@@ -1,2 +1,5 @@
-depression,anxiety,other condition,none
-79,74,35,162
+condition,amount affected
+depression,79
+anxiety,74
+other condition,35
+none,162
