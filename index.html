@@ -868,6 +868,54 @@
         Plotly.newPlot('substanceRace', data, layout);
     });
 
+    // Substance abuse by education
+        Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/substanceEducation.csv", function(err, rows){
+
+            function getData(rows, key) {
+                return rows.map(function(specificRow) {
+                    return specificRow[key];
+                });
+            }
+
+            var headerRow = Plotly.d3.keys(rows[0]);
+            var headerVals = [];
+            var cellVals = [];
+            var sumArr = [];
+
+            for (i = 0; i < headerRow.length; i++) {
+                headerVal = [headerRow[i]];
+                headerVals[i] = headerVal;
+                cellVal = getData(rows, headerRow[i]);
+                cellVals[i] = cellVal;
+            }
+
+            for (j = 0; j < cellVals[1].length; j++){
+                var sum = parseInt(cellVals[1][j]);
+                sumArr.push(sum);
+            }
+
+            cellVals.push(sumArr);
+
+            var data = [
+                {
+                    y: cellVals[1],
+                    x: cellVals[0],
+                    mode: 'markers',
+                    marker: {
+                        size: cellVals[1]
+                    }
+                }
+            ];
+
+            var layout = {
+                title: "Substances Used By Education Level",
+                height: 400,
+                width: 500,
+            }
+
+            Plotly.newPlot('substanceEducation', data, layout);
+        });
+
 </script>
 
 
