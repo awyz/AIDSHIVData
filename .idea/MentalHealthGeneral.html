@@ -1,0 +1,397 @@
+<head>
+    <title>AIDS Test Site</title>
+    <script src="plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--<style>-->
+        <!--body { background-color: #aec6cf }-->
+    <!--</style>-->
+
+</head>
+<body>
+
+<div>
+    <h1 class="display-1"><center>AIDS in Hawaii</center></h1>
+    <hr>
+    <p style="text-align: center;"><em>AIDS does not live in a vacuum. Oftentimes those afflicted with AIDS have other factors that make access to proper care
+    and health difficult.<br/><br/>Out of 350 AIDS patients in Hawaii...</em></p>
+    <hr>
+    <div align="center" id="mentalHealth"></div>
+    <div align="center" id="mentalHealthDepression"></div>
+    <div align="center" id="mentalHealthAnxiety"></div>
+    <div align="center" id="mentalHealthOtherMH"></div>
+    <div align="center" id="depressionEducation"></div>
+    <div align="center" id="anxietyEducation"></div>
+    <div align="center" id="otherMHEducation"></div>
+
+
+    <!--ACCORDIAN-->
+
+    <!--ACCORDIAN END-->
+
+</div>
+
+</body>
+
+<!--Mental Health Charts-->
+<script>
+
+//    MENTAL HEALTH GENERAL //
+    var data = [{
+        values: [79, 74, 35, 162],
+        labels: ['Depression', 'Anxiety', 'Other Condition', 'None'],
+        type: 'pie'
+    }];
+
+    var layout = {
+        title: "People with AIDS Suffering from Mental Health Conditions",
+        height: 400,
+        width: 500,
+        marker: {
+            colors: ['rgb: 230,159,0', 'rgb: 86,180,233', 'rgb: 0,158,115']
+        }
+    };
+
+    Plotly.newPlot('mentalHealth', data, layout);
+//    END MENTAL HEALTH GENERAL //
+
+//    MENTAL HEALTH VERSUS RACE //
+// DEPRESSION
+Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/depressionRace.csv", function(err, rows){
+
+    function getData(rows, key) {
+        return rows.map(function(specificRow) {
+            return specificRow[key];
+        });
+    }
+
+    var headerRow = Plotly.d3.keys(rows[0]);
+    var headerVals = [];
+    var cellVals = [];
+    var sumArr = [];
+
+    for (i = 0; i < headerRow.length; i++) {
+        headerVal = [headerRow[i]];
+        headerVals[i] = headerVal;
+        cellVal = getData(rows, headerRow[i]);
+        cellVals[i] = cellVal;
+    }
+
+    for (j = 0; j < cellVals[1].length; j++){
+        var sum = parseInt(cellVals[1][j]);
+        sumArr.push(sum);
+    }
+
+    cellVals.push(sumArr);
+
+    var data = [
+        {
+            values: cellVals[1],
+            labels: cellVals[0],
+            type: 'pie',
+//                marker: {
+//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
+//                }
+        }
+    ];
+
+    var layout = {
+        title: "Depression in AIDS Patients by Race",
+        height: 400,
+        width: 500,
+    }
+
+    Plotly.newPlot('mentalHealthDepression', data, layout);
+});
+
+    // ANXIETY
+Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/anxietyRace.csv", function(err, rows){
+
+    function getData(rows, key) {
+        return rows.map(function(specificRow) {
+            return specificRow[key];
+        });
+    }
+
+    var headerRow = Plotly.d3.keys(rows[0]);
+    var headerVals = [];
+    var cellVals = [];
+    var sumArr = [];
+
+    for (i = 0; i < headerRow.length; i++) {
+        headerVal = [headerRow[i]];
+        headerVals[i] = headerVal;
+        cellVal = getData(rows, headerRow[i]);
+        cellVals[i] = cellVal;
+    }
+
+    for (j = 0; j < cellVals[1].length; j++){
+        var sum = parseInt(cellVals[1][j]);
+        sumArr.push(sum);
+    }
+
+    cellVals.push(sumArr);
+
+    var data = [
+        {
+            values: cellVals[1],
+            labels: cellVals[0],
+            type: 'pie',
+//                marker: {
+//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
+//                }
+        }
+    ];
+
+    var layout = {
+        title: "Anxiety in AIDS Patients by Race",
+        height: 400,
+        width: 500,
+    }
+
+    Plotly.newPlot('mentalHealthAnxiety', data, layout);
+});
+
+//    END MENTAL HEALTH VERSUS RACE //
+
+//    MENTAL HEALTH VERSUS EDUCATION //
+// Depression Education
+Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/depressionEducation.csv", function(err, rows){
+
+    function getData(rows, key) {
+        return rows.map(function(specificRow) {
+            return specificRow[key];
+        });
+    }
+
+    var headerRow = Plotly.d3.keys(rows[0]);
+    var headerVals = [];
+    var cellVals = [];
+    var sumArr = [];
+
+    for (i = 0; i < headerRow.length; i++) {
+        headerVal = [headerRow[i]];
+        headerVals[i] = headerVal;
+        cellVal = getData(rows, headerRow[i]);
+        cellVals[i] = cellVal;
+    }
+
+    for (j = 0; j < cellVals[1].length; j++){
+        var sum = parseInt(cellVals[1][j]);
+        sumArr.push(sum);
+    }
+
+    cellVals.push(sumArr);
+
+    var data = [
+        {
+            values: cellVals[1],
+            labels: cellVals[0],
+            type: 'pie',
+//                marker: {
+//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
+//                }
+        }
+    ];
+    var data = [
+        {
+            values: cellVals[1],
+            labels: cellVals[0],
+            type: 'pie',
+//                marker: {
+//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
+//                }
+        }
+    ];
+
+    var layout = {
+        title: "Depression in AIDS Patients by Education Level",
+        height: 400,
+        width: 500,
+    }
+
+    Plotly.newPlot('depressionEducation', data, layout);
+});
+
+// Anxiety Education
+    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/anxietyEducation.csv", function(err, rows){
+
+        function getData(rows, key) {
+            return rows.map(function(specificRow) {
+                return specificRow[key];
+            });
+        }
+
+        var headerRow = Plotly.d3.keys(rows[0]);
+        var headerVals = [];
+        var cellVals = [];
+        var sumArr = [];
+
+        for (i = 0; i < headerRow.length; i++) {
+            headerVal = [headerRow[i]];
+            headerVals[i] = headerVal;
+            cellVal = getData(rows, headerRow[i]);
+            cellVals[i] = cellVal;
+        }
+
+        for (j = 0; j < cellVals[1].length; j++){
+            var sum = parseInt(cellVals[1][j]);
+            sumArr.push(sum);
+        }
+
+        cellVals.push(sumArr);
+
+        var data = [
+            {
+                values: cellVals[1],
+                labels: cellVals[0],
+                type: 'pie',
+//                marker: {
+//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
+//                }
+            }
+        ];
+        var data = [
+            {
+                values: cellVals[1],
+                labels: cellVals[0],
+                type: 'pie',
+//                marker: {
+//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
+//                }
+            }
+        ];
+
+        var layout = {
+            title: "Anxiety in AIDS Patients by Education Level",
+            height: 400,
+            width: 500,
+        }
+
+        Plotly.newPlot('anxietyEducation', data, layout);
+    });
+
+// Other MH Issues by Education Level
+// Anxiety Education
+Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/otherMHEducation.csv", function(err, rows){
+
+    function getData(rows, key) {
+        return rows.map(function(specificRow) {
+            return specificRow[key];
+        });
+    }
+
+    var headerRow = Plotly.d3.keys(rows[0]);
+    var headerVals = [];
+    var cellVals = [];
+    var sumArr = [];
+
+    for (i = 0; i < headerRow.length; i++) {
+        headerVal = [headerRow[i]];
+        headerVals[i] = headerVal;
+        cellVal = getData(rows, headerRow[i]);
+        cellVals[i] = cellVal;
+    }
+
+    for (j = 0; j < cellVals[1].length; j++){
+        var sum = parseInt(cellVals[1][j]);
+        sumArr.push(sum);
+    }
+
+    cellVals.push(sumArr);
+
+    var data = [
+        {
+            values: cellVals[1],
+            labels: cellVals[0],
+            type: 'pie',
+//                marker: {
+//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
+//                }
+        }
+    ];
+    var data = [
+        {
+            values: cellVals[1],
+            labels: cellVals[0],
+            type: 'pie',
+//                marker: {
+//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
+//                }
+        }
+    ];
+
+    var layout = {
+        title: "Other Mental Health Issues in AIDS Patients by Education Level",
+        height: 400,
+        width: 500,
+    }
+
+    Plotly.newPlot('otherMHEducation', data, layout);
+});
+// End otherMHEducation
+
+
+// OTHER MENTAL HEALTH BY RACE
+Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/otherMHRace.csv", function(err, rows){
+
+    function getData(rows, key) {
+        return rows.map(function(specificRow) {
+            return specificRow[key];
+        });
+    }
+
+    var headerRow = Plotly.d3.keys(rows[0]);
+    var headerVals = [];
+    var cellVals = [];
+    var sumArr = [];
+
+    for (i = 0; i < headerRow.length; i++) {
+        headerVal = [headerRow[i]];
+        headerVals[i] = headerVal;
+        cellVal = getData(rows, headerRow[i]);
+        cellVals[i] = cellVal;
+    }
+
+    for (j = 0; j < cellVals[1].length; j++){
+        var sum = parseInt(cellVals[1][j]);
+        sumArr.push(sum);
+    }
+
+    cellVals.push(sumArr);
+
+    var data = [
+        {
+            values: cellVals[1],
+            labels: cellVals[0],
+            type: 'pie',
+//                marker: {
+//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
+//                }
+        }
+    ];
+    var data = [
+        {
+            values: cellVals[1],
+            labels: cellVals[0],
+            type: 'pie',
+//                marker: {
+//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
+//                }
+        }
+    ];
+
+    var layout = {
+        title: "Other Mental Health Issues in AIDS Patients by Race",
+        height: 400,
+        width: 500,
+    }
+
+    Plotly.newPlot('mentalHealthOtherMH', data, layout);
+});
+
+//    END MENTAL HEALTH VERSUS EDUCATION //
+
+</script>
+
+
