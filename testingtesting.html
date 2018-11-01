@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- ECharts -->
+    <script src="http://echarts.baidu.com/dist/echarts.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <!-- DOM for chart -->
+    <div id="main" style="width:600px; height:400px;"></div>
+
+    <div id="venom" style="width:600px; height:400px;"></div>
+
+<!-- um -->
+<script>
+    var myChart = echarts.init(document.getElementById('venom'));
+
+    var uploadedDataURL = "https://raw.githubusercontent.com/awyz/AIDSHIVData/master/substanceAbuse.csv";
+
+    function calculateMA(dayCount, data) {
+        var result = [];
+        upl
+        for (var i = 0, len = data.length; i < len; i++) {
+            if (i < dayCount) {
+                result.push('-');
+                continue;
+            }
+            var sum = 0;
+            for (var j = 0; j < dayCount; j++) {
+                sum += data[i - j][1];
+            }
+            result.push(sum / dayCount);
+        }
+        return result;
+    }
+
+    myChart.showLoading();
+    $.get(uploadedDataURL, function(csvStr) {
+        myChart.hideLoading();
+
+        var res = Papa.parse(csvStr).data.slice(2);
+
+        console.log(Papa.parse(csvStr));
+
+        res = res.reverse();
+
+        var dates = res.map(function(item) {
+            return item[0];
+        });
+
+        var data = res.map(function(item) {
+            return [+item[1], +item[2], +item[5], +item[6]];
+        });
+
+        var option;
+
+        myChart.setOption(option = {
+            legend: {
+                data: ['日K', 'MA5', 'MA10', 'MA20', 'MA30']
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            xAxis: {
+                type: 'category',
+                data: dates
+            },
+            yAxis: {
+                scale: true,
+                scale: true
+            },
+            dataZoom: [{
+
+            }, {
+                type: 'inside'
+            }],
+            animation: false,
+            series: [{
+                type: 'candlestick',
+                name: '日K',
+                data: data
+            },
+                {
+                    name: 'MA5',
+                    type: 'line',
+                    data: calculateMA(5, data),
+                    smooth: true,
+                    lineStyle: {
+                        normal: {
+                            width: 1
+                        }
+                    }
+                },
+                {
+                    name: 'MA10',
+                    type: 'line',
+                    data: calculateMA(10, data),
+                    smooth: true,
+                    lineStyle: {
+                        normal: {
+                            width: 1
+                        }
+                    }
+                },
+                {
+                    name: 'MA20',
+                    type: 'line',
+                    data: calculateMA(20, data),
+                    smooth: true,
+                    lineStyle: {
+                        normal: {
+                            width: 1
+                        }
+                    }
+                },
+                {
+                    name: 'MA30',
+                    type: 'line',
+                    data: calculateMA(30, data),
+                    smooth: true,
+                    lineStyle: {
+                        normal: {
+                            width: 1
+                        }
+                    }
+                }
+            ]
+        });
+    });
+
+    myChart.setOption(option);
+
+</script>
+<!-- wat am i doin -->
+
+
+</body>
+
+<script type="text/javascript">
+    // based on prepared DOM, initialize echarts instance
+    var myChart = echarts.init(document.getElementById('main'));
+
+    // specify chart configuration item and data
+    var option = {
+        title: {
+            text: 'ECharts entry example'
+        },
+        tooltip: {},
+        legend: {
+            data:['Sales']
+        },
+        xAxis: {
+            data: ["shirt","cardign","chiffon shirt","pants","heels","socks"]
+        },
+        yAxis: {},
+        series: [{
+            name: 'Sales',
+            type: 'bar',
+            data: [5, 20, 36, 10, 10, 20]
+        }]
+    };
+
+    // use configuration item and data specified to show chart
+    myChart.setOption(option);
+</script>
+
+</html>
