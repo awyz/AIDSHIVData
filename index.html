@@ -52,6 +52,9 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#portfolio">Substance Abuse</a>
                 </li>
+				<li class = "nav-item">
+					<a class ="nav-link js-scroll-trigger" href= "#map">Case Management Locations</a>
+				</li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#contact">Contact & Credits</a>
                 </li>
@@ -196,6 +199,9 @@
         <!--<a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a>-->
     <!--</div>-->
 <!--</section>-->
+<section id = "map">
+<div id = 'myDiv5'></div>
+</section>
 
 <section id="contact">
     <div class="container">
@@ -920,6 +926,41 @@
         });
 
 </script>
+<script>
+				//locations for treatment
+				var data = [{
+					//couldn't find clint spencer clinic Kona
+					type:'scattermapbox',
+					lat:['19.643776', '20.887951','21.971676','21.297346'],
+					lon:[' -155.996775',' -156.500427','-159.376706','-157.862214'],
+					mode:'markers',
+					marker: {
+						size:14
+					},
+					text:['Hawaii Island HIV/AIDS Foundation (HIHAF)','Maui AIDS Foundation','Malama Pono (Kauai)',
+					'Life Foundation']
+				}]
+				
+				var layout = {
+					title: 'Where to Recieve Care',
+					autosize: true,
+					hovermode:'closest',
+					mapbox: {
+						bearing:0,
+						center: {
+							lat: 19.8968,
+							lon: -155.5828
+						},
+						pitch:0,
+						zoom:5
+					},
+				}
 
+					Plotly.setPlotConfig({
+						mapboxAccessToken: 'pk.eyJ1IjoicWF1Y2hpZGEiLCJhIjoiY2pubWpkM3JhMDQzYjNrbW1idWI4bzN0ZiJ9.YkpYWzAkP3MF8usE6Op9Ig'})
+					
+
+				Plotly.plot('myDiv5', data, layout)
+</script>
 
 </html>
