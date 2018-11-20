@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
-    <!-- ECharts -->
-    <script src="http://echarts.baidu.com/dist/echarts.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,162 +26,149 @@
 
 </head>
 <body>
-    <!-- DOM for chart -->
-    <div id="main" style="width:600px; height:400px;"></div>
 
-    <div id="venom" style="width:600px; height:400px;"></div>
 
-<!-- um -->
+<!-- BAR CHART -->
+
+<div class="container">
+    <canvas id="myBarChart"></canvas>
+</div>
+
 <script>
-    var myChart = echarts.init(document.getElementById('venom'));
-
-    var uploadedDataURL = "https://raw.githubusercontent.com/awyz/AIDSHIVData/master/substanceAbuse.csv";
-
-    function calculateMA(dayCount, data) {
-        var result = [];
-        upl
-        for (var i = 0, len = data.length; i < len; i++) {
-            if (i < dayCount) {
-                result.push('-');
-                continue;
-            }
-            var sum = 0;
-            for (var j = 0; j < dayCount; j++) {
-                sum += data[i - j][1];
-            }
-            result.push(sum / dayCount);
-        }
-        return result;
-    }
-
-    myChart.showLoading();
-    $.get(uploadedDataURL, function(csvStr) {
-        myChart.hideLoading();
-
-        var res = Papa.parse(csvStr).data.slice(2);
-
-        console.log(Papa.parse(csvStr));
-
-        res = res.reverse();
-
-        var dates = res.map(function(item) {
-            return item[0];
-        });
-
-        var data = res.map(function(item) {
-            return [+item[1], +item[2], +item[5], +item[6]];
-        });
-
-        var option;
-
-        myChart.setOption(option = {
-            legend: {
-                data: ['日K', 'MA5', 'MA10', 'MA20', 'MA30']
-            },
-            tooltip: {
-                trigger: 'axis'
-            },
-            xAxis: {
-                type: 'category',
-                data: dates
-            },
-            yAxis: {
-                scale: true,
-                scale: true
-            },
-            dataZoom: [{
-
-            }, {
-                type: 'inside'
+    var barOptions_stacked = {
+        tooltips: {
+            enabled: false
+        },
+        hover :{
+            animationDuration:0
+        },
+        scales: {
+            xAxes: [{
+                ticks: {
+                    beginAtZero:true,
+                    fontFamily: "'Open Sans Bold', sans-serif",
+                    fontSize:11
+                },
+                scaleLabel:{
+                    display:false
+                },
+                gridLines: {
+                },
+                stacked: true
             }],
-            animation: false,
-            series: [{
-                type: 'candlestick',
-                name: '日K',
-                data: data
-            },
-                {
-                    name: 'MA5',
-                    type: 'line',
-                    data: calculateMA(5, data),
-                    smooth: true,
-                    lineStyle: {
-                        normal: {
-                            width: 1
-                        }
-                    }
+            yAxes: [{
+                gridLines: {
+                    display:false,
+                    color: "#fff",
+                    zeroLineColor: "#fff",
+                    zeroLineWidth: 0
                 },
-                {
-                    name: 'MA10',
-                    type: 'line',
-                    data: calculateMA(10, data),
-                    smooth: true,
-                    lineStyle: {
-                        normal: {
-                            width: 1
-                        }
-                    }
+                ticks: {
+                    fontFamily: "'Open Sans Bold', sans-serif",
+                    fontSize:11
                 },
-                {
-                    name: 'MA20',
-                    type: 'line',
-                    data: calculateMA(20, data),
-                    smooth: true,
-                    lineStyle: {
-                        normal: {
-                            width: 1
+                stacked: true
+            }]
+        },
+        legend:{
+            display:false
+        },
+
+        animation: {
+            onComplete: function () {
+                var chartInstance = this.chart;
+                var ctx = chartInstance.ctx;
+                ctx.textAlign = "left";
+                ctx.font = "9px Open Sans";
+                ctx.fillStyle = "#fff";
+
+                Chart.helpers.each(this.data.datasets.forEach(function (dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    Chart.helpers.each(meta.data.forEach(function (bar, index) {
+                        data = dataset.data[index];
+                        if(i==0){
+                            ctx.fillText(data, 50, bar._model.y+4);
+                        } else {
+                            ctx.fillText(data, bar._model.x-25, bar._model.y+4);
                         }
-                    }
-                },
-                {
-                    name: 'MA30',
-                    type: 'line',
-                    data: calculateMA(30, data),
-                    smooth: true,
-                    lineStyle: {
-                        normal: {
-                            width: 1
-                        }
-                    }
-                }
-            ]
-        });
-    });
-
-    myChart.setOption(option);
-
-</script>
-<!-- wat am i doin -->
-
-
-</body>
-
-<script type="text/javascript">
-    // based on prepared DOM, initialize echarts instance
-    var myChart = echarts.init(document.getElementById('main'));
-
-    // specify chart configuration item and data
-    var option = {
+                    }),this)
+                }),this);
+            }
+        },
+        pointLabelFontFamily : "Quadon Extra Bold",
+        scaleFontFamily : "Quadon Extra Bold",
         title: {
-            text: 'ECharts entry example'
+            text: "Difficulty to access care",
+            display: true
         },
-        tooltip: {},
         legend: {
-            data:['Sales']
-        },
-        xAxis: {
-            data: ["shirt","cardign","chiffon shirt","pants","heels","socks"]
-        },
-        yAxis: {},
-        series: [{
-            name: 'Sales',
-            type: 'bar',
-            data: [5, 20, 36, 10, 10, 20]
-        }]
+            display: true,
+        }
     };
 
-    // use configuration item and data specified to show chart
-    myChart.setOption(option);
-</script>
+    var ctx = document.getElementById("myBarChart");
+    var myChart = new Chart(ctx, {
+        type: 'horizontalBar',
+        data: {
+            labels: ["HIV Case Management", "Dental Care", "Counseling", "Information", "Alternative Therapy"],
 
+            datasets: [{ // Easy
+                label: ["Easy"],
+                data: [277, 134, 54, 120, 29],
+                backgroundColor: "rgb(83, 226, 119)",
+                hoverBackgroundColor: "rgba(66, 175, 94, 1)"
+            },{ // Possible but required some work
+                label: ["Possible with some work"],
+                data: [39, 67, 15, 32, 43],
+                backgroundColor: "rgba(255, 233, 0, 1)",
+                hoverBackgroundColor: "rgba(191, 178, 38, 1)"
+            }, { // Possible but very difficult
+                label: ["Possible but very difficult"],
+                data: [5, 38, 5, 6, 35],
+                backgroundColor: "rgba(255, 165, 0, 1)",
+                hoverBackgroundColor: "rgba(188, 134, 35, 1)"
+            }, { // Too difficult to access
+                label: ["Too difficult to access"],
+                data: [1, 22, 14, 0, 43],
+                backgroundColor: "rgba(219, 21, 21, 1)",
+                hoverBackgroundColor: "rgba(119, 17, 17, 1)"
+            }, { // blanks
+                label: ["Chose not to answer"],
+                data: [76, 137, 310, 240, 248],
+                backgroundColor: "rgba(155, 155, 155, 1)"
+            }]
+        },
+
+        options: barOptions_stacked,
+    });
+
+</script>
+<!-- BAR CHART END -->
+
+
+<!--<canvas id="myChart"></canvas>-->
+
+<!--<script>-->
+    <!--var ctx = document.getElementById('myChart').getContext('2d');-->
+    <!--var chart = new Chart(ctx, {-->
+        <!--// The type of chart we want to create-->
+        <!--type: 'line',-->
+
+        <!--// The data for our dataset-->
+        <!--data: {-->
+            <!--labels: ["January", "February", "March", "April", "May", "June", "July"],-->
+            <!--datasets: [{-->
+                <!--label: "My First dataset",-->
+                <!--backgroundColor: 'rgb(255, 99, 132)',-->
+                <!--borderColor: 'rgb(255, 99, 132)',-->
+                <!--data: [0, 10, 5, 2, 20, 30, 45],-->
+            <!--}]-->
+        <!--},-->
+
+        <!--// Configuration options go here-->
+        <!--options: {}-->
+    <!--});-->
+<!--</script>-->
+
+</body>
 </html>
