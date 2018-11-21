@@ -331,12 +331,53 @@ header.masthead p {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
-.nav-pills .nav-link:not(.active) {
-  background-color: black;
-  color: green;
-}
-
-.nav-pills .nav-link {
-  background-color: #F05F40;
+.nav-pills .pill-1 .nav-link:not(.active) {
+  background-color: white;
   color: #F05F40;
 }
+
+.nav-pills .pill-2 .nav-link:not(.active) {
+  background-color: white;
+  color: #F05F40;
+}
+
+.nav-pills .pill-3 .nav-link:not(.active) {
+  background-color: white;
+  color: #F05F40;
+}
+
+.nav-pills .pill-4 .nav-link:not(.active) {
+  background-color: white;
+  color: #F05F40;
+}
+
+.nav-pills .pill-5 .nav-link:not(.active) {
+  background-color: white;
+  color: #F05F40;
+}
+
+.nav-pills .pill-1 .nav-link {
+  background-color: #F05F40;
+  color: white;
+}
+
+.nav-pills .pill-2 .nav-link {
+  background-color: #F05F40;
+  color: white;
+}
+
+.nav-pills .pill-3 .nav-link {
+  background-color: #F05F40;
+  color: white;
+}
+
+.nav-pills .pill-4 .nav-link {
+   background-color: #F05F40;
+   color: white;
+ }
+
+.nav-pills .pill-5 .nav-link {
+  background-color: #F05F40;
+  color: white;
+}
+
