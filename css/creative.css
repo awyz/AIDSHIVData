@@ -322,3 +322,21 @@ header.masthead p {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
   box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
 }
+
+.nav-pills{
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 300px;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.nav-pills .nav-link:not(.active) {
+  background-color: black;
+  color: green;
+}
+
+.nav-pills .nav-link {
+  background-color: #F05F40;
+  color: #F05F40;
+}
