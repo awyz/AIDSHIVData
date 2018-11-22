@@ -117,7 +117,16 @@
         tooltips: {
             callbacks: {
                 label: function(tooltipItems, data) {
-                    return data.datasets[tooltipItems.datasetIndex].label + ':' + tooltipItems.yLabel + ' hiya'; // todo add percentages!
+                    return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.xLabel; // todo add percentages!
+                },
+                afterLabel: function (tooltipItem, data) {
+                    var total = 0;
+                    for (i = 0; i < data.datasets.length; i++) {
+                        total += data.datasets[i].data[tooltipItem.datasetIndex];
+                    }
+                    var percent = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] / total * 100;
+                    percent = percent.toFixed(2);
+                    return "Percentage: " + percent;
                 }
             }
         }
