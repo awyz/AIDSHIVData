@@ -1,7 +1,8 @@
 //pie charting
-app.title = 'Case Management Statistics';
 
-option = {
+var myChart = echarts.init(document.getElementById('main'));
+	
+	var option = {
     tooltip: {
         trigger: 'item',
         formatter: "{a} <br/>{b}: {c} ({d}%)"
@@ -46,13 +47,14 @@ option = {
         }
     ]
 };
+		myChart.setOption(option);
+
 
 
 //barriers for case management
 
-app.title = 'Barriers of Case Management';
 
-option = {
+var option = {
     tooltip : {
         trigger: 'axis',
         axisPointer : {            // 坐标轴指示器，坐标轴触发有效
@@ -118,9 +120,8 @@ option = {
 //barriers for case management
 
 
-app.title = 'Race Breakdown of Barriers';
 
-option = {
+var option = {
     tooltip : {
         trigger: 'axis',
         axisPointer : {            // 坐标轴指示器，坐标轴触发有效
@@ -155,7 +156,7 @@ option = {
                 }
             },
             data: [
-			{value:{3,1,0}, itemStyle: {color: 'rgb(175,141,195)'}}
+			{value:[3,1,0], itemStyle: {color: 'rgb(175,141,195)'}}
 			]
         },
         {
@@ -173,4 +174,6 @@ option = {
         },
         
     ]
+
 };
+
