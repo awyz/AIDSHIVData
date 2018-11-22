@@ -41,78 +41,33 @@
     <div style="text-align: center" id="instructions"><h3>Click on a section of the bar chart for more information</h3>
     <p>n = 398</p></div>
 
-    <div id="hivGreenDesc">
+    <div id="hivDesc">
         HIV Case management easy description
     </div>
-    <div id="hivYellowDesc">
-        HIV Case management medium description
-    </div>
-    <div id="hivOrangeDesc">
-        HIV Case management hard description
-    </div>
-    <div id="hivRedDesc">
-        HIV Case management hardest description
-    </div>
 
-    <div id="dentalGreenDesc">
+    <div id="dentalDesc">
         Dental easy description
     </div>
-    <div id="dentalYellowDesc">
-        Dental medium description
-    </div>
-    <div id="dentalOrangeDesc">
-        Dental hard description
-    </div>
-    <div id="dentalRedDesc">
-        Dental hardest description
-    </div>
 
-
-    <div id="counselingGreenDesc">
+    <div id="counselingDesc">
         Counseling easy description
     </div>
-    <div id="counselingYellowDesc">
-        Counseling medium description
-    </div>
-    <div id="counselingOrangeDesc">
-        Counseling hard description
-    </div>
-    <div id="counselingRedDesc">
-        Counseling hardest description
-    </div>
 
-
-    <div id="infoGreenDesc">
+    <div id="infoDesc">
         Info easy description
     </div>
-    <div id="infoYellowDesc">
-        Info medium description
-    </div>
-    <div id="infoOrangeDesc">
-        Info hard description
-    </div>
-    <div id="infoRedDesc">
-        Info hardest description
-    </div>
 
-
-    <div id="altTherapyGreenDesc">
+    <div id="altTherapyDesc">
         Alt Therapy easy description
     </div>
-    <div id="altTherapyYellowDesc">
-        Alt Therapy medium description
-    </div>
-    <div id="altTherapyOrangeDesc">
-        Alt Therapy hard description
-    </div>
-    <div id="altTherapyRedDesc">
-        Alt therapy hardest description
-    </div>
+
     &nbsp;
 </div>
 
 <script>
     // todo Change the fonts
+
+    var group;
 
     var barOptions_stacked = {
         hover :{
@@ -157,8 +112,19 @@
         },
         legend: {
             display: true,
+        },
+        // test
+        tooltips: {
+            callbacks: {
+                label: function(tooltipItems, data) {
+                    return data.datasets[tooltipItems.datasetIndex].label + ':' + tooltipItems.yLabel + ' hiya'; // todo add percentages!
+                }
+            }
         }
+        // test
     };
+
+
 
     var ctx = document.getElementById("myBarChart");
     var myChart = new Chart(ctx, {
@@ -198,26 +164,11 @@
 
     // Hide everything
     window.onload=function(){
-        document.getElementById("hivGreenDesc").style.display='none';
-        document.getElementById("hivYellowDesc").style.display='none';
-        document.getElementById("hivOrangeDesc").style.display='none';
-        document.getElementById("hivRedDesc").style.display='none';
-        document.getElementById("dentalGreenDesc").style.display='none';
-        document.getElementById("dentalYellowDesc").style.display='none';
-        document.getElementById("dentalOrangeDesc").style.display='none';
-        document.getElementById("dentalRedDesc").style.display='none';
-        document.getElementById("counselingGreenDesc").style.display='none';
-        document.getElementById("counselingYellowDesc").style.display='none';
-        document.getElementById("counselingOrangeDesc").style.display='none';
-        document.getElementById("counselingRedDesc").style.display='none';
-        document.getElementById("infoGreenDesc").style.display='none';
-        document.getElementById("infoYellowDesc").style.display='none';
-        document.getElementById("infoOrangeDesc").style.display='none';
-        document.getElementById("infoRedDesc").style.display='none';
-        document.getElementById("altTherapyGreenDesc").style.display='none';
-        document.getElementById("altTherapyYellowDesc").style.display='none';
-        document.getElementById("altTherapyOrangeDesc").style.display='none';
-        document.getElementById("altTherapyRedDesc").style.display='none';
+        document.getElementById("hivDesc").style.display='none';
+        document.getElementById("dentalDesc").style.display='none';
+        document.getElementById("counselingDesc").style.display='none';
+        document.getElementById("infoDesc").style.display='none';
+        document.getElementById("altTherapyDesc").style.display='none';
     }
 
     document.getElementById("myBarChart").onclick = function (evt) {
@@ -227,37 +178,27 @@
         var label = data.datasets[datasetIndex].label;
         var value = data.datasets[datasetIndex].data[activePoint._index];
 
+        console.log("index: " + datasetIndex);
+        console.log(myChart.data.labels[activePoint._index]);
+
         function closeAll() {
             console.log("Close everything");
-            document.getElementById("hivGreenDesc").style.display='none';
-            document.getElementById("hivYellowDesc").style.display='none';
-            document.getElementById("hivOrangeDesc").style.display='none';
-            document.getElementById("hivRedDesc").style.display='none';
-            document.getElementById("dentalGreenDesc").style.display='none';
-            document.getElementById("dentalYellowDesc").style.display='none';
-            document.getElementById("dentalOrangeDesc").style.display='none';
-            document.getElementById("dentalRedDesc").style.display='none';
-            document.getElementById("counselingGreenDesc").style.display='none';
-            document.getElementById("counselingYellowDesc").style.display='none';
-            document.getElementById("counselingOrangeDesc").style.display='none';
-            document.getElementById("counselingRedDesc").style.display='none';
-            document.getElementById("infoGreenDesc").style.display='none';
-            document.getElementById("infoYellowDesc").style.display='none';
-            document.getElementById("infoOrangeDesc").style.display='none';
-            document.getElementById("infoRedDesc").style.display='none';
-            document.getElementById("altTherapyGreenDesc").style.display='none';
-            document.getElementById("altTherapyYellowDesc").style.display='none';
-            document.getElementById("altTherapyOrangeDesc").style.display='none';
-            document.getElementById("altTherapyRedDesc").style.display='none';
+            document.getElementById("hivDesc").style.display='none';
+            document.getElementById("dentalDesc").style.display='none';
+            document.getElementById("counselingDesc").style.display='none';
+            document.getElementById("infoDesc").style.display='none';
+            document.getElementById("altTherapyDesc").style.display='none';
         }
 
         console.log(label, value, datasetIndex);
         closeAll();
 
-        switch(label, value) {
-            case ("Easy" && 277): // Easy HIV Case Management
+
+
+        switch(myChart.data.labels[activePoint._index]) {
+            case ("HIV Case Management"): // HIV Case Management
                 document.getElementById("instructions").style.display = "none";
-                var x = document.getElementById("hivGreenDesc");
+                var x = document.getElementById("hivDesc");
                 if(x.style.display == "block") {
                     x.style.display = "none";
                 }
@@ -266,50 +207,50 @@
                 }
                 break;
 
-            case ("Easy" && 134): // Easy Dental
+            case ("Dental Care"): // Dental
                 document.getElementById("instructions").style.display = "none";
-                var x = document.getElementById("dentalGreenDesc");
+                var x = document.getElementById("dentalDesc");
                 if(x.style.display == "block")
                     x.style.display = "none"
                 else
                     x.style.display = "block";
                 break;
 
-            case ("Easy" && 54): // Easy Counseling
+            case ("Counseling"): // Counseling
                 document.getElementById("instructions").style.display = "none";
-                var x = document.getElementById("counselingGreenDesc");
+                var x = document.getElementById("counselingDesc");
                 if(x.style.display == "block")
                     x.style.display = "none"
                 else
                     x.style.display = "block";
                 break;
 
-            case ("Easy" && 120): // Easy Info
+            case ("Information"): // Info
                 document.getElementById("instructions").style.display = "none";
-                var x = document.getElementById("infoGreenDesc");
+                var x = document.getElementById("infoDesc");
                 if(x.style.display == "block")
                     x.style.display = "none"
                 else
                     x.style.display = "block";
                 break;
 
-            case ("Easy" && 29): // Easy alt therapy
+            case ("Alternative Therapy"): // Easy alt therapy
                 document.getElementById("instructions").style.display = "none";
-                var x = document.getElementById("altTherapyGreenDesc");
+                var x = document.getElementById("altTherapyDesc");
                 if(x.style.display == "block")
                     x.style.display = "none"
                 else
                     x.style.display = "block";
                 break;
 
-            case ("Possible with some work" && 39): // Medium HIV care
-                document.getElementById("instructions").style.display = "none";
-                var x = document.getElementById("hivYellowDesc");
-                if (x.style.display == "block")
-                    x.style.display = "none"
-                else
-                    x.style.display = "block";
-                break;
+//            case ("Possible with some work" && 39): // Medium HIV care
+//                document.getElementById("instructions").style.display = "none";
+//                var x = document.getElementById("hivYellowDesc");
+//                if (x.style.display == "block")
+//                    x.style.display = "none"
+//                else
+//                    x.style.display = "block";
+//                break;
         }
 
     }
