@@ -113,27 +113,27 @@
         legend: {
             display: true,
         },
-        // test
         tooltips: {
             callbacks: {
                 label: function(tooltipItems, data) {
-                    return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.xLabel; // todo add percentages!
+                    return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.xLabel;
                 },
                 afterLabel: function (tooltipItem, data) {
-                    var total = 0;
-                    for (i = 0; i < data.datasets.length; i++) {
-                        total += data.datasets[i].data[tooltipItem.datasetIndex];
-                    }
-                    var percent = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] / total * 100;
-                    percent = percent.toFixed(2);
-                    return "Percentage: " + percent;
+                        var allData = data.datasets[tooltipItem.datasetIndex].data;
+                        var tooltipLabel = data.labels[tooltipItem.index];
+                        var tooltipData = allData[tooltipItem.index];
+                        var total = 0;
+                        for (var i=0; i<allData.length; i++) {
+                            total += allData[i];
+                        }
+                        var tooltipPercentage = Math.round((tooltipData / total) * 100);
+                        return (tooltipPercentage + '%');
                 }
             }
         }
-        // test
     };
 
-
+// todo Fix percentages that show up as NaN
 
     var ctx = document.getElementById("myBarChart");
     var myChart = new Chart(ctx, {
@@ -143,28 +143,32 @@
 
             datasets: [{ // Easy
                 label: "Easy",
-                data: [277, 134, 54, 120, 29],
+                data: [277, 134, 78, 120, 29],
                 backgroundColor: "rgb(83, 226, 119)",
                 hoverBackgroundColor: "rgba(66, 175, 94, 1)"
             },{ // Possible but required some work
                 label: "Possible with some work",
-                data: [39, 67, 15, 32, 43],
+                data: [39, 67, 40, 32, 43],
                 backgroundColor: "rgba(255, 233, 0, 1)",
                 hoverBackgroundColor: "rgba(191, 178, 38, 1)"
             }, { // Possible but very difficult
                 label: "Possible but very difficult",
-                data: [5, 38, 5, 6, 35],
+                data: [5, 38, 9, 6, 35],
                 backgroundColor: "rgba(255, 165, 0, 1)",
                 hoverBackgroundColor: "rgba(188, 134, 35, 1)"
             }, { // Too difficult to access
                 label: "Too difficult to access",
-                data: [1, 22, 14, 0, 43],
+                data: [1, 22, 8, 0, 43],
                 backgroundColor: "rgba(219, 21, 21, 1)",
                 hoverBackgroundColor: "rgba(119, 17, 17, 1)"
             }, { // blanks
                 label: "Chose not to answer",
-                data: [76, 137, 310, 240, 248],
+                data: [1, 5, 7, 2, 241],
                 backgroundColor: "rgba(155, 155, 155, 1)"
+            }, { // No
+                label: "Did not need service",
+                data: [75, 132, 256, 238, 7],
+                backgroundColor: "rgba(188, 188, 188, 1)"
             }]
         },
 
