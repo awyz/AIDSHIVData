@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
-    <!-- ECharts -->
-    <script src="http://echarts.baidu.com/dist/echarts.min.js"></script>
+    <!-- Chart.js MAKE SURE YOU'RE USING THE MOST UPDATED VERSION! -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,162 +27,388 @@
 
 </head>
 <body>
-    <!-- DOM for chart -->
-    <div id="main" style="width:600px; height:400px;"></div>
 
-    <div id="venom" style="width:600px; height:400px;"></div>
+<!-- BAR CHART -->
+<div class="container">
+    <canvas id="myBarChart"></canvas>
+</div>
 
-<!-- um -->
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div class="container" style="border: 2px solid rgb(188, 188, 188)">
+    &nbsp;
+
+    <div style="text-align: center" id="instructions"><h4>
+        Insert description about chart purpose, what it tells us, etc
+        <br> Click on a section of the bar chart for more information</h4>
+    <p>n = 398</p></div>
+
+    <div id="hivDesc">
+        HIV Case management description
+    </div>
+
+    <div id="dentalDesc">
+        Dental description
+    </div>
+
+    <div id="counselingDesc">
+        Counseling description
+    </div>
+
+    <div id="infoDesc">
+        Info description
+    </div>
+
+    <div id="altTherapyDesc">
+        Alt Therapy description
+    </div>
+
+    <div id="homeAidDesc">
+        Home Aid description
+    </div>
+
+    <div id="insuranceDesc">
+        Insurance description
+    </div>
+
+    <div id="medDesc">
+        Med description
+    </div>
+
+    <div id="abuseDesc">
+        Drug/Alcohol abuse description
+    </div>
+
+    <div id="socialDesc">
+        Social description
+    </div>
+
+    <div id="jobDesc">
+        Employment description
+    </div>
+
+    <div id="eduDesc">
+        Education description
+    </div>
+
+    <div id="foodDesc">
+        Food description
+    </div>
+
+    <div id="housingDesc">
+        Housing description
+    </div>
+
+    <div id="billsDesc">
+        Bills description
+    </div>
+
+    &nbsp;
+</div>
+
 <script>
-    var myChart = echarts.init(document.getElementById('venom'));
+    // todo Change the fonts
 
-    var uploadedDataURL = "https://raw.githubusercontent.com/awyz/AIDSHIVData/master/substanceAbuse.csv";
+    var group;
 
-    function calculateMA(dayCount, data) {
-        var result = [];
-        upl
-        for (var i = 0, len = data.length; i < len; i++) {
-            if (i < dayCount) {
-                result.push('-');
-                continue;
-            }
-            var sum = 0;
-            for (var j = 0; j < dayCount; j++) {
-                sum += data[i - j][1];
-            }
-            result.push(sum / dayCount);
-        }
-        return result;
-    }
-
-    myChart.showLoading();
-    $.get(uploadedDataURL, function(csvStr) {
-        myChart.hideLoading();
-
-        var res = Papa.parse(csvStr).data.slice(2);
-
-        console.log(Papa.parse(csvStr));
-
-        res = res.reverse();
-
-        var dates = res.map(function(item) {
-            return item[0];
-        });
-
-        var data = res.map(function(item) {
-            return [+item[1], +item[2], +item[5], +item[6]];
-        });
-
-        var option;
-
-        myChart.setOption(option = {
-            legend: {
-                data: ['日K', 'MA5', 'MA10', 'MA20', 'MA30']
-            },
-            tooltip: {
-                trigger: 'axis'
-            },
-            xAxis: {
-                type: 'category',
-                data: dates
-            },
-            yAxis: {
-                scale: true,
-                scale: true
-            },
-            dataZoom: [{
-
-            }, {
-                type: 'inside'
+    var barOptions_stacked = {
+        hover :{
+            animationDuration:0
+        },
+        scales: {
+            xAxes: [{
+                ticks: {
+                    beginAtZero:true,
+                    fontFamily: "'Open Sans Bold', sans-serif",
+                    fontSize:11
+                },
+                scaleLabel:{
+                    display:false
+                },
+                gridLines: {
+                },
+                stacked: true
             }],
-            animation: false,
-            series: [{
-                type: 'candlestick',
-                name: '日K',
-                data: data
-            },
-                {
-                    name: 'MA5',
-                    type: 'line',
-                    data: calculateMA(5, data),
-                    smooth: true,
-                    lineStyle: {
-                        normal: {
-                            width: 1
-                        }
-                    }
+            yAxes: [{
+                gridLines: {
+                    display:false,
+                    color: "#fff",
+                    zeroLineColor: "#fff",
+                    zeroLineWidth: 0
                 },
-                {
-                    name: 'MA10',
-                    type: 'line',
-                    data: calculateMA(10, data),
-                    smooth: true,
-                    lineStyle: {
-                        normal: {
-                            width: 1
-                        }
-                    }
+                ticks: {
+                    fontFamily: "'Open Sans Bold', sans-serif",
+                    fontSize:11
                 },
-                {
-                    name: 'MA20',
-                    type: 'line',
-                    data: calculateMA(20, data),
-                    smooth: true,
-                    lineStyle: {
-                        normal: {
-                            width: 1
-                        }
-                    }
-                },
-                {
-                    name: 'MA30',
-                    type: 'line',
-                    data: calculateMA(30, data),
-                    smooth: true,
-                    lineStyle: {
-                        normal: {
-                            width: 1
-                        }
-                    }
-                }
-            ]
-        });
-    });
-
-    myChart.setOption(option);
-
-</script>
-<!-- wat am i doin -->
-
-
-</body>
-
-<script type="text/javascript">
-    // based on prepared DOM, initialize echarts instance
-    var myChart = echarts.init(document.getElementById('main'));
-
-    // specify chart configuration item and data
-    var option = {
+                stacked: true
+            }]
+        },
+        legend:{
+            display:false
+        },
+        pointLabelFontFamily : "Quadon Extra Bold",
+        scaleFontFamily : "Quadon Extra Bold",
         title: {
-            text: 'ECharts entry example'
+            text: "Access to Services",
+            display: true,
+            fontSize: 40
         },
-        tooltip: {},
         legend: {
-            data:['Sales']
+            display: true,
         },
-        xAxis: {
-            data: ["shirt","cardign","chiffon shirt","pants","heels","socks"]
-        },
-        yAxis: {},
-        series: [{
-            name: 'Sales',
-            type: 'bar',
-            data: [5, 20, 36, 10, 10, 20]
-        }]
+        tooltips: {
+            callbacks: {
+                label: function(tooltipItems, data) {
+                    return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.xLabel;
+                },
+                afterLabel: function (tooltipItem, data) {
+                        var allData = data.datasets[tooltipItem.datasetIndex].data;
+                        var tooltipLabel = data.labels[tooltipItem.index];
+                        var tooltipData = allData[tooltipItem.index];
+                        var total = 0;
+                        for (var i=0; i < allData.length; i++) {
+                            total += allData[i];
+                        }
+                        var tooltipPercentage = Math.round((tooltipData / total) * 100);
+                        return (tooltipPercentage + '%');
+                }
+            }
+        }
     };
 
-    // use configuration item and data specified to show chart
-    myChart.setOption(option);
+// todo Decide on a color palette
+
+    var ctx = document.getElementById("myBarChart");
+    var myChart = new Chart(ctx, {
+        type: 'horizontalBar',
+        data: {
+            labels: ["HIV Case Management", "Dental Care", "Counseling", "Information", "Alternative Therapy", "Aid at Home", "Paying Medical Costs", "Enrolling in Insurance Coverage", "Help with Alcohol/Drug Abuse", "Social Support", "Employment", "Education", "Paying for Food", "Housing", "Paying Bills"],
+
+            datasets: [{ // Easy
+                label: "Easy",
+                data: [277, 134, 54, 120, 29, 28, 99, 62, 12, 55, 5, 3, 44, 48, 29],
+                backgroundColor: "rgba(165, 255, 214, 1)",
+            },{ // Possible but required some work
+                label: "Possible with some work",
+                data: [39, 67, 15, 32, 43, 26, 73, 47, 11, 24, 15, 11, 74, 58, 47],
+                backgroundColor: "rgba(132, 220, 198, 1)",
+            }, { // Possible but very difficult
+                label: "Possible but very difficult",
+                data: [5, 38, 5, 6, 35, 6, 24, 9, 1, 7, 8, 4, 26, 26, 16],
+                backgroundColor: "rgba(255, 166, 158, 1)",
+            }, { // Too difficult to access
+                label: "Too difficult to access",
+                data: [1, 22, 14, 0, 43, 6, 5, 2, 2, 5, 3, 13, 10, 10, 16],
+                backgroundColor: "rgba(255, 104, 107, 1)",
+//                hoverBackgroundColor: "rgba(166, 60, 6, 1)"
+            }, { // blanks
+                label: "Chose not to answer",
+                data: [1, 5, 7, 2, 241, 3, 3, 5, 6, 7, 7, 7, 7, 7, 7],
+                backgroundColor: "rgba(184, 197, 214, 1)"
+            }, { // No
+                label: "Did not need service",
+                data: [75, 132, 303, 238, 7, 329, 194, 273, 366, 300, 360, 360, 237, 249, 283],
+                backgroundColor: "rgba(163, 155, 168, 1)"
+            }]
+        },
+
+        options: barOptions_stacked,
+    });
+
+    // Hide everything
+    window.onload=function(){
+        document.getElementById("hivDesc").style.display='none';
+        document.getElementById("dentalDesc").style.display='none';
+        document.getElementById("counselingDesc").style.display='none';
+        document.getElementById("infoDesc").style.display='none';
+        document.getElementById("altTherapyDesc").style.display='none';
+        document.getElementById("homeAidDesc").style.display='none';
+        document.getElementById("medDesc").style.display='none';
+        document.getElementById("insuranceDesc").style.display='none';
+        document.getElementById("abuseDesc").style.display='none';
+        document.getElementById("socialDesc").style.display='none';
+        document.getElementById("jobDesc").style.display='none';
+        document.getElementById("eduDesc").style.display='none';
+        document.getElementById("foodDesc").style.display='none';
+        document.getElementById("housingDesc").style.display='none';
+        document.getElementById("billsDesc").style.display='none';
+    }
+
+    document.getElementById("myBarChart").onclick = function (evt) {
+        var activePoint = myChart.getElementAtEvent(evt)[0];
+        var data = activePoint._chart.data;
+        var datasetIndex = activePoint._datasetIndex;
+        var label = data.datasets[datasetIndex].label;
+        var value = data.datasets[datasetIndex].data[activePoint._index];
+
+        console.log("index: " + datasetIndex);
+        console.log(myChart.data.labels[activePoint._index]);
+
+        function closeAll() {
+            console.log("Close everything");
+            document.getElementById("hivDesc").style.display='none';
+            document.getElementById("dentalDesc").style.display='none';
+            document.getElementById("counselingDesc").style.display='none';
+            document.getElementById("infoDesc").style.display='none';
+            document.getElementById("altTherapyDesc").style.display='none';
+            document.getElementById("homeAidDesc").style.display='none';
+            document.getElementById("medDesc").style.display='none';
+            document.getElementById("insuranceDesc").style.display='none';
+            document.getElementById("abuseDesc").style.display='none';
+            document.getElementById("socialDesc").style.display='none';
+            document.getElementById("jobDesc").style.display='none';
+            document.getElementById("eduDesc").style.display='none';
+            document.getElementById("foodDesc").style.display='none';
+            document.getElementById("housingDesc").style.display='none';
+            document.getElementById("billsDesc").style.display='none';
+        }
+
+        console.log(label, value, datasetIndex);
+        closeAll();
+
+
+        // Sees which bar has been clicked & acts accordingly
+        switch(myChart.data.labels[activePoint._index]) {
+            case ("HIV Case Management"): // HIV Case Management
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("hivDesc");
+                if(x.style.display == "block") {
+                    x.style.display = "none";
+                }
+                else {
+                    x.style.display = "block";
+                }
+                break;
+
+            case ("Dental Care"): // Dental
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("dentalDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Counseling"): // Counseling
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("counselingDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Information"): // Info
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("infoDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Alternative Therapy"): // Easy alt therapy
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("altTherapyDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Aid at Home"): // Assistance at home
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("homeAidDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Paying Medical Costs"): // Medical costs
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("medDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Enrolling in Insurance Coverage"):
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("insuranceDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Help with Alcohol/Drug Abuse"):
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("abuseDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Social Support"):
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("socialDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Employment"): // Easy alt therapy
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("jobDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Education"):
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("eduDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Paying for Food"):
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("foodDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Housing"):
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("housingDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Paying Bills"):
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("billsDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+        }
+
+    }
 </script>
 
+</body>
 </html>
