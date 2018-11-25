@@ -1,4 +1,8 @@
 node_modules
 bower_components
+<<<<<<< HEAD
 .idea/workspace.xml
 *.xml
+=======
+.idea/workspace.xml
+>>>>>>> master
