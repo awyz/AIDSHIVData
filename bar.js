@@ -51,7 +51,7 @@
             callbacks: {
                 label: function(tooltipItems, data) {
                     return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.xLabel;
-                },
+                }, //todo Fix these percentages!!!!
                 afterLabel: function (tooltipItem, data) {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
@@ -252,7 +252,7 @@
                     x.style.display = "block";
                 break;
 
-            case ("Employment"): // Easy alt therapy
+            case ("Employment"):
                 document.getElementById("instructions").style.display = "none";
                 var x = document.getElementById("jobDesc");
                 if(x.style.display == "block")
