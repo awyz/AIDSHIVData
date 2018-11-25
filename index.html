@@ -10,6 +10,9 @@
 
     <title>AIDS and HIV In Hawaii</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="echarts.js"></script>
 
     <!-- Graph sheets -->
     <script src="plotly-latest.min.js"></script>
@@ -28,7 +31,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/creative.min.css" rel="stylesheet">
-
+    <link href="css/creative.css" rel="stylesheet">
 
 </head>
 
@@ -43,6 +46,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#sociodemographics">Sociodemographics</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#about">Mental Health</a>
                 </li>
@@ -80,25 +86,142 @@
     </div>
 </header>
 
-<section class="bg-primary" id="about">
+<!--Sociodemographics Section-->
+<section id = "sociodemographics">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <h2 class="section-heading text-white">Mental health problems can be comorbid with HIV</h2>
-                <hr class="light my-4">
-                <p class="text-faded mb-4">
-                <div align="center" id="mentalHealthBar"></div>
+            <div class="col-xl-12 mx-auto text-center">
+                <h2 class="section-heading">Sociodemographics</h2>
+                <h4 class="section-heading">Comparisons of the HIV Needs Assessment's sociodemographic data to <br>
+                    <a href="https://health.hawaii.gov/harmreduction/files/2013/05/2015-Epi-Profile.pdf">Hawaii's HIV/AIDS 2015 Epidemiologic Profile</a>
+                </h4>
+                <br>
+                    <ul class="nav nav-pills nav-justified">
+                        <li class="nav-item pill-1" style="text-align: center">
+                            <a class="nav-link active" data-toggle="tab" href="#ageTab">Age</a>
+                        </li>
+                        <li class="nav-item pill-2">
+                            <a class="nav-link" data-toggle="tab" href="#caseManagementTab">Case Management</a>
+                        </li>
+                        <li class="nav-item pill-3">
+                            <a class="nav-link" data-toggle="tab" href="#disabilityTab">Disability</a>
+                        </li>
+                        <li class="nav-item pill-4">
+                            <a class="nav-link" data-toggle="tab" href="#drugUseTab">Drugs</a>
+                        </li>
+                        <li class="nav-item pill-5">
+                            <a class="nav-link" data-toggle="tab" href="#educationTab">Education</a>
+                        </li>
+                        <li class="nav-item pill-6">
+                            <a class="nav-link" data-toggle="tab" href="#incomeTypeTab">Income</a>
+                        </li>
+                        <li class="nav-item pill-7">
+                            <a class="nav-link" data-toggle="tab" href="#methodOfTransmissionTab">Method of Transmission</a>
+                        </li>
+                        <li class="nav-item pill-8">
+                            <a class="nav-link" data-toggle="tab" href="#raceTab">Race</a>
+                        </li>
+                        <li class="nav-item pill-9">
+                            <a class="nav-link" data-toggle="tab" href="#sexualOrientationTab">Sexual Orientation</a>
+                        </li>
+                    </ul>
 
-                <p>
-                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        Ethnicity
-                    </a>
-                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-                        Education Level
-                    </button>
-                </p>
+                    <div class="tab-content mt-3">
+                        <div class="tab-pane fade show active" id="ageTab" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div id="ageSurvey" style="height: 500px; width: 500px; float: left"></div>
+                                <div id="ageProfile" style="height: 500px; width: 500px; float: right"></div>
+                            </div>
+                            <h4 class="section-heading-discrepancy">
+                                There is a large discrepancy between the HIV Needs Assessment and the Epi Profile.
+                                The HIV Needs Assessment has a much larger amount of people 55 and over, and a much
+                                smaller amount under 44 compared to the Epi Profile.
+                            </h4>
+                        </div>
+                        <div class="tab-pane fade" id="caseManagementTab" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div id="caseManagementSurvey" style="height: 500px; width: 500px; float: left"></div>
+                                <div id="caseManagementProfile" style="height: 500px; width: 500px; float: right"></div>
+                            </div>
+                            <h4 class="section-heading" style="color: #F05F40">Placeholder Text 2</h4>
+                        </div>
+                        <div class="tab-pane fade" id="disabilityTab" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div id="disabilitySurvey" style="height: 500px; width: 500px; float: left"></div>
+                                <div id="disabilityProfile" style="height: 500px; width: 500px; float: right"></div>
+                            </div>
+                            <h4 class="section-heading" style="color: #F05F40">Placeholder Text 3</h4>
+                        </div>
+                        <div class="tab-pane fade" id="drugUseTab" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div id="drugUseSurvey" style="height: 500px; width: 500px; float: left"></div>
+                                <div id="drugUseProfile" style="height: 500px; width: 500px; float: right"></div>
+                            </div>
+                            <h3 class="section-heading" style="color: #F05F40">Placeholder Text 4</h3>
+                        </div>
+                        <div class="tab-pane fade" id="educationTab" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div id="educationSurvey" style="height: 500px; width: 500px; float: left"></div>
+                                <div id="educationProfile" style="height: 500px; width: 500px; float: right"></div>
+                            </div>
+                            <h3 class="section-heading" style="color: #F05F40">Placeholder Text 5</h3>
+                        </div>
+                        <div class="tab-pane fade" id="incomeTypeTab" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div id="incomeTypeSurvey" style="height: 500px; width: 500px; float: left"></div>
+                                <div id="incomeTypeProfile" style="height: 500px; width: 500px; float: right"></div>
+                            </div>
+                            <h3 class="section-heading">Placeholder Text 6</h3>
+                        </div>
+                        <div class="tab-pane fade" id="methodOfTransmissionTab" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div id="methodOfTransmissionSurvey" style="height: 500px; width: 500px; float: left"></div>
+                                <div id="methodOfTransmissionProfile" style="height: 500px; width: 500px; float: right"></div>
+                            </div>
+                            <h3 class="section-heading" style="color: #F05F40">Placeholder Text 7</h3>
+                        </div>
+                        <div class="tab-pane fade" id="sexualOrientationTab" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div id="sexualOrientationSurvey" style="height: 500px; width: 500px; float: left"></div>
+                                <div id="sexualOrientationProfile" style="height: 500px; width: 500px; float: right"></div>
+                            </div>
+                            <h3 class="section-heading">Placeholder Text 8</h3>
+                        </div>
+                        <div class="tab-pane fade" id="raceTab" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div id="raceSurvey" style="height: 500px; width: 500px; float: left"></div>
+                                <div id="raceProfile" style="height: 500px; width: 500px; float: right"></div>
+                            </div>
+                            <h3 class="section-heading" style="color: #F05F40">Placeholder Text 9</h3>
+                        </div>
+                    </div>
 
-                <div class="collapse" id="collapseExample">
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="Sociodemographics.js"></script>
+
+<section class="bg-primary" id="about">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">Mental health problems can be comorbid with HIV</h2>
+            <hr class="light my-4">
+            <p class="text-faded mb-4">
+            <div align="center" id="mentalHealthBar"></div>
+
+            <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Ethnicity
+                </a>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+                    Education Level
+                </button>
+            </p>
+
+            <div class="collapse" id="collapseExample">
                     <div class="card card-body">
                         <div align="center" id="mentalHealthDepression"></div>
                         <div align="center" id="mentalHealthAnxiety"></div>
