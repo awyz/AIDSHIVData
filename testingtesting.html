@@ -41,7 +41,7 @@
     <div style="text-align: center" id="instructions"><h4>
         Insert description about chart purpose, what it tells us, etc
         <br> Click on a section of the bar chart for more information</h4>
-        <p>n = 398</p></div>
+    <p>n = 398</p></div>
 
     <div id="hivDesc">
         HIV Case management description
@@ -108,7 +108,9 @@
 
 <script>
     // todo Change the fonts
+
     var group;
+
     var barOptions_stacked = {
         hover :{
             animationDuration:0
@@ -160,25 +162,28 @@
                     return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.xLabel;
                 },
                 afterLabel: function (tooltipItem, data) {
-                    var allData = data.datasets[tooltipItem.datasetIndex].data;
-                    var tooltipLabel = data.labels[tooltipItem.index];
-                    var tooltipData = allData[tooltipItem.index];
-                    var total = 0;
-                    for (var i=0; i < allData.length; i++) {
-                        total += allData[i];
-                    }
-                    var tooltipPercentage = Math.round((tooltipData / total) * 100);
-                    return (tooltipPercentage + '%');
+                        var allData = data.datasets[tooltipItem.datasetIndex].data;
+                        var tooltipLabel = data.labels[tooltipItem.index];
+                        var tooltipData = allData[tooltipItem.index];
+                        var total = 0;
+                        for (var i=0; i < allData.length; i++) {
+                            total += allData[i];
+                        }
+                        var tooltipPercentage = Math.round((tooltipData / total) * 100);
+                        return (tooltipPercentage + '%');
                 }
             }
         }
     };
-    // todo Decide on a color palette
+
+// todo Decide on a color palette
+
     var ctx = document.getElementById("myBarChart");
     var myChart = new Chart(ctx, {
         type: 'horizontalBar',
         data: {
             labels: ["HIV Case Management", "Dental Care", "Counseling", "Information", "Alternative Therapy", "Aid at Home", "Paying Medical Costs", "Enrolling in Insurance Coverage", "Help with Alcohol/Drug Abuse", "Social Support", "Employment", "Education", "Paying for Food", "Housing", "Paying Bills"],
+
             datasets: [{ // Easy
                 label: "Easy",
                 data: [277, 134, 54, 120, 29, 28, 99, 62, 12, 55, 5, 3, 44, 48, 29],
@@ -206,8 +211,10 @@
                 backgroundColor: "rgba(163, 155, 168, 1)"
             }]
         },
+
         options: barOptions_stacked,
     });
+
     // Hide everything
     window.onload=function(){
         document.getElementById("hivDesc").style.display='none';
@@ -226,14 +233,17 @@
         document.getElementById("housingDesc").style.display='none';
         document.getElementById("billsDesc").style.display='none';
     }
+
     document.getElementById("myBarChart").onclick = function (evt) {
         var activePoint = myChart.getElementAtEvent(evt)[0];
         var data = activePoint._chart.data;
         var datasetIndex = activePoint._datasetIndex;
         var label = data.datasets[datasetIndex].label;
         var value = data.datasets[datasetIndex].data[activePoint._index];
+
         console.log("index: " + datasetIndex);
         console.log(myChart.data.labels[activePoint._index]);
+
         function closeAll() {
             console.log("Close everything");
             document.getElementById("hivDesc").style.display='none';
@@ -252,8 +262,11 @@
             document.getElementById("housingDesc").style.display='none';
             document.getElementById("billsDesc").style.display='none';
         }
+
         console.log(label, value, datasetIndex);
         closeAll();
+
+
         // Sees which bar has been clicked & acts accordingly
         switch(myChart.data.labels[activePoint._index]) {
             case ("HIV Case Management"): // HIV Case Management
@@ -266,6 +279,7 @@
                     x.style.display = "block";
                 }
                 break;
+
             case ("Dental Care"): // Dental
                 document.getElementById("instructions").style.display = "none";
                 var x = document.getElementById("dentalDesc");
@@ -274,6 +288,7 @@
                 else
                     x.style.display = "block";
                 break;
+
             case ("Counseling"): // Counseling
                 document.getElementById("instructions").style.display = "none";
                 var x = document.getElementById("counselingDesc");
@@ -282,6 +297,7 @@
                 else
                     x.style.display = "block";
                 break;
+
             case ("Information"): // Info
                 document.getElementById("instructions").style.display = "none";
                 var x = document.getElementById("infoDesc");
@@ -290,6 +306,7 @@
                 else
                     x.style.display = "block";
                 break;
+
             case ("Alternative Therapy"): // Easy alt therapy
                 document.getElementById("instructions").style.display = "none";
                 var x = document.getElementById("altTherapyDesc");
@@ -298,6 +315,7 @@
                 else
                     x.style.display = "block";
                 break;
+
             case ("Aid at Home"): // Assistance at home
                 document.getElementById("instructions").style.display = "none";
                 var x = document.getElementById("homeAidDesc");
@@ -306,6 +324,7 @@
                 else
                     x.style.display = "block";
                 break;
+
             case ("Paying Medical Costs"): // Medical costs
                 document.getElementById("instructions").style.display = "none";
                 var x = document.getElementById("medDesc");
@@ -314,6 +333,7 @@
                 else
                     x.style.display = "block";
                 break;
+
             case ("Enrolling in Insurance Coverage"):
                 document.getElementById("instructions").style.display = "none";
                 var x = document.getElementById("insuranceDesc");
@@ -322,6 +342,7 @@
                 else
                     x.style.display = "block";
                 break;
+
             case ("Help with Alcohol/Drug Abuse"):
                 document.getElementById("instructions").style.display = "none";
                 var x = document.getElementById("abuseDesc");
@@ -330,6 +351,7 @@
                 else
                     x.style.display = "block";
                 break;
+
             case ("Social Support"):
                 document.getElementById("instructions").style.display = "none";
                 var x = document.getElementById("socialDesc");
@@ -338,6 +360,7 @@
                 else
                     x.style.display = "block";
                 break;
+
             case ("Employment"): // Easy alt therapy
                 document.getElementById("instructions").style.display = "none";
                 var x = document.getElementById("jobDesc");
@@ -346,6 +369,7 @@
                 else
                     x.style.display = "block";
                 break;
+
             case ("Education"):
                 document.getElementById("instructions").style.display = "none";
                 var x = document.getElementById("eduDesc");
@@ -354,6 +378,7 @@
                 else
                     x.style.display = "block";
                 break;
+
             case ("Paying for Food"):
                 document.getElementById("instructions").style.display = "none";
                 var x = document.getElementById("foodDesc");
@@ -362,6 +387,7 @@
                 else
                     x.style.display = "block";
                 break;
+
             case ("Housing"):
                 document.getElementById("instructions").style.display = "none";
                 var x = document.getElementById("housingDesc");
@@ -370,6 +396,7 @@
                 else
                     x.style.display = "block";
                 break;
+
             case ("Paying Bills"):
                 document.getElementById("instructions").style.display = "none";
                 var x = document.getElementById("billsDesc");
@@ -379,6 +406,7 @@
                     x.style.display = "block";
                 break;
         }
+
     }
 </script>
 
