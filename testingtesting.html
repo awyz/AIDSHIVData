@@ -38,27 +38,69 @@
 <div class="container" style="border: 2px solid rgb(188, 188, 188)">
     &nbsp;
 
-    <div style="text-align: center" id="instructions"><h3>Click on a section of the bar chart for more information</h3>
+    <div style="text-align: center" id="instructions"><h4>
+        Insert description about chart purpose, what it tells us, etc
+        <br> Click on a section of the bar chart for more information</h4>
     <p>n = 398</p></div>
 
     <div id="hivDesc">
-        HIV Case management easy description
+        HIV Case management description
     </div>
 
     <div id="dentalDesc">
-        Dental easy description
+        Dental description
     </div>
 
     <div id="counselingDesc">
-        Counseling easy description
+        Counseling description
     </div>
 
     <div id="infoDesc">
-        Info easy description
+        Info description
     </div>
 
     <div id="altTherapyDesc">
-        Alt Therapy easy description
+        Alt Therapy description
+    </div>
+
+    <div id="homeAidDesc">
+        Home Aid description
+    </div>
+
+    <div id="insuranceDesc">
+        Insurance description
+    </div>
+
+    <div id="medDesc">
+        Med description
+    </div>
+
+    <div id="abuseDesc">
+        Drug/Alcohol abuse description
+    </div>
+
+    <div id="socialDesc">
+        Social description
+    </div>
+
+    <div id="jobDesc">
+        Employment description
+    </div>
+
+    <div id="eduDesc">
+        Education description
+    </div>
+
+    <div id="foodDesc">
+        Food description
+    </div>
+
+    <div id="housingDesc">
+        Housing description
+    </div>
+
+    <div id="billsDesc">
+        Bills description
     </div>
 
     &nbsp;
@@ -107,8 +149,9 @@
         pointLabelFontFamily : "Quadon Extra Bold",
         scaleFontFamily : "Quadon Extra Bold",
         title: {
-            text: "Difficulty to access care",
-            display: true
+            text: "Access to Services",
+            display: true,
+            fontSize: 40
         },
         legend: {
             display: true,
@@ -123,7 +166,7 @@
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
                         var total = 0;
-                        for (var i=0; i<allData.length; i++) {
+                        for (var i=0; i < allData.length; i++) {
                             total += allData[i];
                         }
                         var tooltipPercentage = Math.round((tooltipData / total) * 100);
@@ -133,42 +176,39 @@
         }
     };
 
-// todo Fix percentages that show up as NaN
+// todo Decide on a color palette
 
     var ctx = document.getElementById("myBarChart");
     var myChart = new Chart(ctx, {
         type: 'horizontalBar',
         data: {
-            labels: ["HIV Case Management", "Dental Care", "Counseling", "Information", "Alternative Therapy"],
+            labels: ["HIV Case Management", "Dental Care", "Counseling", "Information", "Alternative Therapy", "Aid at Home", "Paying Medical Costs", "Enrolling in Insurance Coverage", "Help with Alcohol/Drug Abuse", "Social Support", "Employment", "Education", "Paying for Food", "Housing", "Paying Bills"],
 
             datasets: [{ // Easy
                 label: "Easy",
-                data: [277, 134, 78, 120, 29],
-                backgroundColor: "rgb(83, 226, 119)",
-                hoverBackgroundColor: "rgba(66, 175, 94, 1)"
+                data: [277, 134, 54, 120, 29, 28, 99, 62, 12, 55, 5, 3, 44, 48, 29],
+                backgroundColor: "rgba(165, 255, 214, 1)",
             },{ // Possible but required some work
                 label: "Possible with some work",
-                data: [39, 67, 40, 32, 43],
-                backgroundColor: "rgba(255, 233, 0, 1)",
-                hoverBackgroundColor: "rgba(191, 178, 38, 1)"
+                data: [39, 67, 15, 32, 43, 26, 73, 47, 11, 24, 15, 11, 74, 58, 47],
+                backgroundColor: "rgba(132, 220, 198, 1)",
             }, { // Possible but very difficult
                 label: "Possible but very difficult",
-                data: [5, 38, 9, 6, 35],
-                backgroundColor: "rgba(255, 165, 0, 1)",
-                hoverBackgroundColor: "rgba(188, 134, 35, 1)"
+                data: [5, 38, 5, 6, 35, 6, 24, 9, 1, 7, 8, 4, 26, 26, 16],
+                backgroundColor: "rgba(255, 166, 158, 1)",
             }, { // Too difficult to access
                 label: "Too difficult to access",
-                data: [1, 22, 8, 0, 43],
-                backgroundColor: "rgba(219, 21, 21, 1)",
-                hoverBackgroundColor: "rgba(119, 17, 17, 1)"
+                data: [1, 22, 14, 0, 43, 6, 5, 2, 2, 5, 3, 13, 10, 10, 16],
+                backgroundColor: "rgba(255, 104, 107, 1)",
+//                hoverBackgroundColor: "rgba(166, 60, 6, 1)"
             }, { // blanks
                 label: "Chose not to answer",
-                data: [1, 5, 7, 2, 241],
-                backgroundColor: "rgba(155, 155, 155, 1)"
+                data: [1, 5, 7, 2, 241, 3, 3, 5, 6, 7, 7, 7, 7, 7, 7],
+                backgroundColor: "rgba(184, 197, 214, 1)"
             }, { // No
                 label: "Did not need service",
-                data: [75, 132, 256, 238, 7],
-                backgroundColor: "rgba(188, 188, 188, 1)"
+                data: [75, 132, 303, 238, 7, 329, 194, 273, 366, 300, 360, 360, 237, 249, 283],
+                backgroundColor: "rgba(163, 155, 168, 1)"
             }]
         },
 
@@ -182,6 +222,16 @@
         document.getElementById("counselingDesc").style.display='none';
         document.getElementById("infoDesc").style.display='none';
         document.getElementById("altTherapyDesc").style.display='none';
+        document.getElementById("homeAidDesc").style.display='none';
+        document.getElementById("medDesc").style.display='none';
+        document.getElementById("insuranceDesc").style.display='none';
+        document.getElementById("abuseDesc").style.display='none';
+        document.getElementById("socialDesc").style.display='none';
+        document.getElementById("jobDesc").style.display='none';
+        document.getElementById("eduDesc").style.display='none';
+        document.getElementById("foodDesc").style.display='none';
+        document.getElementById("housingDesc").style.display='none';
+        document.getElementById("billsDesc").style.display='none';
     }
 
     document.getElementById("myBarChart").onclick = function (evt) {
@@ -201,13 +251,23 @@
             document.getElementById("counselingDesc").style.display='none';
             document.getElementById("infoDesc").style.display='none';
             document.getElementById("altTherapyDesc").style.display='none';
+            document.getElementById("homeAidDesc").style.display='none';
+            document.getElementById("medDesc").style.display='none';
+            document.getElementById("insuranceDesc").style.display='none';
+            document.getElementById("abuseDesc").style.display='none';
+            document.getElementById("socialDesc").style.display='none';
+            document.getElementById("jobDesc").style.display='none';
+            document.getElementById("eduDesc").style.display='none';
+            document.getElementById("foodDesc").style.display='none';
+            document.getElementById("housingDesc").style.display='none';
+            document.getElementById("billsDesc").style.display='none';
         }
 
         console.log(label, value, datasetIndex);
         closeAll();
 
 
-
+        // Sees which bar has been clicked & acts accordingly
         switch(myChart.data.labels[activePoint._index]) {
             case ("HIV Case Management"): // HIV Case Management
                 document.getElementById("instructions").style.display = "none";
@@ -256,21 +316,98 @@
                     x.style.display = "block";
                 break;
 
-//            case ("Possible with some work" && 39): // Medium HIV care
-//                document.getElementById("instructions").style.display = "none";
-//                var x = document.getElementById("hivYellowDesc");
-//                if (x.style.display == "block")
-//                    x.style.display = "none"
-//                else
-//                    x.style.display = "block";
-//                break;
+            case ("Aid at Home"): // Assistance at home
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("homeAidDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Paying Medical Costs"): // Medical costs
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("medDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Enrolling in Insurance Coverage"):
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("insuranceDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Help with Alcohol/Drug Abuse"):
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("abuseDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Social Support"):
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("socialDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Employment"): // Easy alt therapy
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("jobDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Education"):
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("eduDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Paying for Food"):
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("foodDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Housing"):
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("housingDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
+
+            case ("Paying Bills"):
+                document.getElementById("instructions").style.display = "none";
+                var x = document.getElementById("billsDesc");
+                if(x.style.display == "block")
+                    x.style.display = "none"
+                else
+                    x.style.display = "block";
+                break;
         }
 
     }
-
-    // TESSST
-
-
 </script>
 
 </body>
