@@ -437,3 +437,13 @@ header.masthead p {
   color: white;
 }
 
+.section-heading-discrepancy {
+  margin-top: 0;
+  /*background-color: #F05F40;*/
+  /*color: #f05f40;*/
+  background-color: #FF6A4B;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+}
+

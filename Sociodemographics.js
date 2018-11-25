@@ -3,6 +3,7 @@ var ageChartSurvey = echarts.init(document.getElementById('ageSurvey'));
 var ageOptionsSurvey = {
     title : {
         text: 'HIV Needs Assessment',
+        subtext: '2018 / N=398',
         x: 'center'
     },
     tooltip : {
@@ -12,7 +13,7 @@ var ageOptionsSurvey = {
     legend: {
         orient: 'vertical',
         left: 'left',
-        data: ['Placeholder1', 'Placeholder2', 'Placeholder3']
+        data: ['<13', '13-24', '25-34', '35-44', '45-54', '55+']
     },
     series: [
         {
@@ -21,9 +22,12 @@ var ageOptionsSurvey = {
             radius: '55%',
             center: ['50%', '60%'],
             data: [
-                {value:69, name: 'Placeholder1'},
-                {value:69, name: 'Placeholder2'},
-                {value:69, name: 'Placeholder3'}
+                {value:1, name: '<13'},
+                {value:2, name: '13-24'},
+                {value:24, name: '25-34'},
+                {value:42, name: '35-44'},
+                {value:101, name: '45-54'},
+                {value:228, name: '55+'}
             ],
         }
     ]
@@ -34,6 +38,7 @@ var ageChartProfile = echarts.init(document.getElementById('ageProfile'));
 var ageOptionsProfile = {
     title : {
         text: 'Epi Profile',
+        subtext: '2010-2015 / N=598',
         x: 'center'
     },
     tooltip : {
@@ -43,7 +48,7 @@ var ageOptionsProfile = {
     legend: {
         orient: 'vertical',
         left: 'left',
-        data: ['Placeholder1', 'Placeholder2', 'Placeholder3']
+        data: ['<13', '13-24', '25-34', '35-44', '45-54', '55+']
     },
     series: [
         {
@@ -52,9 +57,12 @@ var ageOptionsProfile = {
             radius: '55%',
             center: ['50%', '60%'],
             data: [
-                {value:69, name: 'Placeholder1'},
-                {value:69, name: 'Placeholder2'},
-                {value:69, name: 'Placeholder3'}
+                {value:1, name: '<13'},
+                {value:68, name: '13-24'},
+                {value:191, name: '25-34'},
+                {value:140, name: '35-44'},
+                {value:134, name: '45-54'},
+                {value:64, name: '55+'}
             ],
         }
     ]
