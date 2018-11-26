@@ -1,289 +1,163 @@
 // Age
-var ageChartSurvey = echarts.init(document.getElementById('ageSurvey'));
-var ageOptionsSurvey = {
-    title : {
-        text: 'HIV Needs Assessment',
-        subtext: '2018 / N=398',
-        x: 'center'
+var ageChart = echarts.init(document.getElementById('age'));
+var ageOptions = {
+    title: {
+        text: 'Age',
+        subtext: 'HIV Needs Assessment 2018 / N=398\nEpi Profile 2010-2015/ N = 598'
     },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
     },
     legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['<13', '13-24', '25-34', '35-44', '45-54', '55+']
+        data: ['HIV Needs Assessment', 'Epi Profile']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['55+', '45-54', '35-44', '25-34', '13-24', '<13']
     },
     series: [
         {
-            name: 'Distribution of Ages in HIV Needs Assessment',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-                {value:1, name: '<13'},
-                {value:2, name: '13-24'},
-                {value:24, name: '25-34'},
-                {value:42, name: '35-44'},
-                {value:101, name: '45-54'},
-                {value:228, name: '55+'}
-            ],
-        }
-    ]
-};
-ageChartSurvey.setOption(ageOptionsSurvey);
-
-var ageChartProfile = echarts.init(document.getElementById('ageProfile'));
-var ageOptionsProfile = {
-    title : {
-        text: 'Epi Profile',
-        subtext: '2010-2015 / N=598',
-        x: 'center'
-    },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['<13', '13-24', '25-34', '35-44', '45-54', '55+']
-    },
-    series: [
+            name: 'HIV Needs Assessment',
+            type: 'bar',
+            data: [228, 101, 42, 24, 2, 1]
+        },
         {
-            name: 'Distribution of Ages in Epi Profile',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-                {value:1, name: '<13'},
-                {value:68, name: '13-24'},
-                {value:191, name: '25-34'},
-                {value:140, name: '35-44'},
-                {value:134, name: '45-54'},
-                {value:64, name: '55+'}
-            ],
+            name: 'Epi Profile',
+            type: 'bar',
+            data: [64, 134, 140, 191, 68, 1]
         }
     ]
 };
-ageChartProfile.setOption(ageOptionsProfile);
+ageChart.setOption(ageOptions);
 
 
 // Case Management
-var caseManagementChartSurvey = echarts.init(document.getElementById('caseManagementSurvey'));
-var caseManagementOptionsSurvey = {
-    title : {
-        text: 'HIV Needs Assessment',
-        subtext: '2018 / N=397',
-        x: 'center'
+var caseManagementChart = echarts.init(document.getElementById('caseManagement'));
+var caseManagementOptions = {
+    title: {
+        text: 'Case Management',
+        subtext: 'HIV Needs Assessment 2018 / N=398\nEpi Profile / No data available.'
     },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
     },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['Life Foundation', 'Malama Pono', 'HIHAF', 'Maui AIDS Foundation']
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Malama Pono', 'Maui AIDS Foundation', 'HIHAF', 'Life Foundation']
     },
     series: [
         {
-            name: 'Distribution of Case Management Providers in HIV Needs Assessment',
-            type: 'pie',
-            radius: '50%',
-            center: ['50%', '60%'],
-            data: [
-                {value:219, name: 'Life Foundation'},
-                {value:32, name: 'Malama Pono'},
-                {value:103, name: 'HIHAF'},
-                {value:43, name: 'Maui AIDS Foundation'}
-            ],
-        }
+            name: 'HIV Needs Assessment',
+            type: 'bar',
+            data: [32, 43, 103, 219]
+        },
     ]
 };
-
-caseManagementChartSurvey.setOption(caseManagementOptionsSurvey);
-
-var caseManagementChartProfile = echarts.init(document.getElementById('caseManagementProfile'));
-var caseManagementOptionsProfile = {
-    title : {
-        text: 'Epi Profile',
-        subtext: 'No data available.',
-        x: 'center'
-    },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: []
-    },
-    series: [
-        {
-            name: 'Distribution of Disabilities in Epi Profile',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-            ],
-        }
-    ]
-};
-caseManagementChartProfile.setOption(caseManagementOptionsProfile);
+caseManagementChart.setOption(caseManagementOptions);
 
 
 // Disabilities
-var disabilityChartSurvey = echarts.init(document.getElementById('disabilitySurvey'));
-var disabilityOptionsSurvey = {
-    title : {
-        text: 'HIV Needs Assessment',
-        x: 'center'
+var disabilitiesChart = echarts.init(document.getElementById('disabilities'));
+var disabilitiesOptions = {
+    title: {
+        text: 'Disabilities',
+        subtext: 'HIV Needs Assessment 2018 / N=398\nEpi Profile / No data available.'
     },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
     },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['Heart Disease', 'Arthritis', 'Chronic Pain', 'Diabetes', 'Depression', 'Anxiety', 'Hepatitis C',
-            'Migraine Headaches', 'Insomnia/Sleep Disorder', 'Hearing Impairment', 'Asthma', 'Overactive Bladder',
-            'Sciatica', 'Irritable Bowel Syndrome', 'Osteoporosis', 'Eczema', 'Cancer', 'Emphysema', 'Ulcers', 'Epilepsy',
-            'Multiple Sclerosis']
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Epilepsy', 'Ulcers', 'Eczema', 'Hepatitis C', 'Osteoporosis', 'Diabetes', 'Cancer',
+            'Emphysema', 'Irritable Bowel Syndrome', 'Hearing Impairment', 'Asthma', 'Migraine Headaches', 'Sciatica',
+            'Overactive Bladder', 'Other Mental Health Disorders', 'Arthritis', 'Insomnia/Sleep Disorder', 'Chronic Pain', 'Anxiety', 'Depression', 'Heart Disease']
     },
     series: [
         {
-            name: 'Distribution of Disabilities in HIV Needs Assessment',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-                {value:69, name: 'Heart Disease'},
-                {value:69, name: 'Arthritis'},
-                {value:69, name: 'Chronic Pain'},
-                {value:69, name: 'Diabetes'},
-                {value:69, name: 'Depression'},
-                {value:69, name: 'Anxiety'},
-                {value:69, name: 'Hepatitis C'},
-                {value:69, name: 'Migraine Headaches'},
-                {value:69, name: 'Insomnia/Sleep Disorder'},
-                {value:69, name: 'Hearing Impairment'},
-                {value:69, name: 'Asthma'},
-                {value:69, name: 'Overactive Bladder'},
-                {value:69, name: 'Sciatica'},
-                {value:69, name: 'Irritable Bowel Syndrome'},
-                {value:69, name: 'Osteoporosis'},
-                {value:69, name: 'Eczema'},
-                {value:69, name: 'Cancer'},
-                {value:69, name: 'Emphysema'},
-                {value:69, name: 'Ulcers'},
-                {value:69, name: 'Epilepsy'},
-                {value:69, name: 'Minor Sclerosis'},
-            ],
-        }
+            name: 'HIV Needs Assessment',
+            type: 'bar',
+            data: [4, 5, 7, 9, 10, 10, 11, 14, 19, 20, 22, 24, 26, 28, 29, 50, 54, 69, 77, 86, 94]
+        },
     ]
 };
-
-disabilityChartSurvey.setOption(disabilityOptionsSurvey);
-
-var disabilityChartProfile = echarts.init(document.getElementById('disabilityProfile'));
-var disabilityOptionsProfile = {
-    title : {
-        text: 'Epi Profile',
-        x: 'center'
-    },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['Placeholder1', 'Placeholder2', 'Placeholder3']
-    },
-    series: [
-        {
-            name: 'Distribution of Disabilities in Epi Profile',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-                {value:69, name: 'Placeholder1'},
-                {value:69, name: 'Placeholder2'},
-                {value:69, name: 'Placeholder3'}
-            ],
-        }
-    ]
-};
-disabilityChartProfile.setOption(disabilityOptionsProfile);
+disabilitiesChart.setOption(disabilitiesOptions);
 
 
 // Drug Use
-var drugUseChartSurvey = echarts.init(document.getElementById('drugUseSurvey'));
-var drugUseOptionsSurvey = {
-    title : {
-        text: 'HIV Needs Assessment',
-        x: 'center'
+var drugChart = echarts.init(document.getElementById('drugUse'));
+var drugOptions = {
+    title: {
+        text: 'Drug Use',
+        subtext: 'HIV Needs Assessment 2018 / N=398\nEpi Profile / No data available.'
     },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
     },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['Placeholder1', 'Placeholder2', 'Placeholder3']
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['']
     },
     series: [
         {
-            name: 'Distribution of Drug Use in Survey',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-                {value:69, name: 'Placeholder1'},
-                {value:69, name: 'Placeholder2'},
-                {value:69, name: 'Placeholder3'}
-            ],
-        }
+            name: 'HIV Needs Assessment',
+            type: 'bar',
+            data: []
+        },
     ]
 };
-
-drugUseChartSurvey.setOption(drugUseOptionsSurvey);
-
-var drugUseChartProfile = echarts.init(document.getElementById('drugUseProfile'));
-var drugUseOptionsProfile = {
-    title : {
-        text: 'Epi Profile',
-        x: 'center'
-    },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['Placeholder1', 'Placeholder2', 'Placeholder3']
-    },
-    series: [
-        {
-            name: 'Distribution of Drug Use in Epi Profile',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-                {value:69, name: 'Placeholder1'},
-                {value:69, name: 'Placeholder2'},
-                {value:69, name: 'Placeholder3'}
-            ],
-        }
-    ]
-};
-drugUseChartProfile.setOption(drugUseOptionsProfile);
+drugChart.setOption(drugOptions);
 
 
 // Education
