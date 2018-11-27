@@ -69,7 +69,7 @@ var caseManagementOptions = {
     },
     yAxis: {
         type: 'category',
-        data: ['Malama Pono', 'Maui AIDS Foundation', 'HIHAF', 'Life Foundation']
+        data: ['Malama Pono (Kauai)', 'Maui AIDS Foundation', 'Hawaii Island HIV/AIDS Foundation', 'Life Foundation']
     },
     series: [
         {
@@ -147,13 +147,13 @@ var drugOptions = {
     },
     yAxis: {
         type: 'category',
-        data: ['']
+        data: ['Other', 'Crack', 'Ecstasy', 'Heroin', 'Cocaine', 'Marijuana', 'Methamphetamine', 'None']
     },
     series: [
         {
             name: 'HIV Needs Assessment',
             type: 'bar',
-            data: []
+            data: [4, 4, 4, 5, 6, 36, 131, 243]
         },
     ]
 };
