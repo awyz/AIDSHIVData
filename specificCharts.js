@@ -1,0 +1,392 @@
+//doughnut chart for Case Management 
+
+var caseManagementDoughnut = echarts.init(document.getElementById('hivDesc'));
+var caseManagementDoughnutOption = {
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    legend: false, 
+	// {
+        // orient: 'vertical',
+        // x: 'left',
+        // data:['easy','possible with\n some work','chose not\n to answer','did not\n need service','possible but\n very difficult','too difficult']
+    // },
+    series: [
+        {
+            name:'Access to Case Management',
+            type:'pie',
+            radius: ['50%', '70%'],
+            avoidLabelOverlap: false,
+            label: {
+                normal: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    show: true,
+                    textStyle: {
+                        fontSize: '30',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data:[
+                {value:1, name:'too difficult', itemStyle: {color: 'rgba(255, 104, 107, 1)'}},
+                {value:5, name:'possible but\n very difficult', itemStyle: {color: 'rgba(255, 166, 166, 1)'}},
+                {value:1, name:'chose not\n to answer', itemStyle: {color: 'rgba(163, 155, 168, 1)'}},
+                {value:75, name:'did not\n need service', itemStyle: {color: 'rgba(184, 197, 214, 1)'}},
+                {value:39, name:'possible with\n some work', itemStyle: {color: 'rgba(152, 148, 255, 1)'}},
+                {value:277, name:'easy', itemStyle: {color: 'rgba(104, 99, 240, 1)'}}
+            ]
+        }
+    ]
+};
+caseManagementDoughnut.setOption(caseManagementDoughnutOption);
+//bar graph of Case Management Respondents that answered very or too difficult
+
+//broken down by ethnicity
+var caseManagementBarriersEthnicity = echarts.init(document.getElementById('hivCmEthnicity'));
+var caseManagementOptions1 = {
+    title: {
+        text: 'Case Management Barriers Broken Down by Ethnicity',
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['prefer not to answer','Native Hawaiian','White','African American','Hispanic',
+		'American Indian', 'Asian Indian', 'Chinese', 'Filipino','Japanese','Korean', 'Vietnamese', 
+		'Guamanian', 'Samoan', 'Other Pacific Islander', 'Other Asian', 'Other Race']
+    },
+    series: [
+        {
+            name: 'Very Difficult',
+            type: 'bar',
+            data: [1, 1, 2]
+        },
+		{
+			name:'Too Difficult',
+			type: 'bar',
+			data: ["","",1]
+			
+		}
+    ]
+};
+caseManagementBarriersEthnicity.setOption(caseManagementOptions1);
+
+
+//broken down by age
+var caseManagementBarriersAge = echarts.init(document.getElementById('hivCmAge'));
+var caseManagementOptions2 = {
+    title: {
+        text: 'Case Management Barriers Broken Down by Age',
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['55+', '45-54', '35-44', '25-34', '13-24', '<13']
+    },
+    series: [
+        {
+            name: 'Very Difficult',
+            type: 'bar',
+            data: [2,3]
+        },
+		{
+			name:'Too Difficult',
+			type: 'bar',
+			data: [1]
+			
+		}
+    ]
+};
+caseManagementBarriersAge.setOption(caseManagementOptions2);
+
+//broken down by education
+var caseManagementBarriersEducation = echarts.init(document.getElementById('hivCmEducation'));
+var caseManagementOptions3 = {
+    title: {
+        text: 'Case Management Barriers Broken Down by Education',
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Bachelor\'s', 'Some College', 'Vocational School', 'High School','Prefer not to Answer']
+    },
+    series: [
+        {
+            name: 'Very Difficult',
+            type: 'bar',
+            data: ["",3,1,1]
+        },
+		{
+			name:'Too Difficult',
+			type: 'bar',
+			data: [1]
+			
+		}
+    ]
+};
+caseManagementBarriersEducation.setOption(caseManagementOptions3);
+
+//broken down by income type
+var caseManagementBarriersIncomeType = echarts.init(document.getElementById('hivCmIncomeType'));
+var caseManagementOptions4 = {
+    title: {
+        text: 'Case Management Barriers\n Broken Down by Income Type',
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['SSI/SSDI','Employement','Veteran\'s Benefits','Other']
+    },
+    series: [
+        {
+            name: 'Very Difficult',
+            type: 'bar',
+            data: [4,"","",1]
+        },
+		{
+			name:'Too Difficult',
+			type: 'bar',
+			data: [1]
+			
+		}
+    ]
+};
+caseManagementBarriersIncomeType.setOption(caseManagementOptions4);
+
+//broken down by sexual orientation
+var caseManagementBarriersSexualOrientation = echarts.init(document.getElementById('hivCmSexualOrientation'));
+var caseManagementOptions5 = {
+    title: {
+        text: 'Case Management Barriers\n Broken Down by Sexual Orientation',
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Straight','Homosexual','Bisexual','Non-Binary','Transgender']
+    },
+    series: [
+        {
+            name: 'Very Difficult',
+            type: 'bar',
+            data: [4,"","",1]
+        },
+		{
+			name:'Too Difficult',
+			type: 'bar',
+			data: [1]
+			
+		}
+    ]
+};
+caseManagementBarriersSexualOrientation.setOption(caseManagementOptions5);
+
+//broken down by disability
+var caseManagementBarriersDisability = echarts.init(document.getElementById('hivCmDisability'));
+var caseManagementOptions6 = {
+    title: {
+        text: 'Case Management Barriers\n Broken Down by Disability',
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['disabilities']
+    },
+    series: [
+        {
+            name: 'Very Difficult',
+            type: 'bar',
+            data: [4,"","",1]
+        },
+		{
+			name:'Too Difficult',
+			type: 'bar',
+			data: [1]
+			
+		}
+    ]
+};
+caseManagementBarriersDisability.setOption(caseManagementOptions6);
+
+//broken down by drug use
+var caseManagementBarriersDrugUse = echarts.init(document.getElementById('hivCmDrugUse'));
+var caseManagementOptions7 = {
+    title: {
+        text: 'Case Management Barriers\n Broken Down by Drug Use',
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Cocaine','Crack','Ecstasy','Heroin', 'Marijuana',
+		'Meth','None of the Above','Other']
+    },
+    series: [
+        {
+            name: 'Very Difficult',
+            type: 'bar',
+            data: ["","","","",3,"",2]
+        },
+		{
+			name:'Too Difficult',
+			type: 'bar',
+			data: ["","","","",1]
+			
+		}
+    ]
+};
+caseManagementBarriersDrugUse.setOption(caseManagementOptions7);
+
+//broken down by method of transmission 
+var caseManagementBarriersMoT = echarts.init(document.getElementById('hivCmMoT'));
+var caseManagementOptions8 = {
+    title: {
+        text: 'Case Management Barriers\n Broken Down by Method of Transmission',
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Sex With Men','Sex With Women','Sharing Needles',
+		'Blood Products or Transfusions','Was Born Infected','Unknown','Other']
+    },
+    series: [
+        {
+            name: 'Very Difficult',
+            type: 'bar',
+            data: [2,"",1,1,'',1]
+        },
+		{
+			name:'Too Difficult',
+			type: 'bar',
+			data: [1]
+			
+		}
+    ]
+};
+caseManagementBarriersMoT.setOption(caseManagementOptions8);
