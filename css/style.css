@@ -1,0 +1,123 @@
+.nav-pills{
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    align-items: center;
+    border: none;
+    border-radius: 300px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.nav-pills li {
+    float: none;
+    justify-content: center;
+    display: flex;
+    flex: 1;
+}
+
+.nav-pills li  a {
+    justify-content: center;
+    flex: 1;
+}
+
+.nav-pills .pill-1 .nav-link:not(.active) {
+    background-color: white;
+    color: #F05F40;
+}
+
+.nav-pills .pill-2 .nav-link:not(.active) {
+    background-color: white;
+    color: #F05F40;
+}
+
+.nav-pills .pill-3 .nav-link:not(.active) {
+    background-color: white;
+    color: #F05F40;
+}
+
+.nav-pills .pill-4 .nav-link:not(.active) {
+    background-color: white;
+    color: #F05F40;
+}
+
+.nav-pills .pill-5 .nav-link:not(.active) {
+    background-color: white;
+    color: #F05F40;
+}
+
+.nav-pills .pill-6 .nav-link:not(.active) {
+    background-color: white;
+    color: #F05F40;
+}
+
+.nav-pills .pill-7 .nav-link:not(.active) {
+    background-color: white;
+    color: #F05F40;
+}
+
+.nav-pills .pill-8 .nav-link:not(.active) {
+    background-color: white;
+    color: #F05F40;
+}
+
+.nav-pills .pill-9 .nav-link:not(.active) {
+    background-color: white;
+    color: #F05F40;
+}
+
+.nav-pills .pill-1 .nav-link {
+    background-color: #F05F40;
+    color: white;
+}
+
+.nav-pills .pill-2 .nav-link {
+    background-color: #F05F40;
+    color: white;
+}
+
+.nav-pills .pill-3 .nav-link {
+    background-color: #F05F40;
+    color: white;
+}
+
+.nav-pills .pill-4 .nav-link {
+    background-color: #F05F40;
+    color: white;
+}
+
+.nav-pills .pill-5 .nav-link {
+    background-color: #F05F40;
+    color: white;
+}
+
+.nav-pills .pill-6 .nav-link {
+    background-color: #F05F40;
+    color: white;
+}
+
+.nav-pills .pill-7 .nav-link {
+    background-color: #F05F40;
+    color: white;
+}
+
+.nav-pills .pill-8 .nav-link {
+    background-color: #F05F40;
+    color: white;
+}
+
+.nav-pills .pill-9 .nav-link {
+    background-color: #F05F40;
+    color: white;
+}
+
+.section-heading-discrepancy {
+    margin-top: 0;
+    /*background-color: #F05F40;*/
+    /*color: #f05f40;*/
+    background-color: #FF6A4B;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+}
