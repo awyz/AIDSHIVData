@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>AIDS and HIV In Hawaii</title>
+    <title>HIV & AIDS Needs Assessment</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -17,6 +17,8 @@
     <!-- Graph sheets -->
     <script src="plotly-latest.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -40,7 +42,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">HIV in Hawaii</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">HIV Needs Assessment</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -50,19 +52,13 @@
                     <a class="nav-link js-scroll-trigger" href="#sociodemographics">Sociodemographics</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">Mental Health</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#services">Primary Care</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#portfolio">Substance Abuse</a>
+                    <a class="nav-link js-scroll-trigger" href="#serviceAccess">Services</a>
                 </li>
 				<li class = "nav-item">
 					<a class ="nav-link js-scroll-trigger" href= "#map">Case Management Locations</a>
 				</li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Contact & Credits</a>
+                    <a class="nav-link js-scroll-trigger" href="#contact">Get Involved</a>
                 </li>
             </ul>
         </div>
@@ -74,13 +70,14 @@
         <div class="row">
             <div class="col-lg-10 mx-auto">
                 <h1 class="text-uppercase">
-                    <strong>AIDS and HIV In Hawaii</strong>
+                    <strong>HIV & AIDS Needs Assessment</strong>
                 </h1>
                 <hr>
             </div>
-            <div class="col-lg-8 mx-auto">
-                <p class="text-faded mb-5">[Background on study]<br>[What this study aims to achieve]<br>[Questions being asked and answered]</p>
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Results of HIV and AIDS needs assessment in Hawaii</a>
+            <div class="col-lg-8 mx-auto" style="background-color: rgba(0,0,0, .5)"> <br><br>
+                <p class="text-faded mb-5 rounded" style="text-align: justify">&nbsp;&nbsp; This survey, the HIV Needs Assessment, was conducted through CHOW, The Hawaii Life Foundation and The Hawaii Department of Health in 2017. There are 398 participants hailing from four of the eight Hawaiian Islands. Dr. Barile and Joy Agner, from the University of Hawaii at Manoa, analyzed the data and visualizations were created by Team Treatment of HIV and AIDS in Hawai’i from the University of Hawaii at Manoa.</p>
+                    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#sociodemographics">View Results</a>
+                <br><br>
             </div>
         </div>
     </div>
@@ -200,145 +197,115 @@
 
 <script src="SociodemographicsBar.js"></script>
 
-<section class="bg-primary" id="about">
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">Mental health problems can be comorbid with HIV</h2>
-            <hr class="light my-4">
-            <p class="text-faded mb-4">
-            <div align="center" id="mentalHealthBar"></div>
-
-            <p>
-                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    Ethnicity
-                </a>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-                    Education Level
-                </button>
-            </p>
-
-            <div class="collapse" id="collapseExample">
-                    <div class="card card-body">
-                        <div align="center" id="mentalHealthDepression"></div>
-                        <div align="center" id="mentalHealthAnxiety"></div>
-                        <div align="center" id="mentalHealthOtherMH"></div>
-                    </div>
-                </div>
-                <div class="collapse" id="collapseExample1">
-                    <div class="card card-body">
-                        <div align="center" id="depressionEducation"></div>
-                        <div align="center" id="anxietyEducation"></div>
-                        <div align="center" id="otherMHEducation"></div>
-                    </div>
-                </div>
-
-
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="services">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Fortunately, most HIV patients surveyed had access to primary care</h2>
-                <hr class="light my-4">
-                <p class="text-faded mb-4">
-                <div align="center" id="primaryCare"></div>
-
-                <p>
-                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        Ethnicity
-                    </a>
-                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
-                        Education Level
-                    </button>
-                </p>
-                <div class="collapse" id="collapseExample2">
-                    <div class="card card-body">
-                        <div align="center" id="primaryRace"></div>
-                    </div>
-                </div>
-                <div class="collapse" id="collapseExample3">
-                    <div class="card card-body">
-                        <div align="center" id="primaryEducation"></div>
-                    </div>
-                </div>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section style="background-color: #F05F40" class="p-0" id="portfolio">
-    <div class="container">
+<!-- Bar chart of services -->
+<br><br>
+<section class="bg-primary" id="serviceAccess">
+    <div class="fluid-container" style="background-color: white">
+        <br>
+        <h2 class="section-heading text-center">Access to Services</h2>
+        <h5 class="text-center">n = 398 people</h5>
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <br><br><br>
-                <h2 class="section-heading text-white">For some, substance abuse is a very real problem</h2>
-                <hr class="light my-4">
-                <p class="text-faded mb-4">
-
-                <!-- Insert Main Chart Here -->
-                <div align="center" id="substance"></div>
-
-                <p>
-                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        Ethnicity
-                    </a>
-                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample">
-                        Education Level
-                    </button>
-                </p>
-                <div class="collapse" id="collapseExample5">
-                    <div class="card card-body">
-                        <!-- Ethnicity chart -->
-                        <div align="center" id="substanceRace"></div>
-                    </div>
-                </div>
-                <div class="collapse" id="collapseExample6">
-                    <div class="card card-body">
-                        <!-- Education level chart -->
-                        <div align="center" id="substanceEducation"></div>
-                    </div>
+                <div class="fluid-container">
+                    <canvas id="myBarChart"></canvas>
                 </div>
 
+                &nbsp;&nbsp;&nbsp;&nbsp;
 
-                </p>
-            </div>
+                <div class="container" style="border: 2px solid rgb(188, 188, 188)">
+                    &nbsp;
+
+                    <div style="text-align: center" id="instructions"><p>
+                        While it can be difficult for patients with AIDS/HIV to find and access good care, in Hawaii many people are able to obtain the services they need for the most part. However, there is still a long way to go to ensure that all patients are able to get the services to live a better life.
+                        <br><br> Click on a section of the bar chart for more information</p>
+                    </div>
+
+                    <div id="hivDesc">
+                        HIV Case management description
+                    </div>
+
+                    <div id="dentalDesc">
+                        Dental description
+                    </div>
+
+                    <div id="counselingDesc">
+                        Counseling description
+                    </div>
+
+                    <div id="infoDesc">
+                        Info description
+                    </div>
+
+                    <div id="altTherapyDesc">
+                        Alt Therapy description
+                    </div>
+
+                    <div id="homeAidDesc">
+                        Home Aid description
+                    </div>
+
+                    <div id="insuranceDesc">
+                        Insurance description
+                    </div>
+
+                    <div id="medDesc">
+                        Med description
+                    </div>
+
+                    <div id="abuseDesc">
+                        Drug/Alcohol abuse description
+                    </div>
+
+                    <div id="socialDesc">
+                        Social description
+                    </div>
+
+                    <div id="jobDesc">
+                        Employment description
+                    </div>
+
+                    <div id="eduDesc">
+                        Education description
+                    </div>
+
+                    <div id="foodDesc">
+                        Food description
+                    </div>
+
+                    <div id="housingDesc">
+                        Housing description
+                    </div>
+
+                    <div id="billsDesc">
+                        Bills description
+                    </div>
+
+                    &nbsp;
+                </div>            </div>
         </div>
+        <br><br>
     </div>
 </section>
 
-<!--<section class="bg-dark text-white">-->
-    <!--<div class="container text-center">-->
-        <!--<h2 class="mb-4">Free Download at Start Bootstrap!</h2>-->
-        <!--<a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a>-->
-    <!--</div>-->
-<!--</section>-->
+<script src="bar.js"></script>
+
+
 <section id = "map">
-<div id = 'myDiv5'></div>
+    <h2 class="section-heading text-center">Care Centers</h2>
+    <div id = 'myDiv5'></div>
 </section>
 
-<section id="contact">
-    <div class="container">
+<section class="bg-primary" id="contact">
+    <div class="fluid-container" style="background-color: white">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <h2 class="section-heading">Contact Information and Credit</h2>
+                <h2 class="section-heading"><br><br>Get Involved</h2>
                 <hr class="my-4">
-                <p class="mb-5">Visualizations created by Angela Zheng</p>
-                <p class="mb-5">Data collected and compiled by Joy Agner</p>
-            </div>
-        </div>
-        <div align="center" class="row">
-            <div class="col-lg-4 mr-auto text-center">
-                <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
-                <p>
-                    <a href="mailto:your-email@your-domain.com">awy@hawaii.edu</a>
-                </p>
+                <p class="mb-5"><i>"Reducing harm, promoting health, creating wellness, and fighting stigma in
+                    Hawai'i and the Pacific."</i><br>
+                    <br>This is the motto of Hawai'i Health and Harm Reduction Center, who provide services for Hawai'is people,
+                such as <br>services for the transgender population, those living with HIV, and those who are affected by HIV.
+                <br><br>To help out or raise awareness, click <a href="https://www.hhhrc.org">here.</a></p>
             </div>
         </div>
     </div>
@@ -358,694 +325,7 @@
 
 </body>
 
-<!--Mental Health Charts-->
-<script>
 
-    //    MENTAL HEALTH GENERAL //
-    // General Bar
-    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/mentalhealthgeneral.csv", function(err, rows){
-
-        function getData(rows, key) {
-            return rows.map(function(specificRow) {
-                return specificRow[key];
-            });
-        }
-
-        var headerRow = Plotly.d3.keys(rows[0]);
-        var headerVals = [];
-        var cellVals = [];
-        var sumArr = [];
-
-        for (i = 0; i < headerRow.length; i++) {
-            headerVal = [headerRow[i]];
-            headerVals[i] = headerVal;
-            cellVal = getData(rows, headerRow[i]);
-            cellVals[i] = cellVal;
-        }
-
-        for (j = 0; j < cellVals[1].length; j++){
-            var sum = parseInt(cellVals[1][j]);
-            sumArr.push(sum);
-        }
-
-        cellVals.push(sumArr);
-
-        var data = [
-            {
-                x: cellVals[0],
-                y: cellVals[1],
-                name: 'Mental Health Problem',
-                type: 'bar',
-                marker: {
-                    color: 'rgba(86, 180, 233, 0.85)'
-                }
-            }
-        ];
-
-        var layout = {
-            title: "Mental Health Issues",
-            height: 500,
-            width: 500,
-            xaxis: { title: 'Issue'},
-            yaxis: { title: 'Number of People'},
-            barmode: 'stack'
-        }
-
-        Plotly.newPlot('mentalHealthBar', data, layout);
-    });
-
-    // General Bar
-
-    //    END MENTAL HEALTH GENERAL //
-
-    //    MENTAL HEALTH VERSUS RACE //
-    // DEPRESSION
-    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/depressionRace.csv", function(err, rows){
-
-        function getData(rows, key) {
-            return rows.map(function(specificRow) {
-                return specificRow[key];
-            });
-        }
-
-        var headerRow = Plotly.d3.keys(rows[0]);
-        var headerVals = [];
-        var cellVals = [];
-        var sumArr = [];
-
-        for (i = 0; i < headerRow.length; i++) {
-            headerVal = [headerRow[i]];
-            headerVals[i] = headerVal;
-            cellVal = getData(rows, headerRow[i]);
-            cellVals[i] = cellVal;
-        }
-
-        for (j = 0; j < cellVals[1].length; j++){
-            var sum = parseInt(cellVals[1][j]);
-            sumArr.push(sum);
-        }
-
-        cellVals.push(sumArr);
-
-        var data = [
-            {
-                values: cellVals[1],
-                labels: cellVals[0],
-                type: 'pie',
-//                marker: {
-//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
-//                }
-            }
-        ];
-
-        var layout = {
-            title: "Depression in AIDS Patients by Race",
-            height: 400,
-            width: 500,
-        }
-
-        Plotly.newPlot('mentalHealthDepression', data, layout);
-    });
-
-    // ANXIETY
-    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/anxietyRace.csv", function(err, rows){
-
-        function getData(rows, key) {
-            return rows.map(function(specificRow) {
-                return specificRow[key];
-            });
-        }
-
-        var headerRow = Plotly.d3.keys(rows[0]);
-        var headerVals = [];
-        var cellVals = [];
-        var sumArr = [];
-
-        for (i = 0; i < headerRow.length; i++) {
-            headerVal = [headerRow[i]];
-            headerVals[i] = headerVal;
-            cellVal = getData(rows, headerRow[i]);
-            cellVals[i] = cellVal;
-        }
-
-        for (j = 0; j < cellVals[1].length; j++){
-            var sum = parseInt(cellVals[1][j]);
-            sumArr.push(sum);
-        }
-
-        cellVals.push(sumArr);
-
-        var data = [
-            {
-                values: cellVals[1],
-                labels: cellVals[0],
-                type: 'pie',
-//                marker: {
-//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
-//                }
-            }
-        ];
-
-        var layout = {
-            title: "Anxiety in AIDS Patients by Race",
-            height: 400,
-            width: 500,
-        }
-
-        Plotly.newPlot('mentalHealthAnxiety', data, layout);
-    });
-
-    //    END MENTAL HEALTH VERSUS RACE //
-
-    //    MENTAL HEALTH VERSUS EDUCATION //
-    // Depression Education
-    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/depressionEducation.csv", function(err, rows){
-
-        function getData(rows, key) {
-            return rows.map(function(specificRow) {
-                return specificRow[key];
-            });
-        }
-
-        var headerRow = Plotly.d3.keys(rows[0]);
-        var headerVals = [];
-        var cellVals = [];
-        var sumArr = [];
-
-        for (i = 0; i < headerRow.length; i++) {
-            headerVal = [headerRow[i]];
-            headerVals[i] = headerVal;
-            cellVal = getData(rows, headerRow[i]);
-            cellVals[i] = cellVal;
-        }
-
-        for (j = 0; j < cellVals[1].length; j++){
-            var sum = parseInt(cellVals[1][j]);
-            sumArr.push(sum);
-        }
-
-        cellVals.push(sumArr);
-
-        var data = [
-            {
-                values: cellVals[1],
-                labels: cellVals[0],
-                type: 'pie',
-//                marker: {
-//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
-//                }
-            }
-        ];
-        var data = [
-            {
-                values: cellVals[1],
-                labels: cellVals[0],
-                type: 'pie',
-//                marker: {
-//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
-//                }
-            }
-        ];
-
-        var layout = {
-            title: "Depression in AIDS Patients by Education Level",
-            height: 400,
-            width: 500,
-        }
-
-        Plotly.newPlot('depressionEducation', data, layout);
-    });
-
-    // Anxiety Education
-    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/anxietyEducation.csv", function(err, rows){
-
-        function getData(rows, key) {
-            return rows.map(function(specificRow) {
-                return specificRow[key];
-            });
-        }
-
-        var headerRow = Plotly.d3.keys(rows[0]);
-        var headerVals = [];
-        var cellVals = [];
-        var sumArr = [];
-
-        for (i = 0; i < headerRow.length; i++) {
-            headerVal = [headerRow[i]];
-            headerVals[i] = headerVal;
-            cellVal = getData(rows, headerRow[i]);
-            cellVals[i] = cellVal;
-        }
-
-        for (j = 0; j < cellVals[1].length; j++){
-            var sum = parseInt(cellVals[1][j]);
-            sumArr.push(sum);
-        }
-
-        cellVals.push(sumArr);
-
-        var data = [
-            {
-                values: cellVals[1],
-                labels: cellVals[0],
-                type: 'pie',
-//                marker: {
-//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
-//                }
-            }
-        ];
-        var data = [
-            {
-                values: cellVals[1],
-                labels: cellVals[0],
-                type: 'pie',
-//                marker: {
-//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
-//                }
-            }
-        ];
-
-        var layout = {
-            title: "Anxiety in AIDS Patients by Education Level",
-            height: 400,
-            width: 500,
-        }
-
-        Plotly.newPlot('anxietyEducation', data, layout);
-    });
-
-    // Other MH Issues by Education Level
-    // Anxiety Education
-    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/otherMHEducation.csv", function(err, rows){
-
-        function getData(rows, key) {
-            return rows.map(function(specificRow) {
-                return specificRow[key];
-            });
-        }
-
-        var headerRow = Plotly.d3.keys(rows[0]);
-        var headerVals = [];
-        var cellVals = [];
-        var sumArr = [];
-
-        for (i = 0; i < headerRow.length; i++) {
-            headerVal = [headerRow[i]];
-            headerVals[i] = headerVal;
-            cellVal = getData(rows, headerRow[i]);
-            cellVals[i] = cellVal;
-        }
-
-        for (j = 0; j < cellVals[1].length; j++){
-            var sum = parseInt(cellVals[1][j]);
-            sumArr.push(sum);
-        }
-
-        cellVals.push(sumArr);
-
-        var data = [
-            {
-                values: cellVals[1],
-                labels: cellVals[0],
-                type: 'pie',
-//                marker: {
-//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
-//                }
-            }
-        ];
-        var data = [
-            {
-                values: cellVals[1],
-                labels: cellVals[0],
-                type: 'pie',
-//                marker: {
-//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
-//                }
-            }
-        ];
-
-        var layout = {
-            title: "Other Mental Health Issues in AIDS Patients by Education Level",
-            height: 400,
-            width: 500,
-        }
-
-        Plotly.newPlot('otherMHEducation', data, layout);
-    });
-    // End otherMHEducation
-
-
-    // OTHER MENTAL HEALTH BY RACE
-    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/otherMHRace.csv", function(err, rows){
-
-        function getData(rows, key) {
-            return rows.map(function(specificRow) {
-                return specificRow[key];
-            });
-        }
-
-        var headerRow = Plotly.d3.keys(rows[0]);
-        var headerVals = [];
-        var cellVals = [];
-        var sumArr = [];
-
-        for (i = 0; i < headerRow.length; i++) {
-            headerVal = [headerRow[i]];
-            headerVals[i] = headerVal;
-            cellVal = getData(rows, headerRow[i]);
-            cellVals[i] = cellVal;
-        }
-
-        for (j = 0; j < cellVals[1].length; j++){
-            var sum = parseInt(cellVals[1][j]);
-            sumArr.push(sum);
-        }
-
-        cellVals.push(sumArr);
-
-        var data = [
-            {
-                values: cellVals[1],
-                labels: cellVals[0],
-                type: 'pie',
-//                marker: {
-//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
-//                }
-            }
-        ];
-        var data = [
-            {
-                values: cellVals[1],
-                labels: cellVals[0],
-                type: 'pie',
-//                marker: {
-//                    colors: ['rgb: 230,159,0', 'rgb: 86,180,233','rgb: 0,158,115','rgb: 240,228,66','rgb: 0,114,178','rgb: 213,94,0','rgb: 204,121,167','rgb: 0,50,100','rgb: 0,50,100']
-//                }
-            }
-        ];
-
-        var layout = {
-            title: "Other Mental Health Issues in AIDS Patients by Race",
-            height: 400,
-            width: 500,
-        }
-
-        Plotly.newPlot('mentalHealthOtherMH', data, layout);
-    });
-
-    //    END MENTAL HEALTH VERSUS EDUCATION //
-
-</script>
-
-<!-- Primary Care Charts -->
-<script>
-    var data = [{
-        values: [346, 52],
-        labels: ['Have Access', 'Do Not Have Access'],
-        type: 'pie'
-    }];
-
-    var layout = {
-        title: "People with HIV Who Have Access to Primary Care",
-        height: 400,
-        width: 500,
-        marker: {
-            colors: ['rgb: 230,159,0', 'rgb: 86,180,233']
-        }
-    };
-
-    Plotly.newPlot('primaryCare', data, layout);
-
-    //    Vs Race
-        Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/primaryCareRace.csv", function(err, rows){
-
-            function getData(rows, key) {
-                return rows.map(function(specificRow) {
-                    return specificRow[key];
-                });
-            }
-
-            var headerRow = Plotly.d3.keys(rows[0]);
-            var headerVals = [];
-            var cellVals = [];
-            var sumArr = [];
-
-            for (i = 0; i < headerRow.length; i++) {
-                headerVal = [headerRow[i]];
-                headerVals[i] = headerVal;
-                cellVal = getData(rows, headerRow[i]);
-                cellVals[i] = cellVal;
-            }
-
-            for (j = 0; j < cellVals[1].length; j++){
-                var sum = parseInt(cellVals[1][j]);
-                sumArr.push(sum);
-            }
-
-            cellVals.push(sumArr);
-
-            var data = [
-                {
-                    x: cellVals[0],
-                    y: cellVals[1],
-                    name: 'Without Care',
-                    type: 'bar',
-                    marker: {
-                        color: 'rgba(86, 180, 233, 0.85)'
-                    }
-                },
-                {
-                    x: cellVals[0],
-                    y: [74,157,12,36,16,0,24,31,27,9,2,4,2,24],
-                    name: 'With Care',
-                    type: 'bar'
-                }
-            ];
-
-            var layout = {
-                title: "Patients and Primary Care by Race",
-                height: 500,
-                width: 500,
-                xaxis: { title: 'Race'},
-                yaxis: { title: 'Number of People'},
-                barmode: 'stack'
-            }
-
-            Plotly.newPlot('primaryRace', data, layout);
-        });
-
-        // Vs Education
-    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/noPrimaryCareEducation", function(err, rows){
-
-        function getData(rows, key) {
-            return rows.map(function(specificRow) {
-                return specificRow[key];
-            });
-        }
-
-        var headerRow = Plotly.d3.keys(rows[0]);
-        var headerVals = [];
-        var cellVals = [];
-        var sumArr = [];
-
-        for (i = 0; i < headerRow.length; i++) {
-            headerVal = [headerRow[i]];
-            headerVals[i] = headerVal;
-            cellVal = getData(rows, headerRow[i]);
-            cellVals[i] = cellVal;
-        }
-
-        for (j = 0; j < cellVals[1].length; j++){
-            var sum = parseInt(cellVals[1][j]);
-            sumArr.push(sum);
-        }
-
-        cellVals.push(sumArr);
-
-        var data = [
-            {
-                x: cellVals[0],
-                y: cellVals[1],
-                name: 'Without Care',
-                type: 'bar',
-                marker: {
-                    color: 'rgba(86, 180, 233, 0.85)'
-                }
-            },
-            {
-                x: cellVals[0],
-                y: [20,75,128,63,16,38],
-                name: 'With Care',
-                type: 'bar'
-            }
-        ];
-
-        var layout = {
-            title: "Patients and Primary Care by Education Level",
-            height: 500,
-            width: 500,
-            xaxis: { title: 'Degree'},
-            yaxis: { title: 'Number of People'},
-            barmode: 'stack'
-        }
-
-        Plotly.newPlot('primaryEducation', data, layout);
-    });
-<!-- Primary Care Charts -->
-
-</script>
-
-<!-- Substance Abuse Charts -->
-<script>
-
-    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/substanceAbuse.csv", function(err, rows){
-
-            function getData(rows, key) {
-                return rows.map(function(specificRow) {
-                    return specificRow[key];
-                });
-            }
-
-            var headerRow = Plotly.d3.keys(rows[0]);
-            var headerVals = [];
-            var cellVals = [];
-            var sumArr = [];
-
-            for (i = 0; i < headerRow.length; i++) {
-                headerVal = [headerRow[i]];
-                headerVals[i] = headerVal;
-                cellVal = getData(rows, headerRow[i]);
-                cellVals[i] = cellVal;
-            }
-
-            for (j = 0; j < cellVals[1].length; j++){
-                var sum = parseInt(cellVals[1][j]);
-                sumArr.push(sum);
-            }
-
-            cellVals.push(sumArr);
-
-            var data = [
-                {
-                    values: cellVals[1],
-                    labels: cellVals[0],
-                    type: 'pie',
-                    marker: {
-                        colors: ['rgb(247,252,253)', 'rgb(229,245,249)','rgb(204,236,230)','rgb(153,216,201)','rgb(102,194,164)','rgb(65,174,118)','rgb(35,139,69)','rgb(0,109,44)','rgb(0,68,27)']
-                    }
-                }
-            ];
-
-            var layout = {
-                title: "Substances Used Among HIV Patients",
-                height: 400,
-                width: 500,
-            }
-
-            Plotly.newPlot('substance', data, layout);
-        });
-
-    // By Race
-
-
-    Plotly.d3.csv("    https://raw.githubusercontent.com/awyz/AIDSHIVData/master/substanceRace.csv", function(err, rows){
-
-        function getData(rows, key) {
-            return rows.map(function(specificRow) {
-                return specificRow[key];
-            });
-        }
-
-        var headerRow = Plotly.d3.keys(rows[0]);
-        var headerVals = [];
-        var cellVals = [];
-        var sumArr = [];
-
-        for (i = 0; i < headerRow.length; i++) {
-            headerVal = [headerRow[i]];
-            headerVals[i] = headerVal;
-            cellVal = getData(rows, headerRow[i]);
-            cellVals[i] = cellVal;
-        }
-
-        for (j = 0; j < cellVals[1].length; j++){
-            var sum = parseInt(cellVals[1][j]);
-            sumArr.push(sum);
-        }
-
-        cellVals.push(sumArr);
-
-        var data = [
-            {
-                y: cellVals[1],
-                x: cellVals[0],
-                mode: 'markers',
-                marker: {
-                    size: cellVals[1]
-                }
-            }
-        ];
-
-        var layout = {
-            title: "Substances Used By Race",
-            height: 400,
-            width: 500,
-            yaxis: { title: 'Number of People'}
-        }
-
-        Plotly.newPlot('substanceRace', data, layout);
-    });
-
-    // Substance abuse by education
-        Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/substanceEducation.csv", function(err, rows){
-
-            function getData(rows, key) {
-                return rows.map(function(specificRow) {
-                    return specificRow[key];
-                });
-            }
-
-            var headerRow = Plotly.d3.keys(rows[0]);
-            var headerVals = [];
-            var cellVals = [];
-            var sumArr = [];
-
-            for (i = 0; i < headerRow.length; i++) {
-                headerVal = [headerRow[i]];
-                headerVals[i] = headerVal;
-                cellVal = getData(rows, headerRow[i]);
-                cellVals[i] = cellVal;
-            }
-
-            for (j = 0; j < cellVals[1].length; j++){
-                var sum = parseInt(cellVals[1][j]);
-                sumArr.push(sum);
-            }
-
-            cellVals.push(sumArr);
-
-            var data = [
-                {
-                    y: cellVals[1],
-                    x: cellVals[0],
-                    mode: 'markers',
-                    marker: {
-                        size: cellVals[1]
-                    }
-                }
-            ];
-
-            var layout = {
-                title: "Substances Used By Education Level",
-                height: 400,
-                width: 500,
-                yaxis: { title: 'Number of People'}
-            }
-
-            Plotly.newPlot('substanceEducation', data, layout);
-        });
-
-</script>
 <script>
 				//locations for treatment
 				var data = [{
@@ -1062,7 +342,7 @@
 				}]
 				
 				var layout = {
-					title: 'Where to Recieve Care',
+					<!--title: 'Where to Recieve Care',-->
 					autosize: true,
 					hovermode:'closest',
 					mapbox: {

@@ -1,112 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-
-    <!-- Chart.js MAKE SURE YOU'RE USING THE MOST UPDATED VERSION! -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
-
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/creative.min.css" rel="stylesheet">
-
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-</head>
-<body>
-
-<!-- BAR CHART -->
-<div class="container">
-    <canvas id="myBarChart"></canvas>
-</div>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-<div class="container" style="border: 2px solid rgb(188, 188, 188)">
-    &nbsp;
-
-    <div style="text-align: center" id="instructions"><p>
-        While it can be difficult for patients with AIDS/HIV to find and access good care, in Hawaii many people are able to obtain the services they need for the most part. However, there is still a long way to go to ensure that all patients are able to get the services to live a better life.
-        <br><br> Click on a section of the bar chart for more information</p>
-    <p>n = 398</p></div>
-
-    <div id="hivDesc">
-        HIV Case management description
-    </div>
-
-    <div id="dentalDesc">
-        Dental description
-    </div>
-
-    <div id="counselingDesc">
-        Counseling description
-    </div>
-
-    <div id="infoDesc">
-        Info description
-    </div>
-
-    <div id="altTherapyDesc">
-        Alt Therapy description
-    </div>
-
-    <div id="homeAidDesc">
-        Home Aid description
-    </div>
-
-    <div id="insuranceDesc">
-        Insurance description
-    </div>
-
-    <div id="medDesc">
-        Med description
-    </div>
-
-    <div id="abuseDesc">
-        Drug/Alcohol abuse description
-    </div>
-
-    <div id="socialDesc">
-        Social description
-    </div>
-
-    <div id="jobDesc">
-        Employment description
-    </div>
-
-    <div id="eduDesc">
-        Education description
-    </div>
-
-    <div id="foodDesc">
-        Food description
-    </div>
-
-    <div id="housingDesc">
-        Housing description
-    </div>
-
-    <div id="billsDesc">
-        Bills description
-    </div>
-
-    &nbsp;
-</div>
-
-<script>
     // todo Change the fonts
 
     var group;
@@ -150,7 +41,7 @@
         scaleFontFamily : "Quadon Extra Bold",
         title: {
             text: "Access to Services",
-            display: true,
+            display: false,
             fontSize: 40
         },
         legend: {
@@ -160,7 +51,7 @@
             callbacks: {
                 label: function(tooltipItems, data) {
                     return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.xLabel;
-                },
+                }, //todo Fix these percentages!!!!
                 afterLabel: function (tooltipItem, data) {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
@@ -361,7 +252,7 @@
                     x.style.display = "block";
                 break;
 
-            case ("Employment"): // Easy alt therapy
+            case ("Employment"):
                 document.getElementById("instructions").style.display = "none";
                 var x = document.getElementById("jobDesc");
                 if(x.style.display == "block")
@@ -408,7 +299,3 @@
         }
 
     }
-</script>
-
-</body>
-</html>
