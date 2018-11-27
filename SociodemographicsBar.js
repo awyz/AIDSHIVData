@@ -224,14 +224,15 @@ var incomeOptions = {
     },
     yAxis: {
         type: 'category',
-        data: ['Grades 1-8', 'Vocational/Technical School', 'Grades 9-11', 'Graduate Degree', 'Bachelor\'s Degree',
-            'High School Diploma or GED', 'Some College or Associate\'s Degree']
+        // data: ['SSI/SSDI', 'Employment Income', 'Veteran Benefits', 'Self-Employed', 'Other']
+        data: ['Other', 'Veteran Benefits', 'Self-Employed', 'Employment Income', 'SSI/SSDI']
     },
     series: [
         {
             name: 'HIV Needs Assessment',
             type: 'bar',
-            data: [7, 19, 24, 46, 72, 89, 141]
+            // data: [227, 97, 5, 48, 21]
+            data: [21, 5, 48, 97, 227]
         },
     ]
 };
@@ -242,8 +243,8 @@ incomeChart.setOption(incomeOptions);
 var transmissionChart = echarts.init(document.getElementById('methodOfTransmission'));
 var transmissionOptions = {
     title: {
-        text: 'Drug Use',
-        subtext: 'HIV Needs Assessment 2018 / N=398\nEpi Profile / No data available.'
+        text: 'Method of Transmission',
+        subtext: 'HIV Needs Assessment 2018 / N=398\nEpi Profile 2010-2015 / N=598'
     },
     tooltip: {
         trigger: 'axis',
@@ -263,219 +264,70 @@ var transmissionOptions = {
     },
     yAxis: {
         type: 'category',
-        // data: ['Sex with Men', 'Sex with Women', 'Sharing Needles or Works', 'Blood Products or Transfusion',
-        //     'I was Born HIV infected', 'Don\'t know / Unknown', 'Prefer not to Answer', 'Other']
-        data: ['Male to Male Sexual Contact', 'Male to Female Sexual Contact (Male)', 'Male to Female Sexual Contact (Female)',
-            'Injection Drug Use', 'Born HIV Infected', 'Other']
+        data: ['Other', 'Born HIV Infected', 'Injection Drug Use', 'Male to Female Sexual Contact (Female)',
+            'Male to Female Sexual Contact (Male)', 'Male to Male Sexual Contact']
     },
     series: [
         {
             name: 'HIV Needs Assessment',
             type: 'bar',
-            data: [269, 20, 38, 30, 1, 20]
+            data: [20, 1, 30, 38, 20, 269]
+            // data: [5, .25, 7.5, 9.54, 5, 67.59]
         },
         {
             name: 'Epi Profile',
             type: 'bar',
-            data: []
+            // data: [15, 0, 7.36, 5.35, 8, 63.7]
+            data: [93, 0, 44, 32, 48, 381]
         }
     ]
 };
 transmissionChart.setOption(transmissionOptions);
 
 
-// Income Type
-var incomeTypeChartSurvey = echarts.init(document.getElementById('incomeTypeSurvey'));
-var incomeTypeOptionsSurvey = {
-    title : {
-        text: 'HIV Needs Assessment',
-        x: 'center'
-    },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['Placeholder1', 'Placeholder2', 'Placeholder3']
-    },
-    series: [
-        {
-            name: 'Distribution of Income Type in Survey',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-                {value:69, name: 'Placeholder1'},
-                {value:69, name: 'Placeholder2'},
-                {value:69, name: 'Placeholder3'}
-            ],
-        }
-    ]
-};
-
-incomeTypeChartSurvey.setOption(incomeTypeOptionsSurvey);
-
-var incomeTypeChartProfile = echarts.init(document.getElementById('incomeTypeProfile'));
-var incomeTypeOptionsProfile = {
-    title : {
-        text: 'Epi Profile',
-        x: 'center'
-    },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['Placeholder1', 'Placeholder2', 'Placeholder3']
-    },
-    series: [
-        {
-            name: 'Distribution of Income Type in Epi Profile',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-                {value:69, name: 'Placeholder1'},
-                {value:69, name: 'Placeholder2'},
-                {value:69, name: 'Placeholder3'}
-            ],
-        }
-    ]
-};
-incomeTypeChartProfile.setOption(incomeTypeOptionsProfile);
-
-
 // Race
-var raceChartSurvey = echarts.init(document.getElementById('raceSurvey'));
-var raceOptionsSurvey = {
-    title : {
-        text: 'HIV Needs Assessment',
-        x: 'center'
+var raceChart = echarts.init(document.getElementById('race'));
+var raceOptions = {
+    title: {
+        text: 'Race',
+        subtext: 'HIV Needs Assessment 2018 / N=398\nEpi Profile 2010-2015 / N=598'
     },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
     },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['Placeholder1', 'Placeholder2', 'Placeholder3']
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Hispanic', 'American Indian/Alaskan Native', 'Asian', 'African American', 'Pacific Islander', 'White', 'Multiple Races', 'Other']
     },
     series: [
         {
-            name: 'Distribution of Race in HIV Needs Assessment',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-                {value:69, name: 'Placeholder1'},
-                {value:69, name: 'Placeholder2'},
-                {value:69, name: 'Placeholder3'}
-            ],
-        }
-    ]
-};
-raceChartSurvey.setOption(raceOptionsSurvey);
-
-var raceChartProfile = echarts.init(document.getElementById('raceProfile'));
-var raceOptionsProfile = {
-    title : {
-        text: 'Epi Profile',
-        x: 'center'
-    },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['Placeholder1', 'Placeholder2', 'Placeholder3']
-    },
-    series: [
+            name: 'HIV Needs Assessment',
+            type: 'bar',
+            data: []
+        },
         {
-            name: 'Distribution of Race in Epi Profile',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-                {value:69, name: 'Placeholder1'},
-                {value:69, name: 'Placeholder2'},
-                {value:69, name: 'Placeholder3'}
-            ],
+            name: 'Epi Profile',
+            type: 'bar',
+            data: [93, 0, 44, 32, 48, 381]
         }
     ]
 };
-raceChartProfile.setOption(raceOptionsProfile);
-
+raceChart.setOption(raceOptions);
 
 // Sexual Orientation
-var sexualOrientationChartSurvey = echarts.init(document.getElementById('sexualOrientationSurvey'));
-var sexualOrientationOptionsSurvey = {
-    title : {
-        text: 'HIV Needs Assessment',
-        x: 'center'
-    },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['Placeholder1', 'Placeholder2', 'Placeholder3']
-    },
-    series: [
-        {
-            name: 'Distribution of Sexual Orientation in Survey',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-                {value:69, name: 'Placeholder1'},
-                {value:69, name: 'Placeholder2'},
-                {value:69, name: 'Placeholder3'}
-            ],
-        }
-    ]
-};
-
-sexualOrientationChartSurvey.setOption(sexualOrientationOptionsSurvey);
-
-var sexualOrientationChartProfile = echarts.init(document.getElementById('sexualOrientationProfile'));
-var sexualOrientationOptionsProfile = {
-    title : {
-        text: 'Epi Profile',
-        x: 'center'
-    },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['Placeholder1', 'Placeholder2', 'Placeholder3']
-    },
-    series: [
-        {
-            name: 'Distribution of Sexual Orientation in Epi Profile',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-                {value:69, name: 'Placeholder1'},
-                {value:69, name: 'Placeholder2'},
-                {value:69, name: 'Placeholder3'}
-            ],
-        }
-    ]
-};
-sexualOrientationChartProfile.setOption(sexualOrientationOptionsProfile);
 
 
 
