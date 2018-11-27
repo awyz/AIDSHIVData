@@ -14,6 +14,7 @@ var ageOptions = {
     legend: {
         data: ['HIV Needs Assessment', 'Epi Profile']
     },
+    color: ['#F13535', '#2A8070'],
     grid: {
         left: '3%',
         right: '4%',
@@ -57,6 +58,7 @@ var caseManagementOptions = {
             type: 'shadow'
         }
     },
+    color: ['#F13535'],
     grid: {
         left: '3%',
         right: '4%',
@@ -89,6 +91,7 @@ var disabilitiesOptions = {
         text: 'Disabilities',
         subtext: 'HIV Needs Assessment 2018 / N=398\nEpi Profile / No data available.'
     },
+    color: ['#F13535'],
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -129,6 +132,7 @@ var drugOptions = {
         text: 'Drug Use',
         subtext: 'HIV Needs Assessment 2018 / N=398\nEpi Profile / No data available.'
     },
+    color: ['#F13535'],
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -167,6 +171,7 @@ var educationOptions = {
         text: 'Education',
         subtext: 'HIV Needs Assessment 2018 / N=398\nEpi Profile / No data available.'
     },
+    color: ['#F13535'],
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -206,6 +211,7 @@ var incomeOptions = {
         text: 'Income Type',
         subtext: 'HIV Needs Assessment 2018 / N=398\nEpi Profile / No data available.'
     },
+    color: ['#F13535'],
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -251,6 +257,10 @@ var transmissionOptions = {
         axisPointer: {
             type: 'shadow'
         }
+    },
+    color: ['#F13535', '#2A8070'],
+    legend: {
+        data: ['HIV Needs Assessment', 'Epi Profile']
     },
     grid: {
         left: '3%',
@@ -298,6 +308,10 @@ var raceOptions = {
             type: 'shadow'
         }
     },
+    color: ['#F13535', '#2A8070'],
+    legend: {
+        data: ['HIV Needs Assessment', 'Epi Profile']
+    },
     grid: {
         left: '3%',
         right: '4%',
@@ -310,24 +324,62 @@ var raceOptions = {
     },
     yAxis: {
         type: 'category',
-        data: ['Hispanic', 'American Indian/Alaskan Native', 'Asian', 'African American', 'Pacific Islander', 'White', 'Multiple Races', 'Other']
+        data: ['Prefer not to Answer', 'Other', 'Multiple Races', 'Hispanic', 'American Indian/Alaskan Native', 'Asian',
+            'African American', 'Pacific Islander', 'White']
     },
     series: [
         {
             name: 'HIV Needs Assessment',
             type: 'bar',
-            data: []
+            data: [3, 14, 86, 19, 2, 45, 10, 58, 172]
         },
         {
             name: 'Epi Profile',
             type: 'bar',
-            data: [93, 0, 44, 32, 48, 381]
+            data: [0, 5, 74, 52, 2, 127, 44, 89, 205]
         }
     ]
 };
 raceChart.setOption(raceOptions);
 
 // Sexual Orientation
+var sexualChart = echarts.init(document.getElementById('sexualOrientation'));
+var sexualOptions = {
+    title: {
+        text: 'Race',
+        subtext: 'HIV Needs Assessment 2018 / N=398\nEpi Profile / No data available.'
+    },
+    color: ['#F13535'],
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Prefer not to Answer', 'Other', 'Celibate', 'Bisexual (Female)', 'Bisexual (Male)', 'Homosexual (Female)',
+            'Homosexual (Male)', 'Heterosexual (Female)', 'Heterosexual (Male)']
+    },
+    series: [
+        {
+            name: 'HIV Needs Assessment',
+            type: 'bar',
+            data: [39, 14, 11, 6, 49, 0, 242, 48, 40]
+        },
+    ]
+};
+sexualChart.setOption(sexualOptions);
 
 
 
