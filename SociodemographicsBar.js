@@ -186,7 +186,7 @@ var educationOptions = {
     yAxis: {
         type: 'category',
         data: ['Grades 1-8', 'Vocational/Technical School', 'Grades 9-11', 'Graduate Degree', 'Bachelor\'s Degree',
-            'High School Diploma or GED', 'Some College of Associate\'s Degree']
+            'High School Diploma or GED', 'Some College or Associate\'s Degree']
     },
     series: [
         {
@@ -225,7 +225,7 @@ var incomeOptions = {
     yAxis: {
         type: 'category',
         data: ['Grades 1-8', 'Vocational/Technical School', 'Grades 9-11', 'Graduate Degree', 'Bachelor\'s Degree',
-            'High School Diploma or GED', 'Some College of Associate\'s Degree']
+            'High School Diploma or GED', 'Some College or Associate\'s Degree']
     },
     series: [
         {
@@ -263,15 +263,22 @@ var transmissionOptions = {
     },
     yAxis: {
         type: 'category',
-        data: ['Sex with Men', 'Sex with Women', 'Sharing Needles or Works', 'Blood Products or Transfusion',
-            'I was Born HIV infected', 'Don\'t know / Unknown', 'Prefer not to Answer', 'Other']
+        // data: ['Sex with Men', 'Sex with Women', 'Sharing Needles or Works', 'Blood Products or Transfusion',
+        //     'I was Born HIV infected', 'Don\'t know / Unknown', 'Prefer not to Answer', 'Other']
+        data: ['Male to Male Sexual Contact', 'Male to Female Sexual Contact (Male)', 'Male to Female Sexual Contact (Female)',
+            'Injection Drug Use', 'Born HIV Infected', 'Other']
     },
     series: [
         {
             name: 'HIV Needs Assessment',
             type: 'bar',
-            data: [307, 20,	30, 10, 1, 38, 10, 10]
+            data: [269, 20, 38, 30, 1, 20]
         },
+        {
+            name: 'Epi Profile',
+            type: 'bar',
+            data: []
+        }
     ]
 };
 transmissionChart.setOption(transmissionOptions);
