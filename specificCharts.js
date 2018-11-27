@@ -74,7 +74,7 @@ var caseManagementOptions1 = {
     },
     yAxis: {
         type: 'category',
-        data: ['prefer not to answer','Native Hawaiian','White','African American','Hispanic',
+        data: ['Prefer not to answer','Native Hawaiian','White','African American','Hispanic',
 		'American Indian', 'Asian Indian', 'Chinese', 'Filipino','Japanese','Korean', 'Vietnamese', 
 		'Guamanian', 'Samoan', 'Other Pacific Islander', 'Other Asian', 'Other Race']
     },
@@ -245,18 +245,19 @@ var caseManagementOptions5 = {
     },
     yAxis: {
         type: 'category',
-        data: ['Straight','Homosexual','Bisexual','Non-Binary','Transgender']
+        data: ['Heterosexual','Homosexual','Bisexual',
+		'Non-Binary','Other','Prefer not to answer']
     },
     series: [
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [4,"","",1]
+            data: [3,1,"","",1]
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [1]
+			data: ["",1]
 			
 		}
     ]
@@ -267,7 +268,7 @@ caseManagementBarriersSexualOrientation.setOption(caseManagementOptions5);
 var caseManagementBarriersDisability = echarts.init(document.getElementById('hivCmDisability'));
 var caseManagementOptions6 = {
     title: {
-        text: 'Case Management Barriers\n Broken Down by Disability',
+        text: 'Case Management Barriers Broken Down by Disability',
     },
     tooltip: {
         trigger: 'axis',
@@ -287,18 +288,30 @@ var caseManagementOptions6 = {
     },
     yAxis: {
         type: 'category',
-        data: ['disabilities']
+        data: ['Heart Disease','Depression','Anxiety','Chronic Pain',
+		'Insomnia/Sleep Disorder', 'Arthritis','Other Mental Health Disorders',
+		'Overactive Bladder', 'Sciatica','Migrane Headaches','Asthma',
+		'Hearing Impairment', 'Irriatable Bowel Syndrome','Emphysema',
+		'Cancer','Diabetes','Osteoporosis','Hepatitis C','Eczema','Ulcers','Epilepsy']
     },
     series: [
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [4,"","",1]
+            data: [2,4,4,4,
+			2,2,1,
+			1,"",2,2,
+			2,1,1,
+			2,1,1,3,1,1,1]
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [1]
+			data: [1,1,1,"",
+			"","","",
+			1,"",1,"",
+			"","","",
+			1,"","","","","","",]
 			
 		}
     ]
