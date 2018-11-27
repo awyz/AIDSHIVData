@@ -1,7 +1,7 @@
-//doughnut chart for Case Management 
+//doughnut chart for Disability
 
-var caseManagementDoughnut = echarts.init(document.getElementById('hivDesc'));
-var caseManagementDoughnutOption = {
+var DisabilityDoughnut = echarts.init(document.getElementById('hivInfo'));
+var DisabilityDoughnutOption = {
     tooltip: {
         trigger: 'item',
         formatter: "{a} <br/>{b}: {c} ({d}%)"
@@ -14,7 +14,7 @@ var caseManagementDoughnutOption = {
     // },
     series: [
         {
-            name:'Access to Case Management',
+            name:'Aid at Home',
             type:'pie',
             radius: ['50%', '70%'],
             avoidLabelOverlap: false,
@@ -37,24 +37,24 @@ var caseManagementDoughnutOption = {
                 }
             },
             data:[
-                {value:1, name:'too difficult', itemStyle: {color: 'rgba(255, 104, 107, 1)'}},
-                {value:5, name:'possible but\n very difficult', itemStyle: {color: 'rgba(255, 166, 166, 1)'}},
-                {value:1, name:'chose not\n to answer', itemStyle: {color: 'rgba(163, 155, 168, 1)'}},
-                {value:75, name:'did not\n need service', itemStyle: {color: 'rgba(184, 197, 214, 1)'}},
-                {value:39, name:'possible with\n some work', itemStyle: {color: 'rgba(152, 148, 255, 1)'}},
-                {value:277, name:'easy', itemStyle: {color: 'rgba(104, 99, 240, 1)'}}
+                {value:6, name:'too difficult', itemStyle: {color: 'rgba(255, 104, 107, 1)'}},
+                {value:6, name:'possible but\n very difficult', itemStyle: {color: 'rgba(255, 166, 166, 1)'}},
+                {value:3, name:'chose not\n to answer', itemStyle: {color: 'rgba(163, 155, 168, 1)'}},
+                {value:329, name:'did not\n need service', itemStyle: {color: 'rgba(184, 197, 214, 1)'}},
+                {value:26, name:'possible with\n some work', itemStyle: {color: 'rgba(152, 148, 255, 1)'}},
+                {value:28, name:'easy', itemStyle: {color: 'rgba(104, 99, 240, 1)'}}
             ]
         }
     ]
 };
-caseManagementDoughnut.setOption(caseManagementDoughnutOption);
-//bar graph of Case Management Respondents that answered very or too difficult
+DisabilityDoughnut.setOption(DisabilityDoughnutOption);
+//bar graph of Disability Respondents that answered very or too difficult
 
 //broken down by ethnicity
-var caseManagementBarriersEthnicity = echarts.init(document.getElementById('hivCmEthnicity'));
-var caseManagementOptions1 = {
+var DisabilityBarriersEthnicity = echarts.init(document.getElementById('hivCmEthnicity'));
+var DisabilityOptions1 = {
     title: {
-        text: 'Case Management Barriers Broken Down by Ethnicity',
+        text: 'Disability Barriers Broken Down by Ethnicity',
     },
     tooltip: {
         trigger: 'axis',
@@ -82,26 +82,28 @@ var caseManagementOptions1 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [1, 1, 2],
+            data: ["", 1, 4, 1, 2,1,"",1],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ["","",1],
+			data: ["","",3,"",1,
+			1,"","","","",""","",
+			"",1,"","",1],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
-caseManagementBarriersEthnicity.setOption(caseManagementOptions1);
+DisabilityBarriersEthnicity.setOption(DisabilityOptions1);
 
 
 //broken down by age
-var caseManagementBarriersAge = echarts.init(document.getElementById('hivCmAge'));
-var caseManagementOptions2 = {
+var DisabilityBarriersAge = echarts.init(document.getElementById('hivCmAge'));
+var DisabilityOptions2 = {
     title: {
-        text: 'Case Management Barriers Broken Down by Age',
+        text: 'Disability Barriers Broken Down by Age',
     },
     tooltip: {
         trigger: 'axis',
@@ -127,25 +129,25 @@ var caseManagementOptions2 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [2,3],
+            data: [3,3],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [1],
+			data: [4,1,1],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
-caseManagementBarriersAge.setOption(caseManagementOptions2);
+DisabilityBarriersAge.setOption(DisabilityOptions2);
 
 //broken down by education
-var caseManagementBarriersEducation = echarts.init(document.getElementById('hivCmEducation'));
-var caseManagementOptions3 = {
+var DisabilityBarriersEducation = echarts.init(document.getElementById('hivCmEducation'));
+var DisabilityOptions3 = {
     title: {
-        text: 'Case Management Barriers Broken Down by Education',
+        text: 'Disability Barriers Broken Down by Education',
     },
     tooltip: {
         trigger: 'axis',
@@ -165,32 +167,32 @@ var caseManagementOptions3 = {
     },
     yAxis: {
         type: 'category',
-        data: ['Graduate Degree','Bachelor\'s', 'Some College', 'Vocational School', 'High School',"Grades 9-11",'Prefer not to Answer']
+        data: ['Graduate Degree','Bachelor\'s', 'Some College', 'Vocational School', 'High School','Grades 9-11','Prefer not to Answer']
     },
     series: [
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: ['',"",3,1,1,"",""],
+            data: [1,"",1,1,2,1],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ['',1],
+			data: ['',1,4,'',1,'',''],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
-caseManagementBarriersEducation.setOption(caseManagementOptions3);
+DisabilityBarriersEducation.setOption(DisabilityOptions3);
 
 //broken down by income type
-var caseManagementBarriersIncomeType = echarts.init(document.getElementById('hivCmIncomeType'));
-var caseManagementOptions4 = {
+var DisabilityBarriersIncomeType = echarts.init(document.getElementById('hivCmIncomeType'));
+var DisabilityOptions4 = {
     title: {
-        text: 'Case Management Barriers\n Broken Down by Income Type',
+        text: 'Disability Barriers\n Broken Down by Income Type',
     },
     tooltip: {
         trigger: 'axis',
@@ -216,26 +218,26 @@ var caseManagementOptions4 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [4,"","",1],
+            data: [6],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [1],
+			data: [6],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
-caseManagementBarriersIncomeType.setOption(caseManagementOptions4);
+DisabilityBarriersIncomeType.setOption(DisabilityOptions4);
 
 //broken down by sexual orientation
-var caseManagementBarriersSexualOrientation = echarts.init(document.getElementById('hivCmSexualOrientation'));
-var caseManagementOptions5 = {
+var DisabilityBarriersSexualOrientation = echarts.init(document.getElementById('hivCmSexualOrientation'));
+var DisabilityOptions5 = {
     title: {
-        text: 'Case Management Barriers\n Broken Down by Sexual Orientation',
+        text: 'Disability Barriers\n Broken Down by Sexual Orientation',
     },
     tooltip: {
         trigger: 'axis',
@@ -262,26 +264,26 @@ var caseManagementOptions5 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [3,1,"","",1],
+            data: ["","","","",""],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ["",1],
+			data: ["",""],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
-caseManagementBarriersSexualOrientation.setOption(caseManagementOptions5);
+DisabilityBarriersSexualOrientation.setOption(DisabilityOptions5);
 
 //broken down by disability
-var caseManagementBarriersDisability = echarts.init(document.getElementById('hivCmDisability'));
-var caseManagementOptions6 = {
+var DisabilityBarriersDisability = echarts.init(document.getElementById('hivCmDisability'));
+var DisabilityOptions6 = {
     title: {
-        text: 'Case Management Barriers Broken Down by Disability',
+        text: 'Disability Barriers Broken Down by Disability',
     },
     tooltip: {
         trigger: 'axis',
@@ -332,13 +334,13 @@ var caseManagementOptions6 = {
 		}
     ]
 };
-caseManagementBarriersDisability.setOption(caseManagementOptions6);
+DisabilityBarriersDisability.setOption(DisabilityOptions6);
 
 //broken down by drug use
-var caseManagementBarriersDrugUse = echarts.init(document.getElementById('hivCmDrugUse'));
-var caseManagementOptions7 = {
+var DisabilityBarriersDrugUse = echarts.init(document.getElementById('hivCmDrugUse'));
+var DisabilityOptions7 = {
     title: {
-        text: 'Case Management Barriers\n Broken Down by Drug Use',
+        text: 'Disability Barriers\n Broken Down by Drug Use',
     },
     tooltip: {
         trigger: 'axis',
@@ -365,26 +367,26 @@ var caseManagementOptions7 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: ["","","","",3,"",2],
+            data: ["","","",1,1,1,4],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ["","","","",1],
+			data: ["","","","",2,3,""],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
-caseManagementBarriersDrugUse.setOption(caseManagementOptions7);
+DisabilityBarriersDrugUse.setOption(DisabilityOptions7);
 
 //broken down by method of transmission 
-var caseManagementBarriersMoT = echarts.init(document.getElementById('hivCmMoT'));
-var caseManagementOptions8 = {
+var DisabilityBarriersMoT = echarts.init(document.getElementById('hivCmMoT'));
+var DisabilityOptions8 = {
     title: {
-        text: 'Case Management Barriers\n Broken Down by Method of Transmission',
+        text: 'Disability Barriers\n Broken Down by Method of Transmission',
     },
     tooltip: {
         trigger: 'axis',
@@ -411,14 +413,14 @@ var caseManagementOptions8 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [2,"",1,1,'',1],
+            data: [4,1,1,'','',''],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [1],
+			data: [4,'',1,1],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 
 			
@@ -426,4 +428,4 @@ var caseManagementOptions8 = {
 		}
     ]
 };
-caseManagementBarriersMoT.setOption(caseManagementOptions8);
+DisabilityBarriersMoT.setOption(DisabilityOptions8);
