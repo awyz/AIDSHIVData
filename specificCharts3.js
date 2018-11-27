@@ -1,6 +1,6 @@
 //doughnut chart for Disability
-
-var DisabilityDoughnut = echarts.init(document.getElementById('hivInfo'));
+//still need to input values for sexual orientation and Disabilities
+var DisabilityDoughnut = echarts.init(document.getElementById('hivDisability'));
 var DisabilityDoughnutOption = {
     tooltip: {
         trigger: 'item',
@@ -420,7 +420,7 @@ var DisabilityOptions8 = {
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [4,'',1,1],
+			data: [4,'',1,1,'',1,'',''],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 
 			
