@@ -82,12 +82,14 @@ var caseManagementOptions1 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [1, 1, 2]
+            data: [1, 1, 2],
+			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ["","",1]
+			data: ["","",1],
+			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
@@ -125,12 +127,14 @@ var caseManagementOptions2 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [2,3]
+            data: [2,3],
+			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [1]
+			data: [1],
+			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
@@ -167,12 +171,15 @@ var caseManagementOptions3 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: ["",3,1,1]
+            data: ["",3,1,1],
+			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
+
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [1]
+			data: [1],
+			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
@@ -209,12 +216,15 @@ var caseManagementOptions4 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [4,"","",1]
+            data: [4,"","",1],
+			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
+
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [1]
+			data: [1],
+			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
@@ -252,12 +262,15 @@ var caseManagementOptions5 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [3,1,"","",1]
+            data: [3,1,"","",1],
+			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
+
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ["",1]
+			data: ["",1],
+			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
@@ -302,7 +315,9 @@ var caseManagementOptions6 = {
 			2,2,1,
 			1,"",2,2,
 			2,1,1,
-			2,1,1,3,1,1,1]
+			2,1,1,3,1,1,1],
+			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
+
         },
 		{
 			name:'Too Difficult',
@@ -311,7 +326,8 @@ var caseManagementOptions6 = {
 			"","","",
 			1,"",1,"",
 			"","","",
-			1,"","","","","","",]
+			1,"","","","","","",],
+			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
@@ -349,12 +365,15 @@ var caseManagementOptions7 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: ["","","","",3,"",2]
+            data: ["","","","",3,"",2],
+			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
+
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ["","","","",1]
+			data: ["","","","",1],
+			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
@@ -392,12 +411,17 @@ var caseManagementOptions8 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [2,"",1,1,'',1]
+            data: [2,"",1,1,'',1],
+			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
+
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [1]
+			data: [1],
+			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
+
+			
 			
 		}
     ]
