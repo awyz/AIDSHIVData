@@ -161,131 +161,120 @@ drugChart.setOption(drugOptions);
 
 
 // Education
-var educationChartSurvey = echarts.init(document.getElementById('educationSurvey'));
-var educationOptionsSurvey = {
-    title : {
-        text: 'HIV Needs Assessment',
-        x: 'center'
+var educationChart = echarts.init(document.getElementById('education'));
+var educationOptions = {
+    title: {
+        text: 'Education',
+        subtext: 'HIV Needs Assessment 2018 / N=398\nEpi Profile / No data available.'
     },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
     },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['Placeholder1', 'Placeholder2', 'Placeholder3']
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Grades 1-8', 'Vocational/Technical School', 'Grades 9-11', 'Graduate Degree', 'Bachelor\'s Degree',
+            'High School Diploma or GED', 'Some College of Associate\'s Degree']
     },
     series: [
         {
-            name: 'Distribution of Education in HIV Needs Assessment',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-                {value:69, name: 'Placeholder1'},
-                {value:69, name: 'Placeholder2'},
-                {value:69, name: 'Placeholder3'}
-            ],
-        }
+            name: 'HIV Needs Assessment',
+            type: 'bar',
+            data: [7, 19, 24, 46, 72, 89, 141]
+        },
     ]
 };
-educationChartSurvey.setOption(educationOptionsSurvey);
+educationChart.setOption(educationOptions);
 
-var educationChartProfile = echarts.init(document.getElementById('educationProfile'));
-var educationOptionsProfile = {
-    title : {
-        text: 'Epi Profile',
-        x: 'center'
+
+// Income type
+var incomeChart = echarts.init(document.getElementById('incomeType'));
+var incomeOptions = {
+    title: {
+        text: 'Income Type',
+        subtext: 'HIV Needs Assessment 2018 / N=398\nEpi Profile / No data available.'
     },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
     },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['Placeholder1', 'Placeholder2', 'Placeholder3']
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Grades 1-8', 'Vocational/Technical School', 'Grades 9-11', 'Graduate Degree', 'Bachelor\'s Degree',
+            'High School Diploma or GED', 'Some College of Associate\'s Degree']
     },
     series: [
         {
-            name: 'Distribution of Education in Epi Profile',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-                {value:69, name: 'Placeholder1'},
-                {value:69, name: 'Placeholder2'},
-                {value:69, name: 'Placeholder3'}
-            ],
-        }
+            name: 'HIV Needs Assessment',
+            type: 'bar',
+            data: [7, 19, 24, 46, 72, 89, 141]
+        },
     ]
 };
-educationChartProfile.setOption(educationOptionsProfile);
+incomeChart.setOption(incomeOptions);
 
 
 // Method of Transmission
-var methodOfTransmissionChartSurvey = echarts.init(document.getElementById('methodOfTransmissionSurvey'));
-var methodOfTransmissionOptionsSurvey = {
-    title : {
-        text: 'HIV Needs Assessment',
-        x: 'center'
+var transmissionChart = echarts.init(document.getElementById('methodOfTransmission'));
+var transmissionOptions = {
+    title: {
+        text: 'Drug Use',
+        subtext: 'HIV Needs Assessment 2018 / N=398\nEpi Profile / No data available.'
     },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
     },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['Placeholder1', 'Placeholder2', 'Placeholder3']
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Sex with Men', 'Sex with Women', 'Sharing Needles or Works', 'Blood Products or Transfusion',
+            'I was Born HIV infected', 'Don\'t know / Unknown', 'Prefer not to Answer', 'Other']
     },
     series: [
         {
-            name: 'Distribution of Methods of Transmission in HIV Needs Assessment',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-                {value:69, name: 'Placeholder1'},
-                {value:69, name: 'Placeholder2'},
-                {value:69, name: 'Placeholder3'}
-            ],
-        }
+            name: 'HIV Needs Assessment',
+            type: 'bar',
+            data: [307, 20,	30, 10, 1, 38, 10, 10]
+        },
     ]
 };
-methodOfTransmissionChartSurvey.setOption(methodOfTransmissionOptionsSurvey);
-
-var methodOfTransmissionChartProfile = echarts.init(document.getElementById('methodOfTransmissionProfile'));
-var methodOfTransmissionOptionsProfile = {
-    title : {
-        text: 'Epi Profile',
-        x: 'center'
-    },
-    tooltip : {
-        trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['Placeholder1', 'Placeholder2', 'Placeholder3']
-    },
-    series: [
-        {
-            name: 'Distribution of Ages in Epi Profile',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-                {value:69, name: 'Placeholder1'},
-                {value:69, name: 'Placeholder2'},
-                {value:69, name: 'Placeholder3'}
-            ],
-        }
-    ]
-};
-methodOfTransmissionChartProfile.setOption(methodOfTransmissionOptionsProfile);
+transmissionChart.setOption(transmissionOptions);
 
 
 // Income Type
