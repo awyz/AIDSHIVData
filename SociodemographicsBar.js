@@ -151,13 +151,13 @@ var drugOptions = {
     },
     yAxis: {
         type: 'category',
-        data: ['Other', 'Crack', 'Ecstasy', 'Heroin', 'Cocaine', 'Marijuana', 'Methamphetamine', 'None']
+        data: ['None', 'Other', 'Crack', 'Ecstasy', 'Heroin', 'Cocaine', 'Marijuana', 'Methamphetamine']
     },
     series: [
         {
             name: 'HIV Needs Assessment',
             type: 'bar',
-            data: [4, 4, 4, 5, 6, 36, 131, 243]
+            data: [243, 4, 4, 4, 5, 6, 36, 131]
         },
     ]
 };

@@ -113,6 +113,7 @@
 }
 
 .section-heading-discrepancy {
+    text-align: justify;
     margin-top: 0;
     /*background-color: #F05F40;*/
     /*color: #f05f40;*/
@@ -120,4 +121,8 @@
     color: #ffffff;
     padding: 20px;
     border-radius: 20px;
+}
+
+.section-heading-text {
+    text-align: justify;
 }
