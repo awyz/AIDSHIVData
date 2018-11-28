@@ -1,8 +1,8 @@
-//doughnut chart for Dental Services
+//doughnut chart for Insurance Enrollment Services
 //still need to input values for sexual orienation and disability
 
-var DentalDoughnut = echarts.init(document.getElementById('dentalDesc'));
-var DentalDoughnutOption = {
+var InsuranceEnrollmentDoughnut = echarts.init(document.getElementById('InsuranceEnrollmentDesc'));
+var InsuranceEnrollmentDoughnutOption = {
     tooltip: {
         trigger: 'item',
         formatter: "{a} <br/>{b}: {c} ({d}%)"
@@ -15,7 +15,7 @@ var DentalDoughnutOption = {
     },
     series: [
         {
-            name:'Access to Dental Services',
+            name:'Access to Insurance Enrollment Services',
             type:'pie',
             radius: ['50%', '70%'],
             avoidLabelOverlap: false,
@@ -38,24 +38,24 @@ var DentalDoughnutOption = {
                 }
             },
             data:[
-                {value:22, name:'too difficult', itemStyle: {color: 'rgba(255, 104, 107, 1)'}},
-                {value:132, name:'possible but\n very difficult', itemStyle: {color: 'rgba(255, 166, 166, 1)'}},
+                {value:2, name:'too difficult', itemStyle: {color: 'rgba(255, 104, 107, 1)'}},
+                {value:9, name:'possible but\n very difficult', itemStyle: {color: 'rgba(255, 166, 166, 1)'}},
                 {value:5, name:'chose not\n to answer', itemStyle: {color: 'rgba(184, 197, 214, 1)'}},
-                {value:238, name:'did not\n need service',itemStyle: {color: 'rgba(163, 155, 168, 1)'} },
-                {value:67, name:'possible with\n some work', itemStyle: {color: 'rgba(152, 148, 255, 1)'}},
-                {value:134, name:'easy', itemStyle: {color: 'rgba(104, 99, 240, 1)'}}
+                {value:273, name:'did not\n need service',itemStyle: {color: 'rgba(163, 155, 168, 1)'} },
+                {value:47, name:'possible with\n some work', itemStyle: {color: 'rgba(152, 148, 255, 1)'}},
+                {value:62, name:'easy', itemStyle: {color: 'rgba(104, 99, 240, 1)'}}
             ]
         }
     ]
 };
-DentalDoughnut.setOption(DentalDoughnutOption);
-//bar graph of Dental Respondents that answered very or too difficult
+InsuranceEnrollmentDoughnut.setOption(InsuranceEnrollmentDoughnutOption);
+//bar graph of InsuranceEnrollment Respondents that answered very or too difficult
 
 //broken down by ethnicity
-var DentalBarriersEthnicity = echarts.init(document.getElementById('hivCmEthnicity'));
-var DentalOptions1 = {
+var InsuranceEnrollmentBarriersEthnicity = echarts.init(document.getElementById('hivCmEthnicity'));
+var InsuranceEnrollmentOptions1 = {
     title: {
-        text: 'Dental Barriers Broken Down by Ethnicity',
+        text: 'InsuranceEnrollment Barriers Broken Down by Ethnicity',
     },
     tooltip: {
         trigger: 'axis',
@@ -95,14 +95,14 @@ var DentalOptions1 = {
 		}
     ]
 };
-DentalBarriersEthnicity.setOption(DentalOptions1);
+InsuranceEnrollmentBarriersEthnicity.setOption(InsuranceEnrollmentOptions1);
 
 
 //broken down by age
-var DentalBarriersAge = echarts.init(document.getElementById('hivCmAge'));
-var DentalOptions2 = {
+var InsuranceEnrollmentBarriersAge = echarts.init(document.getElementById('hivCmAge'));
+var InsuranceEnrollmentOptions2 = {
     title: {
-        text: 'Dental Barriers Broken Down by Age',
+        text: 'InsuranceEnrollment Barriers Broken Down by Age',
     },
     tooltip: {
         trigger: 'axis',
@@ -140,13 +140,13 @@ var DentalOptions2 = {
 		}
     ]
 };
-DentalBarriersAge.setOption(DentalOptions2);
+InsuranceEnrollmentBarriersAge.setOption(InsuranceEnrollmentOptions2);
 
 //broken down by education
-var DentalBarriersEducation = echarts.init(document.getElementById('hivCmEducation'));
-var DentalOptions3 = {
+var InsuranceEnrollmentBarriersEducation = echarts.init(document.getElementById('hivCmEducation'));
+var InsuranceEnrollmentOptions3 = {
     title: {
-        text: 'Dental Barriers Broken Down by Education',
+        text: 'InsuranceEnrollment Barriers Broken Down by Education',
     },
     tooltip: {
         trigger: 'axis',
@@ -185,13 +185,13 @@ var DentalOptions3 = {
 		}
     ]
 };
-DentalBarriersEducation.setOption(DentalOptions3);
+InsuranceEnrollmentBarriersEducation.setOption(InsuranceEnrollmentOptions3);
 
 //broken down by income type
-var DentalBarriersIncomeType = echarts.init(document.getElementById('hivCmIncomeType'));
-var DentalOptions4 = {
+var InsuranceEnrollmentBarriersIncomeType = echarts.init(document.getElementById('hivCmIncomeType'));
+var InsuranceEnrollmentOptions4 = {
     title: {
-        text: 'Dental Barriers\n Broken Down by Income Type',
+        text: 'InsuranceEnrollment Barriers\n Broken Down by Income Type',
     },
     tooltip: {
         trigger: 'axis',
@@ -230,13 +230,13 @@ var DentalOptions4 = {
 		}
     ]
 };
-DentalBarriersIncomeType.setOption(DentalOptions4);
+InsuranceEnrollmentBarriersIncomeType.setOption(InsuranceEnrollmentOptions4);
 
 //broken down by sexual orientation
-var DentalBarriersSexualOrientation = echarts.init(document.getElementById('hivCmSexualOrientation'));
-var DentalOptions5 = {
+var InsuranceEnrollmentBarriersSexualOrientation = echarts.init(document.getElementById('hivCmSexualOrientation'));
+var InsuranceEnrollmentOptions5 = {
     title: {
-        text: 'Dental Barriers\n Broken Down by Sexual Orientation',
+        text: 'InsuranceEnrollment Barriers\n Broken Down by Sexual Orientation',
     },
     tooltip: {
         trigger: 'axis',
@@ -276,13 +276,13 @@ var DentalOptions5 = {
 		}
     ]
 };
-DentalBarriersSexualOrientation.setOption(DentalOptions5);
+InsuranceEnrollmentBarriersSexualOrientation.setOption(InsuranceEnrollmentOptions5);
 
 //broken down by disability
-var DentalBarriersDisability = echarts.init(document.getElementById('hivCmDisability'));
-var DentalOptions6 = {
+var InsuranceEnrollmentBarriersDisability = echarts.init(document.getElementById('hivCmDisability'));
+var InsuranceEnrollmentOptions6 = {
     title: {
-        text: 'Dental Barriers Broken Down by Disability',
+        text: 'InsuranceEnrollment Barriers Broken Down by Disability',
     },
     tooltip: {
         trigger: 'axis',
@@ -333,13 +333,13 @@ var DentalOptions6 = {
 		}
     ]
 };
-DentalBarriersDisability.setOption(DentalOptions6);
+InsuranceEnrollmentBarriersDisability.setOption(InsuranceEnrollmentOptions6);
 
 //broken down by drug use
-var DentalBarriersDrugUse = echarts.init(document.getElementById('hivCmDrugUse'));
-var DentalOptions7 = {
+var InsuranceEnrollmentBarriersDrugUse = echarts.init(document.getElementById('hivCmDrugUse'));
+var InsuranceEnrollmentOptions7 = {
     title: {
-        text: 'Dental Barriers\n Broken Down by Drug Use',
+        text: 'InsuranceEnrollment Barriers\n Broken Down by Drug Use',
     },
     tooltip: {
         trigger: 'axis',
@@ -379,13 +379,13 @@ var DentalOptions7 = {
 		}
     ]
 };
-DentalBarriersDrugUse.setOption(DentalOptions7);
+InsuranceEnrollmentBarriersDrugUse.setOption(InsuranceEnrollmentOptions7);
 
 //broken down by method of transmission 
-var DentalBarriersMoT = echarts.init(document.getElementById('hivCmMoT'));
-var DentalOptions8 = {
+var InsuranceEnrollmentBarriersMoT = echarts.init(document.getElementById('hivCmMoT'));
+var InsuranceEnrollmentOptions8 = {
     title: {
-        text: 'Dental Barriers\n Broken Down by Method of Transmission',
+        text: 'InsuranceEnrollment Barriers\n Broken Down by Method of Transmission',
     },
     tooltip: {
         trigger: 'axis',
@@ -427,4 +427,4 @@ var DentalOptions8 = {
 		}
     ]
 };
-DentalBarriersMoT.setOption(DentalOptions8);
+InsuranceEnrollmentBarriersMoT.setOption(InsuranceEnrollmentOptions8);
