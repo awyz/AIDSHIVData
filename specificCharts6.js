@@ -1,17 +1,17 @@
-//doughnut chart for Case Management 
-//still need to input values for sexual orientation and disability
+//doughnut chart for Insurance Payment Services
+//still need to input values for sexual orienation and disability
 
-var caseManagementDoughnut = echarts.init(document.getElementById('hivDesc'));
-var caseManagementDoughnutOption = {
+var InsurancePaymentDoughnut = echarts.init(document.getElementById('InsurancePaymentDesc'));
+var InsurancePaymentDoughnutOption = {
     tooltip: {
         trigger: 'item',
         formatter: "{a} <br/>{b}: {c} ({d}%)"
     },
     legend: false,
-	
+	 
     series: [
         {
-            name:'Access to Case Management',
+            name:'Access to Insurance Payment Services',
             type:'pie',
             radius: ['50%', '70%'],
             avoidLabelOverlap: false,
@@ -34,24 +34,24 @@ var caseManagementDoughnutOption = {
                 }
             },
             data:[
-                {value:1, name:'too difficult', itemStyle: {color: 'rgba(255, 104, 107, 1)'}},
-                {value:5, name:'possible but\n very difficult', itemStyle: {color: 'rgba(255, 166, 166, 1)'}},
-                {value:1, name:'chose not\n to answer',itemStyle: {color: 'rgba(184, 197, 214, 1)'} },
-                {value:75, name:'did not\n need service', itemStyle: {color: 'rgba(163, 155, 168, 1)'}},
-                {value:39, name:'possible with\n some work', itemStyle: {color: 'rgba(152, 148, 255, 1)'}},
-                {value:277, name:'easy', itemStyle: {color: 'rgba(104, 99, 240, 1)'}}
+                {value:2, name:'too difficult', itemStyle: {color: 'rgba(255, 104, 107, 1)'}},
+                {value:9, name:'possible but\n very difficult', itemStyle: {color: 'rgba(255, 166, 166, 1)'}},
+                {value:5, name:'chose not\n to answer', itemStyle: {color: 'rgba(184, 197, 214, 1)'}},
+                {value:273, name:'did not\n need service',itemStyle: {color: 'rgba(163, 155, 168, 1)'} },
+                {value:47, name:'possible with\n some work', itemStyle: {color: 'rgba(152, 148, 255, 1)'}},
+                {value:62, name:'easy', itemStyle: {color: 'rgba(104, 99, 240, 1)'}}
             ]
         }
     ]
 };
-caseManagementDoughnut.setOption(caseManagementDoughnutOption);
-//bar graph of Case Management Respondents that answered very or too difficult
+InsurancePaymentDoughnut.setOption(InsurancePaymentDoughnutOption);
+//bar graph of InsurancePayment Respondents that answered very or too difficult
 
 //broken down by ethnicity
-var caseManagementBarriersEthnicity = echarts.init(document.getElementById('hivCmEthnicity'));
-var caseManagementOptions1 = {
+var InsurancePaymentBarriersEthnicity = echarts.init(document.getElementById('hivCmEthnicity'));
+var InsurancePaymentOptions1 = {
     title: {
-        text: 'Case Management Barriers Broken Down by Ethnicity',
+        text: 'InsurancePayment Barriers Broken Down by Ethnicity',
     },
     tooltip: {
         trigger: 'axis',
@@ -79,26 +79,26 @@ var caseManagementOptions1 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [1, 1, 2],
+            data: ["", 1, 4,"",1],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ["","",1],
+			data: [""],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
-caseManagementBarriersEthnicity.setOption(caseManagementOptions1);
+InsurancePaymentBarriersEthnicity.setOption(InsurancePaymentOptions1);
 
 
 //broken down by age
-var caseManagementBarriersAge = echarts.init(document.getElementById('hivCmAge'));
-var caseManagementOptions2 = {
+var InsurancePaymentBarriersAge = echarts.init(document.getElementById('hivCmAge'));
+var InsurancePaymentOptions2 = {
     title: {
-        text: 'Case Management Barriers Broken Down by Age',
+        text: 'InsurancePayment Barriers Broken Down by Age',
     },
     tooltip: {
         trigger: 'axis',
@@ -124,25 +124,25 @@ var caseManagementOptions2 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [2,3],
+            data: [2,3,1],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [1],
+			data: [""],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
-caseManagementBarriersAge.setOption(caseManagementOptions2);
+InsurancePaymentBarriersAge.setOption(InsurancePaymentOptions2);
 
 //broken down by education
-var caseManagementBarriersEducation = echarts.init(document.getElementById('hivCmEducation'));
-var caseManagementOptions3 = {
+var InsurancePaymentBarriersEducation = echarts.init(document.getElementById('hivCmEducation'));
+var InsurancePaymentOptions3 = {
     title: {
-        text: 'Case Management Barriers Broken Down by Education',
+        text: 'InsurancePayment Barriers Broken Down by Education',
     },
     tooltip: {
         trigger: 'axis',
@@ -168,26 +168,26 @@ var caseManagementOptions3 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: ['',"",3,1,1,"",""],
+            data: [2,1,1,"",2,"",""],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ['',1],
+			data: [''],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
-caseManagementBarriersEducation.setOption(caseManagementOptions3);
+InsurancePaymentBarriersEducation.setOption(InsurancePaymentOptions3);
 
 //broken down by income type
-var caseManagementBarriersIncomeType = echarts.init(document.getElementById('hivCmIncomeType'));
-var caseManagementOptions4 = {
+var InsurancePaymentBarriersIncomeType = echarts.init(document.getElementById('hivCmIncomeType'));
+var InsurancePaymentOptions4 = {
     title: {
-        text: 'Case Management Barriers\n Broken Down by Income Type',
+        text: 'InsurancePayment Barriers\n Broken Down by Income Type',
     },
     tooltip: {
         trigger: 'axis',
@@ -213,26 +213,26 @@ var caseManagementOptions4 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [4,"","",1],
+            data: [4,1,"",1],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [1],
+			data: [''],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
-caseManagementBarriersIncomeType.setOption(caseManagementOptions4);
+InsurancePaymentBarriersIncomeType.setOption(InsurancePaymentOptions4);
 
 //broken down by sexual orientation
-var caseManagementBarriersSexualOrientation = echarts.init(document.getElementById('hivCmSexualOrientation'));
-var caseManagementOptions5 = {
+var InsurancePaymentBarriersSexualOrientation = echarts.init(document.getElementById('hivCmSexualOrientation'));
+var InsurancePaymentOptions5 = {
     title: {
-        text: 'Case Management Barriers\n Broken Down by Sexual Orientation',
+        text: 'InsurancePayment Barriers\n Broken Down by Sexual Orientation',
     },
     tooltip: {
         trigger: 'axis',
@@ -259,26 +259,26 @@ var caseManagementOptions5 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [3,1,"","",1],
+            data: ["","","","",""],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ["",1],
+			data: ["",""],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
-caseManagementBarriersSexualOrientation.setOption(caseManagementOptions5);
+InsurancePaymentBarriersSexualOrientation.setOption(InsurancePaymentOptions5);
 
 //broken down by disability
-var caseManagementBarriersDisability = echarts.init(document.getElementById('hivCmDisability'));
-var caseManagementOptions6 = {
+var InsurancePaymentBarriersDisability = echarts.init(document.getElementById('hivCmDisability'));
+var InsurancePaymentOptions6 = {
     title: {
-        text: 'Case Management Barriers Broken Down by Disability',
+        text: 'InsurancePayment Barriers Broken Down by Disability',
     },
     tooltip: {
         trigger: 'axis',
@@ -329,13 +329,13 @@ var caseManagementOptions6 = {
 		}
     ]
 };
-caseManagementBarriersDisability.setOption(caseManagementOptions6);
+InsurancePaymentBarriersDisability.setOption(InsurancePaymentOptions6);
 
 //broken down by drug use
-var caseManagementBarriersDrugUse = echarts.init(document.getElementById('hivCmDrugUse'));
-var caseManagementOptions7 = {
+var InsurancePaymentBarriersDrugUse = echarts.init(document.getElementById('hivCmDrugUse'));
+var InsurancePaymentOptions7 = {
     title: {
-        text: 'Case Management Barriers\n Broken Down by Drug Use',
+        text: 'InsurancePayment Barriers\n Broken Down by Drug Use',
     },
     tooltip: {
         trigger: 'axis',
@@ -362,26 +362,26 @@ var caseManagementOptions7 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: ["","","","",3,"",2],
+            data: ["","","","",2,1,3],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ["","","","",1],
+			data: ["","","","",""],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
-caseManagementBarriersDrugUse.setOption(caseManagementOptions7);
+InsurancePaymentBarriersDrugUse.setOption(InsurancePaymentOptions7);
 
 //broken down by method of transmission 
-var caseManagementBarriersMoT = echarts.init(document.getElementById('hivCmMoT'));
-var caseManagementOptions8 = {
+var InsurancePaymentBarriersMoT = echarts.init(document.getElementById('hivCmMoT'));
+var InsurancePaymentOptions8 = {
     title: {
-        text: 'Case Management Barriers\n Broken Down by Method of Transmission',
+        text: 'InsurancePayment Barriers\n Broken Down by Method of Transmission',
     },
     tooltip: {
         trigger: 'axis',
@@ -408,14 +408,14 @@ var caseManagementOptions8 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [2,"",1,1,'',1],
+            data: [3,"",1,1,'',1],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [1],
+			data: [''],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 
 			
@@ -423,4 +423,4 @@ var caseManagementOptions8 = {
 		}
     ]
 };
-caseManagementBarriersMoT.setOption(caseManagementOptions8);
+InsurancePaymentBarriersMoT.setOption(InsurancePaymentOptions8);
