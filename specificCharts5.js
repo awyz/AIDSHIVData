@@ -3,7 +3,7 @@
 
 var InsuranceEnrollmentDoughnut = echarts.init(document.getElementById('insuranceDesc'));
 var InsuranceEnrollmentDoughnutOption = {
-    ttitle : {
+    title : {
         text: 'Insurance Statistics',
         x: 'center'
     },

@@ -3,7 +3,7 @@
 
 var CounselingDoughnut = echarts.init(document.getElementById('counselingDesc'));
 var CounselingDoughnutOption = {
-    ttitle : {
+    title : {
         text: 'Counseling Statistics',
         x: 'center'
     },
