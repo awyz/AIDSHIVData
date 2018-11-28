@@ -1,17 +1,18 @@
 //doughnut chart for Disability
 //still need to input values for sexual orientation and Disabilities
+
 var DisabilityDoughnut = echarts.init(document.getElementById('hivDisability'));
 var DisabilityDoughnutOption = {
     tooltip: {
         trigger: 'item',
         formatter: "{a} <br/>{b}: {c} ({d}%)"
     },
-    legend: false, 
-	// {
-        // orient: 'vertical',
-        // x: 'left',
-        // data:['easy','possible with\n some work','chose not\n to answer','did not\n need service','possible but\n very difficult','too difficult']
-    // },
+    legend: 
+	{
+        orient: 'vertical',
+        x: 'left',
+        data:['easy','possible with\n some work','chose not\n to answer','did not\n need service','possible but\n very difficult','too difficult']
+    },
     series: [
         {
             name:'Aid at Home',

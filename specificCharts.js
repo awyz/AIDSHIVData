@@ -40,8 +40,8 @@ var caseManagementDoughnutOption = {
             data:[
                 {value:1, name:'too difficult', itemStyle: {color: 'rgba(255, 104, 107, 1)'}},
                 {value:5, name:'possible but\n very difficult', itemStyle: {color: 'rgba(255, 166, 166, 1)'}},
-                {value:1, name:'chose not\n to answer', itemStyle: {color: 'rgba(163, 155, 168, 1)'}},
-                {value:75, name:'did not\n need service', itemStyle: {color: 'rgba(184, 197, 214, 1)'}},
+                {value:1, name:'chose not\n to answer',itemStyle: {color: 'rgba(184, 197, 214, 1)'} },
+                {value:75, name:'did not\n need service', itemStyle: {color: 'rgba(163, 155, 168, 1)'}},
                 {value:39, name:'possible with\n some work', itemStyle: {color: 'rgba(152, 148, 255, 1)'}},
                 {value:277, name:'easy', itemStyle: {color: 'rgba(104, 99, 240, 1)'}}
             ]
