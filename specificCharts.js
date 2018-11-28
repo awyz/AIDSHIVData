@@ -7,12 +7,12 @@ var caseManagementDoughnutOption = {
         trigger: 'item',
         formatter: "{a} <br/>{b}: {c} ({d}%)"
     },
-    legend: false, 
-	// {
-        // orient: 'vertical',
-        // x: 'left',
-        // data:['easy','possible with\n some work','chose not\n to answer','did not\n need service','possible but\n very difficult','too difficult']
-    // },
+    legend: 
+	{
+        orient: 'vertical',
+        x: 'left',
+        data:['easy','possible with\n some work','chose not\n to answer','did not\n need service','possible but\n very difficult','too difficult']
+    },
     series: [
         {
             name:'Access to Case Management',

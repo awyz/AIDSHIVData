@@ -1,6 +1,7 @@
 //doughnut chart for Information 
+//still need to input values for sexual orienation and disability
 
-var InformationDoughnut = echarts.init(document.getElementById('hivInfo'));
+var InformationDoughnut = echarts.init(document.getElementById('infoDesc'));
 var InformationDoughnutOption = {
     tooltip: {
         trigger: 'item',
