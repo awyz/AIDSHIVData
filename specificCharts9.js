@@ -1,10 +1,10 @@
-//doughnut chart for MedicalCosts
-//still need to input values for sexual orientation and disabilities
+//doughnut chart for Alcohol and Drug Use
+//still need to input values for sexual orienation and disability
 
-var MedicalCostsDoughnut = echarts.init(document.getElementById('medDesc'));
-var MedicalCostsDoughnutOption = {
-   title : {
-        text: 'Medical Cost Statistics',
+var AandDuseDoughnut = echarts.init(document.getElementById('abuseDesc'));
+var AandDuseDoughnutOption = {
+    title : {
+        text: 'Help with Alcohol/Drug Abuse Statistics',
         x: 'center'
     },
     tooltip: {
@@ -19,7 +19,7 @@ var MedicalCostsDoughnutOption = {
     },
     series: [
         {
-            name:'Aid at Home',
+            name:'Alcohol and Drug Use',
             type:'pie',
             radius: ['45%', '60%'],
             avoidLabelOverlap: false,
@@ -42,24 +42,24 @@ var MedicalCostsDoughnutOption = {
                 }
             },
             data:[
-                {value:5, name:'too difficult', itemStyle: {color: 'rgba(255, 104, 107, 1)'}},
-                {value:24, name:'possible but\n very difficult', itemStyle: {color: 'rgba(255, 166, 166, 1)'}},
-                {value:3, name:'chose not\n to answer', itemStyle: {color: 'rgba(184, 197, 214, 1)'}},
-                {value:194, name:'did not\n need service', itemStyle: {color: 'rgba(163, 155, 168, 1)'}},
-                {value:73, name:'possible with\n some work', itemStyle: {color: 'rgba(152, 148, 255, 1)'}},
-                {value:99, name:'easy', itemStyle: {color: 'rgba(104, 99, 240, 1)'}}
+                {value:2, name:'too difficult', itemStyle: {color: 'rgba(255, 104, 107, 1)'}},
+                {value:1, name:'possible but\n very difficult', itemStyle: {color: 'rgba(255, 166, 166, 1)'}},
+                {value:6, name:'chose not\n to answer', itemStyle: {color: 'rgba(163, 155, 168, 1)'}},
+                {value:366, name:'did not\n need service', itemStyle: {color: 'rgba(184, 197, 214, 1)'}},
+                {value:11, name:'possible with\n some work', itemStyle: {color: 'rgba(152, 148, 255, 1)'}},
+                {value:12, name:'easy', itemStyle: {color: 'rgba(104, 99, 240, 1)'}}
             ]
         }
     ]
 };
-MedicalCostsDoughnut.setOption(MedicalCostsDoughnutOption);
-//bar graph of MedicalCosts Respondents that answered very or too difficult
-
+AandDuseDoughnut.setOption(AandDuseDoughnutOption);
+//bar graph of AandDuse Respondents that answered very or too difficult
+/* 
 //broken down by ethnicity
-var MedicalCostsBarriersEthnicity = echarts.init(document.getElementById('hivCmEthnicity'));
-var MedicalCostsOptions1 = {
+var AandDuseBarriersEthnicity = echarts.init(document.getElementById('hivCmEthnicity'));
+var AandDuseOptions1 = {
     title: {
-        text: 'Medical Cost Barriers Broken Down by Ethnicity',
+        text: 'AandDuse Barriers Broken Down by Ethnicity',
     },
     tooltip: {
         trigger: 'axis',
@@ -87,28 +87,26 @@ var MedicalCostsOptions1 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: ["", 1, 4, 1, 2,1,"",1],
+            data: ["", 1, 4,"",1],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ["","",3,"",1,
-			1,"","","","","","","",
-			"",1,"","",1],
+			data: [""],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
-MedicalCostsBarriersEthnicity.setOption(MedicalCostsOptions1);
+AandDuseBarriersEthnicity.setOption(AandDuseOptions1);
 
 
 //broken down by age
-var MedicalCostsBarriersAge = echarts.init(document.getElementById('hivCmAge'));
-var MedicalCostsOptions2 = {
+var AandDuseBarriersAge = echarts.init(document.getElementById('hivCmAge'));
+var AandDuseOptions2 = {
     title: {
-        text: 'Medical Cost Barriers Broken Down by Age',
+        text: 'AandDuse Barriers Broken Down by Age',
     },
     tooltip: {
         trigger: 'axis',
@@ -134,25 +132,25 @@ var MedicalCostsOptions2 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [3,3],
+            data: [2,3,1],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [4,1,1],
+			data: [""],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
-MedicalCostsBarriersAge.setOption(MedicalCostsOptions2);
+AandDuseBarriersAge.setOption(AandDuseOptions2);
 
 //broken down by education
-var MedicalCostsBarriersEducation = echarts.init(document.getElementById('hivCmEducation'));
-var MedicalCostsOptions3 = {
+var AandDuseBarriersEducation = echarts.init(document.getElementById('hivCmEducation'));
+var AandDuseOptions3 = {
     title: {
-        text: 'Medical Cost Barriers Broken Down by Education',
+        text: 'AandDuse Barriers Broken Down by Education',
     },
     tooltip: {
         trigger: 'axis',
@@ -172,32 +170,32 @@ var MedicalCostsOptions3 = {
     },
     yAxis: {
         type: 'category',
-        data: ['Graduate Degree','Bachelor\'s', 'Some College', 'Vocational School', 'High School','Grades 9-11','Prefer not to Answer']
+        data: ['Graduate Degree','Bachelor\'s', 'Some College', 'Vocational School', 'High School',"Grades 9-11",'Prefer not to Answer']
     },
     series: [
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [1,"",1,1,2,1],
+            data: [2,1,1,"",2,"",""],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ['',1,4,'',1,'',''],
+			data: [''],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
-MedicalCostsBarriersEducation.setOption(MedicalCostsOptions3);
+AandDuseBarriersEducation.setOption(AandDuseOptions3);
 
 //broken down by income type
-var MedicalCostsBarriersIncomeType = echarts.init(document.getElementById('hivCmIncomeType'));
-var MedicalCostsOptions4 = {
+var AandDuseBarriersIncomeType = echarts.init(document.getElementById('hivCmIncomeType'));
+var AandDuseOptions4 = {
     title: {
-        text: 'Medical Cost Barriers\n Broken Down by Income Type',
+        text: 'AandDuse Barriers\n Broken Down by Income Type',
     },
     tooltip: {
         trigger: 'axis',
@@ -223,26 +221,26 @@ var MedicalCostsOptions4 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [6],
+            data: [4,1,"",1],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [6],
+			data: [''],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
-MedicalCostsBarriersIncomeType.setOption(MedicalCostsOptions4);
+AandDuseBarriersIncomeType.setOption(AandDuseOptions4);
 
 //broken down by sexual orientation
-var MedicalCostsBarriersSexualOrientation = echarts.init(document.getElementById('hivCmSexualOrientation'));
-var MedicalCostsOptions5 = {
+var AandDuseBarriersSexualOrientation = echarts.init(document.getElementById('hivCmSexualOrientation'));
+var AandDuseOptions5 = {
     title: {
-        text: 'Medical Cost Barriers\n Broken Down by Sexual Orientation',
+        text: 'AandDuse Barriers\n Broken Down by Sexual Orientation',
     },
     tooltip: {
         trigger: 'axis',
@@ -282,13 +280,13 @@ var MedicalCostsOptions5 = {
 		}
     ]
 };
-MedicalCostsBarriersSexualOrientation.setOption(MedicalCostsOptions5);
+AandDuseBarriersSexualOrientation.setOption(AandDuseOptions5);
 
-//broken down by MedicalCosts
-var MedicalCostsBarriersMedicalCosts = echarts.init(document.getElementById('hivCmMedicalCosts'));
-var MedicalCostsOptions6 = {
+//broken down by disability
+var AandDuseBarriersDisability = echarts.init(document.getElementById('hivCmDisability'));
+var AandDuseOptions6 = {
     title: {
-        text: 'Medical Cost Barriers Broken Down by MedicalCosts',
+        text: 'AandDuse Barriers Broken Down by Disability',
     },
     tooltip: {
         trigger: 'axis',
@@ -339,13 +337,13 @@ var MedicalCostsOptions6 = {
 		}
     ]
 };
-MedicalCostsBarriersMedicalCosts.setOption(MedicalCostsOptions6);
+AandDuseBarriersDisability.setOption(AandDuseOptions6);
 
 //broken down by drug use
-var MedicalCostsBarriersDrugUse = echarts.init(document.getElementById('hivCmDrugUse'));
-var MedicalCostsOptions7 = {
+var AandDuseBarriersDrugUse = echarts.init(document.getElementById('hivCmDrugUse'));
+var AandDuseOptions7 = {
     title: {
-        text: 'Medical Cost Barriers\n Broken Down by Drug Use',
+        text: 'AandDuse Barriers\n Broken Down by Drug Use',
     },
     tooltip: {
         trigger: 'axis',
@@ -372,26 +370,26 @@ var MedicalCostsOptions7 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: ["","","",1,1,1,4],
+            data: ["","","","",2,1,3],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ["","","","",2,3,""],
+			data: ["","","","",""],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
-MedicalCostsBarriersDrugUse.setOption(MedicalCostsOptions7);
+AandDuseBarriersDrugUse.setOption(AandDuseOptions7);
 
 //broken down by method of transmission 
-var MedicalCostsBarriersMoT = echarts.init(document.getElementById('hivCmMoT'));
-var MedicalCostsOptions8 = {
+var AandDuseBarriersMoT = echarts.init(document.getElementById('hivCmMoT'));
+var AandDuseOptions8 = {
     title: {
-        text: 'Medical Cost Barriers\n Broken Down by Method of Transmission',
+        text: 'AandDuse Barriers\n Broken Down by Method of Transmission',
     },
     tooltip: {
         trigger: 'axis',
@@ -418,14 +416,14 @@ var MedicalCostsOptions8 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [4,1,1,'','',''],
+            data: [3,"",1,1,'',1],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [4,'',1,1,'',1,'',''],
+			data: [''],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 
 			
@@ -433,4 +431,5 @@ var MedicalCostsOptions8 = {
 		}
     ]
 };
-MedicalCostsBarriersMoT.setOption(MedicalCostsOptions8);
+AandDuseBarriersMoT.setOption(AandDuseOptions8);
+ */
