@@ -6,10 +6,6 @@ var caseManagementOptions0 = {
         text: 'Case Management Barriers Broken Down by Reason',
 		x: 'center'
     },
-	footer:{
-		text: 'Top Barriers'
-		
-	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -29,7 +25,7 @@ var caseManagementOptions0 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        boundaryGap: [0, 20]
     },
     yAxis: {
         type: 'category',
@@ -76,31 +72,32 @@ var caseManagementOptions0 = {
 				],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
         },
+		
 		{
 			name:'Too Difficult',
 			type: 'bar',
 			 data: [
-				{value:2, name:'Could not afford'},
-				{value:2, name:'Did not know where to get it'},
+				{value:0, name:'Could not afford'},
+				{value:0, name:'Did not know where to get it'},
 				{value:0, name:'Too long of a wait '},
-				{value:1, name:'Service not available'},
+				{value:0, name:'Service not available'},
 				{value:1, name:'Did not qualify'},
-				{value:3, name:'Did not have transportation'},
+				{value:0, name:'Did not have transportation'},
 				{value:0, name:'Did not have childcare'},
 				{value:0, name:'Did not have enough time off work'},
-				{value:2, name:'Concerned about privacy'},
+				{value:0, name:'Concerned about privacy'},
 				{value:0, name:'They did not speak my primary language'},
-				{value:1, name:'Discrimination because of race'},
-				{value:1, name:'Discrimination because of sexual orientation'},
-				{value:1, name:'Discrimination because of gender'},
-				{value:2, name:'I was not in stable living condition'},
-				{value:2, name:'Nervous or afraid of what people might say'},
-				{value:2, name:'Stigma due to HIV'},
+				{value:0, name:'Discrimination because of race'},
+				{value:0, name:'Discrimination because of sexual orientation'},
+				{value:0, name:'Discrimination because of gender'},
+				{value:1, name:'I was not in stable living condition'},
+				{value:0, name:'Nervous or afraid of what people might say'},
+				{value:0, name:'Stigma due to HIV'},
 				{value:0, name:'Discrimination because of my HIV status'},
 				],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
-		}
+		},
 		
     ]
 };
