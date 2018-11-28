@@ -1,6 +1,6 @@
 //doughnut chart for Alternative Therapy
 var AlternativeTherapyBarriersReason = echarts.init(document.getElementById('altTherapyDesc'));
-var AlternativeTherapytOptions0 = {
+var AlternativeTherapyOptions0 = {
 	title: {
         text: 'Alternative Therapy Barriers Broken Down by Reason',
 		x: 'center'
@@ -24,7 +24,7 @@ var AlternativeTherapytOptions0 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 20]
+        boundaryGap: [0, 0.1]
     },
     yAxis: {
         type: 'category',
@@ -102,10 +102,10 @@ var AlternativeTherapytOptions0 = {
 };
 //top barrier could not afford
     
-     caseManagmentBarriersReason.setOption(caseManagementOptions0);
+     AlternativeTherapyBarriersReason.setOption(AlternativeTherapyOptions0);
 //still need to input values for sexual orienation and disability
 
-var AlternativeTherapyDoughnut = echarts.init(document.getElementById('altTherapyDesc'));
+var AlternativeTherapyDoughnut = echarts.init(document.getElementById('altTherapy'));
 var AlternativeTherapyDoughnutOption = {
     title : {
         text: 'Alternative Therapy Statistics',
