@@ -42,12 +42,12 @@ var PayingForBillsDoughnutOption = {
                 }
             },
             data:[
-                {value:10, name:'too difficult', itemStyle: {color: 'rgba(255, 104, 107, 1)'}},
-                {value:26, name:'possible but\n very difficult', itemStyle: {color: 'rgba(255, 166, 166, 1)'}},
+                {value:16, name:'too difficult', itemStyle: {color: 'rgba(255, 104, 107, 1)'}},
+                {value:16, name:'possible but\n very difficult', itemStyle: {color: 'rgba(255, 166, 166, 1)'}},
                 {value:7, name:'chose not\n to answer', itemStyle: {color: 'rgba(163, 155, 168, 1)'}},
-                {value:249, name:'did not\n need service', itemStyle: {color: 'rgba(184, 197, 214, 1)'}},
-                {value:58, name:'possible with\n some work', itemStyle: {color: 'rgba(152, 148, 255, 1)'}},
-                {value:48, name:'easy', itemStyle: {color: 'rgba(104, 99, 240, 1)'}}
+                {value:283, name:'did not\n need service', itemStyle: {color: 'rgba(184, 197, 214, 1)'}},
+                {value:47, name:'possible with\n some work', itemStyle: {color: 'rgba(152, 148, 255, 1)'}},
+                {value:29, name:'easy', itemStyle: {color: 'rgba(104, 99, 240, 1)'}}
             ]
         }
     ]
