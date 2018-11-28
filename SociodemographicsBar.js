@@ -88,7 +88,7 @@ caseManagementChart.setOption(caseManagementOptions);
 var disabilitiesChart = echarts.init(document.getElementById('disabilities'));
 var disabilitiesOptions = {
     title: {
-        text: 'Disabilities',
+        text: 'Related Diseases',
         subtext: 'HIV Needs Assessment 2018 / N=398\nEpi Profile / No data available.'
     },
     color: ['#F13535'],
