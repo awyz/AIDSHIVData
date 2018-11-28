@@ -94,7 +94,7 @@ var MedicalCostsOptions1 = {
 			name:'Too Difficult',
 			type: 'bar',
 			data: ["","",3,"",1,
-			1,"","","","",""","",
+			1,"","","","","","","",
 			"",1,"","",1],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			

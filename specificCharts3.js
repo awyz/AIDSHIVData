@@ -20,7 +20,7 @@ var DisabilityDoughnutOption = {
 	
     series: [
         {
-            name:'Aid at Home',
+            name:'Disability',
             type:'pie',
             radius: ['45%', '60%'],
             avoidLabelOverlap: false,
@@ -56,7 +56,7 @@ var DisabilityDoughnutOption = {
 DisabilityDoughnut.setOption(DisabilityDoughnutOption);
 //bar graph of Disability Respondents that answered very or too difficult
 
-//broken down by ethnicity
+/* //broken down by ethnicity
 var DisabilityBarriersEthnicity = echarts.init(document.getElementById('hivCmEthnicity'));
 var DisabilityOptions1 = {
     title: {
@@ -95,7 +95,7 @@ var DisabilityOptions1 = {
 			name:'Too Difficult',
 			type: 'bar',
 			data: ["","",3,"",1,
-			1,"","","","",""","",
+			1,"","","","","","","",
 			"",1,"","",1],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
@@ -433,5 +433,5 @@ var DisabilityOptions8 = {
 			
 		}
     ]
-};
-DisabilityBarriersMoT.setOption(DisabilityOptions8);
+}; */
+/**DisabilityBarriersMoT.setOption(DisabilityOptions8);*/
