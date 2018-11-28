@@ -1,10 +1,10 @@
-//doughnut chart for Alcohol and Drug Use
+//doughnut chart for Support Group
 //still need to input values for sexual orienation and disability
 
-var AandDuseDoughnut = echarts.init(document.getElementById('abuseDesc'));
-var AandDuseDoughnutOption = {
+var SupportDoughnut = echarts.init(document.getElementById('socialDesc'));
+var SupportDoughnutOption = {
     title : {
-        text: 'Help with Alcohol/Drug Abuse Statistics',
+        text: 'Social Support',
         x: 'center'
     },
     tooltip: {
@@ -19,7 +19,7 @@ var AandDuseDoughnutOption = {
     },
     series: [
         {
-            name:'Alcohol and Drug Use',
+            name:'Support Group',
             type:'pie',
             radius: ['45%', '60%'],
             avoidLabelOverlap: false,
@@ -42,24 +42,24 @@ var AandDuseDoughnutOption = {
                 }
             },
             data:[
-                {value:2, name:'too difficult', itemStyle: {color: 'rgba(255, 104, 107, 1)'}},
-                {value:1, name:'possible but\n very difficult', itemStyle: {color: 'rgba(255, 166, 166, 1)'}},
-                {value:6, name:'chose not\n to answer', itemStyle: {color: 'rgba(163, 155, 168, 1)'}},
-                {value:366, name:'did not\n need service', itemStyle: {color: 'rgba(184, 197, 214, 1)'}},
-                {value:11, name:'possible with\n some work', itemStyle: {color: 'rgba(152, 148, 255, 1)'}},
-                {value:12, name:'easy', itemStyle: {color: 'rgba(104, 99, 240, 1)'}}
+                {value:5, name:'too difficult', itemStyle: {color: 'rgba(255, 104, 107, 1)'}},
+                {value:7, name:'possible but\n very difficult', itemStyle: {color: 'rgba(255, 166, 166, 1)'}},
+                {value:7, name:'chose not\n to answer', itemStyle: {color: 'rgba(163, 155, 168, 1)'}},
+                {value:300, name:'did not\n need service', itemStyle: {color: 'rgba(184, 197, 214, 1)'}},
+                {value:24, name:'possible with\n some work', itemStyle: {color: 'rgba(152, 148, 255, 1)'}},
+                {value:55, name:'easy', itemStyle: {color: 'rgba(104, 99, 240, 1)'}}
             ]
         }
     ]
 };
-AandDuseDoughnut.setOption(AandDuseDoughnutOption);
-//bar graph of AandDuse Respondents that answered very or too difficult
+SupportDoughnut.setOption(SupportDoughnutOption);
+//bar graph of Support Respondents that answered very or too difficult
 /* 
 //broken down by ethnicity
-var AandDuseBarriersEthnicity = echarts.init(document.getElementById('hivCmEthnicity'));
-var AandDuseOptions1 = {
+var SupportBarriersEthnicity = echarts.init(document.getElementById('hivCmEthnicity'));
+var SupportOptions1 = {
     title: {
-        text: 'AandDuse Barriers Broken Down by Ethnicity',
+        text: 'Support Barriers Broken Down by Ethnicity',
     },
     tooltip: {
         trigger: 'axis',
@@ -99,14 +99,14 @@ var AandDuseOptions1 = {
 		}
     ]
 };
-AandDuseBarriersEthnicity.setOption(AandDuseOptions1);
+SupportBarriersEthnicity.setOption(SupportOptions1);
 
 
 //broken down by age
-var AandDuseBarriersAge = echarts.init(document.getElementById('hivCmAge'));
-var AandDuseOptions2 = {
+var SupportBarriersAge = echarts.init(document.getElementById('hivCmAge'));
+var SupportOptions2 = {
     title: {
-        text: 'AandDuse Barriers Broken Down by Age',
+        text: 'Support Barriers Broken Down by Age',
     },
     tooltip: {
         trigger: 'axis',
@@ -144,13 +144,13 @@ var AandDuseOptions2 = {
 		}
     ]
 };
-AandDuseBarriersAge.setOption(AandDuseOptions2);
+SupportBarriersAge.setOption(SupportOptions2);
 
 //broken down by education
-var AandDuseBarriersEducation = echarts.init(document.getElementById('hivCmEducation'));
-var AandDuseOptions3 = {
+var SupportBarriersEducation = echarts.init(document.getElementById('hivCmEducation'));
+var SupportOptions3 = {
     title: {
-        text: 'AandDuse Barriers Broken Down by Education',
+        text: 'Support Barriers Broken Down by Education',
     },
     tooltip: {
         trigger: 'axis',
@@ -189,13 +189,13 @@ var AandDuseOptions3 = {
 		}
     ]
 };
-AandDuseBarriersEducation.setOption(AandDuseOptions3);
+SupportBarriersEducation.setOption(SupportOptions3);
 
 //broken down by income type
-var AandDuseBarriersIncomeType = echarts.init(document.getElementById('hivCmIncomeType'));
-var AandDuseOptions4 = {
+var SupportBarriersIncomeType = echarts.init(document.getElementById('hivCmIncomeType'));
+var SupportOptions4 = {
     title: {
-        text: 'AandDuse Barriers\n Broken Down by Income Type',
+        text: 'Support Barriers\n Broken Down by Income Type',
     },
     tooltip: {
         trigger: 'axis',
@@ -234,13 +234,13 @@ var AandDuseOptions4 = {
 		}
     ]
 };
-AandDuseBarriersIncomeType.setOption(AandDuseOptions4);
+SupportBarriersIncomeType.setOption(SupportOptions4);
 
 //broken down by sexual orientation
-var AandDuseBarriersSexualOrientation = echarts.init(document.getElementById('hivCmSexualOrientation'));
-var AandDuseOptions5 = {
+var SupportBarriersSexualOrientation = echarts.init(document.getElementById('hivCmSexualOrientation'));
+var SupportOptions5 = {
     title: {
-        text: 'AandDuse Barriers\n Broken Down by Sexual Orientation',
+        text: 'Support Barriers\n Broken Down by Sexual Orientation',
     },
     tooltip: {
         trigger: 'axis',
@@ -280,13 +280,13 @@ var AandDuseOptions5 = {
 		}
     ]
 };
-AandDuseBarriersSexualOrientation.setOption(AandDuseOptions5);
+SupportBarriersSexualOrientation.setOption(SupportOptions5);
 
 //broken down by disability
-var AandDuseBarriersDisability = echarts.init(document.getElementById('hivCmDisability'));
-var AandDuseOptions6 = {
+var SupportBarriersDisability = echarts.init(document.getElementById('hivCmDisability'));
+var SupportOptions6 = {
     title: {
-        text: 'AandDuse Barriers Broken Down by Disability',
+        text: 'Support Barriers Broken Down by Disability',
     },
     tooltip: {
         trigger: 'axis',
@@ -337,13 +337,13 @@ var AandDuseOptions6 = {
 		}
     ]
 };
-AandDuseBarriersDisability.setOption(AandDuseOptions6);
+SupportBarriersDisability.setOption(SupportOptions6);
 
 //broken down by drug use
-var AandDuseBarriersDrugUse = echarts.init(document.getElementById('hivCmDrugUse'));
-var AandDuseOptions7 = {
+var SupportBarriersDrugUse = echarts.init(document.getElementById('hivCmDrugUse'));
+var SupportOptions7 = {
     title: {
-        text: 'AandDuse Barriers\n Broken Down by Drug Use',
+        text: 'Support Barriers\n Broken Down by Drug Use',
     },
     tooltip: {
         trigger: 'axis',
@@ -383,13 +383,13 @@ var AandDuseOptions7 = {
 		}
     ]
 };
-AandDuseBarriersDrugUse.setOption(AandDuseOptions7);
+SupportBarriersDrugUse.setOption(SupportOptions7);
 
 //broken down by method of transmission 
-var AandDuseBarriersMoT = echarts.init(document.getElementById('hivCmMoT'));
-var AandDuseOptions8 = {
+var SupportBarriersMoT = echarts.init(document.getElementById('hivCmMoT'));
+var SupportOptions8 = {
     title: {
-        text: 'AandDuse Barriers\n Broken Down by Method of Transmission',
+        text: 'Support Barriers\n Broken Down by Method of Transmission',
     },
     tooltip: {
         trigger: 'axis',
@@ -431,5 +431,5 @@ var AandDuseOptions8 = {
 		}
     ]
 };
-AandDuseBarriersMoT.setOption(AandDuseOptions8);
+SupportBarriersMoT.setOption(SupportOptions8);
  */
