@@ -1,23 +1,27 @@
 //doughnut chart for Insurance Enrollment Services
 //still need to input values for sexual orienation and disability
 
-var InsuranceEnrollmentDoughnut = echarts.init(document.getElementById('InsuranceEnrollmentDesc'));
+var InsuranceEnrollmentDoughnut = echarts.init(document.getElementById('insuranceDesc'));
 var InsuranceEnrollmentDoughnutOption = {
+    ttitle : {
+        text: 'Insurance Statistics',
+        x: 'center'
+    },
     tooltip: {
         trigger: 'item',
         formatter: "{a} <br/>{b}: {c} ({d}%)"
     },
-    legend: 
-	 {
+    legend: {
         orient: 'vertical',
-        x: 'left',
-        data:['easy','possible with\n some work','chose not\n to answer','did not\n need service','possible but\n very difficult','too difficult']
+        left: 'right',
+        data: ['too difficult', 'possible but\n very difficult', 
+		'chose not\n to answer','did not\n need service','possible with\n some work','easy']
     },
     series: [
         {
             name:'Access to Insurance Enrollment Services',
             type:'pie',
-            radius: ['50%', '70%'],
+            radius: ['45%', '60%'],
             avoidLabelOverlap: false,
             label: {
                 normal: {

@@ -1,19 +1,27 @@
 //doughnut chart for MedicalCosts
 //still need to input values for sexual orientation and disabilities
 
-var MedicalCostsDoughnut = echarts.init(document.getElementById('hivMedicalCosts'));
+var MedicalCostsDoughnut = echarts.init(document.getElementById('medDesc'));
 var MedicalCostsDoughnutOption = {
+   title : {
+        text: 'Medical Cost Statistics',
+        x: 'center'
+    },
     tooltip: {
         trigger: 'item',
         formatter: "{a} <br/>{b}: {c} ({d}%)"
     },
-    legend:  false,
-	
+    legend: {
+        orient: 'vertical',
+        left: 'right',
+        data: ['too difficult', 'possible but\n very difficult', 
+		'chose not\n to answer','did not\n need service','possible with\n some work','easy']
+    },
     series: [
         {
             name:'Aid at Home',
             type:'pie',
-            radius: ['50%', '70%'],
+            radius: ['45%', '60%'],
             avoidLabelOverlap: false,
             label: {
                 normal: {

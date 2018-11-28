@@ -3,16 +3,25 @@
 
 var AlternativeTherapyDoughnut = echarts.init(document.getElementById('altTherapyDesc'));
 var AlternativeTherapyDoughnutOption = {
+    title : {
+        text: 'Alternative Therapy Statistics',
+        x: 'center'
+    },
     tooltip: {
         trigger: 'item',
         formatter: "{a} <br/>{b}: {c} ({d}%)"
     },
-    legend: false,
+    legend: {
+        orient: 'vertical',
+        left: 'right',
+        data: ['too difficult', 'possible but\n very difficult', 
+		'chose not\n to answer','did not\n need service','possible with\n some work','easy']
+    },
     series: [
         {
             name:'Access to Alternative Therapy Services',
             type:'pie',
-            radius: ['50%', '70%'],
+            radius: ['45%', '60%'],
             avoidLabelOverlap: false,
             label: {
                 normal: {
