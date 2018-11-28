@@ -1,11 +1,116 @@
 //doughnut chart for Case Management 
 //still need to input values for sexual orientation and disability
+var caseManagmentBarriersReason = echarts.init(document.getElementById('hivDesc'));
+var caseManagementOptions0 = {
+	title: {
+        text: 'Case Management Barriers Broken Down by Reason',
+		x: 'center'
+    },
+	footer:{
+		text: 'Top Barriers'
+		
+	},
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        text: 'Top Barriers: \n1.\n2.'
+	},
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Could not afford',
+		'Did not know where to get it',
+		'Too long of a wait',
+		'Service not available',
+		'Did not qualify',
+		'Did not have transportation', 
+		'Did not have childcare', 
+		'Did not have enough time off work', 
+		'Concered about privacy',
+		'They did not speak my primary language',
+		'Discrimination because of race', 
+		'Discrimination because of sexual orientation', 
+		'Discrimination because of gender',
+		'I was not in stable living condition', 
+		'Nervous or afraid of what people might say',
+		'Stigma due to HIV', 
+		'Discrimination because of my HIV status']
+    },
+    series: [
+        {
+            name: 'Very Difficult',
+            type: 'bar',
+            data: [
+				{value:2, name:'Could not afford'},
+				{value:2, name:'Did not know where to get it'},
+				{value:0, name:'Too long of a wait '},
+				{value:1, name:'Service not available'},
+				{value:1, name:'Did not qualify'},
+				{value:3, name:'Did not have transportation'},
+				{value:0, name:'Did not have childcare'},
+				{value:0, name:'Did not have enough time off work'},
+				{value:2, name:'Concerned about privacy'},
+				{value:0, name:'They did not speak my primary language'},
+				{value:1, name:'Discrimination because of race'},
+				{value:1, name:'Discrimination because of sexual orientation'},
+				{value:1, name:'Discrimination because of gender'},
+				{value:2, name:'I was not in stable living condition'},
+				{value:2, name:'Nervous or afraid of what people might say'},
+				{value:2, name:'Stigma due to HIV'},
+				{value:0, name:'Discrimination because of my HIV status'}
+				],
+			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
+        },
+		{
+			name:'Too Difficult',
+			type: 'bar',
+			 data: [
+				{value:2, name:'Could not afford'},
+				{value:2, name:'Did not know where to get it'},
+				{value:0, name:'Too long of a wait '},
+				{value:1, name:'Service not available'},
+				{value:1, name:'Did not qualify'},
+				{value:3, name:'Did not have transportation'},
+				{value:0, name:'Did not have childcare'},
+				{value:0, name:'Did not have enough time off work'},
+				{value:2, name:'Concerned about privacy'},
+				{value:0, name:'They did not speak my primary language'},
+				{value:1, name:'Discrimination because of race'},
+				{value:1, name:'Discrimination because of sexual orientation'},
+				{value:1, name:'Discrimination because of gender'},
+				{value:2, name:'I was not in stable living condition'},
+				{value:2, name:'Nervous or afraid of what people might say'},
+				{value:2, name:'Stigma due to HIV'},
+				{value:0, name:'Discrimination because of my HIV status'},
+				],
+			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
+			
+		}
+		
+    ]
+};
+    
+     caseManagmentBarriersReason.setOption(caseManagementOptions0);
 
-var caseManagementDoughnut = echarts.init(document.getElementById('hivDesc'));
+var caseManagementDoughnut = echarts.init(document.getElementById('hivCm'));
 var caseManagementDoughnutOption = {
 	title : {
         text: 'Case Management Statistics',
-		subtext: 'Top Barriers: \n1.\n2.',
         x: 'center'
     },
     tooltip: {
@@ -43,6 +148,7 @@ var caseManagementDoughnutOption = {
                     show: false
                 }
             },
+		
             data:[
                 {value:1, name:'too difficult', itemStyle: {color: 'rgba(255, 104, 107, 1)'}},
                 {value:5, name:'possible but\n very difficult', itemStyle: {color: 'rgba(255, 166, 166, 1)'}},
@@ -51,65 +157,15 @@ var caseManagementDoughnutOption = {
                 {value:39, name:'possible with\n some work', itemStyle: {color: 'rgba(152, 148, 255, 1)'}},
                 {value:277, name:'easy', itemStyle: {color: 'rgba(104, 99, 240, 1)'}}
             ]
-        },
-		   {
-            name: 'Barriers for Respondents that answered "Very Difficult"',
-            type: 'bar',
-            data:[
-				{value:2, name:'Could not afford'},
-				{value:2, name:'Did not know where to get it'},
-				{value:0, name:'Too long of a wait '},
-				{value:1, name:'Service not available'},
-				{value:1, name:'Did not qualify'},
-				{value:3, name:'Did not have transportation'},
-				{value:0, name:'Did not have childcare'},
-				{value:0, name:'Did not have enough time off work'},
-				{value:2, name:'Concerned about privacy'},
-				{value:0, name:'They did not speak my primary language'},
-				{value:1, name:'Discrimination because of race'},
-				{value:1, name:'Discrimination because of sexual orientation'},
-				{value:1, name:'Discrimination because of gender'},
-				{value:2, name:'I was not in stable living condition'},
-				{value:2, name:'Nervous or afraid of what people might say'},
-				{value:2, name:'Stigma due to HIV'},
-				{value:0, name:'Discrimination because of my HIV status'}
+		},			
+		   
 				
-			]
-			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
-        },
-		{
-			name:'Barriers for Respondents that answered "Very Difficult"',
-			type: 'bar',
-			  data:[
-					{value:0, name:'Could not afford'},
-					{value:0, name:'Did not know where to get it'},
-					{value:0, name:'Too long of a wait '},
-					{value:0, name:'Service not available'},
-					{value:1, name:'Did not qualify'},
-					{value:0, name:'Did not have transportation'},
-					{value:0, name:'Did not have childcare'},
-					{value:0, name:'Did not have enough time off work'},
-					{value:0, name:'Concerned about privacy'},
-					{value:0, name:'They did not speak my primary language'},
-					{value:0, name:'Discrimination because of race'},
-					{value:0, name:'Discrimination because of sexual orientation'},
-					{value:0, name:'Discrimination because of gender'},
-					{value:0, name:'I was not in stable living condition'},
-					{value:1, name:'Nervous or afraid of what people might say'},
-					{value:0, name:'Stigma due to HIV'},
-					{value:0, name:'Discrimination because of my HIV status'}
-				]
-			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
-			
-		}
     ]
 };
 caseManagementDoughnut.setOption(caseManagementDoughnutOption);
 //bar graph of Case Management Respondents that answered very or too difficult
 //broken down by reason
 
-    
-     
     
 //broken down by ethnicity
 var caseManagementBarriersEthnicity = echarts.init(document.getElementById('hivCmEthnicity'));
