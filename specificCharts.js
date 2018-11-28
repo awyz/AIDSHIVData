@@ -101,6 +101,7 @@ var caseManagementOptions0 = {
 		
     ]
 };
+//top barrier did not have transportation
     
      caseManagmentBarriersReason.setOption(caseManagementOptions0);
 

@@ -1,4 +1,108 @@
 //doughnut chart for Alternative Therapy
+var AlternativeTherapyBarriersReason = echarts.init(document.getElementById('altTherapyDesc'));
+var AlternativeTherapytOptions0 = {
+	title: {
+        text: 'Alternative Therapy Barriers Broken Down by Reason',
+		x: 'center'
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        text: 'Top Barriers: \n1.\n2.'
+	},
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 20]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Could not afford',
+		'Did not know where to get it',
+		'Too long of a wait',
+		'Service not available',
+		'Did not qualify',
+		'Did not have transportation', 
+		'Did not have childcare', 
+		'Did not have enough time off work', 
+		'Concered about privacy',
+		'They did not speak my primary language',
+		'Discrimination because of race', 
+		'Discrimination because of sexual orientation', 
+		'Discrimination because of gender',
+		'I was not in stable living condition', 
+		'Nervous or afraid of what people might say',
+		'Stigma due to HIV', 
+		'Discrimination because of my HIV status']
+    },
+    series: [
+        {
+            name: 'Very Difficult',
+            type: 'bar',
+            data: [
+				{value:29, name:'Could not afford'},
+				{value:12, name:'Did not know where to get it'},
+				{value:7, name:'Too long of a wait '},
+				{value:13, name:'Service not available'},
+				{value:6, name:'Did not qualify'},
+				{value:1, name:'Did not have transportation'},
+				{value:1, name:'Did not have childcare'},
+				{value:2, name:'Did not have enough time off work'},
+				{value:1, name:'Concerned about privacy'},
+				{value:0, name:'They did not speak my primary language'},
+				{value:0, name:'Discrimination because of race'},
+				{value:1, name:'Discrimination because of sexual orientation'},
+				{value:0, name:'Discrimination because of gender'},
+				{value:1, name:'I was not in stable living condition'},
+				{value:2, name:'Nervous or afraid of what people might say'},
+				{value:2, name:'Stigma due to HIV'},
+				{value:0, name:'Discrimination because of my HIV status'}
+				],
+			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
+        },
+		
+		{
+			name:'Too Difficult',
+			type: 'bar',
+			 data: [
+				{value:35, name:'Could not afford'},
+				{value:18, name:'Did not know where to get it'},
+				{value:5, name:'Too long of a wait '},
+				{value:16, name:'Service not available'},
+				{value:15, name:'Did not qualify'},
+				{value:4, name:'Did not have transportation'},
+				{value:0, name:'Did not have childcare'},
+				{value:0, name:'Did not have enough time off work'},
+				{value:1, name:'Concerned about privacy'},
+				{value:1, name:'They did not speak my primary language'},
+				{value:0, name:'Discrimination because of race'},
+				{value:1, name:'Discrimination because of sexual orientation'},
+				{value:0, name:'Discrimination because of gender'},
+				{value:1, name:'I was not in stable living condition'},
+				{value:3, name:'Nervous or afraid of what people might say'},
+				{value:1, name:'Stigma due to HIV'},
+				{value:1, name:'Discrimination because of my HIV status'},
+				],
+			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
+			
+		},
+		
+    ]
+};
+//top barrier could not afford
+    
+     caseManagmentBarriersReason.setOption(caseManagementOptions0);
 //still need to input values for sexual orienation and disability
 
 var AlternativeTherapyDoughnut = echarts.init(document.getElementById('altTherapyDesc'));
