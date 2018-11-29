@@ -9,7 +9,7 @@ var ageOptions = {
         trigger: 'axis',
         axisPointer: {
             type: 'shadow'
-        }
+        },
     },
     legend: {
         data: ['HIV Needs Assessment', 'Epi Profile']
