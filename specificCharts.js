@@ -103,8 +103,8 @@ var caseManagementOptions0 = {
 };
 //top barrier did not have transportation
     
-     caseManagmentBarriersReason.setOption(caseManagementOptions0);
-
+ caseManagmentBarriersReason.setOption(caseManagementOptions0);
+/* 
 var caseManagementDoughnut = echarts.init(document.getElementById('hivCm'));
 var caseManagementDoughnutOption = {
 	title : {
@@ -542,3 +542,4 @@ var caseManagementOptions8 = {
     ]
 };
 caseManagementBarriersMoT.setOption(caseManagementOptions8);
+ */
