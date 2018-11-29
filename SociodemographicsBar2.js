@@ -1,35 +1,3 @@
-function createOptions(xAxisLabel, yAxisLabel) {
-
-    return options = {
-        scales: {
-            xAxes: [{
-                scaleLabel: {
-                    display: true,
-                    labelString: xAxisLabel
-                },
-                ticks: {
-                    fontFamily: "'Open Sans Bold', sans-serif",
-                    fontSize: 11,
-                    beginAtZero: true
-                }
-            }],
-            yAxes: [{
-                scaleLabel: {
-                    display: true,
-                    labelString: yAxisLabel
-                },
-                ticks: {
-                    fontFamily: "'Open Sans Bold', sans-serif",
-                    fontSize: 11,
-                }
-            }],
-            legend: {
-                display: true
-            }
-        }
-    }
-}
-
 var ageChart = document.getElementById('age');
 var myChart = new Chart(ageChart, {
     type: 'horizontalBar',
@@ -54,5 +22,52 @@ var myChart = new Chart(ageChart, {
 
         ]
     },
-    options: createOptions('Percentage of People with HIV', 'Age'),
+    options: createOptions('Percentage of People with HIV', 'Age', 398)
+    // options: options
 });
+
+function createOptions(xAxisLabel, yAxisLabel, nValue) {
+
+    var options = {
+        scales: {
+            xAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: xAxisLabel
+                },
+                ticks: {
+                    fontFamily: "'Open Sans Bold', sans-serif",
+                    fontSize: 11,
+                    beginAtZero: true
+                },
+            }],
+            yAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: yAxisLabel
+                },
+                ticks: {
+                    fontFamily: "'Open Sans Bold', sans-serif",
+                    fontSize: 11,
+                },
+                gridLines: {
+                    display: false
+                }
+            }],
+            legend: {
+                display: true
+            },
+            tooltips: {
+                callbacks: {
+                    label: function (tooltipItems, data) {
+                        return data.datasets[tooltipItems.datasetIndex].label + ": www" + tooltipItems.xLabel;
+                        // console.log(label);
+                        // return label;
+                    }
+                }
+            }
+        }
+    }
+    console.log(options);
+    return options;
+}
