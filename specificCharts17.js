@@ -14,7 +14,7 @@ var AlternativeTherapyOptions0 = {
 	legend: {
 		orient: 'vertical',
 		left:'right',
-        text: 'Top Barriers: \n1.\n2.'
+        data: ["","","","Very Difficult", "Too Difficult"]
 	},
     grid: {
         left: '3%',
