@@ -1,5 +1,5 @@
 //doughnut chart for Alternative Therapy
-var AlternativeTherapyBarriersReason = echarts.init(document.getElementById('altTherapyDesc'));
+var AlternativeTherapyBarriersReason = echarts.init(document.getElementById('TherapyDesc'));
 var AlternativeTherapyOptions0 = {
 	title: {
         text: 'Alternative Therapy Barriers Broken Down by Reason',
