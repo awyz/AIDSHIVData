@@ -1,6 +1,6 @@
 //doughnut chart for Case Management 
 //still need to input values for sexual orientation and disability
-var caseManagmentBarriersReason = echarts.init(document.getElementById('hivDesc'));
+var caseManagmentBarriersReason = echarts.init(document.getElementById('cMReasons'));
 var caseManagementOptions0 = {
 	title: {
         text: 'Case Management Barriers Broken Down by Reason',
