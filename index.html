@@ -204,6 +204,7 @@
 
 <!-- Bar chart of services -->
 <br><br>
+<a name="theBar"></a>
 <section class="bg-primary" id="serviceAccess">
     <div class="fluid-container" style="background-color: white">
         <br>
@@ -213,13 +214,12 @@
             <div class="col-lg-8 mx-auto text-center">
                 <div class="fluid-container">
                     <canvas id="myBarChart"></canvas>
+                    <a name="theBox"></a>
                 </div>
-
                 &nbsp;&nbsp;&nbsp;&nbsp;
 
                 <div class="container" style="border: 2px solid rgb(188, 188, 188)">
                     &nbsp;
-
                     <div style="text-align: center" id="instructions"><p>
                         While it can be difficult for patients with AIDS/HIV to find and access good care, in Hawaii many people are able to obtain the services they need for the most part. However, there is still a long way to go to ensure that all patients are able to get the services to live a better life.
                         <br><br> Click on a section of the bar chart for more information</p>
@@ -230,11 +230,18 @@
         var x = document.getElementById(divElement);
         x.style.display = "none";
         document.getElementById('instructions').style.display = "block";
+        window.location.href = "#theBar";
     }
 </script>
 
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
                     <div class="text-center" id="hivDesc">
-                        <button class="btn btn-outline-danger" type="button" onclick="myFunction('hivDesc')">Close</button><br><br>
+                        <button class="btn btn-outline-danger js-scroll-trigger" type="button" onclick="myFunction('hivDesc')">Close</button><br><br>
                         HIV Case management description
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('hivDesc')">Close</button>
                     </div>

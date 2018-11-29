@@ -135,6 +135,8 @@
         console.log("index: " + datasetIndex);
         console.log(myChart.data.labels[activePoint._index]);
 
+        // location.hash = "#theBox";
+
         function closeAll() {
             console.log("Close everything");
             document.getElementById("hivDesc").style.display='none';
