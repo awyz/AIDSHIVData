@@ -1,6 +1,6 @@
 //doughnut chart for Dental Services
 //still need to input values for sexual orienation and disability
-var dentalBarriersReason = echarts.init(document.getElementById('dReasons'));
+var dentalBarriersReason = echarts.init(document.getElementById('denReasons'));
 var dentalOptions0 = {
 	title: {
         text: 'Dental Barriers Broken Down by Reason',
@@ -25,7 +25,7 @@ var dentalOptions0 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 20]
+        boundaryGap: [0, 1.75]
     },
     yAxis: {
         type: 'category',
