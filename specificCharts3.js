@@ -106,7 +106,7 @@ var disabilityOptions0 = {
 
 //doughnut chart for Disability
 //still need to input values for sexual orientation and Disabilities
-
+/* 
 var DisabilityDoughnut = echarts.init(document.getElementById('homeAidDesc'));
 var DisabilityDoughnutOption = {
   title : {
@@ -159,7 +159,7 @@ var DisabilityDoughnutOption = {
         }
     ]
 };
-DisabilityDoughnut.setOption(DisabilityDoughnutOption);
+DisabilityDoughnut.setOption(DisabilityDoughnutOption); */
 //bar graph of Disability Respondents that answered very or too difficult
 
 /* //broken down by ethnicity

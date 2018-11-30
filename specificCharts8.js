@@ -1,6 +1,110 @@
+//Drug and Alcohol Abuse
+var abuseBarriersReason = echarts.init(document.getElementById('abusReasons'));
+var abuseOptions0 = {
+	title: {
+        text: 'Drug and Alcohol Abuse Barriers Broken Down by Reason',
+		x: 'center'
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        text: 'Top Barriers: \n1.\n2.'
+	},
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 1.75]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Could not afford',
+		'Did not know where to get it',
+		'Too long of a wait',
+		'Service not available',
+		'Did not qualify',
+		'Did not have transportation', 
+		'Did not have childcare', 
+		'Did not have enough time off work', 
+		'Concered about privacy',
+		'They did not speak my primary language',
+		'Discrimination because of race', 
+		'Discrimination because of sexual orientation', 
+		'Discrimination because of gender',
+		'I was not in stable living condition', 
+		'Nervous or afraid of what people might say',
+		'Stigma due to HIV', 
+		'Discrimination because of my HIV status']
+    },
+    series: [
+        {
+            name: 'Very Difficult',
+            type: 'bar',
+            data: [
+				{value:0, name:'Could not afford'},
+				{value:0, name:'Did not know where to get it'},
+				{value:0, name:'Too long of a wait '},
+				{value:0, name:'Service not available'},
+				{value:1, name:'Did not qualify'},
+				{value:0, name:'Did not have transportation'},
+				{value:0, name:'Did not have childcare'},
+				{value:0, name:'Did not have enough time off work'},
+				{value:1, name:'Concerned about privacy'},
+				{value:0, name:'They did not speak my primary language'},
+				{value:0, name:'Discrimination because of race'},
+				{value:0, name:'Discrimination because of sexual orientation'},
+				{value:0, name:'Discrimination because of gender'},
+				{value:1, name:'I was not in stable living condition'},
+				{value:1, name:'Nervous or afraid of what people might say'},
+				{value:1, name:'Stigma due to HIV'},
+				{value:0, name:'Discrimination because of my HIV status'}
+				],
+			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
+        },
+		
+		{
+			name:'Too Difficult',
+			type: 'bar',
+			 data: [
+				{value:1, name:'Could not afford'},
+				{value:0, name:'Did not know where to get it'},
+				{value:1, name:'Too long of a wait '},
+				{value:1, name:'Service not available'},
+				{value:0, name:'Did not qualify'},
+				{value:0, name:'Did not have transportation'},
+				{value:0, name:'Did not have childcare'},
+				{value:0, name:'Did not have enough time off work'},
+				{value:1, name:'Concerned about privacy'},
+				{value:0, name:'They did not speak my primary language'},
+				{value:0, name:'Discrimination because of race'},
+				{value:0, name:'Discrimination because of sexual orientation'},
+				{value:0, name:'Discrimination because of gender'},
+				{value:1, name:'I was not in stable living condition'},
+				{value:1, name:'Nervous or afraid of what people might say'},
+				{value:1, name:'Stigma due to HIV'},
+				{value:0, name:'Discrimination because of my HIV status'},
+				],
+			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
+			
+		},
+		
+    ]
+};
+abuseBarriersReason.setOption(abuseOptions0);
+
 //doughnut chart for Alcohol and Drug Use
 //still need to input values for sexual orienation and disability
-
+/* 
 var AandDuseDoughnut = echarts.init(document.getElementById('abuseDesc'));
 var AandDuseDoughnutOption = {
     title : {
@@ -52,7 +156,7 @@ var AandDuseDoughnutOption = {
         }
     ]
 };
-AandDuseDoughnut.setOption(AandDuseDoughnutOption);
+AandDuseDoughnut.setOption(AandDuseDoughnutOption); */
 //bar graph of AandDuse Respondents that answered very or too difficult
 /* 
 //broken down by ethnicity

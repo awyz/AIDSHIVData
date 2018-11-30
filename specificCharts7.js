@@ -104,7 +104,7 @@ var dentalOptions0 = {
 dentalBarriersReason.setOption(dentalOptions0);
 
 //dental doughnut
-
+/* 
 var DentalDoughnut = echarts.init(document.getElementById('doughnutDental'));
 var DentalDoughnutOption = {
     title : {
@@ -537,3 +537,4 @@ var DentalOptions8 = {
     ]
 };
 DentalBarriersMoT.setOption(DentalOptions8);
+ */
