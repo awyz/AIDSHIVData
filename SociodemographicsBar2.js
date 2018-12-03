@@ -200,12 +200,19 @@ var ctx = educationChart.getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'horizontalBar',
     data: {
-        labels: ['Life Foundation', 'Hawaii Island HIV/AIDS Foundation', 'Maui AIDS Foundation', 'Malama Pono (Kauai)'],
+        // labels: ['Some College or Associate\'s Degree', 'High School Diploma or GED', 'Bachelor\'s Degree', 'Graduate Degree',
+        //     'Grades 9-11', 'Vocational/Technical School', 'Grades 1-8'],
+        labels: ['Graduate Degree', 'Bachelor\'s Degree', 'Some College or Associate\'s Degree', 'Vocational/Technical School',
+            'High School Diploma or GED', 'Grades 9-11', 'Grades 1-8'],
         datasets: [
             {
                 label: 'HIV Needs Assessment',
-                data: [55, 25.9, 10.8, 8],
+                // data: [35.4, 22.4, 18.1, 11.6, 6, 4.8, 1.8],
+                data: [11.6, 18.1, 35.4, 4.8, 22.4, 6, 1.8],
                 backgroundColor: [
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
                     'rgba(255, 104, 107, 1)',
                     'rgba(255, 104, 107, 1)',
                     'rgba(255, 104, 107, 1)',
@@ -213,5 +220,142 @@ var myChart = new Chart(ctx, {
                 ]},
         ]
     },
-    options: createOptions('Case Management Provider', false)
+    options: createOptions('Level of Education', false)
+});
+
+
+// Income Type
+var incomeChart = document.getElementById('incomeType');
+var ctx = incomeChart.getContext('2d');
+
+var myChart = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: {
+        labels: ['SSI/SSDI', 'Employment Income', 'Self-Employed', 'Veteran Benefits', 'Other'],
+        datasets: [
+            {
+                label: 'HIV Needs Assessment',
+                data: [57, 24.4, 12, 1.3, 5.3],
+                backgroundColor: [
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)'
+                ]},
+        ]
+    },
+    options: createOptions('Income Type', false)
+});
+
+
+// Method of Transmission
+var transmissionChart = document.getElementById('methodOfTransmission');
+var ctx = transmissionChart.getContext('2d');
+
+var myChart = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: {
+        labels: ['Male to Male Sexual Contact', 'Male to Female Sexual Contact (Male)', 'Male to Female Sexual Contact (Female)',
+            'Injection Drug Use', 'Born HIV Infected', 'Other'],
+        datasets: [
+            {
+                label: 'HIV Needs Assessment',
+                data: [67.6, 5, 9.5, 7.5, .25, 5],
+                backgroundColor: [
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)'
+                ]},
+            {
+                label: 'Epi Profile',
+                data: [71.9, 3.6, 6.6, 6.5, 0.6, 4.6],
+                backgroundColor: [
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)'
+                ]}
+        ]
+    },
+    options: createOptions('Method of Transmission', true)
+});
+
+
+// Race
+var raceChart = document.getElementById('race');
+var ctx = raceChart.getContext('2d');
+
+var myChart = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: {
+        labels: ['White', 'Pacific Islander', 'African American', 'Asian', 'American Indian/Alaskan Native', 'Hispanic',
+            'Multiple Races', 'Other', 'Prefer not to Answer'],
+        datasets: [
+            {
+                label: 'HIV Needs Assessment',
+                data: [43.2, 14.6, 2.5, 11.3, 0.5, 4.8, 21.6, 3.5, 0.8],
+                backgroundColor: [
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                ]},
+            {
+                label: 'Epi Profile',
+                data: [49.4, 9.2, 6.6, 15.4, 0.2, 10, 8., 0.5, 0],
+                backgroundColor: [
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)'
+                ]}
+        ]
+    },
+    options: createOptions('Race', true)
+});
+
+
+// Sexual Orientation
+var sexChart = document.getElementById('sexualOrientation');
+var ctx = sexChart.getContext('2d');
+
+var myChart = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: {
+        labels: ['Heterosexual (Male)', 'Heterosexual (Female)', 'Homosexual (Male)', 'Homosexual (Female)', 'Bisexual (Male)',
+            'Bisexual (Female)', 'Celibate', 'Other', 'Prefer not to Answer'],
+        datasets: [
+            {
+                label: 'HIV Needs Assessment',
+                data: [10.1, 12.1, 60.8, 0, 12.3, 1.5, 2.8, 3.5, 9.8],
+                backgroundColor: [
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)'
+                ]},
+        ]
+    },
+    options: createOptions('Sexual Orientation', false)
 });
