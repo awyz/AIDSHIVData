@@ -260,117 +260,246 @@
 
                     <div class="text-center" id="hivDesc">
                         <button class="btn btn-outline-danger" type="button" onclick="myFunction('hivDesc')">Close</button><br><br>
-                        HIV Case management description
+                        <div id = "cMReasons" style = "height: 500px; width: 850px"></div>
+						<h2>The top barrier is that respondents did not have transportation.</h2>
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('hivDesc')">Close</button>
                     </div>
-
+					<script src = "specificCharts.js"></script>	
                     <div id="dentalDesc">
                         <button class="btn btn-outline-danger" type="button" onclick="myFunction('dentalDesc')">Close</button><br><br>
-					<!--<script src = "specificCharts.js"></script>-->
-					<!--works-->
-                        Dental description
+						<div id = "denReasons" style = "height:500px; width:850px"></div>
+                       <h2>The top barrier is that respondents could not afford it.</h2>
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('dentalDesc')">Close</button>
                     </div>
-
+					<script src = "specificCharts7.js"></script>
+					
                     <div id="counselingDesc">
                         <button class="btn btn-outline-danger" type="button" onclick="myFunction('counselingDesc')">Close</button><br><br>
-					<!--<script src = "specificCharts7.js"></script>-->
-					<!--works-->
-                        Counseling description
+						<div id = "counReasons" style = "height:500px; width:850px"></div>				
+						<h2>The top barrier is that respondents did not know where to get it.</h2>
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('counselingDesc')">Close</button>
                     </div>
+					<script src = "specificCharts10.js"></script>
 
                     <div id="infoDesc">
                         <button class="btn btn-outline-danger" type="button" onclick="myFunction('infoDesc')">Close</button><br><br>
-					<!--<script src = "specificCharts10.js"></script>-->
-					<!--works-->
-                        Info description
+						<div id = "infoReasons" style = "height:500px; width:850px"></div>				
+						<h2>The top barrier is that respondents did not know where to get it.</h2>
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('infoDesc')">Close</button>
                     </div>
-
+					<script src = "specificCharts2.js"></script>
+					<!--Alternative therapy multiple graphs-->
                     <div id="altTherapyDesc">
                         <button class="btn btn-outline-danger" type="button" onclick="myFunction('altTherapyDesc')">Close</button><br><br>
-                        <div id ="altTherapy" style = "height: 600px; width: 800px;" align = "center"></div>
-                        <div id = "TherapyDesc" style = "height: 600px; width: 800px;" align = "center"></div>
-                        <h2 align = "center">The top barrier is that many could not afford Alternative Therapy.</h2>
+                         <div class="container">
+							<div class="row">
+								<div class="col-xl-12 mx-auto text-center">
+									<h2 class="section-heading">Sociodemographic Breakdown</h2>
+									
+						<br>
+							<ul class="nav nav-pills nav-justified">
+                        <li class="nav-item pill-1" style="text-align: center">
+                            <a class="nav-link active" data-toggle="tab" href="#barriersTabQ">Barriers</a>
+                        </li>
+						 <li class="nav-item pill-2" style="text-align: center">
+                            <a class="nav-link" data-toggle="tab" href="#ageTabQ">Age</a>
+                        </li>
+                        <li class="nav-item pill-3">
+                            <a class="nav-link" data-toggle="tab" href="#disabilityTabQ">Related Disease</a>
+                        </li>
+                        <li class="nav-item pill-4">
+                            <a class="nav-link" data-toggle="tab" href="#drugUseTabQ">Drugs</a>
+                        </li>
+                        <li class="nav-item pill-5">
+                            <a class="nav-link" data-toggle="tab" href="#educationTabQ">Education</a>
+                        </li>
+                        <li class="nav-item pill-6">
+                            <a class="nav-link" data-toggle="tab" href="#incomeTypeTabQ">Income</a>
+                        </li>
+                        <li class="nav-item pill-7">
+                            <a class="nav-link" data-toggle="tab" href="#methodOfTransmissionTabQ">Method of Transmission</a>
+                        </li>
+                        <li class="nav-item pill-8">
+                            <a class="nav-link" data-toggle="tab" href="#raceTabQ">Race</a>
+                        </li>
+                        <li class="nav-item pill-9">
+                            <a class="nav-link" data-toggle="tab" href="#sexualOrientationTabQ">Sexual Orientation</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content mt-3">
+                        <div class="tab-pane fade show active" id="barriersTabQ" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div id="therReasons" style="height: 600px; width: 1000px;"></div>
+                            </div>
+                            <div class="container-text-discrepancy">
+                               The top barrier is that most respondents could not afford alternative therapy.
+                            </div>
+                        </div>
+						<div class="tab-pane fade" id="ageTabQ" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div id="altTherapyAge" style="height: 600px; width: 1000px;"></div>
+                            </div>
+                            <div class="container-text-discrepancy">
+                               The age group that has the most respondents who answered "very difficult"
+							   or "too difficult" are those aged 55 and up. 
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="caseManagementTabQ" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div id="altTherapyCaseManagement" style="height: 600px; width: 1000px;"></div>
+                            </div>
+                            <div class="container-text">
+                                something.
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="disabilityTabQ" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div id="altTherapyDisabilities" style="height: 600px; width: 1000px;"></div>
+                            </div>
+                            <div class="container-text">
+                                something.
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="drugUseTabQ" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div id="altTherapyDrugUse" style="height: 600px; width: 1000px;"></div>
+                            </div>
+                            <div class="container-text">
+                               The majority of the respondents do not use any illegal substances.
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="educationTabQ" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div id="altTherapyEducation" style="height: 600px; width: 1000px;"></div>
+                            </div>
+                            <div class="container-text">
+                                something.
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="incomeTypeTabQ" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div id="altTherapyIncomeType" style="height: 600px; width: 1000px;"></div>
+                            </div>
+                            <div class="container-text">
+                                The main source of income for these respondents is SSI/SSDI.
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="methodOfTransmissionTabQ" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div id="altTherapyMoT" style="height: 600px; width: 1000px;"></div>
+                            </div>
+                            <div class="container-text">
+                                something.
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="raceTabQ" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div id="altTherapyRace" style="height: 600px; width: 1000px;"></div>
+                            </div>
+                            <div class="container-text-discrepancy">
+                                something.
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="sexualOrientationTabQ" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div id="altTherapySexualOrientation" style="height: 600px; width: 1000px;"></div>
+                            </div>
+                            <div class="container-text">
+                                There seems to be a majority of homosexual males who find it difficult to access alternative therapy.
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('altTherapyDesc')">Close</button>
                     </div>
+					<script src ="specificCharts17.js"></script>
 
                     <div id="homeAidDesc">
                         <button class="btn btn-outline-danger" type="button" onclick="myFunction('homeAidDesc')">Close</button><br><br>
-					<!--<script src= "specificCharts2.js"></script>-->
-					<!--<script src ="specificCharts17.js"></script>-->
-					<!--works-->
-                        Home Aid description
+						<div id = "disReasons" style = "height: 600px; width: 800px;" align = "center"></div>
+                        <h2 align = "center">The top barrier is that the service was unavailable.</h2>
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('homeAidDesc')">Close</button>
                     </div>
+					<script src = "specificCharts3.js"></script>
 
                     <div id="insuranceDesc">
                         <button class="btn btn-outline-danger" type="button" onclick="myFunction('insuranceDesc')">Close</button><br><br>
-					<!--<script src = "specificCharts3.js"></script>-->
-					<!--works-->
-                        Insurance description
+						<div id = "insuReasons" style = "height: 600px; width: 800px;" align = "center"></div>
+                        <h2 align = "center">The top barrier is that many did not know where to get it.</h2>
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('insuranceDesc')">Close</button>
                     </div>
-					<!--<script src = "specificCharts5.js"></script>-->
+					<script src = "specificCharts5.js"></script>
+
 
                     <div id="medDesc">
                         <button class="btn btn-outline-danger" type="button" onclick="myFunction('medDesc')">Close</button><br><br>
-					<!--fix-->
-                        Med description
+						<div id = "medcReasons" style = "height: 600px; width: 800px;" align = "center"></div>
+                        <h2 align = "center">The top barrier is that it was unavailable.</h2>
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('medDesc')">Close</button>
                     </div>
-					<!--<script src = "specificCharts4.js"></script>-->
+					<script src = "specificCharts4.js"></script>
 
                     <div id="abuseDesc">
                         <button class="btn btn-outline-danger" type="button" onclick="myFunction('abuseDesc')">Close</button><br><br>
-                        Drug/Alcohol abuse description
+						<div id = "abusReasons" style = "height: 600px; width: 800px;" align = "center"></div>
+                        <h2 align = "center">The top barrier is that it was unavailable.</h2>
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('abuseDesc')">Close</button>
                     </div>
-					<!--<script src = "specificCharts8.js"></script>-->
+					<script src = "specificCharts8.js"></script>
 
                     <div id="socialDesc">
                         <button class="btn btn-outline-danger" type="button" onclick="myFunction('socialDesc')">Close</button><br><br>
-                        Social description
+						<div id = "sociReasons" style = "height: 600px; width: 800px;" align = "center"></div>
+                        <h2 align = "center">The top barrier is that it was unavailable.</h2>
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('socialDesc')">Close</button>
                     </div>
-					<!--<script src = "specificCharts9.js"></script>-->
+					<script src = "specificCharts9.js"></script>
 
                     <div id="jobDesc">
                         <button class="btn btn-outline-danger" type="button" onclick="myFunction('jobDesc')">Close</button><br><br>
-                        Employment description
+						<div id = "emplReasons" style = "height: 600px; width: 800px;" align = "center"></div>
+                        <h2 align = "center">The top barrier is that it was unavailable.</h2>
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('jobDesc')">Close</button>
                     </div>
-					<!--<script src = "specificCharts11.js"></script>-->
+					<script src = "specificCharts11.js"></script>
 
 
                     <div id="eduDesc">
                         <button class="btn btn-outline-danger" type="button" onclick="myFunction('eduDesc')">Close</button><br><br>
-                        Education description
+						<div id = "eduReasons" style = "height: 600px; width: 800px;" align = "center"></div>
+                        <h2 align = "center">The top barrier is that it was unavailable.</h2>
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('eduDesc')">Close</button>
                     </div>
-					<!--<script src = "specificCharts12.js"></script>-->
+					<script src = "specificCharts12.js"></script>
 
                     <div id="foodDesc">
                         <button class="btn btn-outline-danger" type="button" onclick="myFunction('foodDesc')">Close</button><br><br>
-                        Food description
+						<div id = "fooReasons" style = "height: 600px; width: 800px;" align = "center"></div>
+                        <h2 align = "center">The top barrier is that many did not qualify.</h2>
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('foodDesc')">Close</button>
                     </div>
-					<!--<script src = "specificCharts13.js"></script>-->
+					<script src = "specificCharts13.js"></script>
 
                     <div id="housingDesc">
                         <button class="btn btn-outline-danger" type="button" onclick="myFunction('housingDesc')">Close</button><br><br>
-                        Housing description
+						<div id = "housReasons" style = "height: 600px; width: 800px;" align = "center"></div>
+                        <h2 align = "center">The top barrier is that many did not qualify.</h2>
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('housingDesc')">Close</button>
                     </div>
-					<!--<script src = "specificCharts14.js"></script>-->
+					<script src = "specificCharts14.js"></script>
 
                     <div id="billsDesc">
                         <button class="btn btn-outline-danger" type="button" onclick="myFunction('billsDesc')">Close</button><br><br>
-                        Bills description
+						<div id = "bilReasons" style = "height: 600px; width: 800px;" align = "center"></div>
+                        <h2 align = "center">The top barrier is that many did not qualify.</h2>
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('billsDesc')">Close</button>
                     </div>
-					<!--<script src = "specificCharts15.js"></script>-->
+
+                    <script src = "specificCharts15.js"></script>
 
                     &nbsp;
                 </div>            </div>

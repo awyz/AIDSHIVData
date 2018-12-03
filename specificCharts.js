@@ -1,6 +1,6 @@
 //doughnut chart for Case Management 
 //still need to input values for sexual orientation and disability
-var caseManagmentBarriersReason = echarts.init(document.getElementById('hivDesc'));
+var caseManagmentBarriersReason = echarts.init(document.getElementById('cMReasons'));
 var caseManagementOptions0 = {
 	title: {
         text: 'Case Management Barriers Broken Down by Reason',
@@ -103,8 +103,8 @@ var caseManagementOptions0 = {
 };
 //top barrier did not have transportation
     
-     caseManagmentBarriersReason.setOption(caseManagementOptions0);
-
+ caseManagmentBarriersReason.setOption(caseManagementOptions0);
+/* 
 var caseManagementDoughnut = echarts.init(document.getElementById('hivCm'));
 var caseManagementDoughnutOption = {
 	title : {
@@ -542,3 +542,4 @@ var caseManagementOptions8 = {
     ]
 };
 caseManagementBarriersMoT.setOption(caseManagementOptions8);
+ */
