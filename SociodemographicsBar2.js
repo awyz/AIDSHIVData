@@ -55,6 +55,7 @@ function createOptions(yAxisLabel) {
     return options;
 }
 
+// Age
 var ageChart = document.getElementById('age');
 var ctx = ageChart.getContext('2d');
 
@@ -67,27 +68,64 @@ var myChart = new Chart(ctx, {
                 label: 'HIV Needs Assessment',
                 data: [0.3, 0.5, 6.0, 10.6, 25.4, 57.3],
                 backgroundColor: [
-                    'rgb(255, 99, 132)',
-                    'rgb(255, 99, 132)',
-                    'rgb(255, 99, 132)',
-                    'rgb(255, 99, 132)',
-                    'rgb(255, 99, 132)',
-                    'rgb(255, 99, 132)'
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)'
                 ]},
             {
                 label: 'Epi Profile',
                 data: [0.2, 2.2, 11.4, 16.6, 34.1, 35.5],
                 backgroundColor: [
-                    'rgb(54, 162, 235)',
-                    'rgb(54, 162, 235)',
-                    'rgb(54, 162, 235)',
-                    'rgb(54, 162, 235)',
-                    'rgb(54, 162, 235)',
-                    'rgb(54, 162, 235)'
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)'
                 ]
             }
 
         ]
     },
     options: createOptions('Age')
+});
+
+
+// Case Management
+var ageChart = document.getElementById('caseManagement');
+var ctx = ageChart.getContext('2d');
+
+var myChart = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: {
+        labels: ['<13', '13-24', '25-34', '35-44', '45-54', '55+'],
+        datasets: [
+            {
+                label: 'HIV Needs Assessment',
+                data: [0.3, 0.5, 6.0, 10.6, 25.4, 57.3],
+                backgroundColor: [
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)',
+                    'rgba(255, 104, 107, 1)'
+                ]},
+            {
+                label: 'Epi Profile',
+                data: [0.2, 2.2, 11.4, 16.6, 34.1, 35.5],
+                backgroundColor: [
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)',
+                    'rgba(104, 99, 240, 1)'
+                ]
+            }
+
+        ]
+    },
+    options: createOptions('Case Management Provider')
 });
