@@ -163,7 +163,7 @@ AlternativeTherapyDoughnut.setOption(AlternativeTherapyDoughnutOption);
 var AlternativeTherapyBarriersEthnicity = echarts.init(document.getElementById('hivCmEthnicity'));
 var AlternativeTherapyOptions1 = {
     title: {
-        text: 'AlternativeTherapy Barriers Broken Down by Ethnicity',
+        text: 'Alternative Therapy Barriers Broken Down by Ethnicity',
     },
     tooltip: {
         trigger: 'axis',
@@ -191,7 +191,7 @@ var AlternativeTherapyOptions1 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: ["", 1, 4,"",1],
+            data: [''],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
         },
 		{
@@ -211,7 +211,13 @@ var AlternativeTherapyBarriersAge = echarts.init(document.getElementById('altThe
 var AlternativeTherapyOptions2 = {
     title: {
         text: 'AlternativeTherapy Barriers Broken Down by Age',
+		x:'center'
     },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        data: ["","","","Very Difficult", "Too Difficult"]
+	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -255,7 +261,13 @@ var AlternativeTherapyBarriersEducation = echarts.init(document.getElementById('
 var AlternativeTherapyOptions3 = {
     title: {
         text: 'AlternativeTherapy Barriers Broken Down by Education',
+		x:'center'
     },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        data: ["","","","Very Difficult", "Too Difficult"]
+	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -280,14 +292,14 @@ var AlternativeTherapyOptions3 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [2,1,1,"",2,"",""],
+            data: [3,6,16,1,9,"",""],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [''],
+			data: [7,6,14,2,11,3,""],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
@@ -300,7 +312,13 @@ var AlternativeTherapyBarriersIncomeType = echarts.init(document.getElementById(
 var AlternativeTherapyOptions4 = {
     title: {
         text: 'AlternativeTherapy Barriers\n Broken Down by Income Type',
+		x: 'center'
     },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        data: ["","","","Very Difficult", "Too Difficult"]
+	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -345,7 +363,13 @@ var AlternativeTherapyBarriersSexualOrientation = echarts.init(document.getEleme
 var AlternativeTherapyOptions5 = {
     title: {
         text: 'AlternativeTherapy Barriers\n Broken Down by Sexual Orientation',
+		x: 'center'
     },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        data: ["","","","Very Difficult", "Too Difficult"]
+	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -449,7 +473,13 @@ var AlternativeTherapyBarriersDrugUse = echarts.init(document.getElementById('al
 var AlternativeTherapyOptions7 = {
     title: {
         text: 'AlternativeTherapy Barriers\n Broken Down by Drug Use',
+		x: 'center'
     },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        data: ["","","","Very Difficult", "Too Difficult"]
+	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -494,8 +524,14 @@ AlternativeTherapyBarriersDrugUse.setOption(AlternativeTherapyOptions7);
 var AlternativeTherapyBarriersMoT = echarts.init(document.getElementById('altTherapyMoT'));
 var AlternativeTherapyOptions8 = {
     title: {
-        text: 'AlternativeTherapy Barriers\n Broken Down by Method of Transmission',
+        text: 'Alternative Therapy Barriers\n Broken Down by Method of Transmission',
+		x: 'center'
     },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        data: ["","","","Very Difficult", "Too Difficult"]
+	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -515,20 +551,20 @@ var AlternativeTherapyOptions8 = {
     yAxis: {
         type: 'category',
         data: ['Sex With Men','Sex With Women','Sharing Needles',
-		'Blood Products or Transfusions','Was Born Infected','Unknown','Other','Prefer Not to Answer']
+		'Blood Products or Transfusions','Was Born Infected','Unknown','Prefer Not to Answer','Other']
     },
     series: [
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [3,"",1,1,'',1],
+            data: [28,1,7,0,0,2,0,1],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [''],
+			data: [35,1,1,1,15,2,0],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 
 			
