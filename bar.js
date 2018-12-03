@@ -134,6 +134,7 @@
 
         console.log("index: " + datasetIndex);
         console.log(myChart.data.labels[activePoint._index]);
+        console.log(barOptions_stacked);
 
         // location.hash = "#theBox";
 
