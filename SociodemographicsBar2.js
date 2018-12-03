@@ -1,124 +1,16 @@
-// var canvas = document.getElementById("age");
-// var ctx = canvas.getContext('2d');
-//
-// // // Global Options:
-// // Chart.defaults.global.defaultFontColor = 'dodgerblue';
-// // Chart.defaults.global.defaultFontSize = 16;
-// //
-// // Data with datasets options
-// var data = {
-//     labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-//     datasets: [
-//         {
-//             label: "HIV Needs Assessment",
-//             fill: true,
-//             data: [11, 9, 4, 10, 3, 2]
-//         },
-//         {
-//             label: "Epi Profile",
-//             fill: true,
-//             data: [11, 9, 4, 10, 3, 2]
-//         }
-//     ]
-// };
-//
-// var options = {
-//     tooltips: {
-//         callbacks: {
-//             label: function(tooltipItem, data) {
-//                 return "$" + Number(tooltipItem.yLabel) + " and so worth it !";
-//             }
-//         }
-//     },
-//     title: {
-//         display: true,
-//         text: 'Ice Cream Truck',
-//     },
-//     scales: {
-//         xAxes: [{
-//             scaleLabel: {
-//                 display: true,
-//                 labelString: "someLabel"
-//             },
-//             ticks: {
-//                 fontFamily: "'Open Sans Bold', sans-serif",
-//                 fontSize: 11,
-//                 beginAtZero: true
-//             },
-//         }],
-//         yAxes: [{
-//             scaleLabel: {
-//                 display: true,
-//                 labelString: "OtherLabel"
-//             },
-//             ticks: {
-//                 fontFamily: "'Open Sans Bold', sans-serif",
-//                 fontSize: 11,
-//             },
-//             gridLines: {
-//                 display: false
-//             }
-//         }],
-//         legend: {
-//             display: true
-//         },
-//     }
-// };
-//
-// // Chart declaration:
-// var myBarChart = new Chart(ctx, {
-//     type: 'horizontalBar',
-//     data: data,
-//     options: options
-// });
-
-var ageChart = document.getElementById('age');
-var ctx = ageChart.getContext('2d');
-
-
-
-var myChart = new Chart(ctx, {
-    type: 'horizontalBar',
-    data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-        datasets: [
-            {
-                label: 'HIV Needs Assessment',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgb(255, 99, 132)',
-                    'rgb(54, 162, 235)',
-                    'rgb(255, 206, 86)',
-                    'rgb(75, 192, 192)',
-                    'rgb(153, 102, 255)',
-                    'rgb(255, 159, 64)'
-            ]},
-            {
-                label: 'Epi Profile',
-                data: [1, 2, 3, 4, 5, 6],
-            }
-
-        ]
-    },
-    options: createOptions('Percentage of People with HIV', 'Age', 398)
-    // options: options
-});
-
-function createOptions(xAxisLabel, yAxisLabel, nValue) {
+function createOptions(yAxisLabel) {
 
     var options = {
-        tooltips: {
-            callbacks: {
-                label: function (tooltipItems, data) {
-                    return data.datasets[tooltipItems.datasetIndex].label + ": www" + tooltipItems.xLabel;
-                }
-            }
+        title: {
+            text: ['HIV Needs Assessment 2018 / N = 398', 'Epi Profile 2010-2015 / N = 2,519'],
+            display: true,
+            fontSize: 20
         },
         scales: {
             xAxes: [{
                 scaleLabel: {
                     display: true,
-                    labelString: xAxisLabel
+                    labelString: 'Percentage of People with HIV'
                 },
                 ticks: {
                     fontFamily: "'Open Sans Bold', sans-serif",
@@ -136,18 +28,66 @@ function createOptions(xAxisLabel, yAxisLabel, nValue) {
                     fontSize: 11,
                 },
                 gridLines: {
-                    display: false
+                    display: false,
                 }
             }],
-            legend: {
-                display: true
-            },
-        }
+        },
+        pointLabelFontFamily : "Quadon Extra Bold",
+        scaleFontFamily : "Quadon Extra Bold",
+        legend: {
+            display: true,
+        },
+        tooltips: {
+            callbacks: {
+                label: function (tooltipItems, data) {
+                    if(tooltipItems.datasetIndex === 0) {
+                        return data.datasets[tooltipItems.datasetIndex].label + " Value: " + Math.round(tooltipItems.xLabel / 100 * 398);
+                    } else {
+                        return data.datasets[tooltipItems.datasetIndex].label + " Value: " + Math.round(tooltipItems.xLabel / 100 * 2519);
+                    }
+                },
+                afterLabel: function (tooltipItems, data) {
+                    return  data.datasets[tooltipItems.datasetIndex].label + " Percentage: " + tooltipItems.xLabel;
+                },
+            }
+        },
     }
-    console.log(options);
     return options;
 }
 
-// function generateLabel (tooltipItems, data) {
-//     return data.datasets[tooltipItems.datasetIndex].label + ": www" + tooltipItems.xLabel;
-// }
+var ageChart = document.getElementById('age');
+var ctx = ageChart.getContext('2d');
+
+var myChart = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: {
+        labels: ['<13', '13-24', '25-34', '35-44', '45-54', '55+'],
+        datasets: [
+            {
+                label: 'HIV Needs Assessment',
+                data: [0.3, 0.5, 6.0, 10.6, 25.4, 57.3],
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(255, 99, 132)',
+                    'rgb(255, 99, 132)',
+                    'rgb(255, 99, 132)',
+                    'rgb(255, 99, 132)',
+                    'rgb(255, 99, 132)'
+                ]},
+            {
+                label: 'Epi Profile',
+                data: [0.2, 2.2, 11.4, 16.6, 34.1, 35.5],
+                backgroundColor: [
+                    'rgb(54, 162, 235)',
+                    'rgb(54, 162, 235)',
+                    'rgb(54, 162, 235)',
+                    'rgb(54, 162, 235)',
+                    'rgb(54, 162, 235)',
+                    'rgb(54, 162, 235)'
+                ]
+            }
+
+        ]
+    },
+    options: createOptions('Age')
+});
