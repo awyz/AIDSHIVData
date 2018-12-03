@@ -104,7 +104,7 @@ var AlternativeTherapyOptions0 = {
     
      AlternativeTherapyBarriersReason.setOption(AlternativeTherapyOptions0);
 //still need to input values for sexual orienation and disability
-
+/* 
 var AlternativeTherapyDoughnut = echarts.init(document.getElementById('altTherapy'));
 var AlternativeTherapyDoughnutOption = {
     title : {
@@ -204,10 +204,10 @@ var AlternativeTherapyOptions1 = {
     ]
 };
 AlternativeTherapyBarriersEthnicity.setOption(AlternativeTherapyOptions1);
-
+ */
 
 //broken down by age
-var AlternativeTherapyBarriersAge = echarts.init(document.getElementById('hivCmAge'));
+var AlternativeTherapyBarriersAge = echarts.init(document.getElementById('altTherapyAge'));
 var AlternativeTherapyOptions2 = {
     title: {
         text: 'AlternativeTherapy Barriers Broken Down by Age',
@@ -236,13 +236,13 @@ var AlternativeTherapyOptions2 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [2,3,1],
+            data: [20,7,4,4,0,0],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [""],
+			data: [17,18,5,3,0],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
@@ -251,7 +251,7 @@ var AlternativeTherapyOptions2 = {
 AlternativeTherapyBarriersAge.setOption(AlternativeTherapyOptions2);
 
 //broken down by education
-var AlternativeTherapyBarriersEducation = echarts.init(document.getElementById('hivCmEducation'));
+var AlternativeTherapyBarriersEducation = echarts.init(document.getElementById('altTherapyEducation'));
 var AlternativeTherapyOptions3 = {
     title: {
         text: 'AlternativeTherapy Barriers Broken Down by Education',
@@ -296,7 +296,7 @@ var AlternativeTherapyOptions3 = {
 AlternativeTherapyBarriersEducation.setOption(AlternativeTherapyOptions3);
 
 //broken down by income type
-var AlternativeTherapyBarriersIncomeType = echarts.init(document.getElementById('hivCmIncomeType'));
+var AlternativeTherapyBarriersIncomeType = echarts.init(document.getElementById('altTherapyIncomeType'));
 var AlternativeTherapyOptions4 = {
     title: {
         text: 'AlternativeTherapy Barriers\n Broken Down by Income Type',
@@ -325,14 +325,14 @@ var AlternativeTherapyOptions4 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [4,1,"",1],
+            data: [19,11,"",5],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [''],
+			data: [11,6,"",26],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
@@ -341,7 +341,7 @@ var AlternativeTherapyOptions4 = {
 AlternativeTherapyBarriersIncomeType.setOption(AlternativeTherapyOptions4);
 
 //broken down by sexual orientation
-var AlternativeTherapyBarriersSexualOrientation = echarts.init(document.getElementById('hivCmSexualOrientation'));
+var AlternativeTherapyBarriersSexualOrientation = echarts.init(document.getElementById('altTherapySexualOrientation'));
 var AlternativeTherapyOptions5 = {
     title: {
         text: 'AlternativeTherapy Barriers\n Broken Down by Sexual Orientation',
@@ -364,21 +364,22 @@ var AlternativeTherapyOptions5 = {
     },
     yAxis: {
         type: 'category',
-        data: ['Heterosexual','Homosexual','Bisexual',
-		'Non-Binary','Other','Prefer not to answer']
+        data: ['Heterosexual (Male)','Heterosexual (Female)','Homosexual (Male)',
+		'Homosexual(Female)','Bisexual (Male)','Bisexual (Female)',
+		'Celibate','Other','Prefer not to answer']
     },
     series: [
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: ["","","","",""],
+            data: [4,1,22,6,1,1,0,1],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ["",""],
+			data: [1,6,30,2,2,2,0,2],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
@@ -387,7 +388,7 @@ var AlternativeTherapyOptions5 = {
 AlternativeTherapyBarriersSexualOrientation.setOption(AlternativeTherapyOptions5);
 
 //broken down by disability
-var AlternativeTherapyBarriersDisability = echarts.init(document.getElementById('hivCmDisability'));
+/* var AlternativeTherapyBarriersDisability = echarts.init(document.getElementById('hivCmDisability'));
 var AlternativeTherapyOptions6 = {
     title: {
         text: 'AlternativeTherapy Barriers Broken Down by Disability',
@@ -442,9 +443,9 @@ var AlternativeTherapyOptions6 = {
     ]
 };
 AlternativeTherapyBarriersDisability.setOption(AlternativeTherapyOptions6);
-
+ */
 //broken down by drug use
-var AlternativeTherapyBarriersDrugUse = echarts.init(document.getElementById('hivCmDrugUse'));
+var AlternativeTherapyBarriersDrugUse = echarts.init(document.getElementById('altTherapyDrugUse'));
 var AlternativeTherapyOptions7 = {
     title: {
         text: 'AlternativeTherapy Barriers\n Broken Down by Drug Use',
@@ -474,14 +475,14 @@ var AlternativeTherapyOptions7 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: ["","","","",2,1,3],
+            data: [1,1,2,1,13,5,19,0],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ["","","","",""],
+			data: [0,0,0,0,	15,2,27,1],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
@@ -490,7 +491,7 @@ var AlternativeTherapyOptions7 = {
 AlternativeTherapyBarriersDrugUse.setOption(AlternativeTherapyOptions7);
 
 //broken down by method of transmission 
-var AlternativeTherapyBarriersMoT = echarts.init(document.getElementById('hivCmMoT'));
+var AlternativeTherapyBarriersMoT = echarts.init(document.getElementById('altTherapyMoT'));
 var AlternativeTherapyOptions8 = {
     title: {
         text: 'AlternativeTherapy Barriers\n Broken Down by Method of Transmission',
