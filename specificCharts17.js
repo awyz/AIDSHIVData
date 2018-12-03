@@ -564,7 +564,7 @@ var AlternativeTherapyOptions8 = {
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [35,1,1,1,15,2,0],
+			data: [35,1,1,1,1,5,2,0],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 
 			
