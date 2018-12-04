@@ -24,7 +24,7 @@ var AlternativeTherapyOptions0 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.2]
+        max: 40
     },
     yAxis: {
         type: 'category',
@@ -180,7 +180,7 @@ var AlternativeTherapyOptions1 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',
@@ -233,7 +233,7 @@ var AlternativeTherapyOptions2 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',
@@ -283,7 +283,7 @@ var AlternativeTherapyOptions3 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',
@@ -334,7 +334,7 @@ var AlternativeTherapyOptions4 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',
@@ -385,7 +385,7 @@ var AlternativeTherapyOptions5 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',
@@ -495,7 +495,7 @@ var AlternativeTherapyOptions7 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',
@@ -547,7 +547,7 @@ var AlternativeTherapyOptions8 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',

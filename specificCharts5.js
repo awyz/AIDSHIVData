@@ -24,7 +24,7 @@ var insuranceOptions0 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 1.75]
+        max: 40
     },
     yAxis: {
         type: 'category',

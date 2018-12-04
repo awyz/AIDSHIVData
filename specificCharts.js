@@ -25,7 +25,7 @@ var caseManagementOptions0 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 20]
+        max: 40
     },
     yAxis: {
         type: 'category',

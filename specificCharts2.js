@@ -24,7 +24,7 @@ var informationOptions0 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.1]
+        max: 40
     },
     yAxis: {
         type: 'category',
