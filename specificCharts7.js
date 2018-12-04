@@ -186,25 +186,25 @@ var DentalOptions1 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',
-        data: ['Prefer not to answer','Native Hawaiian','White','African American','Hispanic',
-		'American Indian', 'Asian Indian', 'Chinese', 'Filipino','Japanese','Korean', 'Vietnamese', 
-		'Guamanian', 'Samoan', 'Other Pacific Islander', 'Other Asian', 'Other Race']
+        data: ['Prefer not to answer', 'Other Race', 'Other Asian', 'Other Pacific Islander', 'Hispanic',
+            'American Indian', 'Asian Indian', 'Filipino', 'Vietnamese', 'Korean', 'Chinese', 'Japanese',
+            'African American', 'Samoan', 'Guamanian', 'Native Hawaiian', 'White'],
     },
     series: [
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: ["",9,16,2,5,2,"",4,2,1,1,"",1,1,"",3,1],
-			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
+            data: [0,1,3,0,5,2,0,2,0,1,4,1,2,1,1,9,16],
+            itemStyle:{color: 'rgba(255, 166, 166, 1)'}
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [1,2,12,"",2,3,"","","",1,1,"","","","",1,4],
+			data: [1,41,0,2,3,0,0,0,1,0,1,0,0,0,2,12],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
@@ -238,7 +238,7 @@ var DentalOptions2 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 1.75]
+        max: 40
     },
     yAxis: {
         type: 'category',
@@ -283,24 +283,28 @@ var DentalOptions3 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',
-        data: ['Graduate Degree','Bachelor\'s', 'Some College', 'Vocational School', 'High School',"Grades 9-11",'Prefer not to Answer']
+        // data: ['Graduate Degree','Bachelor\'s', 'Some College', 'Vocational School', 'High School',"Grades 9-11",'Prefer not to Answer']
+        data: ['Prefer not to Answer', 'Grades 9-11', 'High School Diploma or GED', 'Vocational/Technical School',
+            'Some College or Associate\'s Degree', 'Bachelor\'s Degree', 'Graduate Degree']
     },
     series: [
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [4,5,14,2,11,2],
+            // data: [4,5,14,2,11,2],
+            data: [0,2,11,2,14,5,4],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [2,3,9,1,4,2],
+			// data: [2,3,9,1,4,2],
+            data: [0,2,4,1,9,3,2],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
@@ -334,24 +338,27 @@ var DentalOptions4 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',
-        data: ['SSI/SSDI','Employement','Veteran\'s Benefits','Other']
+        // data: ['SSI/SSDI','Employement','Veteran\'s Benefits','Other']
+        data: ['Other', 'Veteran Benefits', 'Employment Income', 'SSI/SSDI']
     },
     series: [
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [26,8,"",4],
+            // data: [26,8,"",4],
+            data: [4,0,8,26],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [15,3,"",4],
+			// data: [15,3,"",4],
+            data: [4,0,3,15],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
@@ -385,12 +392,12 @@ var DentalOptions5 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',
-        data: ['Prefer not to answer','Other','Celibate','Bisexual (Female)', 'Bisexual (Male)',
-            'Homosexual(Female)','Homosexual (Male)', 'Heterosexual (Female)', 'Heterosexual (Male)']
+        // data: ['Prefer not to answer','Other','Celibate','Bisexual (Female)', 'Bisexual (Male)',
+        //     'Homosexual(Female)','Homosexual (Male)', 'Heterosexual (Female)', 'Heterosexual (Male)']
     },
     series: [
         {
@@ -494,25 +501,27 @@ var DentalOptions7 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',
-        data: ['Cocaine','Crack','Ecstasy','Heroin', 'Marijuana',
-		'Meth','None of the Above','Other']
+        // data: ['Cocaine','Crack','Ecstasy','Heroin', 'Marijuana', 'Meth','None of the Above','Other']
+        data: ['None', 'Other', 'Crack', 'Ecstasy', 'Heroin', 'Cocaine', 'Marijuana', 'Methamphetamine'],
     },
     series: [
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: ["","","",14,1,22,""],
+            // data: ["","","",14,1,22,""],
+            data: [22,0,0,0,14,0,1,22],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ["","",2,5,3,15,""],
+			// data: ["","",2,5,3,15,""],
+            data: [15,0,0,2,5,0,3,15],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
@@ -546,25 +555,29 @@ var DentalOptions8 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',
-        data: ['Sex With Men','Sex With Women','Sharing Needles',
-		'Blood Products or Transfusions','Was Born Infected','Unknown','Other','Prefer Not to Answer']
+        // data: ['Sex With Men','Sex With Women','Sharing Needles',
+		// 'Blood Products or Transfusions','Was Born Infected','Unknown','Other','Prefer Not to Answer']
+        data: ['Other','Prefer Not to Answer','Unknown', 'Born HIV Infected', 'Blood Products or Transfusions',
+            'Injection Drug Use', 'Sex with Women', 'Sex with Men']
     },
     series: [
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [27,1,4,"","",8,"",2],
+            // data: [27,1,4,"","",8,"",2],
+            data: [0,2,8,0,0,4,1,27],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [16,2,2,"","",2,1,1],
+			// data: [16,2,2,"","",2,1,1],
+            data: [1,1,2,0,0,2,2,16],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 
 			
