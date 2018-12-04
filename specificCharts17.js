@@ -160,8 +160,8 @@ AlternativeTherapyDoughnut.setOption(AlternativeTherapyDoughnutOption);
 */
 //bar graph of AlternativeTherapy Respondents that answered very or too difficult
 
-//broken down by ethnicity
-var AlternativeTherapyBarriersEthnicity = echarts.init(document.getElementById('dentalEthnicity'));
+//broken down by ethnicity	
+var AlternativeTherapyBarriersEthnicity = echarts.init(document.getElementById('altTherapyEthnicity'));
 var AlternativeTherapyOptions1 = {
     title: {
         text: 'Alternative Therapy Barriers Broken Down by Ethnicity',
@@ -213,7 +213,7 @@ AlternativeTherapyBarriersEthnicity.setOption(AlternativeTherapyOptions1);
 
 
 //broken down by age
-var AlternativeTherapyBarriersAge = echarts.init(document.getElementById('dentalAge'));
+var AlternativeTherapyBarriersAge = echarts.init(document.getElementById('altTherapyAge'));
 var AlternativeTherapyOptions2 = {
     title: {
         text: 'Alternative Therapy Barriers Broken Down by Age',
@@ -263,7 +263,7 @@ var AlternativeTherapyOptions2 = {
 AlternativeTherapyBarriersAge.setOption(AlternativeTherapyOptions2);
 
 //broken down by education
-var AlternativeTherapyBarriersEducation = echarts.init(document.getElementById('dentalEducation'));
+var AlternativeTherapyBarriersEducation = echarts.init(document.getElementById('altTherapyEducation'));
 var AlternativeTherapyOptions3 = {
     title: {
         text: 'Alternative Therapy Barriers Broken Down by Education',
@@ -316,7 +316,7 @@ var AlternativeTherapyOptions3 = {
 AlternativeTherapyBarriersEducation.setOption(AlternativeTherapyOptions3);
 
 //broken down by income type
-var AlternativeTherapyBarriersIncomeType = echarts.init(document.getElementById('dentalIncomeType'));
+var AlternativeTherapyBarriersIncomeType = echarts.init(document.getElementById('altTherapyIncomeType'));
 var AlternativeTherapyOptions4 = {
     title: {
         text: 'Alternative Therapy Barriers\n Broken Down by Income Type',
@@ -367,7 +367,7 @@ var AlternativeTherapyOptions4 = {
 AlternativeTherapyBarriersIncomeType.setOption(AlternativeTherapyOptions4);
 
 //broken down by sexual orientation
-var AlternativeTherapyBarriersSexualOrientation = echarts.init(document.getElementById('dentalSexualOrientation'));
+var AlternativeTherapyBarriersSexualOrientation = echarts.init(document.getElementById('altTherapySexualOrientation'));
 var AlternativeTherapyOptions5 = {
     title: {
         text: 'Alternative Therapy Barriers\n Broken Down by Sexual Orientation',
@@ -477,7 +477,7 @@ var AlternativeTherapyOptions6 = {
 AlternativeTherapyBarriersDisability.setOption(AlternativeTherapyOptions6);
  */
 //broken down by drug use
-var AlternativeTherapyBarriersDrugUse = echarts.init(document.getElementById('dentalDrugUse'));
+var AlternativeTherapyBarriersDrugUse = echarts.init(document.getElementById('altTherapyDrugUse'));
 var AlternativeTherapyOptions7 = {
     title: {
         text: 'Alternative Therapy Barriers\n Broken Down by Drug Use',
@@ -528,7 +528,7 @@ var AlternativeTherapyOptions7 = {
 AlternativeTherapyBarriersDrugUse.setOption(AlternativeTherapyOptions7);
 
 //broken down by method of transmission 
-var AlternativeTherapyBarriersMoT = echarts.init(document.getElementById('dentalMoT'));
+var AlternativeTherapyBarriersMoT = echarts.init(document.getElementById('altTherapyMoT'));
 var AlternativeTherapyOptions8 = {
     title: {
         text: 'Alternative Therapy Barriers\n Broken Down by Method of Transmission',
