@@ -1,5 +1,5 @@
-//doughnut chart for Alternative Therapy
-var AlternativeTherapyBarriersReason = echarts.init(document.getElementById('TherapyDesc'));
+//Alternative Therapy
+var AlternativeTherapyBarriersReason = echarts.init(document.getElementById('therReasons'));
 var AlternativeTherapyOptions0 = {
 	title: {
         text: 'Alternative Therapy Barriers Broken Down by Reason',
@@ -24,7 +24,7 @@ var AlternativeTherapyOptions0 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.1]
+        max: 40
     },
     yAxis: {
         type: 'category',
@@ -104,7 +104,7 @@ var AlternativeTherapyOptions0 = {
     
      AlternativeTherapyBarriersReason.setOption(AlternativeTherapyOptions0);
 //still need to input values for sexual orienation and disability
-
+/* 
 var AlternativeTherapyDoughnut = echarts.init(document.getElementById('altTherapy'));
 var AlternativeTherapyDoughnutOption = {
     title : {
@@ -157,13 +157,14 @@ var AlternativeTherapyDoughnutOption = {
     ]
 };
 AlternativeTherapyDoughnut.setOption(AlternativeTherapyDoughnutOption);
+*/
 //bar graph of AlternativeTherapy Respondents that answered very or too difficult
 
 //broken down by ethnicity
-var AlternativeTherapyBarriersEthnicity = echarts.init(document.getElementById('hivCmEthnicity'));
+var AlternativeTherapyBarriersEthnicity = echarts.init(document.getElementById('altTherapyEthnicity'));
 var AlternativeTherapyOptions1 = {
     title: {
-        text: 'AlternativeTherapy Barriers Broken Down by Ethnicity',
+        text: 'Alternative Therapy Barriers Broken Down by Ethnicity',
     },
     tooltip: {
         trigger: 'axis',
@@ -179,26 +180,26 @@ var AlternativeTherapyOptions1 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',
-        data: ['Prefer not to answer','Native Hawaiian','White','African American','Hispanic',
-		'American Indian', 'Asian Indian', 'Chinese', 'Filipino','Japanese','Korean', 'Vietnamese', 
-		'Guamanian', 'Samoan', 'Other Pacific Islander', 'Other Asian', 'Other Race']
+        data: ['Prefer not to answer', 'Other Race', 'Other Asian', 'Other Pacific Islander', 'Hispanic',
+            'American Indian', 'Asian Indian', 'Filipino', 'Vietnamese', 'Korean', 'Chinese', 'Japanese',
+            'African American', 'Samoan', 'Guamanian', 'Native Hawaiian', 'White']
     },
     series: [
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: ["", 1, 4,"",1],
-			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
+            data: [0,4,1,0,2,1,0,5,0,2,5,4,0,0,0,8,22],
+            itemStyle:{color: 'rgba(255, 166, 166, 1)'}
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [""],
-			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
+            data: [2,2,1,0,12,5,0,0,0,2,2,3,1,1,0,7,19],
+            itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
@@ -207,11 +208,17 @@ AlternativeTherapyBarriersEthnicity.setOption(AlternativeTherapyOptions1);
 
 
 //broken down by age
-var AlternativeTherapyBarriersAge = echarts.init(document.getElementById('hivCmAge'));
+var AlternativeTherapyBarriersAge = echarts.init(document.getElementById('altTherapyAge'));
 var AlternativeTherapyOptions2 = {
     title: {
-        text: 'AlternativeTherapy Barriers Broken Down by Age',
+        text: 'Alternative Therapy Barriers Broken Down by Age',
+		x:'center'
     },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        data: ["","","","Very Difficult", "Too Difficult"]
+	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -226,7 +233,7 @@ var AlternativeTherapyOptions2 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',
@@ -236,13 +243,13 @@ var AlternativeTherapyOptions2 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [2,3,1],
+            data: [20,7,4,4,0,0],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [""],
+			data: [17,18,5,3,0],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
@@ -251,11 +258,17 @@ var AlternativeTherapyOptions2 = {
 AlternativeTherapyBarriersAge.setOption(AlternativeTherapyOptions2);
 
 //broken down by education
-var AlternativeTherapyBarriersEducation = echarts.init(document.getElementById('hivCmEducation'));
+var AlternativeTherapyBarriersEducation = echarts.init(document.getElementById('altTherapyEducation'));
 var AlternativeTherapyOptions3 = {
     title: {
-        text: 'AlternativeTherapy Barriers Broken Down by Education',
+        text: 'Alternative Therapy Barriers Broken Down by Education',
+		x:'center'
     },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        data: ["","","","Very Difficult", "Too Difficult"]
+	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -270,24 +283,26 @@ var AlternativeTherapyOptions3 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',
-        data: ['Graduate Degree','Bachelor\'s', 'Some College', 'Vocational School', 'High School',"Grades 9-11",'Prefer not to Answer']
+        data: ['Prefer not to Answer', 'Grades 9-11', 'High School Diploma or GED', 'Vocational/Technical School',
+            'Some College or Associate\'s Degree', 'Bachelor\'s Degree', 'Graduate Degree']
     },
     series: [
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [2,1,1,"",2,"",""],
+            data: [3,6,16,1,9,"",""],
+            data: ["","",9,1,16,6,3],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [''],
+            data: ["",3,11,2,14,6,7],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
@@ -296,11 +311,17 @@ var AlternativeTherapyOptions3 = {
 AlternativeTherapyBarriersEducation.setOption(AlternativeTherapyOptions3);
 
 //broken down by income type
-var AlternativeTherapyBarriersIncomeType = echarts.init(document.getElementById('hivCmIncomeType'));
+var AlternativeTherapyBarriersIncomeType = echarts.init(document.getElementById('altTherapyIncomeType'));
 var AlternativeTherapyOptions4 = {
     title: {
-        text: 'AlternativeTherapy Barriers\n Broken Down by Income Type',
+        text: 'Alternative Therapy Barriers\n Broken Down by Income Type',
+		x: 'center'
     },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        data: ["","","","Very Difficult", "Too Difficult"]
+	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -315,24 +336,24 @@ var AlternativeTherapyOptions4 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',
-        data: ['SSI/SSDI','Employement','Veteran\'s Benefits','Other']
+        data: ['Other', 'Veteran Benefits', 'Employment Income', 'SSI/SSDI']
     },
     series: [
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [4,1,"",1],
+            data: [5,"",11,19],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [''],
+            data: [26,"",6,11],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
@@ -341,11 +362,17 @@ var AlternativeTherapyOptions4 = {
 AlternativeTherapyBarriersIncomeType.setOption(AlternativeTherapyOptions4);
 
 //broken down by sexual orientation
-var AlternativeTherapyBarriersSexualOrientation = echarts.init(document.getElementById('hivCmSexualOrientation'));
+var AlternativeTherapyBarriersSexualOrientation = echarts.init(document.getElementById('altTherapySexualOrientation'));
 var AlternativeTherapyOptions5 = {
     title: {
-        text: 'AlternativeTherapy Barriers\n Broken Down by Sexual Orientation',
+        text: 'Alternative Therapy Barriers\n Broken Down by Sexual Orientation',
+		x: 'center'
     },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        data: ["","","","Very Difficult", "Too Difficult"]
+	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -360,25 +387,25 @@ var AlternativeTherapyOptions5 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',
-        data: ['Heterosexual','Homosexual','Bisexual',
-		'Non-Binary','Other','Prefer not to answer']
+        data: ['Prefer not to answer','Other','Celibate','Bisexual (Female)', 'Bisexual (Male)',
+            'Homosexual(Female)','Homosexual (Male)', 'Heterosexual (Female)', 'Heterosexual (Male)']
     },
     series: [
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: ["","","","",""],
+            data: [1,0,1,1,6,22,1,4],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ["",""],
+            data: [2,0,2,2,2,30,6,1],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
@@ -387,7 +414,7 @@ var AlternativeTherapyOptions5 = {
 AlternativeTherapyBarriersSexualOrientation.setOption(AlternativeTherapyOptions5);
 
 //broken down by disability
-var AlternativeTherapyBarriersDisability = echarts.init(document.getElementById('hivCmDisability'));
+/* var AlternativeTherapyBarriersDisability = echarts.init(document.getElementById('hivCmDisability'));
 var AlternativeTherapyOptions6 = {
     title: {
         text: 'AlternativeTherapy Barriers Broken Down by Disability',
@@ -442,13 +469,19 @@ var AlternativeTherapyOptions6 = {
     ]
 };
 AlternativeTherapyBarriersDisability.setOption(AlternativeTherapyOptions6);
-
+ */
 //broken down by drug use
-var AlternativeTherapyBarriersDrugUse = echarts.init(document.getElementById('hivCmDrugUse'));
+var AlternativeTherapyBarriersDrugUse = echarts.init(document.getElementById('altTherapyDrugUse'));
 var AlternativeTherapyOptions7 = {
     title: {
-        text: 'AlternativeTherapy Barriers\n Broken Down by Drug Use',
+        text: 'Alternative Therapy Barriers\n Broken Down by Drug Use',
+		x: 'center'
     },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        data: ["","","","Very Difficult", "Too Difficult"]
+	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -463,26 +496,25 @@ var AlternativeTherapyOptions7 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',
-        data: ['Cocaine','Crack','Ecstasy','Heroin', 'Marijuana',
-		'Meth','None of the Above','Other']
+        data: ['None', 'Other', 'Crack', 'Ecstasy', 'Heroin', 'Cocaine', 'Marijuana', 'Methamphetamine'],
     },
     series: [
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: ["","","","",2,1,3],
-			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
+            data: [19, 0, 1, 2, 1, 1, 13, 5],
+            itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ["","","","",""],
-			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
+            data: [27, 1, 0, 0, 0, 0, 15, 2],
+            itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
@@ -490,11 +522,17 @@ var AlternativeTherapyOptions7 = {
 AlternativeTherapyBarriersDrugUse.setOption(AlternativeTherapyOptions7);
 
 //broken down by method of transmission 
-var AlternativeTherapyBarriersMoT = echarts.init(document.getElementById('hivCmMoT'));
+var AlternativeTherapyBarriersMoT = echarts.init(document.getElementById('altTherapyMoT'));
 var AlternativeTherapyOptions8 = {
     title: {
-        text: 'AlternativeTherapy Barriers\n Broken Down by Method of Transmission',
+        text: 'Alternative Therapy Barriers\n Broken Down by Method of Transmission',
+		x: 'center'
     },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        data: ["","","","Very Difficult", "Too Difficult"]
+	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -509,26 +547,26 @@ var AlternativeTherapyOptions8 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        max: 40
     },
     yAxis: {
         type: 'category',
-        data: ['Sex With Men','Sex With Women','Sharing Needles',
-		'Blood Products or Transfusions','Was Born Infected','Unknown','Other','Prefer Not to Answer']
+        data: ['Other','Prefer Not to Answer','Unknown', 'Born HIV Infected', 'Blood Products or Transfusions',
+            'Injection Drug Use', 'Sex with Women', 'Sex with Men']
     },
     series: [
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [3,"",1,1,'',1],
-			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
+            data: [1,0,2,0,0,7,1,28],
+            itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [''],
-			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
+            data: [0,2,5,1,1,1,1,35],
+            itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 
 			
 			

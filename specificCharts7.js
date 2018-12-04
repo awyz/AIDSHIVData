@@ -1,7 +1,111 @@
 //doughnut chart for Dental Services
 //still need to input values for sexual orienation and disability
+var dentalBarriersReason = echarts.init(document.getElementById('denReasons'));
+var dentalOptions0 = {
+	title: {
+        text: 'Dental Barriers Broken Down by Reason',
+		x: 'center'
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        text: 'Top Barriers: \n1.\n2.'
+	},
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+		max: 40
+    },
+    yAxis: {
+        type: 'category',
+        data: ['Could not afford',
+		'Did not know where to get it',
+		'Too long of a wait',
+		'Service not available',
+		'Did not qualify',
+		'Did not have transportation', 
+		'Did not have childcare', 
+		'Did not have enough time off work', 
+		'Concered about privacy',
+		'They did not speak my primary language',
+		'Discrimination because of race', 
+		'Discrimination because of sexual orientation', 
+		'Discrimination because of gender',
+		'I was not in stable living condition', 
+		'Nervous or afraid of what people might say',
+		'Stigma due to HIV', 
+		'Discrimination because of my HIV status']
+    },
+    series: [
+        {
+            name: 'Very Difficult',
+            type: 'bar',
+            data: [
+				{value:26, name:'Could not afford'},
+				{value:10, name:'Did not know where to get it'},
+				{value:12, name:'Too long of a wait '},
+				{value:14, name:'Service not available'},
+				{value:8, name:'Did not qualify'},
+				{value:5, name:'Did not have transportation'},
+				{value:1, name:'Did not have childcare'},
+				{value:2, name:'Did not have enough time off work'},
+				{value:3, name:'Concerned about privacy'},
+				{value:1, name:'They did not speak my primary language'},
+				{value:0, name:'Discrimination because of race'},
+				{value:0, name:'Discrimination because of sexual orientation'},
+				{value:0, name:'Discrimination because of gender'},
+				{value:5, name:'I was not in stable living condition'},
+				{value:6, name:'Nervous or afraid of what people might say'},
+				{value:4, name:'Stigma due to HIV'},
+				{value:0, name:'Discrimination because of my HIV status'}
+				],
+			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
+        },
+		
+		{
+			name:'Too Difficult',
+			type: 'bar',
+			 data: [
+				{value:16, name:'Could not afford'},
+				{value:7, name:'Did not know where to get it'},
+				{value:9, name:'Too long of a wait '},
+				{value:6, name:'Service not available'},
+				{value:4, name:'Did not qualify'},
+				{value:3, name:'Did not have transportation'},
+				{value:0, name:'Did not have childcare'},
+				{value:0, name:'Did not have enough time off work'},
+				{value:0, name:'Concerned about privacy'},
+				{value:0, name:'They did not speak my primary language'},
+				{value:0, name:'Discrimination because of race'},
+				{value:0, name:'Discrimination because of sexual orientation'},
+				{value:0, name:'Discrimination because of gender'},
+				{value:2, name:'I was not in stable living condition'},
+				{value:3, name:'Nervous or afraid of what people might say'},
+				{value:1, name:'Stigma due to HIV'},
+				{value:1, name:'Discrimination because of my HIV status'},
+				],
+			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
+			
+		},
+		
+    ]
+};
+dentalBarriersReason.setOption(dentalOptions0);
 
-var DentalDoughnut = echarts.init(document.getElementById('dentalDesc'));
+//dental doughnut
+/* 
+var DentalDoughnut = echarts.init(document.getElementById('doughnutDental'));
 var DentalDoughnutOption = {
     title : {
         text: 'Dental Services Statistics',
@@ -102,12 +206,13 @@ var DentalOptions1 = {
 };
 DentalBarriersEthnicity.setOption(DentalOptions1);
 
-
+*/
 //broken down by age
 var DentalBarriersAge = echarts.init(document.getElementById('dentalAge'));
 var DentalOptions2 = {
     title: {
         text: 'Dental Barriers Broken Down by Age',
+		x: 'center'
     },
     tooltip: {
         trigger: 'axis',
@@ -123,7 +228,7 @@ var DentalOptions2 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        boundaryGap: [0, 1.75]
     },
     yAxis: {
         type: 'category',
@@ -133,19 +238,20 @@ var DentalOptions2 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [2,5,11,10,10,""],
+            data: [2,5,11,10,10,0],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [2,3,5,7,4,""],
+			data: [2,3,5,7,4,0],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
 DentalBarriersAge.setOption(DentalOptions2);
+/*
 
 //broken down by education
 var DentalBarriersEducation = echarts.init(document.getElementById('dentalEducation'));
@@ -433,3 +539,4 @@ var DentalOptions8 = {
     ]
 };
 DentalBarriersMoT.setOption(DentalOptions8);
+ */
