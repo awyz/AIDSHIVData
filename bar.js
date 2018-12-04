@@ -55,17 +55,6 @@
                 afterLabel: function(tooltipItem, data) {
                     console.log(tooltipItem.xLabel);
                     return ("Percentage: " + Math.round((tooltipItem.xLabel * 100) / 398) + "%");
-                // afterLabel: function (tooltipItem, data) {
-                //         var allData = data.datasets[tooltipItem.datasetIndex].data;
-                //         var tooltipLabel = data.labels[tooltipItem.index];
-                //         var tooltipData = allData[tooltipItem.index];
-                //         var total = 0;
-                //         for (var i=0; i < allData.length; i++) {
-                //             total += allData[i];
-                //         }
-                //         var tooltipPercentage = Math.round((tooltipData / total) * 100);
-                //         total = 0;
-                //         return (tooltipPercentage + '%');
                 }
             }
         }
@@ -140,7 +129,7 @@
         console.log(myChart.data.labels[activePoint._index]);
         console.log(barOptions_stacked);
 
-        // location.hash = "#theBox";
+        location.hash = "#theBox";
 
         function closeAll() {
             console.log("Close everything");
