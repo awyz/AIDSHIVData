@@ -159,13 +159,19 @@ var DentalDoughnutOption = {
 };
 DentalDoughnut.setOption(DentalDoughnutOption);
 //bar graph of Dental Respondents that answered very or too difficult
-
+*/
 //broken down by ethnicity
-var DentalBarriersEthnicity = echarts.init(document.getElementById('hivCmEthnicity'));
+var DentalBarriersEthnicity = echarts.init(document.getElementById('dentalEthnicity'));
 var DentalOptions1 = {
     title: {
         text: 'Dental Barriers Broken Down by Ethnicity',
+		x:'center'
     },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        data: ["","","","Very Difficult", "Too Difficult"]
+	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -192,13 +198,13 @@ var DentalOptions1 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: ["", 1, 4,"",1],
+            data: ["",9,16,2,5,2,"",4,2,1,1,"",1,1,"",3,1],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [""],
+			data: [1,2,12,"",2,3,"","","",1,1,"","","","",1,4],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
@@ -206,14 +212,18 @@ var DentalOptions1 = {
 };
 DentalBarriersEthnicity.setOption(DentalOptions1);
 
-*/
 //broken down by age
-var DentalBarriersAge = echarts.init(document.getElementById('hivCmAge'));
+var DentalBarriersAge = echarts.init(document.getElementById('dentalAge'));
 var DentalOptions2 = {
     title: {
         text: 'Dental Barriers Broken Down by Age',
 		x: 'center'
     },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        data: ["","","","Very Difficult", "Too Difficult"]
+	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -238,26 +248,26 @@ var DentalOptions2 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [2,5,11,10,10,0],
+            data: [2,5,11,10,10,""],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [2,3,5,7,4,0],
+			data: [2,3,5,7,4,""],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
 DentalBarriersAge.setOption(DentalOptions2);
-/*
 
 //broken down by education
-var DentalBarriersEducation = echarts.init(document.getElementById('hivCmEducation'));
+var DentalBarriersEducation = echarts.init(document.getElementById('dentalEducation'));
 var DentalOptions3 = {
     title: {
         text: 'Dental Barriers Broken Down by Education',
+		x:'center'
     },
     tooltip: {
         trigger: 'axis',
@@ -283,14 +293,14 @@ var DentalOptions3 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [2,1,1,"",2,"",""],
+            data: [4,5,14,2,11,2],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [''],
+			data: [2,3,9,1,4,2],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
@@ -299,11 +309,17 @@ var DentalOptions3 = {
 DentalBarriersEducation.setOption(DentalOptions3);
 
 //broken down by income type
-var DentalBarriersIncomeType = echarts.init(document.getElementById('hivCmIncomeType'));
+var DentalBarriersIncomeType = echarts.init(document.getElementById('dentalIncomeType'));
 var DentalOptions4 = {
     title: {
         text: 'Dental Barriers\n Broken Down by Income Type',
+		x:'center'
     },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        data: ["","","","Very Difficult", "Too Difficult"]
+	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -328,14 +344,14 @@ var DentalOptions4 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [4,1,"",1],
+            data: [26,8,"",4],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [''],
+			data: [15,3,"",4],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
@@ -344,11 +360,17 @@ var DentalOptions4 = {
 DentalBarriersIncomeType.setOption(DentalOptions4);
 
 //broken down by sexual orientation
-var DentalBarriersSexualOrientation = echarts.init(document.getElementById('hivCmSexualOrientation'));
+var DentalBarriersSexualOrientation = echarts.init(document.getElementById('dentalSexualOrientation'));
 var DentalOptions5 = {
     title: {
         text: 'Dental Barriers\n Broken Down by Sexual Orientation',
+		x:'center'
     },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        data: ["","","","Very Difficult", "Too Difficult"]
+	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -367,28 +389,28 @@ var DentalOptions5 = {
     },
     yAxis: {
         type: 'category',
-        data: ['Heterosexual','Homosexual','Bisexual',
-		'Non-Binary','Other','Prefer not to answer']
+        data: ['Prefer not to answer','Other','Celibate','Bisexual (Female)', 'Bisexual (Male)',
+            'Homosexual(Female)','Homosexual (Male)', 'Heterosexual (Female)', 'Heterosexual (Male)']
     },
     series: [
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: ["","","","",""],
+            data: [3,6,17,8,1,3,"",3],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ["",""],
+			data: [2,4,12,3,"","","",1],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
 DentalBarriersSexualOrientation.setOption(DentalOptions5);
-
+/**
 //broken down by disability
 var DentalBarriersDisability = echarts.init(document.getElementById('hivCmDisability'));
 var DentalOptions6 = {
@@ -445,13 +467,19 @@ var DentalOptions6 = {
     ]
 };
 DentalBarriersDisability.setOption(DentalOptions6);
-
+*/
 //broken down by drug use
-var DentalBarriersDrugUse = echarts.init(document.getElementById('hivCmDrugUse'));
+var DentalBarriersDrugUse = echarts.init(document.getElementById('dentalDrugUse'));
 var DentalOptions7 = {
     title: {
         text: 'Dental Barriers\n Broken Down by Drug Use',
+		x:'center'
     },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        data: ["","","","Very Difficult", "Too Difficult"]
+	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -477,14 +505,14 @@ var DentalOptions7 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: ["","","","",2,1,3],
+            data: ["","","",14,1,22,""],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: ["","","","",""],
+			data: ["","",2,5,3,15,""],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
@@ -493,11 +521,17 @@ var DentalOptions7 = {
 DentalBarriersDrugUse.setOption(DentalOptions7);
 
 //broken down by method of transmission 
-var DentalBarriersMoT = echarts.init(document.getElementById('hivCmMoT'));
+var DentalBarriersMoT = echarts.init(document.getElementById('dentalMoT'));
 var DentalOptions8 = {
     title: {
         text: 'Dental Barriers\n Broken Down by Method of Transmission',
+		x:'center'
     },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        data: ["","","","Very Difficult", "Too Difficult"]
+	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -523,14 +557,14 @@ var DentalOptions8 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [3,"",1,1,'',1],
+            data: [27,1,4,"","",8,"",2],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [''],
+			data: [16,2,2,"","",2,1,1],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 
 			
@@ -539,4 +573,4 @@ var DentalOptions8 = {
     ]
 };
 DentalBarriersMoT.setOption(DentalOptions8);
- */
+ 
