@@ -59,6 +59,12 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#aboutHIV">About HIV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#goals">Goals</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#sociodemographics">Sociodemographics</a>
                 </li>
                 <li class="nav-item">
@@ -89,6 +95,39 @@
         </div>
     </div>
 </header>
+
+
+<!-- About HIV/AIDS -->
+<section class="bg-primary" id="aboutHIV">
+    <div class="fluid-container" style="background-color: white">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-heading"><br><br>What is HIV?</h2>
+                <hr class="my-4">
+                <p class="mb-5">
+                    According to <a href="hiv.gov">HIV.gov</a>, HIV (human immunodeficiency virus) is a virus that attacks the body's T cells, otherwise known as CD4 cells. These cells normally are used to fight off infections, and thus, patients with HIV have a harder time fighting infections due to having a weaker immune system. When a person's CD4 count reaches a certain number, then AIDS, Acquired Immunodeficiency Syndrome, can occur. While there currently is no cure for HIV, steps have been taken to improve the quality of life for patients and ensure that it is possible to get proper care.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End HIV/AIDS intro -->
+
+<!-- Goals -->
+<section class="bg-primary" id="goals">
+    <div class="fluid-container" style="background-color: white">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-heading"><br><br>The Goal</h2>
+                <hr class="my-4">
+                <p class="mb-5">
+                    While many have heard of the term HIV, there still exists a stigma against people with it. It is important to realize that an HIV diagnosis does not automatically equal a death sentence, as it is possible to live a long, healthy life with HIV due to a combination of proper case management and medical assistance. A way to improve the quality of life for these patients would be to understand the demographics of those with the disease and to improve the quality of and accessibility to different types of services for this group of people. Therefore, the main goal for people who assist those with HIV should be to find where these patients are lacking in care and make those services more accessible to all who need it.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End goals -->
 
 <!--Sociodemographics Section-->
 <section id = "sociodemographics">
@@ -133,7 +172,7 @@
                     <div class="tab-content mt-3">
                         <div class="tab-pane fade show active" id="ageTab" role="tabpanel">
                             <div class="row justify-content-center">
-                                <canvas id="age" width="1000px" height="600px"></canvas>
+                                <canvas id="age" height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text-discrepancy">
                                 <p>There is a large discrepancy between the HIV Needs Assessment and the Epi Profile.
@@ -143,7 +182,7 @@
                         </div>
                         <div class="tab-pane fade" id="caseManagementTab" role="tabpanel">
                             <div class="row justify-content-center">
-                                <canvas id="caseManagement" width="1000px" height="600px"></canvas>
+                                <canvas id="caseManagement"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text">
                                 <p>The Epi Profile has no data on Case Management Providers. However, a large proportion
@@ -152,7 +191,7 @@
                         </div>
                         <div class="tab-pane fade" id="disabilityTab" role="tabpanel">
                             <div class="row justify-content-center">
-                                <canvas id="disabilities" width="1000px" height="600px"></canvas>
+                                <canvas id="disabilities"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text">
                                 <p>The Epi Profile has no data on related diseases. However, a large proportion of people from
@@ -161,7 +200,7 @@
                         </div>
                         <div class="tab-pane fade" id="drugUseTab" role="tabpanel">
                             <div class="row justify-content-center">
-                                <canvas id="drugUse" width="1000px" height="600px"></canvas>
+                                <canvas id="drugUse"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text">
                                 <p>The Epi Profile has no data on drug use. However, a large proportion of the drug-using people
@@ -170,7 +209,7 @@
                         </div>
                         <div class="tab-pane fade" id="educationTab" role="tabpanel">
                             <div class="row justify-content-center">
-                                <canvas id="education" width="1000px" height="600px"></canvas>
+                                <canvas id="education"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text">
                                 <p>The Epi Profile has no data on education level. Most people from the HIV Needs Assessment
@@ -180,7 +219,7 @@
                         </div>
                         <div class="tab-pane fade" id="incomeTypeTab" role="tabpanel">
                             <div class="row justify-content-center">
-                                <canvas id="incomeType" width="1000px" height="600px"></canvas>
+                                <canvas id="incomeType"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text">
                                 <p>The Epi Profile has no data on income types. However, most people from the HIV Needs Assessment
@@ -189,7 +228,7 @@
                         </div>
                         <div class="tab-pane fade" id="methodOfTransmissionTab" role="tabpanel">
                             <div class="row justify-content-center">
-                                <canvas id="methodOfTransmission" width="1000px" height="600px"></canvas>
+                                <canvas id="methodOfTransmission"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text">
                                 <p>There were no significant differences between the methods of transmission of the HIV
@@ -199,7 +238,7 @@
                         </div>
                         <div class="tab-pane fade" id="raceTab" role="tabpanel">
                             <div class="row justify-content-center">
-                                <canvas id="race" width="1000px" height="600px"></canvas>
+                                <canvas id="race"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text-discrepancy">
                                 <p>The HIV Needs Assessment and the Epi Profile have a number of small discrepancies mostly in the range of about 5%. It must
@@ -211,7 +250,7 @@
                         </div>
                         <div class="tab-pane fade" id="sexualOrientationTab" role="tabpanel">
                             <div class="row justify-content-center">
-                                <canvas id="sexualOrientation" width="1000px" height="600px"></canvas>
+                                <canvas id="sexualOrientation"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text">
                                 <p>The Epi Profile has no data on sexual orientation. However, a large amount of people from the HIV
@@ -226,7 +265,6 @@
 </section>
 
 <script src="SociodemographicsBar2.js"></script>
-<!--<script src="SociodemographicsBar.js"></script>-->
 
 <!-- Bar chart of services -->
 <a name="theBar"></a>
@@ -274,12 +312,21 @@
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('hivDesc')">Close</button>
                     </div>
 					<script src = "specificCharts.js"></script>
+
+
                     <div id="dentalDesc">
                         <button class="btn btn-outline-danger" type="button" onclick="myFunction('dentalDesc')">Close</button><br><br>
+
+
+
 						<div id = "denReasons" style = "height:500px; width:850px"></div>
                        <h2>The top barrier is that respondents could not afford it.</h2>
+                        <div id="hivCmAge" style = "height:500px; width:850px"></div>
+
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('dentalDesc')">Close</button>
                     </div>
+
+
 					<script src = "specificCharts7.js"></script>
 
                     <div id="counselingDesc">
@@ -312,9 +359,6 @@
                         </li>
 						 <li class="nav-item pill-2" style="text-align: center">
                             <a class="nav-link" data-toggle="tab" href="#ageTabQ">Age</a>
-                        </li>
-                        <li class="nav-item pill-3">
-                            <a class="nav-link" data-toggle="tab" href="#disabilityTabQ">Related Disease</a>
                         </li>
                         <li class="nav-item pill-4">
                             <a class="nav-link" data-toggle="tab" href="#drugUseTabQ">Drugs</a>
@@ -354,22 +398,7 @@
 							   or "too difficult" are those aged 55 and up.
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="caseManagementTabQ" role="tabpanel">
-                            <div class="row justify-content-center">
-                                <div id="altTherapyCaseManagement" style="height: 600px; width: 1000px;"></div>
-                            </div>
-                            <div class="container-text">
-                                something.
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="disabilityTabQ" role="tabpanel">
-                            <div class="row justify-content-center">
-                                <div id="altTherapyDisabilities" style="height: 600px; width: 1000px;"></div>
-                            </div>
-                            <div class="container-text">
-                                something.
-                            </div>
-                        </div>
+
                         <div class="tab-pane fade" id="drugUseTabQ" role="tabpanel">
                             <div class="row justify-content-center">
                                 <div id="altTherapyDrugUse" style="height: 600px; width: 1000px;"></div>
@@ -383,7 +412,7 @@
                                 <div id="altTherapyEducation" style="height: 600px; width: 1000px;"></div>
                             </div>
                             <div class="container-text">
-                                something.
+                                <h2>The majority of the respondents' highest level of education was "some college".</h2>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="incomeTypeTabQ" role="tabpanel">
@@ -391,7 +420,7 @@
                                 <div id="altTherapyIncomeType" style="height: 600px; width: 1000px;"></div>
                             </div>
                             <div class="container-text">
-                                The main source of income for these respondents is SSI/SSDI.
+                                <h2>The main source of income for these respondents is SSI/SSDI.</h2>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="methodOfTransmissionTabQ" role="tabpanel">
@@ -399,15 +428,15 @@
                                 <div id="altTherapyMoT" style="height: 600px; width: 1000px;"></div>
                             </div>
                             <div class="container-text">
-                                something.
+                               <h2>The majority of respodents cited "sex with men" as the most likely way they recieved HIV.</h2>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="raceTabQ" role="tabpanel">
                             <div class="row justify-content-center">
-                                <div id="altTherapyRace" style="height: 600px; width: 1000px;"></div>
+                                <div id="altTherapyEthnicity" style="height: 600px; width: 1000px;"></div>
                             </div>
                             <div class="container-text-discrepancy">
-                                something.
+                               <h2>The majority of the respondents that found it difficult to access alternative therapy were White.</h2>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="sexualOrientationTabQ" role="tabpanel">
@@ -415,7 +444,7 @@
                                 <div id="altTherapySexualOrientation" style="height: 600px; width: 1000px;"></div>
                             </div>
                             <div class="container-text">
-                                There seems to be a majority of homosexual males who find it difficult to access alternative therapy.
+                                <h2>There seems to be a majority of homosexual males who find it difficult to access alternative therapy.</h2>
                             </div>
                         </div>
                     </div>
@@ -507,8 +536,7 @@
                         <h2 align = "center">The top barrier is that many did not qualify.</h2>
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('billsDesc')">Close</button>
                     </div>
-
-                    <script src = "specificCharts15.js"></script>
+					<script src = "specificCharts15.js"></script>
 
                     &nbsp;
                 </div>            </div>
@@ -536,7 +564,7 @@
 
 <script src="bar.js"></script>
 
- <!--Bootstrap core JavaScript -->
+<!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -549,40 +577,5 @@
 <script src="js/creative.min.js"></script>
 
 </body>
-
-<script>
-//locations for treatment
-var data = [{
-//couldn't find clint spencer clinic Kona
-type:'scattermapbox',
-lat:['19.643776', '20.887951','21.971676','21.297346'],
-lon:[' -155.996775',' -156.500427','-159.376706','-157.862214'],
-mode:'markers',
-marker: {
-size:14
-},
-text:['Hawaii Island HIV/AIDS Foundation (HIHAF)','Maui AIDS Foundation','Malama Pono (Kauai)',
-'Life Foundation']
-}]
-
-var layout = {
-<!--title: 'Where to Recieve Care',-->
-autosize: true,
-hovermode:'closest',
-mapbox: {
-bearing:0,
-center: {
-lat: 19.8968,
-lon: -155.5828
-},
-pitch:0,
-zoom:5
-},
-}
-Plotly.setPlotConfig({
-mapboxAccessToken: 'pk.eyJ1IjoicWF1Y2hpZGEiLCJhIjoiY2pubWpkM3JhMDQzYjNrbW1idWI4bzN0ZiJ9.YkpYWzAkP3MF8usE6Op9Ig'})
-
-Plotly.plot('myDiv5', data, layout)
-</script>
 
 </html>

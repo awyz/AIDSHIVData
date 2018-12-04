@@ -24,7 +24,7 @@ var AlternativeTherapyOptions0 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.1]
+        boundaryGap: [0, 0.2]
     },
     yAxis: {
         type: 'category',
@@ -157,10 +157,11 @@ var AlternativeTherapyDoughnutOption = {
     ]
 };
 AlternativeTherapyDoughnut.setOption(AlternativeTherapyDoughnutOption);
+*/
 //bar graph of AlternativeTherapy Respondents that answered very or too difficult
 
 //broken down by ethnicity
-var AlternativeTherapyBarriersEthnicity = echarts.init(document.getElementById('hivCmEthnicity'));
+var AlternativeTherapyBarriersEthnicity = echarts.init(document.getElementById('altTherapyEthnicity'));
 var AlternativeTherapyOptions1 = {
     title: {
         text: 'Alternative Therapy Barriers Broken Down by Ethnicity',
@@ -191,20 +192,20 @@ var AlternativeTherapyOptions1 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [''],
+            data: [0,8,22,0,2,1,0,5,5,4,2,0,0,0,0,1,4],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [""],
+			data: [2,7,19,1,12,5,0,2,0,3,2,0,0,1,0,1,2],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
 AlternativeTherapyBarriersEthnicity.setOption(AlternativeTherapyOptions1);
- */
+
 
 //broken down by age
 var AlternativeTherapyBarriersAge = echarts.init(document.getElementById('altTherapyAge'));
