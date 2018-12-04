@@ -18,7 +18,7 @@
     <script src="plotly-latest.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 
 
 	<script src = "echarts.js"></script>
@@ -133,17 +133,17 @@
                     <div class="tab-content mt-3">
                         <div class="tab-pane fade show active" id="ageTab" role="tabpanel">
                             <div class="row justify-content-center">
-                                <div id="age" style="height: 600px; width: 1000px;"></div>
+                                <canvas id="age" height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text-discrepancy">
                                 There is a large discrepancy between the HIV Needs Assessment and the Epi Profile.
                                 The HIV Needs Assessment has a much larger amount of people 55 and over, and a much
-                                smaller amount under 44 compared to the Epi Profile.
+                                smaller amount for all age groups from 25 to 55 compared to the Epi Profile.
                             </div>
                         </div>
                         <div class="tab-pane fade" id="caseManagementTab" role="tabpanel">
                             <div class="row justify-content-center">
-                                <div id="caseManagement" style="height: 600px; width: 1000px;"></div>
+                                <canvas id="caseManagement"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text">
                                 The Epi Profile has no data on Case Management Providers. However, a large proportion
@@ -152,7 +152,7 @@
                         </div>
                         <div class="tab-pane fade" id="disabilityTab" role="tabpanel">
                             <div class="row justify-content-center">
-                                <div id="disabilities" style="height: 600px; width: 1000px;"></div>
+                                <canvas id="disabilities"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text">
                                 The Epi Profile has no data on disabilities. However, a large proportion of people from
@@ -161,7 +161,7 @@
                         </div>
                         <div class="tab-pane fade" id="drugUseTab" role="tabpanel">
                             <div class="row justify-content-center">
-                                <div id="drugUse" style="height: 600px; width: 1000px;"></div>
+                                <canvas id="drugUse"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text">
                                 The Epi Profile has no data on drug use. However, a large proportion of the drug-using people
@@ -170,7 +170,7 @@
                         </div>
                         <div class="tab-pane fade" id="educationTab" role="tabpanel">
                             <div class="row justify-content-center">
-                                <div id="education" style="height: 600px; width: 1000px;"></div>
+                                <canvas id="education"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text">
                                 The Epi Profile has no data on education level. Most people from the HIV Needs Assessment
@@ -180,7 +180,7 @@
                         </div>
                         <div class="tab-pane fade" id="incomeTypeTab" role="tabpanel">
                             <div class="row justify-content-center">
-                                <div id="incomeType" style="height: 600px; width: 1000px;"></div>
+                                <canvas id="incomeType"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text">
                                 The Epi Profile has no data on income types. However, most people from the HIV Needs Assessment
@@ -189,7 +189,7 @@
                         </div>
                         <div class="tab-pane fade" id="methodOfTransmissionTab" role="tabpanel">
                             <div class="row justify-content-center">
-                                <div id="methodOfTransmission" style="height: 600px; width: 1000px;"></div>
+                                <canvas id="methodOfTransmission"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text">
                                 There were no significant differences between the methods of transmission of the HIV
@@ -199,18 +199,19 @@
                         </div>
                         <div class="tab-pane fade" id="raceTab" role="tabpanel">
                             <div class="row justify-content-center">
-                                <div id="race" style="height: 600px; width: 1000px;"></div>
+                                <canvas id="race"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text-discrepancy">
-                                The HIV Needs Assessment and the Epi Profile have a large discrepancy in the number of Asians. However,
-                                anyone who was multiple Asian races or multiple Pacific Islander races ONLY in the HIV Needs Assessment
-                                was counted as a mixed-race person, but it is unclear how the Epi Profile counted its mixed race people.
+                                The HIV Needs Assessment and the Epi Profile have a number of small discrepancies mostly in the range of about 5%. It must
+                                be noted that anyone who was multiple Asian races or multiple Pacific Islander races ONLY in the HIV Needs Assessment
+                                was counted as a mixed-race person, but it is unclear how the Epi Profile counted its mixed race people. Other than that,
+                                the HIV Needs Assessment has a much larger percentage of Multiple Race people, which may further support this issue.
                                 In general, there are a large amount of white-only people compared to any other race in either distribution.
                             </div>
                         </div>
                         <div class="tab-pane fade" id="sexualOrientationTab" role="tabpanel">
                             <div class="row justify-content-center">
-                                <div id="sexualOrientation" style="height: 600px; width: 1000px;"></div>
+                                <canvas id="sexualOrientation"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text">
                                 The Epi Profile has no data on sexual orientation. However, a large amount of people from the HIV
@@ -224,7 +225,7 @@
     </div>
 </section>
 
-<script src="SociodemographicsBar.js"></script>
+<script src="SociodemographicsBar2.js"></script>
 
 <!-- Bar chart of services -->
 <br><br>
@@ -263,7 +264,7 @@
 						<h2>The top barrier is that respondents did not have transportation.</h2>
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('hivDesc')">Close</button>
                     </div>
-					<script src = "specificCharts.js"></script>	
+					<script src = "specificCharts.js"></script>
                     <div id="dentalDesc">
                         <button class="btn btn-outline-danger" type="button" onclick="myFunction('dentalDesc')">Close</button><br><br>
 						<div id = "denReasons" style = "height:500px; width:850px"></div>
@@ -271,10 +272,10 @@
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('dentalDesc')">Close</button>
                     </div>
 					<script src = "specificCharts7.js"></script>
-					
+
                     <div id="counselingDesc">
                         <button class="btn btn-outline-danger" type="button" onclick="myFunction('counselingDesc')">Close</button><br><br>
-						<div id = "counReasons" style = "height:500px; width:850px"></div>				
+						<div id = "counReasons" style = "height:500px; width:850px"></div>
 						<h2>The top barrier is that respondents did not know where to get it.</h2>
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('counselingDesc')">Close</button>
                     </div>
@@ -282,7 +283,7 @@
 
                     <div id="infoDesc">
                         <button class="btn btn-outline-danger" type="button" onclick="myFunction('infoDesc')">Close</button><br><br>
-						<div id = "infoReasons" style = "height:500px; width:850px"></div>				
+						<div id = "infoReasons" style = "height:500px; width:850px"></div>
 						<h2>The top barrier is that respondents did not know where to get it.</h2>
                         <br><br><button class="btn btn-outline-danger" type="button" onclick="myFunction('infoDesc')">Close</button>
                     </div>
@@ -294,7 +295,7 @@
 							<div class="row">
 								<div class="col-xl-12 mx-auto text-center">
 									<h2 class="section-heading">Sociodemographic Breakdown</h2>
-									
+
 						<br>
 							<ul class="nav nav-pills nav-justified">
                         <li class="nav-item pill-1" style="text-align: center">
@@ -338,10 +339,10 @@
                             </div>
                             <div class="container-text-discrepancy">
                                The age group that has the most respondents who answered "very difficult"
-							   or "too difficult" are those aged 55 and up. 
+							   or "too difficult" are those aged 55 and up.
                             </div>
                         </div>
-                        
+
                         <div class="tab-pane fade" id="drugUseTabQ" role="tabpanel">
                             <div class="row justify-content-center">
                                 <div id="altTherapyDrugUse" style="height: 600px; width: 1000px;"></div>
@@ -491,34 +492,34 @@
 <script src="bar.js"></script>
 
 
-<!--<section class="bg-dark text-white">-->
-    <!--<div class="container text-center">-->
-        <!--<h2 class="mb-4">Free Download at Start Bootstrap!</h2>-->
-        <!--<a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a>-->
-    <!--</div>-->
-<!--</section>-->
-<!-- <section> -->
-<!-- </section> -->
-<!-- <section id = "map"> -->
-    <!-- <h2 class="section-heading text-center">Care Centers</h2> -->
-    <!-- <div id = 'myDiv5'></div> -->
-<!-- </section> -->
+<section class="bg-dark text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
+        <a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a>
+    </div>
+</section>
+ <section>
+ </section>
+ <section id = "map">
+     <h2 class="section-heading text-center">Care Centers</h2>
+     <div id = 'myDiv5'></div>
+ </section>
 
-<!-- <section class="bg-primary" id="contact"> -->
-    <!-- <div class="fluid-container" style="background-color: white"> -->
-        <!-- <div class="row"> -->
-            <!-- <div class="col-lg-8 mx-auto text-center"> -->
-                <!-- <h2 class="section-heading"><br><br>Get Involved</h2> -->
-                <!-- <hr class="my-4"> -->
-                <!-- <p class="mb-5"><i>"Reducing harm, promoting health, creating wellness, and fighting stigma in -->
-                    <!-- Hawai'i and the Pacific."</i><br> -->
-                    <!-- <br>This is the motto of Hawai'i Health and Harm Reduction Center, who provide services for Hawai'is people, -->
-                <!-- such as <br>services for the transgender population, those living with HIV, and those who are affected by HIV. -->
-                <!-- <br><br>To help out or raise awareness, click <a href="https://www.hhhrc.org">here.</a></p> -->
-            <!-- </div> -->
-        <!-- </div> -->
-    <!-- </div> -->
-<!-- </section> -->
+ <section class="bg-primary" id="contact">
+     <div class="fluid-container" style="background-color: white">
+         <div class="row">
+             <div class="col-lg-8 mx-auto text-center">
+                 <h2 class="section-heading"><br><br>Get Involved</h2>
+                 <hr class="my-4">
+                 <p class="mb-5"><i>"Reducing harm, promoting health, creating wellness, and fighting stigma in
+                     Hawai'i and the Pacific."</i><br>
+                     <br>This is the motto of Hawai'i Health and Harm Reduction Center, who provide services for Hawai'is people,
+                 such as <br>services for the transgender population, those living with HIV, and those who are affected by HIV.
+                 <br><br>To help out or raise awareness, click <a href="https://www.hhhrc.org">here.</a></p>
+             </div>
+         </div>
+     </div>
+ </section>
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
@@ -534,7 +535,6 @@
 
 </body>
 
-
 <!-- Primary Care Charts -->
 <script>
     var data = [{
@@ -542,7 +542,6 @@
         labels: ['Have Access', 'Do Not Have Access'],
         type: 'pie'
     }];
-
     var layout = {
         title: "People with HIV Who Have Access to Primary Care",
         height: 400,
@@ -551,95 +550,78 @@
             colors: ['rgb: 230,159,0', 'rgb: 86,180,233']
         }
     };
-
     Plotly.newPlot('primaryCare', data, layout);
-
     //    Vs Race
-        Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/primaryCareRace.csv", function(err, rows){
-
-            function getData(rows, key) {
-                return rows.map(function(specificRow) {
-                    return specificRow[key];
-                });
-            }
-
-            var headerRow = Plotly.d3.keys(rows[0]);
-            var headerVals = [];
-            var cellVals = [];
-            var sumArr = [];
-
-            for (i = 0; i < headerRow.length; i++) {
-                headerVal = [headerRow[i]];
-                headerVals[i] = headerVal;
-                cellVal = getData(rows, headerRow[i]);
-                cellVals[i] = cellVal;
-            }
-
-            for (j = 0; j < cellVals[1].length; j++){
-                var sum = parseInt(cellVals[1][j]);
-                sumArr.push(sum);
-            }
-
-            cellVals.push(sumArr);
-
-            var data = [
-                {
-                    x: cellVals[0],
-                    y: cellVals[1],
-                    name: 'Without Care',
-                    type: 'bar',
-                    marker: {
-                        color: 'rgba(86, 180, 233, 0.85)'
-                    }
-                },
-                {
-                    x: cellVals[0],
-                    y: [74,157,12,36,16,0,24,31,27,9,2,4,2,24],
-                    name: 'With Care',
-                    type: 'bar'
-                }
-            ];
-
-            var layout = {
-                title: "Patients and Primary Care by Race",
-                height: 500,
-                width: 500,
-                xaxis: { title: 'Race'},
-                yaxis: { title: 'Number of People'},
-                barmode: 'stack'
-            }
-
-            Plotly.newPlot('primaryRace', data, layout);
-        });
-
-        // Vs Education
-    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/noPrimaryCareEducation", function(err, rows){
-
+    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/primaryCareRace.csv", function(err, rows){
         function getData(rows, key) {
             return rows.map(function(specificRow) {
                 return specificRow[key];
             });
         }
-
         var headerRow = Plotly.d3.keys(rows[0]);
         var headerVals = [];
         var cellVals = [];
         var sumArr = [];
-
         for (i = 0; i < headerRow.length; i++) {
             headerVal = [headerRow[i]];
             headerVals[i] = headerVal;
             cellVal = getData(rows, headerRow[i]);
             cellVals[i] = cellVal;
         }
-
         for (j = 0; j < cellVals[1].length; j++){
             var sum = parseInt(cellVals[1][j]);
             sumArr.push(sum);
         }
-
         cellVals.push(sumArr);
-
+        var data = [
+            {
+                x: cellVals[0],
+                y: cellVals[1],
+                name: 'Without Care',
+                type: 'bar',
+                marker: {
+                    color: 'rgba(86, 180, 233, 0.85)'
+                }
+            },
+            {
+                x: cellVals[0],
+                y: [74,157,12,36,16,0,24,31,27,9,2,4,2,24],
+                name: 'With Care',
+                type: 'bar'
+            }
+        ];
+        var layout = {
+            title: "Patients and Primary Care by Race",
+            height: 500,
+            width: 500,
+            xaxis: { title: 'Race'},
+            yaxis: { title: 'Number of People'},
+            barmode: 'stack'
+        }
+        Plotly.newPlot('primaryRace', data, layout);
+    });
+    // Vs Education
+    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/noPrimaryCareEducation", function(err, rows){
+        function getData(rows, key) {
+            return rows.map(function(specificRow) {
+                return specificRow[key];
+            });
+        }
+        var headerRow = Plotly.d3.keys(rows[0]);
+        var headerVals = [];
+        var cellVals = [];
+        var sumArr = [];
+        for (i = 0; i < headerRow.length; i++) {
+            headerVal = [headerRow[i]];
+            headerVals[i] = headerVal;
+            cellVal = getData(rows, headerRow[i]);
+            cellVals[i] = cellVal;
+        }
+        for (j = 0; j < cellVals[1].length; j++){
+            var sum = parseInt(cellVals[1][j]);
+            sumArr.push(sum);
+        }
+        cellVals.push(sumArr);
         var data = [
             {
                 x: cellVals[0],
@@ -657,7 +639,6 @@
                 type: 'bar'
             }
         ];
-
         var layout = {
             title: "Patients and Primary Care by Education Level",
             height: 500,
@@ -666,93 +647,73 @@
             yaxis: { title: 'Number of People'},
             barmode: 'stack'
         }
-
         Plotly.newPlot('primaryEducation', data, layout);
     });
-<!-- Primary Care Charts -->
-
+    <!-- Primary Care Charts -->
 </script>
 
 <!-- Substance Abuse Charts -->
 <script>
-
     Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/substanceAbuse.csv", function(err, rows){
-
-            function getData(rows, key) {
-                return rows.map(function(specificRow) {
-                    return specificRow[key];
-                });
-            }
-
-            var headerRow = Plotly.d3.keys(rows[0]);
-            var headerVals = [];
-            var cellVals = [];
-            var sumArr = [];
-
-            for (i = 0; i < headerRow.length; i++) {
-                headerVal = [headerRow[i]];
-                headerVals[i] = headerVal;
-                cellVal = getData(rows, headerRow[i]);
-                cellVals[i] = cellVal;
-            }
-
-            for (j = 0; j < cellVals[1].length; j++){
-                var sum = parseInt(cellVals[1][j]);
-                sumArr.push(sum);
-            }
-
-            cellVals.push(sumArr);
-
-            var data = [
-                {
-                    values: cellVals[1],
-                    labels: cellVals[0],
-                    type: 'pie',
-                    marker: {
-                        colors: ['rgb(247,252,253)', 'rgb(229,245,249)','rgb(204,236,230)','rgb(153,216,201)','rgb(102,194,164)','rgb(65,174,118)','rgb(35,139,69)','rgb(0,109,44)','rgb(0,68,27)']
-                    }
-                }
-            ];
-
-            var layout = {
-                title: "Substances Used Among HIV Patients",
-                height: 400,
-                width: 500,
-            }
-
-            Plotly.newPlot('substance', data, layout);
-        });
-
-    // By Race
-
-
-    Plotly.d3.csv("    https://raw.githubusercontent.com/awyz/AIDSHIVData/master/substanceRace.csv", function(err, rows){
-
         function getData(rows, key) {
             return rows.map(function(specificRow) {
                 return specificRow[key];
             });
         }
-
         var headerRow = Plotly.d3.keys(rows[0]);
         var headerVals = [];
         var cellVals = [];
         var sumArr = [];
-
         for (i = 0; i < headerRow.length; i++) {
             headerVal = [headerRow[i]];
             headerVals[i] = headerVal;
             cellVal = getData(rows, headerRow[i]);
             cellVals[i] = cellVal;
         }
-
         for (j = 0; j < cellVals[1].length; j++){
             var sum = parseInt(cellVals[1][j]);
             sumArr.push(sum);
         }
-
         cellVals.push(sumArr);
-
+        var data = [
+            {
+                values: cellVals[1],
+                labels: cellVals[0],
+                type: 'pie',
+                marker: {
+                    colors: ['rgb(247,252,253)', 'rgb(229,245,249)','rgb(204,236,230)','rgb(153,216,201)','rgb(102,194,164)','rgb(65,174,118)','rgb(35,139,69)','rgb(0,109,44)','rgb(0,68,27)']
+                }
+            }
+        ];
+        var layout = {
+            title: "Substances Used Among HIV Patients",
+            height: 400,
+            width: 500,
+        }
+        Plotly.newPlot('substance', data, layout);
+    });
+    // By Race
+    Plotly.d3.csv("    https://raw.githubusercontent.com/awyz/AIDSHIVData/master/substanceRace.csv", function(err, rows){
+        function getData(rows, key) {
+            return rows.map(function(specificRow) {
+                return specificRow[key];
+            });
+        }
+        var headerRow = Plotly.d3.keys(rows[0]);
+        var headerVals = [];
+        var cellVals = [];
+        var sumArr = [];
+        for (i = 0; i < headerRow.length; i++) {
+            headerVal = [headerRow[i]];
+            headerVals[i] = headerVal;
+            cellVal = getData(rows, headerRow[i]);
+            cellVals[i] = cellVal;
+        }
+        for (j = 0; j < cellVals[1].length; j++){
+            var sum = parseInt(cellVals[1][j]);
+            sumArr.push(sum);
+        }
+        cellVals.push(sumArr);
         var data = [
             {
                 y: cellVals[1],
@@ -763,104 +724,89 @@
                 }
             }
         ];
-
         var layout = {
             title: "Substances Used By Race",
             height: 400,
             width: 500,
             yaxis: { title: 'Number of People'}
         }
-
         Plotly.newPlot('substanceRace', data, layout);
     });
-
     // Substance abuse by education
-        Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/substanceEducation.csv", function(err, rows){
-
-            function getData(rows, key) {
-                return rows.map(function(specificRow) {
-                    return specificRow[key];
-                });
-            }
-
-            var headerRow = Plotly.d3.keys(rows[0]);
-            var headerVals = [];
-            var cellVals = [];
-            var sumArr = [];
-
-            for (i = 0; i < headerRow.length; i++) {
-                headerVal = [headerRow[i]];
-                headerVals[i] = headerVal;
-                cellVal = getData(rows, headerRow[i]);
-                cellVals[i] = cellVal;
-            }
-
-            for (j = 0; j < cellVals[1].length; j++){
-                var sum = parseInt(cellVals[1][j]);
-                sumArr.push(sum);
-            }
-
-            cellVals.push(sumArr);
-
-            var data = [
-                {
-                    y: cellVals[1],
-                    x: cellVals[0],
-                    mode: 'markers',
-                    marker: {
-                        size: cellVals[1]
-                    }
+    Plotly.d3.csv("https://raw.githubusercontent.com/awyz/AIDSHIVData/master/substanceEducation.csv", function(err, rows){
+        function getData(rows, key) {
+            return rows.map(function(specificRow) {
+                return specificRow[key];
+            });
+        }
+        var headerRow = Plotly.d3.keys(rows[0]);
+        var headerVals = [];
+        var cellVals = [];
+        var sumArr = [];
+        for (i = 0; i < headerRow.length; i++) {
+            headerVal = [headerRow[i]];
+            headerVals[i] = headerVal;
+            cellVal = getData(rows, headerRow[i]);
+            cellVals[i] = cellVal;
+        }
+        for (j = 0; j < cellVals[1].length; j++){
+            var sum = parseInt(cellVals[1][j]);
+            sumArr.push(sum);
+        }
+        cellVals.push(sumArr);
+        var data = [
+            {
+                y: cellVals[1],
+                x: cellVals[0],
+                mode: 'markers',
+                marker: {
+                    size: cellVals[1]
                 }
-            ];
-
-            var layout = {
-                title: "Substances Used By Education Level",
-                height: 400,
-                width: 500,
-                yaxis: { title: 'Number of People'}
             }
-
-            Plotly.newPlot('substanceEducation', data, layout);
-        });
-
+        ];
+        var layout = {
+            title: "Substances Used By Education Level",
+            height: 400,
+            width: 500,
+            yaxis: { title: 'Number of People'}
+        }
+        Plotly.newPlot('substanceEducation', data, layout);
+    });
 </script>
 
 <script>
-				//locations for treatment
-				var data = [{
-					//couldn't find clint spencer clinic Kona
-					type:'scattermapbox',
-					lat:['19.643776', '20.887951','21.971676','21.297346'],
-					lon:[' -155.996775',' -156.500427','-159.376706','-157.862214'],
-					mode:'markers',
-					marker: {
-						size:14
-					},
-					text:['Hawaii Island HIV/AIDS Foundation (HIHAF)','Maui AIDS Foundation','Malama Pono (Kauai)',
-					'Life Foundation']
-				}]
-				
-				var layout = {
+    //locations for treatment
+    var data = [{
+        //couldn't find clint spencer clinic Kona
+        type:'scattermapbox',
+        lat:['19.643776', '20.887951','21.971676','21.297346'],
+        lon:[' -155.996775',' -156.500427','-159.376706','-157.862214'],
+        mode:'markers',
+        marker: {
+            size:14
+        },
+        text:['Hawaii Island HIV/AIDS Foundation (HIHAF)','Maui AIDS Foundation','Malama Pono (Kauai)',
+            'Life Foundation']
+    }]
 
-					title: 'Where to Recieve Case Management',
-					autosize: true,
-					hovermode:'closest',
-					mapbox: {
-						bearing:0,
-						center: {
-							lat: 19.8968,
-							lon: -155.5828
-						},
-						pitch:0,
-						zoom:5
-					},
-				}
+    var layout = {
+        title: 'Where to Recieve Case Management',
+        autosize: true,
+        hovermode:'closest',
+        mapbox: {
+            bearing:0,
+            center: {
+                lat: 19.8968,
+                lon: -155.5828
+            },
+            pitch:0,
+            zoom:5
+        },
+    }
+    Plotly.setPlotConfig({
+        mapboxAccessToken: 'pk.eyJ1IjoicWF1Y2hpZGEiLCJhIjoiY2pubWpkM3JhMDQzYjNrbW1idWI4bzN0ZiJ9.YkpYWzAkP3MF8usE6Op9Ig'})
 
-					Plotly.setPlotConfig({
-						mapboxAccessToken: 'pk.eyJ1IjoicWF1Y2hpZGEiLCJhIjoiY2pubWpkM3JhMDQzYjNrbW1idWI4bzN0ZiJ9.YkpYWzAkP3MF8usE6Op9Ig'})
-					
-
-				Plotly.plot('myDiv5', data, layout)
+    Plotly.plot('myDiv5', data, layout)
 </script>
 
 </html>
