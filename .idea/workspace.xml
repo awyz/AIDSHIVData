@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5207ce07-fca4-4a8e-acb2-8528f6f2cc26" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testingx3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specificCharts.js" afterPath="$PROJECT_DIR$/specificCharts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specificCharts10.js" afterPath="$PROJECT_DIR$/specificCharts10.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specificCharts11.js" afterPath="$PROJECT_DIR$/specificCharts11.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specificCharts12.js" afterPath="$PROJECT_DIR$/specificCharts12.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specificCharts13.js" afterPath="$PROJECT_DIR$/specificCharts13.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specificCharts14.js" afterPath="$PROJECT_DIR$/specificCharts14.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specificCharts15.js" afterPath="$PROJECT_DIR$/specificCharts15.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specificCharts17.js" afterPath="$PROJECT_DIR$/specificCharts17.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specificCharts2.js" afterPath="$PROJECT_DIR$/specificCharts2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specificCharts3.js" afterPath="$PROJECT_DIR$/specificCharts3.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specificCharts4.js" afterPath="$PROJECT_DIR$/specificCharts4.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specificCharts5.js" afterPath="$PROJECT_DIR$/specificCharts5.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specificCharts7.js" afterPath="$PROJECT_DIR$/specificCharts7.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specificCharts8.js" afterPath="$PROJECT_DIR$/specificCharts8.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specificCharts9.js" afterPath="$PROJECT_DIR$/specificCharts9.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="183">
+              <caret line="329" column="49" lean-forward="true" selection-start-line="329" selection-start-column="49" selection-end-line="329" selection-end-column="49" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -71,11 +55,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="specificCharts17.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SociodemographicsBar2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SociodemographicsBar2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="174" column="16" lean-forward="true" selection-start-line="174" selection-start-column="16" selection-end-line="174" selection-end-column="106" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="specificCharts17.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/specificCharts17.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="570" column="12" lean-forward="true" selection-start-line="570" selection-start-column="12" selection-end-line="570" selection-end-column="12" />
+            <state relative-caret-position="466">
+              <caret line="555" column="6" lean-forward="true" selection-start-line="555" selection-start-column="6" selection-end-line="555" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -98,12 +92,13 @@
       <find>tooltip</find>
       <find>people</find>
       <find>altThera</find>
-      <find>race</find>
       <find>disa</find>
       <find>cMReas</find>
       <find>echarts</find>
       <find>therap</find>
       <find>therapy</find>
+      <find>race</find>
+      <find>sexual</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -714,7 +709,7 @@
         <state relative-caret-position="504">
           <caret line="42" column="19" lean-forward="false" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="19" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -726,14 +721,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SociodemographicsBar2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="342" column="19" lean-forward="false" selection-start-line="342" selection-start-column="19" selection-end-line="342" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -882,7 +869,7 @@
         <state relative-caret-position="-273">
           <caret line="29" column="38" lean-forward="true" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -903,10 +890,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/specificCharts17.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="555" column="6" lean-forward="true" selection-start-line="555" selection-start-column="6" selection-end-line="555" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SociodemographicsBar2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="174" column="16" lean-forward="true" selection-start-line="174" selection-start-column="16" selection-end-line="174" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="183">
+          <caret line="329" column="49" lean-forward="true" selection-start-line="329" selection-start-column="49" selection-end-line="329" selection-end-column="49" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -940,14 +943,6 @@
             <element signature="n#style#0;n#div#0;n#div#15;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/specificCharts17.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="570" column="12" lean-forward="true" selection-start-line="570" selection-start-column="12" selection-end-line="570" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
