@@ -206,12 +206,13 @@ var DentalOptions1 = {
 };
 DentalBarriersEthnicity.setOption(DentalOptions1);
 
-
+*/
 //broken down by age
 var DentalBarriersAge = echarts.init(document.getElementById('hivCmAge'));
 var DentalOptions2 = {
     title: {
         text: 'Dental Barriers Broken Down by Age',
+		x: 'center'
     },
     tooltip: {
         trigger: 'axis',
@@ -227,7 +228,7 @@ var DentalOptions2 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
+        boundaryGap: [0, 1.75]
     },
     yAxis: {
         type: 'category',
@@ -237,19 +238,20 @@ var DentalOptions2 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [2,3,1],
+            data: [2,5,11,10,10,0],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-			data: [""],
+			data: [2,3,5,7,4,0],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
     ]
 };
 DentalBarriersAge.setOption(DentalOptions2);
+/*
 
 //broken down by education
 var DentalBarriersEducation = echarts.init(document.getElementById('hivCmEducation'));
