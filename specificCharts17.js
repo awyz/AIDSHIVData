@@ -24,7 +24,7 @@ var AlternativeTherapyOptions0 = {
     },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.1]
+        boundaryGap: [0, 0.2]
     },
     yAxis: {
         type: 'category',
