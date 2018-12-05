@@ -124,14 +124,14 @@
 /*}*/
 
 .container-text {
-    text-align: center;
-    border: 2px solid rgb(188, 188, 188);
+    text-align: justify;
+    border: 4px solid rgb(188, 188, 188);
     padding: 20px;
 }
 
 .container-text-discrepancy {
-    text-align: center;
-    border: 2px solid rgb(188, 188, 188);
+    text-align: justify;
+    border: 4px solid rgb(188, 188, 188);
     padding: 20px;
     color: #f05f40;
 }
