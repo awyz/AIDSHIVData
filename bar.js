@@ -29,13 +29,11 @@
                 },
                 ticks: {
                     fontFamily: "'Open Sans Bold', sans-serif",
-                    fontSize:11
+                    fontSize:16,
+                    fontcolor: '#000'
                 },
                 stacked: true
             }]
-        },
-        legend:{
-            display:false
         },
         pointLabelFontFamily : "Quadon Extra Bold",
         scaleFontFamily : "Quadon Extra Bold",
@@ -46,6 +44,10 @@
         },
         legend: {
             display: true,
+            position: 'right',
+            labels: {
+                fontSize: 18
+            }
         },
         tooltips: {
             callbacks: {
