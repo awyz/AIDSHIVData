@@ -160,12 +160,17 @@ AlternativeTherapyDoughnut.setOption(AlternativeTherapyDoughnutOption);
 */
 //bar graph of AlternativeTherapy Respondents that answered very or too difficult
 
-//broken down by ethnicity
+//broken down by ethnicity	
 var AlternativeTherapyBarriersEthnicity = echarts.init(document.getElementById('altTherapyEthnicity'));
 var AlternativeTherapyOptions1 = {
     title: {
         text: 'Alternative Therapy Barriers Broken Down by Ethnicity',
     },
+	legend: {
+		orient: 'vertical',
+		left:'right',
+        data: ["","","","Very Difficult", "Too Difficult"]
+	},
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -398,14 +403,15 @@ var AlternativeTherapyOptions5 = {
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [1,0,1,1,6,22,1,4],
+            data: ['',1,1,1,1,
+			0,22,6,4],
 			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-            data: [2,0,2,2,2,30,6,1],
+            data: [0,2,0,2,2,2,30,6,1],
 			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
