@@ -88,11 +88,11 @@
                 backgroundColor: "rgba(255, 104, 107, 1)",
 //                hoverBackgroundColor: "rgba(166, 60, 6, 1)"
             }, { // blanks
-                label: "Chose not to answer",
+                label: "Did not need service",
                 data: [75, 132, 303, 238, 7, 329, 194, 273, 366, 300, 360, 360, 237, 249, 283],
                 backgroundColor: "rgba(184, 197, 214, 1)"
             }, { // No
-                label: "Did not need service",
+                label: "Chose not to answer",
                 data: [1, 5, 7, 2, 241, 3, 3, 5, 6, 7, 7, 7, 7, 7, 7],
                 backgroundColor: "rgba(163, 155, 168, 1)"
             }]
