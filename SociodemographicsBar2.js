@@ -187,7 +187,7 @@ var myChart = new Chart(ctx, {
         datasets: [
             {
                 label: 'HIV Needs Assessment',
-                data: [9, 32.9, 1.5, 1.3, 1, 1, 1, 61],
+                data: [32.9, 9, 1.5, 1.3, 1, 1, 1, 61],
                 backgroundColor: [
                     'rgba(255, 104, 107, 1)',
                     'rgba(255, 104, 107, 1)',
