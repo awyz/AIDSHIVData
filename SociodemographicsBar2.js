@@ -183,11 +183,11 @@ var ctx = drugChart.getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'horizontalBar',
     data: {
-        labels: ['Methamphetamine', 'Maijuana', 'Cocaine', 'Heroin', 'Ecstasy', 'Crack', 'Other', 'None'],
+        labels: ['Marijuana', 'Methamphetamine', 'Cocaine', 'Heroin', 'Ecstasy', 'Crack', 'Other', 'None'],
         datasets: [
             {
                 label: 'HIV Needs Assessment',
-                data: [32.9, 9, 1.5, 1.3, 1, 1, 1, 61],
+                data: [9, 32.9, 1.5, 1.3, 1, 1, 1, 61],
                 backgroundColor: [
                     'rgba(255, 104, 107, 1)',
                     'rgba(255, 104, 107, 1)',
