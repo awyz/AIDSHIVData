@@ -1,34 +1,41 @@
 function createOptions(yAxisLabel, ifEpiProfileData) {
 
     var epiTitleString = '';
-    if(ifEpiProfileData) epiTitleString = 'Epi Profile 2010-2015 / N = 2,519'
+    if(ifEpiProfileData) epiTitleString = 'Hawaii\'s HIV/AIDS Survey / People Surveyed: 2,519'
 
     var options = {
         title: {
-            text: ['HIV Needs Assessment 2018 / N = 398', epiTitleString],
+            text: ['HIV Needs Assessment 2018 / People Surveyed: 398', epiTitleString],
             display: true,
-            fontSize: 20
+            fontSize: 25
         },
         scales: {
             xAxes: [{
                 scaleLabel: {
                     display: true,
-                    labelString: 'Percentage of People with HIV'
+                    labelString: 'Percentage of People with HIV',
+                    fontSize:16,
+                    fontcolor: '#000'
                 },
                 ticks: {
                     fontFamily: "'Open Sans Bold', sans-serif",
                     fontSize: 11,
-                    beginAtZero: true
+                    beginAtZero: true,
+                    fontSize:16,
+                    fontcolor: '#000'
                 },
             }],
             yAxes: [{
                 scaleLabel: {
                     display: true,
-                    labelString: yAxisLabel
+                    labelString: yAxisLabel,
+                    fontSize:16,
+                    fontcolor: '#000'
                 },
                 ticks: {
                     fontFamily: "'Open Sans Bold', sans-serif",
-                    fontSize: 11,
+                    fontSize:16,
+                    fontcolor: '#000'
                 },
                 gridLines: {
                     display: false,
@@ -38,7 +45,11 @@ function createOptions(yAxisLabel, ifEpiProfileData) {
         pointLabelFontFamily : "Quadon Extra Bold",
         scaleFontFamily : "Quadon Extra Bold",
         legend: {
-            display: ifEpiProfileData
+            display: ifEpiProfileData,
+            labels: {
+                fontSize: 18
+            }
+
         },
         tooltips: {
             callbacks: {
@@ -79,7 +90,7 @@ var myChart = new Chart(ctx, {
                     'rgba(255, 104, 107, 1)'
                 ]},
             {
-                label: 'Epi Profile',
+                label: 'State Survey',
                 data: [0.2, 2.2, 11.4, 16.6, 34.1, 35.5],
                 backgroundColor: [
                     'rgba(104, 99, 240, 1)',
@@ -172,7 +183,7 @@ var ctx = drugChart.getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'horizontalBar',
     data: {
-        labels: ['Methamphetamine', 'Maijuana', 'Cocaine', 'Heroin', 'Ecstasy', 'Crack', 'Other', 'None'],
+        labels: ['Marijuana', 'Methamphetamine', 'Cocaine', 'Heroin', 'Ecstasy', 'Crack', 'Other', 'None'],
         datasets: [
             {
                 label: 'HIV Needs Assessment',
@@ -271,7 +282,7 @@ var myChart = new Chart(ctx, {
                     'rgba(255, 104, 107, 1)'
                 ]},
             {
-                label: 'Epi Profile',
+                label: 'State Survey',
                 data: [71.9, 3.6, 6.6, 6.5, 0.6, 4.6],
                 backgroundColor: [
                     'rgba(104, 99, 240, 1)',
@@ -312,7 +323,7 @@ var myChart = new Chart(ctx, {
                     'rgba(255, 104, 107, 1)',
                 ]},
             {
-                label: 'Epi Profile',
+                label: 'State Survey',
                 data: [49.4, 9.2, 6.6, 15.4, 0.2, 10, 8., 0.5, 0],
                 backgroundColor: [
                     'rgba(104, 99, 240, 1)',

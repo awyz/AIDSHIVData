@@ -506,20 +506,20 @@ var AlternativeTherapyOptions7 = {
     },
     yAxis: {
         type: 'category',
-        data: ['None', 'Other', 'Crack', 'Ecstasy', 'Heroin', 'Cocaine', 'Marijuana', 'Methamphetamine'],
+        data: ['None', 'Other', 'Crack', 'Ecstasy', 'Heroin', 'Cocaine', 'Methamphetamine', 'Marijuana'],
     },
     series: [
         {
             name: 'Very Difficult',
             type: 'bar',
-            data: [19, 0, 1, 2, 1, 1, 13, 5],
+            data: [19, 0, 1, 2, 1, 1, 5, 13],
             itemStyle:{color: 'rgba(255, 166, 166, 1)'}
 
         },
 		{
 			name:'Too Difficult',
 			type: 'bar',
-            data: [27, 1, 0, 0, 0, 0, 15, 2],
+            data: [27, 1, 0, 0, 0, 0, 2, 15],
             itemStyle: {color: 'rgba(255, 104, 107, 1)'}
 			
 		}
