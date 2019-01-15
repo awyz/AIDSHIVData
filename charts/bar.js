@@ -68,32 +68,32 @@
     var myChart = new Chart(ctx, {
         type: 'horizontalBar',
         data: {
-            labels: ["HIV Case Management", "Dental Care", "Counseling", "Information", "Alternative Therapy", "Aid at Home", "Paying Medical Costs", "Enrolling in Insurance Coverage", "Help with Alcohol/Drug Abuse", "Social Support", "Employment", "Education", "Paying for Food", "Housing", "Paying Bills"],
+            labels: ["HIV Case Management", "Dental Care", "Paying Medical Costs", "Information", "Paying for Food", "Alternative Therapy", "Housing", "Enrolling in Insurance Coverage", "Paying Bills", "Social Support", "Counseling",  "Aid at Home", "Employment", "Education", "Help with Alcohol/Drug Abuse"],
 
             datasets: [{ // Easy
                 label: "Easy",
-                data: [277, 134, 54, 120, 29, 28, 99, 62, 12, 55, 5, 3, 44, 48, 29],
+                data: [277, 134, 99, 120, 44, 29, 48, 62, 29, 55, 54, 28, 5, 3, 12],
                 backgroundColor: "rgba(104, 99, 240, 1)",
             },{ // Possible but required some work
                 label: "Possible with some work",
-                data: [39, 67, 15, 32, 43, 26, 73, 47, 11, 24, 15, 11, 74, 58, 47],
+                data: [39, 67, 73, 32, 74, 43, 58, 47, 47, 24, 15, 26, 15, 11, 11],
                 backgroundColor: "rgba(152, 148, 255, 1)",
             }, { // Possible but very difficult
                 label: "Possible but very difficult",
-                data: [5, 38, 5, 6, 35, 6, 24, 9, 1, 7, 8, 4, 26, 26, 16],
+                data: [5, 38, 24, 6, 26, 35, 26, 9, 16, 7, 5, 6, 8, 4, 1],
                 backgroundColor: "rgba(255, 166, 166, 1)",
             }, { // Too difficult to access
                 label: "Too difficult to access",
-                data: [1, 22, 14, 0, 43, 6, 5, 2, 2, 5, 3, 13, 10, 10, 16],
+                data: [1, 22, 5, 0, 10, 43, 10, 2, 16, 5, 14, 6, 3, 13, 2],
                 backgroundColor: "rgba(255, 104, 107, 1)",
 //                hoverBackgroundColor: "rgba(166, 60, 6, 1)"
             }, { // blanks
                 label: "Did not need service",
-                data: [75, 132, 303, 238, 241, 329, 194, 273, 366, 300, 360, 360, 237, 249, 283],
+                data: [75, 132, 194, 238, 237, 241, 249, 273, 283, 300, 303, 329, 360, 360, 366],
                 backgroundColor: "rgba(184, 197, 214, 1)"
             }, { // No
                 label: "Chose not to answer",
-                data: [1, 5, 7, 2, 7, 3, 3, 5, 6, 7, 7, 7, 7, 7, 7],
+                data: [1, 5, 3, 2, 7, 7, 7, 5, 7, 7, 7, 3, 7, 7, 6],
                 backgroundColor: "rgba(163, 155, 168, 1)"
             }]
         },
