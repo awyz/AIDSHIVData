@@ -13,17 +13,17 @@ var stackedBar = new Chart(insuranceBarriersReason, {
             'Did not have transportation',
             'Concerned about privacy',
             'I was not in stable living condition',
+            'Stigma due to HIV',
             'Service not available',
             'They did not speak my primary language',
-            'Stigma due to HIV',
         ],
         datasets: [{
             label: "Very Difficult",
-            data: [4,3,3,3,4,3,3,3,1,1,2],
+            data: [4,3,3,3,4,3,3,3,2,1,1],
             backgroundColor: "rgba(104, 99, 240, 1)",
         },{
             label: "Too Difficult",
-            data: [2,2,2,1,0,0,0,0,1,0,1],
+            data: [2,2,2,1,0,0,0,0,1,1,0],
             backgroundColor: "rgba(152,148,255,1)"
         }
         ]

@@ -19,11 +19,11 @@ var myChart = new Chart(educationBarriersReason, {
         datasets: [{
             label: "Very Difficult",
             data: [2,3,1,2,0,0,0,0,0],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
             data: [10,5,5,3,3,1,1,1,1],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            backgroundColor: "#F3FFB6",
         }]
     },
 

@@ -25,11 +25,11 @@ var myChart = new Chart(billsBarriersReason, {
         datasets: [{
             label: "Very Difficult",
             data: [5,9,3,0,7,4,3,2,2,2,2,2,1,1,1],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
             data: [11,5,10,10,1,3,1,1,1,0,0,0,0,0,0],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            backgroundColor: "#F3FFB6",
         }]
     },
 

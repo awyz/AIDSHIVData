@@ -20,11 +20,11 @@ var myChart = new Chart(abuseBarriersReason, {
         datasets: [{
             label: "Very Difficult",
             data: [1,1,1,1,0,0,0,1],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
             data: [1,1,1,1,1,1,1,0],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            backgroundColor: "#F3FFB6",
         }]
     },
     options: {

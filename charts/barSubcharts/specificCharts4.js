@@ -12,19 +12,20 @@ var myChart = new Chart(medicalCostsBarriersReason, {
             'Too long of a wait ',
             'Concerned about privacy',
             'Did not have transportation',
+            'Stigma due to HIV',
             'I was not in stable living condition',
+            'Discrimination because of my HIV status',
             'Discrimination because of race',
             'Discrimination because of sexual orientation',
-            'Stigma due to HIV',
-            'Discrimination because of my HIV status'],
+            ],
 
         datasets: [{
             label: "Very Difficult",
-            data: [12,12,8,7,6,6,5,3,0,1,4,2],
+            data: [12,12,8,7,6,6,5,4,3,2,0,1],
             backgroundColor: "rgba(104, 99, 240, 1)",
         },{
             label: "Too Difficult",
-            data: [3,2,0,1,0,0,0,0,1,0,0,0],
+            data: [3,2,0,1,0,0,0,0,0,0,1,0],
             backgroundColor: "rgba(152, 148, 255, 1)",
         }]
     },

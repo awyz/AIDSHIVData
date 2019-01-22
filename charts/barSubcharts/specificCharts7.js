@@ -25,11 +25,11 @@ var myChart = new Chart(dentalBarriersReason, {
         datasets: [{
             label: "Very Difficult",
             data: [26,12,14,10,8,6,5,5,4,3,2,1,1,0],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
             data: [16,9,6,7,4,3,3,2,1,0,0,0,0,1],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            backgroundColor: "#F3FFB6",
         }]
     },
 
@@ -69,11 +69,11 @@ var chart2= new Chart(dentalBarriersEthnicity, {
         datasets: [{
             label: "Very Difficult",
             data: [0,1,3,0,5,2,2,0,1,4,1,2,1,1,9,16],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
             data: [1,41,0,2,3,0,0,1,0,1,0,0,0,2,12],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            backgroundColor: "#F3FFB6",
         }]
     },
 
@@ -103,11 +103,11 @@ var chart3 = new Chart(dentalBarriersAge, {
         datasets: [{
             label: "Very Difficult",
             data: [10,11,10,5,2],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
             data: [7,5,4,3,2],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            backgroundColor: "#F3FFB6",
         }]
     },
 
@@ -138,11 +138,11 @@ var myChart = new Chart(dentalBarriersEducation, {
         datasets: [{
             label: "Very Difficult",
             data: [14,11,5,4,2,2],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
             data: [9,4,3,2,2,1],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            backgroundColor: "#F3FFB6",
         }]
     },
     options: {
@@ -170,11 +170,11 @@ var myChart = new Chart(dentalBarriersIncomeType, {
         datasets: [{
             label: "Very Difficult",
             data: [26,8,4],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
             data: [15,3,4],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            backgroundColor: "#F3FFB6",
         }]
     },
     options: {
@@ -206,11 +206,11 @@ var myChart = new Chart(dentalBarriersSexualOrientation, {
         datasets: [{
             label: "Very Difficult",
             data: [17,8,6,3,3,3,1],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
             data: [12,3,4,2,1,0,0],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            backgroundColor: "#F3FFB6",
         }]
     },
     options: {
@@ -302,11 +302,11 @@ var myChart = new Chart(dentalBarriersDrugUse, {
         datasets: [{
             label: "Very Difficult",
             data: [22,22,14,1,0],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
             data: [15,15,5,3,2],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            backgroundColor: "#F3FFB6",
         }]
     },
     options: {
@@ -341,11 +341,11 @@ var myChart = new Chart(dentalBarriersMoT, {
         datasets: [{
             label: "Very Difficult",
             data: [27,8,4,2,1,0],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
             data: [16,2,2,1,2,1],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            backgroundColor: "#F3FFB6",
         }]
     },
     options: {
