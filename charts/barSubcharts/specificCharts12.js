@@ -6,22 +6,23 @@ var myChart = new Chart(educationBarriersReason, {
     data: {
         labels: [
             'Did not know where to get it',
-            'Too long of a wait ',
-            'Service not available',
             'Did not qualify',
+            'Service not available',
+            'Too long of a wait ',
+            'Nervous or afraid of what people might say',
             'Concerned about privacy',
             'Discrimination because of sexual orientation',
-            'Nervous or afraid of what people might say',
             'Stigma due to HIV',
-            'Discrimination because of my HIV status'],
+            'Discrimination because of my HIV status',
+            ],
 
         datasets: [{
             label: "Very Difficult",
-            data: [2,2,1,3,0,0,0,0,0],
+            data: [2,3,1,2,0,0,0,0,0],
             backgroundColor: "rgba(104, 99, 240, 1)",
         },{
             label: "Too Difficult",
-            data: [10,3,5,5,1,1,3,1,1],
+            data: [10,5,5,3,3,1,1,1,1],
             backgroundColor: "rgba(152, 148, 255, 1)",
         }]
     },

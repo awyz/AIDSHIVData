@@ -8,27 +8,27 @@ var myChart = new Chart(dentalBarriersReason, {
     data: {
         labels: [
             'Could not afford',
-            'Did not know where to get it',
             'Too long of a wait ',
             'Service not available',
+            'Did not know where to get it',
             'Did not qualify',
-            'Did not have transportation',
-            'Did not have childcare',
-            'Did not have enough time off work',
-            'Concerned about privacy',
-            'They did not speak my primary language',
-            'I was not in stable living condition',
             'Nervous or afraid of what people might say',
+            'Did not have transportation',
+            'I was not in stable living condition',
             'Stigma due to HIV',
+            'Concerned about privacy',
+            'Did not have enough time off work',
+            'Did not have childcare',
+            'They did not speak my primary language',
             'Discrimination because of my HIV status'],
 
         datasets: [{
             label: "Very Difficult",
-            data: [26, 10, 12, 14, 8, 5, 1, 2, 3, 1, 5, 6, 4, 0],
+            data: [26,12,14,10,8,6,5,5,4,3,2,1,1,0],
             backgroundColor: "rgba(104, 99, 240, 1)",
         },{
             label: "Too Difficult",
-            data: [16,7,9,6,4,3,0,0,0,0,0,0,0,2,3,1,1],
+            data: [16,9,6,7,4,3,3,2,1,0,0,0,0,1],
             backgroundColor: "rgba(152, 148, 255, 1)",
         }]
     },
@@ -50,9 +50,22 @@ var chart2= new Chart(dentalBarriersEthnicity, {
     type: 'horizontalBar',
     data: {
         labels: [
-            'Prefer not to answer', 'Other Race', 'Other Asian', 'Other Pacific Islander', 'Hispanic',
-            'American Indian', 'Filipino', 'Vietnamese', 'Korean', 'Chinese', 'Japanese',
-            'African American', 'Samoan', 'Guamanian', 'Native Hawaiian', 'White'],
+            'Prefer not to answer',
+            'Other Race',
+            'Other Asian',
+            'Other Pacific Islander',
+            'Hispanic',
+            'American Indian',
+            'Filipino',
+            'Vietnamese',
+            'Korean',
+            'Chinese',
+            'Japanese',
+            'African American',
+            'Samoan',
+            'Guamanian',
+            'Native Hawaiian',
+            'White'],
         datasets: [{
             label: "Very Difficult",
             data: [0,1,3,0,5,2,2,0,1,4,1,2,1,1,9,16],
@@ -81,14 +94,19 @@ var chart3 = new Chart(dentalBarriersAge, {
     type: 'horizontalBar',
     data: {
         labels: [
-            '55+', '45-54', '35-44', '25-34', '13-24'],
+            '25-34',
+            '35-44',
+            '13-24',
+            '45-54',
+            '55+',
+            ],
         datasets: [{
             label: "Very Difficult",
-            data: [2,5,11,10,10],
+            data: [10,11,10,5,2],
             backgroundColor: "rgba(104, 99, 240, 1)",
         },{
             label: "Too Difficult",
-            data: [2,3,5,7,4],
+            data: [7,5,4,3,2],
             backgroundColor: "rgba(152, 148, 255, 1)",
         }]
     },
@@ -110,14 +128,20 @@ var myChart = new Chart(dentalBarriersEducation, {
     type: 'horizontalBar',
     data: {
         labels: [
-            'Grades 9-11', 'High School Diploma or GED', 'Vocational/Technical School', 'Some College or Associate\'s Degree', 'Bachelor\'s Degree', 'Graduate Degree'],
+            'Grades 9-11',
+            'High School Diploma or GED',
+            'Vocational/Technical School',
+            'Some College or Associate\'s Degree',
+            'Bachelor\'s Degree',
+            'Graduate Degree'
+            ],
         datasets: [{
             label: "Very Difficult",
-            data: [2,11,2,14,5,4],
+            data: [14,11,5,4,2,2],
             backgroundColor: "rgba(104, 99, 240, 1)",
         },{
             label: "Too Difficult",
-            data: [2,4,1,9,3,2],
+            data: [9,4,3,2,2,1],
             backgroundColor: "rgba(152, 148, 255, 1)",
         }]
     },
@@ -139,15 +163,17 @@ var myChart = new Chart(dentalBarriersIncomeType, {
     type: 'horizontalBar',
     data: {
         labels: [
-            'Other', 'Employment Income', 'SSI/SSDI'
+            'SSI/SSDI',
+            'Employment Income',
+            'Other',
         ],
         datasets: [{
             label: "Very Difficult",
-            data: [4,8,26],
+            data: [26,8,4],
             backgroundColor: "rgba(104, 99, 240, 1)",
         },{
             label: "Too Difficult",
-            data: [4,3,15],
+            data: [15,3,4],
             backgroundColor: "rgba(152, 148, 255, 1)",
         }]
     },
@@ -169,21 +195,21 @@ var myChart = new Chart(dentalBarriersSexualOrientation, {
     type: 'horizontalBar',
     data: {
         labels: [
-            'Heterosexual (Male)',
-            'Bisexual (Male)',
             'Homosexual (Male)',
             'Heterosexual (Female),',
-            'Bisexual (Female)',
+            'Bisexual (Male)',
+            'Heterosexual (Male)',
+            'Other',
             'Celibate',
-            'Other'
+            'Bisexual (Female)',
         ],
         datasets: [{
             label: "Very Difficult",
-            data: [3,6,17,8,1,3,3],
+            data: [17,8,6,3,3,3,1],
             backgroundColor: "rgba(104, 99, 240, 1)",
         },{
             label: "Too Difficult",
-            data: [2,4,12,3,"","",1],
+            data: [12,3,4,2,1,0,0],
             backgroundColor: "rgba(152, 148, 255, 1)",
         }]
     },
@@ -266,14 +292,20 @@ var myChart = new Chart(dentalBarriersDrugUse, {
         x: 'center'
     },
     data: {
-        labels: ['None', 'Ecstasy', 'Heroin', 'Marijuana', 'Methamphetamine'],
+        labels: [
+        'None',
+        'Methamphetamine',
+        'Heroin',
+        'Marijuana',
+        'Ecstasy',
+        ],
         datasets: [{
             label: "Very Difficult",
-            data: [22,0,14,1,22],
+            data: [22,22,14,1,0],
             backgroundColor: "rgba(104, 99, 240, 1)",
         },{
             label: "Too Difficult",
-            data: [15,2,5,3,15],
+            data: [15,15,5,3,2],
             backgroundColor: "rgba(152, 148, 255, 1)",
         }]
     },
@@ -298,14 +330,21 @@ var myChart = new Chart(dentalBarriersMoT, {
         x: 'center'
     },
     data: {
-        labels: ['Other','Prefer Not to Answer','Unknown', 'Injection Drug Use', 'Sex with Women', 'Sex with Men'],
+        labels: [
+        'Sex with Men',
+        'Unknown',
+        'Injection Drug Use',
+        'Prefer Not to Answer',
+        'Sex with Women',
+        'Other',
+        ],
         datasets: [{
             label: "Very Difficult",
-            data: [0,2,8,4,1,27],
+            data: [27,8,4,2,1,0],
             backgroundColor: "rgba(104, 99, 240, 1)",
         },{
             label: "Too Difficult",
-            data: [1,1,2,2,2,16],
+            data: [16,2,2,1,2,1],
             backgroundColor: "rgba(152, 148, 255, 1)",
         }]
     },
