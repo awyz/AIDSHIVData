@@ -7,25 +7,25 @@ var stackedBar = new Chart(disabilityBarriersReason, {
     type: 'horizontalBar',
     data: {
         labels: [
-            'Could not afford',
             'Did not know where to get it',
-            'Too long of a wait ',
             'Service not available',
+            'Could not afford',
             'Did not qualify',
+            'Too long of a wait ',
+            'Stigma due to HIV',
             'Did not have transportation',
             'Did not have childcare',
             'Concerned about privacy',
             'Nervous or afraid of what people might say',
-            'Stigma due to HIV',
         ],
         datasets: [{
             label: "Very Difficult",
-            data: [2,3,2,2,1,0,0,0,0,0],
+            data: [3,2,2,1,2,0,0,0,0,0],
             backgroundColor: "rgba(104, 99, 240, 1)",
         },
 			{
 				label: "Too Difficult",
-				data: [2,3,1,4,3,1,1,1,1,2],
+				data: [3,4,2,3,1,2,1,1,1,1],
 				backgroundColor: "rgba(152, 148, 255, 1)"
 			}]
     },

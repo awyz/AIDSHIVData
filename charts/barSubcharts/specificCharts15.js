@@ -5,30 +5,31 @@ var myChart = new Chart(billsBarriersReason, {
     type: 'horizontalBar',
     data: {
         labels: [
-            'Could not afford',
+            'Service not available',
             'Did not know where to get it',
             'Too long of a wait ',
-            'Service not available',
+            'Could not afford',
             'Did not qualify',
-            'Did not have transportation',
+            'Nervous or afraid of what people might say',
             'Did not have enough time off work',
+            'Did not have transportation',
+            'Stigma due to HIV',
             'Concerned about privacy',
-            'Discrimination because of race',
             'Discrimination because of sexual orientation',
+            'Discrimination because of my HIV status',
+            'Discrimination because of race',
             'Discrimination because of gender',
             'I was not in stable living condition',
-            'Nervous or afraid of what people might say',
-            'Stigma due to HIV',
-            'Discrimination because of my HIV status'],
+            ],
 
         datasets: [{
             label: "Very Difficult",
-            data: [0,9,3,5,7,2,3,2,1,2,1,1,4,2,2],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            data: [5,9,3,0,7,4,3,2,2,2,2,2,1,1,1],
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [10,5,10,11,1,1,1,0,0,0,0,0,3,1,0],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            data: [11,5,10,10,1,3,1,1,1,0,0,0,0,0,0],
+            backgroundColor: "#F3FFB6",
         }]
     },
 

@@ -19,16 +19,17 @@ var myChart = new Chart(altTherapyBarriersReason, {
             'I was not in stable living condition',
             'Nervous or afraid of what people might say',
             'Stigma due to HIV',
-            'Discrimination because of my HIV status'],
+            'Discrimination because of my HIV status',
+            ],
 
         datasets: [{
             label: "Very Difficult",
-            data: [29, 12, 7, 13, 6, 1, 1, 2, 1, 0, 1, 1, 2, 2, 0],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            data: [29,12,13,6,7,1,2,2,2,1,1,1,1,0,0],
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [35,18,5,16,15,4,0,0,1,1, 1,1,3,1,1],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            data: [35,18,16,15,5,4,3,1,0,1,1,1,0,1,1],
+            backgroundColor: "#F3FFB6",
         }]
     },
 
@@ -50,15 +51,28 @@ var myChart = new Chart(altTherapyEthnicity, {
     type: 'horizontalBar',
     data: {
         labels: [
-            'Prefer not to answer', 'Other Race', 'Other Asian', 'Hispanic', 'American Indian', 'Filipino', 'Korean', 'Chinese', 'Japanese','African American', 'Samoan', 'Native Hawaiian', 'White'],
+            'White',
+            'Native Hawaiian',
+            'Hispanic',
+            'Chinese',
+            'Japanese',
+            'Other Race',
+            'American Indian',
+            'Filipino',
+            'Korean',
+            'Prefer not to answer',
+            'Other Asian',
+            'African American',
+            'Samoan',
+            ],
         datasets: [{
             label: "Very Difficult",
-            data: [0,4,1,2,1,5,2,5,4,0,0,8,22],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            data: [22,8,2,5,4,4,1,5,2,0,1,0,0],
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [2,2,1,12,5,0,2,2,3,1,1,7,19],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            data: [19,7,12,2,3,2,5,0,2,2,1,1,1],
+            backgroundColor: "#F3FFB6",
         }]
     },
 
@@ -81,18 +95,21 @@ var myChart = new Chart(altTherapyAge, {
     type: 'horizontalBar',
     data: {
         labels: [
-            '55+', '45-54', '35-44', '25-34',
+            '55+',
+            '45-54',
+            '35-44',
+            '25-34',
             //'13-24', '<13'
         ],
 
         datasets: [{
             label: "Very Difficult",
             data: [20,7,4,4],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
             data: [17,18,5,3],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            backgroundColor: "#F3FFB6",
         }]
     },
     options: {
@@ -114,15 +131,21 @@ var myChart = new Chart(altTherapyEducation, {
     type: 'horizontalBar',
     data: {
         labels: [
-            'Grades 9-11', 'High School Diploma or GED', 'Vocational/Technical School', 'Some College or Associate\'s Degree', 'Bachelor\'s Degree', 'Graduate Degree'],
+            'Some College or Associate\'s Degree',
+            'High School Diploma or GED',
+            'Bachelor\'s Degree',
+            'Graduate Degree',
+            'Grades 9-11',
+            'Vocational/Technical School',
+            ],
         datasets: [{
             label: "Very Difficult",
-            data: ["",9,1,16,6,3],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            data: [16,9,6,3,0,1],
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [3,11,2,14,6,7],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            data: [14,11,6,7,3,2],
+            backgroundColor: "#F3FFB6",
         }]
     },
 
@@ -145,17 +168,17 @@ var myChart = new Chart(altTherapyIncome, {
     type: 'horizontalBar',
     data: {
         labels: [
-            'Other', 'Employment Income', 'SSI/SSDI'
+            'Other', 'SSI/SSDI', 'Employment Income'
         ],
 
         datasets: [{
             label: "Very Difficult",
-            data: [5,11,19],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            data: [5,19, 11],
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [26,6,11],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            data: [26,11,6],
+            backgroundColor: "#F3FFB6",
         }]
     },
     options: {
@@ -177,17 +200,24 @@ var myChart = new Chart(altTherapySexualOrientation, {
     type: 'horizontalBar',
     data: {
         labels: [
-            'Other','Celibate','Bisexual (Female)', 'Bisexual (Male)','Homosexual(Female)','Homosexual (Male)', 'Heterosexual (Female)', 'Heterosexual (Male)'
+            'Homosexual (Male)',
+            'Heterosexual (Female)',
+            'Heterosexual (Male)',
+            'Other',
+            'Bisexual (Female)',
+            'Bisexual (Male)',
+            'Homosexual(Female)',
+            'Celibate',
         ],
 
         datasets: [{
             label: "Very Difficult",
-            data: [1,1,1,1,0,22,6,4],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            data: [22,6,4,1,1,1,0,1],
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [2,0,2,2,2,30,6,1],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            data: [30,6,1,2,2,2,2,0],
+            backgroundColor: "#F3FFB6",
         }]
     },
     options: {
@@ -209,17 +239,24 @@ var myChart = new Chart(altTherapyDrugs, {
     type: 'horizontalBar',
     data: {
         labels: [
-            'None', 'Other', 'Crack', 'Ecstasy', 'Heroin', 'Cocaine', 'Methamphetamine', 'Marijuana'
+            'None',
+            'Marijuana',
+            'Methamphetamine',
+            'Ecstasy',
+            'Other',
+            'Crack',
+            'Heroin',
+            'Cocaine',
         ],
 
         datasets: [{
             label: "Very Difficult",
-            data: [19, 0, 1, 2, 1, 1, 5, 13],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            data: [19,13,5,2,0,1,1,1],
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [27, 1, 0, 0, 0, 0, 2, 15],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            data: [27,15,2,0,1,0,0,0],
+            backgroundColor: "#F3FFB6",
         }]
     },
 
@@ -242,17 +279,24 @@ var myChart = new Chart(altTherapyMoT, {
     type: 'horizontalBar',
     data: {
         labels: [
-            'Other','Prefer Not to Answer','Unknown', 'Born HIV Infected', 'Blood Products or Transfusions','Injection Drug Use', 'Sex with Women', 'Sex with Men'
+            'Sex with Men',
+            'Injection Drug Use',
+            'Unknown',
+            'Prefer Not to Answer',
+            'Sex with Women',
+            'Other',
+            'Born HIV Infected',
+            'Blood Products or Transfusions',
         ],
 
         datasets: [{
             label: "Very Difficult",
-            data: [1,0,2,0,0,7,1,28],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            data: [28,7,2,0,1,1,0,0],
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [0,2,5,1,1,1,1,35],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            data: [35,1,5,2,1,0,1,1],
+            backgroundColor: "#F3FFB6",
         }]
     },
 
@@ -315,8 +359,8 @@ var AlternativeTherapyDoughnutOption = {
                 {value:35, name:'possible but\n very difficult', itemStyle: {color: 'rgba(255, 166, 166, 1)'}},
                 {value:241, name:'chose not\n to answer', itemStyle: {color: 'rgba(184, 197, 214, 1)'}},
                 {value:7, name:'did not\n need service',itemStyle: {color: 'rgba(163, 155, 168, 1)'} },
-                {value:43, name:'possible with\n some work', itemStyle: {color: 'rgba(152, 148, 255, 1)'}},
-                {value:29, name:'easy', itemStyle: {color: 'rgba(104, 99, 240, 1)'}}
+                {value:43, name:'possible with\n some work', itemStyle: {color: '#F3FFB6'}},
+                {value:29, name:'easy', itemStyle: {color: '#FF9505'}}
             ]
         }
     ]

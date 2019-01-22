@@ -5,18 +5,18 @@ var stackedBar = new Chart(informationBarriersReason, {
     type: 'horizontalBar',
     data: {
         labels: [
-            'Could not afford',
             'Did not know where to get it',
-            'Service not available',
-            'Did not have transportation',
             'Concerned about privacy',
             'I was not in stable living condition',
+            'Could not afford',
+            'Did not have transportation',
             'Nervous or afraid of what people might say',
+            'Service not available',
             'Stigma due to HIV',
         ],
         datasets: [{
             label: "Very Difficult",
-            data: [2,5,1,2,3,3,2,1],
+            data: [5,3,3,2,2,2,1,1],
             backgroundColor: "rgba(104, 99, 240, 1)",
         }]
     },

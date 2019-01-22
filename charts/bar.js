@@ -62,8 +62,6 @@
         }
     };
 
-// todo Decide on a color palette
-
     var ctx = document.getElementById("myBarChart");
     var myChart = new Chart(ctx, {
         type: 'horizontalBar',
@@ -81,11 +79,11 @@
             }, { // Possible but very difficult
                 label: "Possible but very difficult",
                 data: [5, 38, 24, 6, 26, 35, 26, 9, 16, 7, 5, 6, 8, 4, 1],
-                backgroundColor: "rgba(255, 166, 166, 1)",
+                backgroundColor: "#FF9505",
             }, { // Too difficult to access
                 label: "Too difficult to access",
                 data: [1, 22, 5, 0, 10, 43, 10, 2, 16, 5, 14, 6, 3, 13, 2],
-                backgroundColor: "rgba(255, 104, 107, 1)",
+                backgroundColor: "#F3FFB6",
 //                hoverBackgroundColor: "rgba(166, 60, 6, 1)"
             }, { // blanks
                 label: "Did not need service",
