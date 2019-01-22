@@ -2,6 +2,53 @@
 //don't use for big bar graph
 //still need to input values for sexual orienation and disability
 
+// todo UNUSED!!!!!!!!!!!!!
+
+var ctx = document.getElementById("cMReasons");
+var myChart = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: {
+        labels: [
+            'Could not afford',
+            'Did not know where to get it',
+            'Too long of a wait ',
+            'Service not available',
+            'Did not qualify',
+            'Did not have transportation',
+            'Did not have childcare',
+            'Did not have enough time off work',
+            'Concerned about privacy',
+            'They did not speak my primary language',
+            'Discrimination because of race',
+            'Discrimination because of sexual orientation',
+            'Discrimination because of gender',
+            'I was not in stable living condition',
+            'Nervous or afraid of what people might say',
+            'Stigma due to HIV',
+            'Discrimination because of my HIV status'],
+
+        datasets: [{
+            label: "Very Difficult",
+            data: [2, 2, 0, 1, 1, 3, 0, 0, 2, 0, 1, 1, 1, 2, 2, 2, 0],
+            backgroundColor: "rgba(104, 99, 240, 1)",
+        },{
+            label: "Too Difficult",
+            data: [0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0],
+            backgroundColor: "rgba(152, 148, 255, 1)",
+        }]
+    },
+
+    options: {
+        scales: {
+            xAxes: [{
+                stacked: true
+            }],
+            yAxes: [{
+                stacked: true
+            }]
+        }
+    }});
+
 var InsurancePaymentDoughnut = echarts.init(document.getElementById('InsurancePaymentDesc'));
 var InsurancePaymentDoughnutOption = {
     title : {

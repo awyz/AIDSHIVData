@@ -1,108 +1,48 @@
 //paying for food
-var foodBarriersReason = echarts.init(document.getElementById('fooReasons'));
-var foodOptions0 = {
-	title: {
-        text: 'Paying for Food Barriers Broken Down by Reason',
-		x: 'center'
+
+var foodBarriersReason = document.getElementById("fooReasons");
+var myChart = new Chart(foodBarriersReason, {
+    type: 'horizontalBar',
+    data: {
+        labels: [
+            'Could not afford',
+            'Did not know where to get it',
+            'Too long of a wait ',
+            'Service not available',
+            'Did not qualify',
+            'Did not have transportation',
+            'Did not have enough time off work',
+            'Concerned about privacy',
+            'Discrimination because of race',
+            'Discrimination because of sexual orientation',
+            'Discrimination because of gender',
+            'I was not in stable living condition',
+            'Nervous or afraid of what people might say',
+            'Stigma due to HIV',
+            'Discrimination because of my HIV status'],
+
+        datasets: [{
+            label: "Very Difficult",
+            data: [0,7,9,10,14,9,1,4,1,3,1,2,5,4,2],
+            backgroundColor: "rgba(104, 99, 240, 1)",
+        },{
+            label: "Too Difficult",
+            data: [6,2,6,5,1,0,0,0,0,0,0,0,1,0,0],
+            backgroundColor: "rgba(152, 148, 255, 1)",
+        }]
     },
-    tooltip: {
-        trigger: 'axis',
-        axisPointer: {
-            type: 'shadow'
+
+    options: {
+        scales: {
+            xAxes: [{
+                stacked: true
+            }],
+            yAxes: [{
+                stacked: true
+            }]
         }
-    },
-	legend: {
-		orient: 'vertical',
-		left:'right',
-        text: 'Top Barriers: \n1.\n2.'
-	},
-    grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        containLabel: true
-    },
-    xAxis: {
-        type: 'value',
-        max: 40
-    },
-    yAxis: {
-        type: 'category',
-        data: ['Could not afford',
-		'Did not know where to get it',
-		'Too long of a wait',
-		'Service not available',
-		'Did not qualify',
-		'Did not have transportation', 
-		'Did not have childcare', 
-		'Did not have enough time off work', 
-		'Concered about privacy',
-		'They did not speak my primary language',
-		'Discrimination because of race', 
-		'Discrimination because of sexual orientation', 
-		'Discrimination because of gender',
-		'I was not in stable living condition', 
-		'Nervous or afraid of what people might say',
-		'Stigma due to HIV', 
-		'Discrimination because of my HIV status']
-    },
-    series: [
-        {
-            name: 'Very Difficult',
-            type: 'bar',
-            data: [
-				{value:0, name:'Could not afford'},
-				{value:7, name:'Did not know where to get it'},
-				{value:9, name:'Too long of a wait '},
-				{value:10, name:'Service not available'},
-				{value:14, name:'Did not qualify'},
-				{value:9, name:'Did not have transportation'},
-				{value:0, name:'Did not have childcare'},
-				{value:1, name:'Did not have enough time off work'},
-				{value:4, name:'Concerned about privacy'},
-				{value:0, name:'They did not speak my primary language'},
-				{value:1, name:'Discrimination because of race'},
-				{value:3, name:'Discrimination because of sexual orientation'},
-				{value:1, name:'Discrimination because of gender'},
-				{value:2, name:'I was not in stable living condition'},
-				{value:5, name:'Nervous or afraid of what people might say'},
-				{value:4, name:'Stigma due to HIV'},
-				{value:2, name:'Discrimination because of my HIV status'}
-				],
-			itemStyle:{color: 'rgba(255, 166, 166, 1)'}
-        },
-		
-		{
-			name:'Too Difficult',
-			type: 'bar',
-			 data: [
-				{value:6, name:'Could not afford'},
-				{value:2, name:'Did not know where to get it'},
-				{value:6, name:'Too long of a wait '},
-				{value:5, name:'Service not available'},
-				{value:1, name:'Did not qualify'},
-				{value:0, name:'Did not have transportation'},
-				{value:0, name:'Did not have childcare'},
-				{value:0, name:'Did not have enough time off work'},
-				{value:0, name:'Concerned about privacy'},
-				{value:0, name:'They did not speak my primary language'},
-				{value:0, name:'Discrimination because of race'},
-				{value:0, name:'Discrimination because of sexual orientation'},
-				{value:0, name:'Discrimination because of gender'},
-				{value:0, name:'I was not in stable living condition'},
-				{value:1, name:'Nervous or afraid of what people might say'},
-				{value:0, name:'Stigma due to HIV'},
-				{value:0, name:'Discrimination because of my HIV status'},
-				],
-			itemStyle: {color: 'rgba(255, 104, 107, 1)'}
-			
-		},
-		
-    ]
-};
-//top barrier did not have transportation
-    
- foodBarriersReason.setOption(foodOptions0);
+    }});
+
 //doughnut chart for Paying for Food
 //still need to input values for sexual orienation and disability
 /* 
