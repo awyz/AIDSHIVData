@@ -12,21 +12,21 @@ var myChart = new Chart(employmentBarriersReason, {
             'Nervous or afraid of what people might say',
             'Too long of a wait ',
             'Discrimination because of my HIV status',
-            'Could not afford',
             'Did not have transportation',
-            'Concerned about privacy',
             'I was not in stable living condition',
+            'Could not afford',
+            'Concerned about privacy',
             'Discrimination because of race',
             'Discrimination because of sexual orientation',
             ],
 
         datasets: [{
             label: "Very Difficult",
-            data: [4,4,3,3,3,2,2,1,2,1,2,1,1],
+            data: [4,4,3,3,3,2,2,2,2,1,1,1,1],
             backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [3,2,2,2,1,1,1,1,0,1,0,0,0],
+            data: [3,2,2,2,1,1,1,0,0,1,1,0,0],
             backgroundColor: "#F3FFB6",
         }]
     },

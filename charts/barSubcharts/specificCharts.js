@@ -27,14 +27,18 @@ var stackedBar = new Chart(caseManagementBarriersReason, {
             backgroundColor: "#F3FFB6",
         }]
     },
-    options: {
-        scales: {
-            xAxes: [{
-                stacked: true
-            }],
-            yAxes: [{
-                stacked: true
-            }]
-        }
-    }
-});
+   'options': {
+     scales: {
+        'xAxes': [{
+          'type': 'linear',
+          'ticks': {
+            'min': 0,
+            'max': 70
+          },
+        }],
+      },
+      'legend': {
+        'position': 'right',
+      },
+  },
+})

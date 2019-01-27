@@ -15,13 +15,13 @@
     <script src="charts/echarts.js"></script>
 
     <!-- Graph sheets -->
-    <script src="plotly-latest.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 
-
-	<script src = "charts/echarts.js"></script>
+    <!-- Data label plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -289,7 +289,7 @@
                 </div>
                 &nbsp;&nbsp;&nbsp;&nbsp;
 
-                <div class="container" style="border: 4px solid rgb(188, 188, 188)">
+                <div class="container">
                     &nbsp;
                     <div style="text-align: justify; text-align-last: center;" id="instructions"><p>
                         While it can be difficult for patients with AIDS/HIV to find and access good care, in Hawaii many people are able to obtain the services they need for the most part. However, there is still a long way to go to ensure that all patients are able to get the services to live a better life.
@@ -312,7 +312,6 @@
 </style>
 
                     <div class="text-center" id="hivDesc">
-                        <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('hivDesc')">Close</a>
                         <br><br>
                         <p style="font-size: 20px; font-family: Arial;">Stable living conditions and transportation were the main barriers to HIV case management.</p>
                         <canvas id = "cMReasons" style = "height: 500px; width: 850px"></canvas>
@@ -324,7 +323,6 @@
 
 
                     <div id="dentalDesc">
-                        <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('dentalDesc')">Close</a>
                         <br><br>
                          <div class="container">
 							<div class="row">
@@ -441,7 +439,6 @@
 					<script src = "charts/barSubcharts/specificCharts7.js"></script>
 
                     <div id="counselingDesc">
-                        <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('counselingDesc')">Close</a>
                         <br><br>
                         <p><i>What made it most difficult for patients to access counseling?</i></p>
                         <p style="font-size: 20px; font-family: Arial;">The top barrier to counseling is that respondents did not know where to get it. </p>
@@ -453,7 +450,6 @@
 					<script src = "charts/barSubcharts/specificCharts10.js"></script>
 
                     <div id="infoDesc">
-                        <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('infoDesc')">Close</a>
                         <br><br>
                         <p><i>What made it most difficult for patients to access information?</i></p>
                         <p style="font-size: 20px; font-family: Arial;">The top barrier is that respondents did not know where to get it.</p>
@@ -466,7 +462,6 @@
 
 					<!--Alternative therapy multiple graphs-->
                     <div id="altTherapyDesc">
-                        <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('altTherapyDesc')">Close</a>
                         <br><br>
                          <div class="container">
 							<div class="row">
@@ -585,7 +580,6 @@
 					<script src ="charts/barSubcharts/specificCharts17.js"></script>
 
                     <div id="homeAidDesc">
-                        <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('homeAidDesc')">Close</a>
                         <br><br>
                         <p><i>What are the main barriers to accessing home aid?</i></p>
                         <p style="font-size: 20px; font-family: Arial;" align = "center">The top barrier is that the service was unavailable.</p>
@@ -597,7 +591,6 @@
 					<script src = "charts/barSubcharts/specificCharts3.js"></script>
 
                     <div id="insuranceDesc">
-                        <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('insuranceDesc')">Close</a>
                         <br><br>
                         <p><i>What are the main barriers to obtaining insurance?</i></p>
                         <p style="font-size: 20px; font-family: Arial;" align = "center">The top barrier is that many did not know where to obtain insurance.</p>
@@ -610,7 +603,6 @@
 
 
                     <div id="medDesc">
-                        <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('medDesc')">Close</a>
                         <br><br>
                         <p><i>What are the main barriers to paying medical costs?</i></p>
                         <p style="font-size: 20px; font-family: Arial;" align = "center">The top barrier to assistance paying for medical costs is that this service is unavailable.</p>
@@ -622,7 +614,6 @@
 					<script src = "charts/barSubcharts/specificCharts4.js"></script>
 
                     <div id="abuseDesc">
-                        <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('abuseDesc')">Close</a>
                         <br><br>
                         <p><i>What are the main barriers to accessing help with addiction/drug abuse?</i></p>
                         <p style="font-size: 20px; font-family: Arial;" align = "center">The top barrier to help with addiction and drug abuse is that it was unavailable.</p>
@@ -634,7 +625,6 @@
 					<script src = "charts/barSubcharts/specificCharts8.js"></script>
 
                     <div id="socialDesc">
-                        <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('socialDesc')">Close</a>
                         <br><br>
                         <p><i>What are the main barriers to accessing social support?</i></p>
                         <p style="font-size: 20px; font-family: Arial;" align = "center">The top barrier is that it was unavailable.</p>
@@ -646,7 +636,6 @@
 					<script src = "charts/barSubcharts/specificCharts9.js"></script>
 
                     <div id="jobDesc">
-                        <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('jobDesc')">Close</a>
                         <br><br>
                         <p><i>What are the main barriers to accessing employment?</i></p>
                         <p style="font-size: 20px; font-family: Arial;" align = "center">The top barrier to accessing and having a job is that it was unavailable.</p>
@@ -659,7 +648,6 @@
 
 
                     <div id="eduDesc">
-                        <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('eduDesc')">Close</a>
                         <br><br>
                         <p><i>What are the main barriers to accessing education?</i></p>
                         <p style="font-size: 20px; font-family: Arial;" align = "center">The top barrier to obtaining an education is that it is unavailable.</p>
@@ -671,7 +659,6 @@
 					<script src = "charts/barSubcharts/specificCharts12.js"></script>
 
                     <div id="foodDesc">
-                        <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('foodDesc')">Close</a>
                         <br><br>
                         <p><i>What are the main barriers to acquiring aid to purchase food?</i></p>
                         <p style="font-size: 20px; font-family: Arial;" align = "center">The top barrier to assistance paying for food is that many did not qualify for this service.</p>
@@ -683,7 +670,6 @@
 					<script src = "charts/barSubcharts/specificCharts13.js"></script>
 
                     <div id="housingDesc">
-                        <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('housingDesc')">Close</a>
                         <br><br>
                         <p><i>What are the main barriers to accessing housing cost assistance?</i></p>
                         <p style="font-size: 20px; font-family: Arial;" align = "center">The top barrier to assistance paying for housing is that many did not qualify for it.</p>
@@ -695,7 +681,6 @@
 					<script src = "charts/barSubcharts/specificCharts14.js"></script>
 
                     <div id="billsDesc">
-                        <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('billsDesc')">Close</a>
                         <p><i>What are the main barriers to accessing aid for paying bills?</i></p>
                         <p style="font-size: 20px; font-family: Arial;" align = "center">The top barrier to assistance paying for bills is that many did not qualify for this service.</p>
                         <canvas id = "bilReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>

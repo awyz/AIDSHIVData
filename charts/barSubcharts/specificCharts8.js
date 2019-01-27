@@ -12,18 +12,18 @@ var myChart = new Chart(abuseBarriersReason, {
             'I was not in stable living condition',
             'Nervous or afraid of what people might say',
             'Stigma due to HIV',
+            'Did not qualify',
             'Could not afford',
             'Too long of a wait',
             'Service not available',
-            'Did not qualify',
 		],
         datasets: [{
             label: "Very Difficult",
-            data: [1,1,1,1,0,0,0,1],
+            data: [1,1,1,1,1,0,0,0],
             backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [1,1,1,1,1,1,1,0],
+            data: [1,1,1,1,0,1,1,1],
             backgroundColor: "#F3FFB6",
         }]
     },
