@@ -29,7 +29,7 @@
                 },
                 ticks: {
                     fontFamily: "'Open Sans Bold', sans-serif",
-                    fontSize:16,
+//                    fontSize:16,
                     fontcolor: '#000'
                 },
                 stacked: true
@@ -40,26 +40,22 @@
         title: {
             text: "Access to Services",
             display: false,
-            fontSize: 40
+//            fontSize: 40
         },
         legend: {
             display: true,
             position: 'right',
             labels: {
-                fontSize: 18
+//                fontSize: 18
             }
         },
         tooltips: {
-            callbacks: {
-                label: function(tooltipItems, data) {
-                    // return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.xLabel;
-                    return data.datasets[tooltipItems.datasetIndex].label + ": " + tooltipItems.xLabel;
-                }, //todo Fix these percentages!!!!
-                afterLabel: function(tooltipItem, data) {
-                    console.log(tooltipItem.xLabel);
-                    return ("(" + Math.round((tooltipItem.xLabel * 100) / 398) + "%)");
-                }
-            }
+             callbacks: {
+                 label: function(tooltipItems, data) {
+                     var percentage = Math.round((tooltipItems.xLabel * 100) / 398);
+                     return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.xLabel + " ("+ percentage + "%)";
+                 },
+             }
         }
     };
 
@@ -67,8 +63,8 @@
     var myChart = new Chart(ctx, {
         type: 'horizontalBar',
         data: {
-            labels: ["HIV Case Management n=144", "Dental Care", "Paying Medical Costs", "Information", "Paying for Food", "Alternative Therapy", "Housing", "Enrolling in Insurance Coverage", "Paying Bills", "Social Support", "Counseling",  "Aid at Home", "Employment", "Education", "Help with Alcohol/Drug Abuse"],
-
+            labels: ["HIV Case Management", "Dental Care", "Paying Medical Costs", "Information", "Paying for Food", "Alternative Therapy", "Housing", ["Enrolling in", "Insurance Coverage"], "Paying Bills", "Social Support", "Counseling",  "Assistance at Home", "Employment", "Education",
+                     ["Help with Alcohol", "and Drug Abuse"]],
             datasets: [{ // Easy
                 label: "Easy",
                 data: [277, 134, 99, 120, 44, 29, 48, 62, 29, 55, 54, 28, 5, 3, 12],
@@ -204,7 +200,7 @@
                     x.style.display = "block";
                 break;
 
-            case ("Aid at Home"): // Assistance at home
+            case ("Assistance at Home"): // Assistance at home
                 document.getElementById("instructions").style.display = "none";
                 var x = document.getElementById("homeAidDesc");
                 if(x.style.display == "block")
