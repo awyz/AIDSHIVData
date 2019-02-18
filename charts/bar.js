@@ -52,11 +52,12 @@
         tooltips: {
             callbacks: {
                 label: function(tooltipItems, data) {
-                    return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.xLabel;
+                    // return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.xLabel;
+                    return data.datasets[tooltipItems.datasetIndex].label + ": " + tooltipItems.xLabel;
                 }, //todo Fix these percentages!!!!
                 afterLabel: function(tooltipItem, data) {
                     console.log(tooltipItem.xLabel);
-                    return ("Percentage: " + Math.round((tooltipItem.xLabel * 100) / 398) + "%");
+                    return ("(" + Math.round((tooltipItem.xLabel * 100) / 398) + "%)");
                 }
             }
         }
@@ -66,7 +67,7 @@
     var myChart = new Chart(ctx, {
         type: 'horizontalBar',
         data: {
-            labels: ["HIV Case Management", "Dental Care", "Paying Medical Costs", "Information", "Paying for Food", "Alternative Therapy", "Housing", "Enrolling in Insurance Coverage", "Paying Bills", "Social Support", "Counseling",  "Aid at Home", "Employment", "Education", "Help with Alcohol/Drug Abuse"],
+            labels: ["HIV Case Management n=144", "Dental Care", "Paying Medical Costs", "Information", "Paying for Food", "Alternative Therapy", "Housing", "Enrolling in Insurance Coverage", "Paying Bills", "Social Support", "Counseling",  "Aid at Home", "Employment", "Education", "Help with Alcohol/Drug Abuse"],
 
             datasets: [{ // Easy
                 label: "Easy",
