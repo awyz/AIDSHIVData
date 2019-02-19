@@ -5,13 +5,13 @@ var myChart = new Chart(foodBarriersReason, {
     type: 'horizontalBar',
     data: {
         labels: [
+            'Did not qualify',
             'Service not available',
             'Too long of a wait ',
-            'Did not qualify',
-            'Did not know where to get it',
             'Did not have transportation',
-            'Could not afford',
+            'Did not know where to get it',
             'Nervous or afraid of what people might say',
+            'Could not afford',
             'Concerned about privacy',
             'Stigma due to HIV',
             'Discrimination because of sexual orientation',
@@ -24,11 +24,11 @@ var myChart = new Chart(foodBarriersReason, {
 
         datasets: [{
             label: "Very Difficult",
-            data: [10,9,14,7,9,0,5,4,4,3,2,2,1,1,1],
+            data: [14,10,9,9,7,5,0,4,4,3,2,2,1,1,1],
             backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [5,6,1,2,0,6,1,0,0,0,0,0,0,0,0],
+            data: [1,5,6,0,2,1,6,0,0,0,0,0,0,0,0],
             backgroundColor: "#F3FFB6",
         }]
     },

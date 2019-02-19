@@ -43,57 +43,16 @@
 
 <body>
 
-<canvas id="cMReasons"></canvas>
-
-<script>//doughnut chart for Case Management
-//still need to input values for sexual orientation and disability
-var disabilityBarriersReason = document.getElementById("disReasons");
-
-var stackedBar = new Chart(disabilityBarriersReason, {
-    type: 'horizontalBar',
-    data: {
-        labels: [
-            'Could not afford',
-            'Did not know where to get it',
-            'Too long of a wait ',
-            'Service not available',
-            'Did not qualify',
-            'Did not have transportation',
-            'Did not have childcare',
-            'Did not have enough time off work',
-            'Concerned about privacy',
-            'They did not speak my primary language',
-            'Discrimination because of race',
-            'Discrimination because of sexual orientation',
-            'Discrimination because of gender',
-            'I was not in stable living condition',
-            'Nervous or afraid of what people might say',
-            'Stigma due to HIV',
-            'Discrimination because of my HIV status',
-        ],
-        datasets: [{
-            label: "Very Difficult",
-            data: [2,3,2,2,1,0,0,0,0,0,0,0,0,0,0,0,0],
-            backgroundColor: "rgba(104, 99, 240, 1)",
-        },
-            {
-                label: "Too Difficult",
-                data: [2,3,1,4,3,1,1,0,1,0,0,0,0,0,1,2,0],
-                backgroundColor: "rgba(152, 148, 255, 1)"
-            }]
-    },
-    options: {
-        scales: {
-            xAxes: [{
-                stacked: true
-            }],
-            yAxes: [{
-                stacked: true
-            }]
-        }
-    }
-});
-</script>
+<div id="insuranceDesc">
+    <br><br>
+    <p><i>What are the main barriers to obtaining insurance?</i></p>
+    <p style="font-size: 20px; font-family: Arial;" align = "center">The top barrier is that many did not know where to obtain insurance.</p>
+    <canvas id = "insuReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
+    <p style="font-size: 14px"><i>Barriers to Obtaining Insurance</i></p>
+    <br><br>
+    <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('insuranceDesc')">Close</a>
+</div>
+<script src = "charts/barSubcharts/specificCharts5.js"></script>
 
 </body>
 </html>

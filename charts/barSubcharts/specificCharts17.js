@@ -10,8 +10,8 @@ var myChart = new Chart(altTherapyBarriersReason, {
             'Too long of a wait ',
             'Service not available',
             'Did not qualify',
-            'Did not have transportation',
             'Did not have childcare',
+            'Did not have transportation',
             'Did not have enough time off work',
             'Concerned about privacy',
             'They did not speak my primary language',
@@ -24,11 +24,11 @@ var myChart = new Chart(altTherapyBarriersReason, {
 
         datasets: [{
             label: "Very Difficult",
-            data: [29,12,13,6,7,1,2,2,2,1,1,1,1,0,0],
+            data: [29,12,13,6,7,2,1,2,2,1,1,1,1,0,0],
             backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [35,18,16,15,5,4,3,1,0,1,1,1,0,1,1],
+            data: [35,18,16,15,5,3,4,1,0,1,1,1,0,1,1],
             backgroundColor: "#F3FFB6",
         }]
     },
@@ -135,16 +135,16 @@ var myChart = new Chart(altTherapyEducation, {
             'High School Diploma or GED',
             'Bachelor\'s Degree',
             'Graduate Degree',
-            'Grades 9-11',
             'Vocational/Technical School',
+            'Grades 9-11',
             ],
         datasets: [{
             label: "Very Difficult",
-            data: [16,9,6,3,0,1],
+            data: [16,9,6,3,1,0],
             backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [14,11,6,7,3,2],
+            data: [14,11,6,7,2,3],
             backgroundColor: "#F3FFB6",
         }]
     },
@@ -282,20 +282,20 @@ var myChart = new Chart(altTherapyMoT, {
             'Sex with Men',
             'Injection Drug Use',
             'Unknown',
-            'Prefer Not to Answer',
             'Sex with Women',
             'Other',
+            'Prefer Not to Answer',
             'Born HIV Infected',
             'Blood Products or Transfusions',
         ],
 
         datasets: [{
             label: "Very Difficult",
-            data: [28,7,2,0,1,1,0,0],
+            data: [28,7,2,1,1,0,0,0],
             backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [35,1,5,2,1,0,1,1],
+            data: [35,1,5,1,0,2,1,1],
             backgroundColor: "#F3FFB6",
         }]
     },

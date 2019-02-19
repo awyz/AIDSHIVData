@@ -290,5 +290,21 @@
                     x.style.display = "block";
                 break;
         }
+        if (myChart.data.labels[activePoint._index][0].includes("Help with Alcohol")) {
+            document.getElementById("instructions").style.display = "none";
+            var x = document.getElementById("abuseDesc");
+            if(x.style.display == "block")
+                x.style.display = "none"
+            else
+                x.style.display = "block";
+        }
+        else if (myChart.data.labels[activePoint._index][0].includes("Enrolling in")) {
+            document.getElementById("instructions").style.display = "none";
+            var x = document.getElementById("insuranceDesc");
+            if(x.style.display == "block")
+                x.style.display = "none"
+            else
+                x.style.display = "block";
+        }
 
     }

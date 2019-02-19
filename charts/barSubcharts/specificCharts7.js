@@ -8,8 +8,8 @@ var myChart = new Chart(dentalBarriersReason, {
     data: {
         labels: [
             'Could not afford',
-            'Too long of a wait ',
             'Service not available',
+            'Too long of a wait',
             'Did not know where to get it',
             'Did not qualify',
             'Nervous or afraid of what people might say',
@@ -24,11 +24,11 @@ var myChart = new Chart(dentalBarriersReason, {
 
         datasets: [{
             label: "Very Difficult",
-            data: [26,12,14,10,8,6,5,5,4,3,2,1,1,0],
+            data: [26,14,12,10,8,6,5,5,4,3,2,1,1,0],
             backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [16,9,6,7,4,3,3,2,1,0,0,0,0,1],
+            data: [16,6,9,7,4,3,3,2,1,0,0,0,0,1],
             backgroundColor: "#F3FFB6",
         }]
     },
