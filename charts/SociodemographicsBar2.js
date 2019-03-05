@@ -55,10 +55,10 @@ function createOptions(yAxisLabel, ifEpiProfileData) {
             callbacks: {
                 label: function (tooltipItems, data) {
                     if(tooltipItems.datasetIndex === 0) {
-                        return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel) + " (" + Math.ceil(tooltipItems.xLabel) + "%)";
+                        return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel) + " (" + Math.ceil(tooltipItems.xLabel * 100 / 398) + "%)";
                         ;
                     } else {
-                        return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel) + " (" + Math.ceil(tooltipItems.xLabel) + "%)";
+                        return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel) + " (" + Math.ceil(tooltipItems.xLabel * 100 / 2519) + "%)";
                     }
                 },
                 // afterLabel: function (tooltipItems, data) {
