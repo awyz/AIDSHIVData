@@ -4,14 +4,14 @@ var stackedBar = new Chart(caseManagementBarriersReason, {
     type: 'horizontalBar',
     data: {
         labels: [
-            'I was not in stable living condition',
             'Did not have transportation',
+            'I was not in stable living condition',
             'Could not afford',
             'Did not know where to get it',
-            'Did not qualify',
+            'Stigma due to HIV',
             'Concerned about privacy',
             'Nervous or afraid of what people might say',
-            'Stigma due to HIV',
+            'Did not qualify',
             'Service not available',
             'Discrimination because of race',
             'Discrimination because of sexual orientation',
@@ -19,23 +19,27 @@ var stackedBar = new Chart(caseManagementBarriersReason, {
         ],
         datasets: [{
             label: "Very Difficult",
-            data: [2,3,2,2,1,2,2,2,1,1,1,1],
+            data: [3,2,2,2,2,2,2,1,1,1,1,1],
             backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [1,0,0,0,1,0,0,0,0,0,0,0],
+            data: [0,1,0,0,0,0,0,1,0,0,0,0],
             backgroundColor: "#F3FFB6",
         }]
     },
    'options': {
      scales: {
         'xAxes': [{
-          'type': 'linear',
-          'ticks': {
-            'min': 0,
-            'max': 70
-          },
+          stacked: true
+          // 'ticks': {
+          //     beginAtZero: true,
+          //     'min': 0,
+          //   'max': 3
+          // },
         }],
+         yAxes: [{
+            stacked: true
+         }]
       },
       'legend': {
         'position': 'right',

@@ -8,8 +8,8 @@ var myChart = new Chart(dentalBarriersReason, {
     data: {
         labels: [
             'Could not afford',
-            'Service not available',
             'Too long of a wait',
+            'Service not available',
             'Did not know where to get it',
             'Did not qualify',
             'Nervous or afraid of what people might say',
@@ -24,11 +24,11 @@ var myChart = new Chart(dentalBarriersReason, {
 
         datasets: [{
             label: "Very Difficult",
-            data: [26,14,12,10,8,6,5,5,4,3,2,1,1,0],
+            data: [26,12,14,10,8,6,5,5,4,3,2,1,1,0],
             backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [16,6,9,7,4,3,3,2,1,0,0,0,0,1],
+            data: [16,9,6,7,4,3,3,2,1,0,0,0,0,1],
             backgroundColor: "#F3FFB6",
         }]
     },
@@ -50,29 +50,31 @@ var chart2= new Chart(dentalBarriersEthnicity, {
     type: 'horizontalBar',
     data: {
         labels: [
-            'Prefer not to answer',
-            'Other Race',
-            'Other Asian',
-            'Other Pacific Islander',
+            'White',
+            'Native Hawaiian',
             'Hispanic',
             'American Indian',
-            'Filipino',
-            'Vietnamese',
-            'Korean',
+            'Other Race',
             'Chinese',
-            'Japanese',
+            'Other Asian',
+            'Filipino',
             'African American',
+            'Korean',
+            'Japanese',
+            'Other Pacific Islander',
             'Samoan',
             'Guamanian',
-            'Native Hawaiian',
-            'White'],
+            'Prefer not to answer',
+            'Vietnamese',
+
+        ],
         datasets: [{
             label: "Very Difficult",
-            data: [0,1,3,0,5,2,2,0,1,4,1,2,1,1,9,16],
+            data: [16,9,5,2,1,4,3,2,2,1,1,0,1,1,0,0],
             backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [1,41,0,2,3,0,0,1,0,1,0,0,0,2,12],
+            data: [12,2,2,3,4,0,1,0,0,1,1,2,0,0,1,1],
             backgroundColor: "#F3FFB6",
         }]
     },

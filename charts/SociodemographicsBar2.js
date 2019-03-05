@@ -55,14 +55,15 @@ function createOptions(yAxisLabel, ifEpiProfileData) {
             callbacks: {
                 label: function (tooltipItems, data) {
                     if(tooltipItems.datasetIndex === 0) {
-                        return data.datasets[tooltipItems.datasetIndex].label + " Value: " + Math.round(tooltipItems.xLabel / 100 * 398);
+                        return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel) + " (" + Math.ceil(tooltipItems.xLabel) + "%)";
+                        ;
                     } else {
-                        return data.datasets[tooltipItems.datasetIndex].label + " Value: " + Math.round(tooltipItems.xLabel / 100 * 2519);
+                        return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel) + " (" + Math.ceil(tooltipItems.xLabel) + "%)";
                     }
                 },
-                afterLabel: function (tooltipItems, data) {
-                    return  data.datasets[tooltipItems.datasetIndex].label + " Percentage: " + tooltipItems.xLabel + "%";
-                },
+                // afterLabel: function (tooltipItems, data) {
+                //     return  " (" + Math.ceil(tooltipItems.xLabel) + "%)";
+                // },
             }
         },
     }
@@ -80,7 +81,8 @@ var myChart = new Chart(ctx, {
         datasets: [
             {
                 label: 'HIV Needs Assessment',
-                data: [0.3, 0.5, 6.0, 10.6, 25.4, 57.3],
+                // data: [0.3, 0.5, 6.0, 10.6, 25.4, 57.3], <-- %, changed back to number using =CELL * 398/100
+                data: [1, 2, 24, 42, 101, 228],
                 backgroundColor: [
                     'rgba(255, 104, 107, 1)',
                     'rgba(255, 104, 107, 1)',
@@ -91,7 +93,8 @@ var myChart = new Chart(ctx, {
                 ]},
             {
                 label: 'State Survey',
-                data: [0.2, 2.2, 11.4, 16.6, 34.1, 35.5],
+                // data: [0.2, 2.2, 11.4, 16.6, 34.1, 35.5],
+                data: [5, 55, 287, 418, 859, 894],
                 backgroundColor: [
                     'rgba(104, 99, 240, 1)',
                     'rgba(104, 99, 240, 1)',
@@ -119,7 +122,8 @@ var myChart = new Chart(ctx, {
         datasets: [
             {
                 label: 'HIV Needs Assessment',
-                data: [55, 25.9, 10.8, 8],
+                // data: [55, 25.9, 10.8, 8],
+                data: [219, 103, 43, 32],
                 backgroundColor: [
                     'rgba(255, 104, 107, 1)',
                     'rgba(255, 104, 107, 1)',
@@ -146,7 +150,8 @@ var myChart = new Chart(ctx, {
         datasets: [
             {
                 label: 'HIV Needs Assessment',
-                data: [23.6, 21.6, 19.3, 17.3, 13.6, 12.6, 7.3, 7, 6.5, 6, 5.5, 5, 4.8, 3.5, 2.8, 2.5, 2.5, 2.3, 1.8, 1.3, 1],
+                // data: [23.6, 21.6, 19.3, 17.3, 13.6, 12.6, 7.3, 7, 6.5, 6, 5.5, 5, 4.8, 3.5, 2.8, 2.5, 2.5, 2.3, 1.8, 1.3, 1],
+                data: [94, 86, 77, 69, 54, 50, 29, 28, 26, 24, 22, 20, 19, 14, 11, 10, 10, 9, 7, 5, 4],
                 backgroundColor: [
                     'rgba(255, 104, 107, 1)',
                     'rgba(255, 104, 107, 1)',
@@ -187,7 +192,8 @@ var myChart = new Chart(ctx, {
         datasets: [
             {
                 label: 'HIV Needs Assessment',
-                data: [32.9, 9, 1.5, 1.3, 1, 1, 1, 61],
+                // data: [32.9, 9, 1.5, 1.3, 1, 1, 1, 61],
+                data: [131, 36, 6, 5, 4, 4, 4, 243],
                 backgroundColor: [
                     'rgba(255, 104, 107, 1)',
                     'rgba(255, 104, 107, 1)',
@@ -218,8 +224,8 @@ var myChart = new Chart(ctx, {
         datasets: [
             {
                 label: 'HIV Needs Assessment',
-                // data: [35.4, 22.4, 18.1, 11.6, 6, 4.8, 1.8],
-                data: [11.6, 18.1, 35.4, 4.8, 22.4, 6, 1.8],
+                // data: [11.6, 18.1, 35.4, 4.8, 22.4, 6, 1.8],
+                data: [46, 72, 141, 19, 89, 24, 7],
                 backgroundColor: [
                     'rgba(255, 104, 107, 1)',
                     'rgba(255, 104, 107, 1)',
@@ -246,7 +252,8 @@ var myChart = new Chart(ctx, {
         datasets: [
             {
                 label: 'HIV Needs Assessment',
-                data: [57, 24.4, 12, 1.3, 5.3],
+                // data: [57, 24.4, 12, 1.3, 5.3],
+                data: [227, 97, 48, 5, 21],
                 backgroundColor: [
                     'rgba(255, 104, 107, 1)',
                     'rgba(255, 104, 107, 1)',
@@ -272,7 +279,8 @@ var myChart = new Chart(ctx, {
         datasets: [
             {
                 label: 'HIV Needs Assessment',
-                data: [67.6, 5, 9.5, 7.5, .25, 5],
+                // data: [67.6, 5, 9.5, 7.5, .25, 5],
+                data: [269, 20, 38, 30, 1, 20],
                 backgroundColor: [
                     'rgba(255, 104, 107, 1)',
                     'rgba(255, 104, 107, 1)',
@@ -283,7 +291,8 @@ var myChart = new Chart(ctx, {
                 ]},
             {
                 label: 'State Survey',
-                data: [71.9, 3.6, 6.6, 6.5, 0.6, 4.6],
+                // data: [71.9, 3.6, 6.6, 6.5, 0.6, 4.6],
+                data: [286, 14, 26, 26, 2, 18],
                 backgroundColor: [
                     'rgba(104, 99, 240, 1)',
                     'rgba(104, 99, 240, 1)',
@@ -310,7 +319,8 @@ var myChart = new Chart(ctx, {
         datasets: [
             {
                 label: 'HIV Needs Assessment',
-                data: [43.2, 14.6, 2.5, 11.3, 0.5, 4.8, 21.6, 3.5, 0.8],
+                // data: [43.2, 14.6, 2.5, 11.3, 0.5, 4.8, 21.6, 3.5, 0.8],
+                data: [172, 58, 10, 45, 2, 19, 86, 14, 3],
                 backgroundColor: [
                     'rgba(255, 104, 107, 1)',
                     'rgba(255, 104, 107, 1)',
@@ -324,7 +334,8 @@ var myChart = new Chart(ctx, {
                 ]},
             {
                 label: 'State Survey',
-                data: [49.4, 9.2, 6.6, 15.4, 0.2, 10, 8., 0.5, 0],
+                // data: [49.4, 9.2, 6.6, 15.4, 0.2, 10, 8., 0.5, 0],
+                data: [197, 37, 26, 61, 1, 40, 32, 2, 0],
                 backgroundColor: [
                     'rgba(104, 99, 240, 1)',
                     'rgba(104, 99, 240, 1)',
@@ -354,7 +365,8 @@ var myChart = new Chart(ctx, {
         datasets: [
             {
                 label: 'HIV Needs Assessment',
-                data: [10.1, 12.1, 60.8, 0, 12.3, 1.5, 2.8, 3.5, 9.8],
+                // data: [10.1, 12.1, 60.8, 0, 12.3, 1.5, 2.8, 3.5, 9.8],
+                data: [40, 48, 242, 0, 49, 6, 11, 14, 39],
                 backgroundColor: [
                     'rgba(255, 104, 107, 1)',
                     'rgba(255, 104, 107, 1)',
