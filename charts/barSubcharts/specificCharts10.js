@@ -16,8 +16,8 @@ var myChart = new Chart(counselingBarriersReason, {
             'Service not available',
             'Could not afford',
             'They did not speak my primary language',
-            'I was not in stable living condition',
             'Did not have enough time off work',
+            'I was not in stable living condition',
             'Discrimination because of my HIV status',
             'Discrimination because of race',
             'Discrimination because of sexual orientation',
@@ -26,7 +26,7 @@ var myChart = new Chart(counselingBarriersReason, {
 
         datasets: [{
             label: "Very Difficult",
-            data: [5,3,2,4,3,3,1,2,2,0,2,0,0,0,0],
+            data: [5,3,2,4,3,3,1,2,2,2,0,0,0,0,0],
             backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",

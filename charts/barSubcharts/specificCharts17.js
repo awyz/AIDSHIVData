@@ -60,18 +60,18 @@ var myChart = new Chart(altTherapyEthnicity, {
             'American Indian',
             'Filipino',
             'Korean',
-            'Prefer not to answer',
             'Other Asian',
+            'Prefer not to answer',
             'African American',
             'Samoan',
             ],
         datasets: [{
             label: "Very Difficult",
-            data: [22,8,2,5,4,4,1,5,2,0,1,0,0],
+            data: [22,8,2,5,4,4,1,5,2,1,0,0,0],
             backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [19,7,12,2,3,2,5,0,2,2,1,1,1],
+            data: [19,7,12,2,3,2,5,0,2,1,2,1,1],
             backgroundColor: "#F3FFB6",
         }]
     },
@@ -243,19 +243,19 @@ var myChart = new Chart(altTherapyDrugs, {
             'Marijuana',
             'Methamphetamine',
             'Ecstasy',
-            'Other',
             'Crack',
             'Heroin',
             'Cocaine',
+            'Other',
         ],
 
         datasets: [{
             label: "Very Difficult",
-            data: [19,13,5,2,0,1,1,1],
+            data: [19,13,5,2,1,1,1,0],
             backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [27,15,2,0,1,0,0,0],
+            data: [27,15,2,0,0,0,0,1],
             backgroundColor: "#F3FFB6",
         }]
     },
@@ -283,19 +283,19 @@ var myChart = new Chart(altTherapyMoT, {
             'Injection Drug Use',
             'Unknown',
             'Sex with Women',
-            'Other',
             'Prefer Not to Answer',
+            'Other',
             'Born HIV Infected',
             'Blood Products or Transfusions',
         ],
 
         datasets: [{
             label: "Very Difficult",
-            data: [28,7,2,1,1,0,0,0],
+            data: [28,7,2,1,0,1,0,0],
             backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
-            data: [35,1,5,1,0,2,1,1],
+            data: [35,1,5,1,2,0,1,1],
             backgroundColor: "#F3FFB6",
         }]
     },
