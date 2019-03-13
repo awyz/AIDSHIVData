@@ -171,6 +171,7 @@
                     x.style.display = "none"
                 else
                     x.style.display = "block";
+                window.location.href = '#dentalDesc';
                 break;
 
             case ("Counseling"): // Counseling
