@@ -69,11 +69,11 @@
             datasets: [{ // Easy
                 label: "Easy",
                 data: [277, 134, 99, 120, 44, 29, 48, 62, 29, 55, 54, 28, 5, 3, 12],
-                backgroundColor: "rgba(104, 99, 240, 1)",
+                backgroundColor: "#ff7777",
             },{ // Possible but required some work
                 label: "Possible with some work",
                 data: [39, 67, 73, 32, 74, 43, 58, 47, 47, 24, 15, 26, 15, 11, 11],
-                backgroundColor: "rgba(152, 148, 255, 1)",
+                backgroundColor: "#ff9e9e",
             }, { // Possible but very difficult
                 label: "Possible but very difficult",
                 data: [5, 38, 24, 6, 26, 35, 26, 9, 16, 7, 5, 6, 8, 4, 1],
@@ -99,21 +99,21 @@
 
     // Hide everything
     window.onload=function(){
-        document.getElementById("hivDesc").style.display='none';
-        document.getElementById("dentalDesc").style.display='none';
-        document.getElementById("counselingDesc").style.display='none';
-        document.getElementById("infoDesc").style.display='none';
-        document.getElementById("altTherapyDesc").style.display='none';
-        document.getElementById("homeAidDesc").style.display='none';
-        document.getElementById("medDesc").style.display='none';
-        document.getElementById("insuranceDesc").style.display='none';
-        document.getElementById("abuseDesc").style.display='none';
-        document.getElementById("socialDesc").style.display='none';
-        document.getElementById("jobDesc").style.display='none';
-        document.getElementById("eduDesc").style.display='none';
-        document.getElementById("foodDesc").style.display='none';
-        document.getElementById("housingDesc").style.display='none';
-        document.getElementById("billsDesc").style.display='none';
+        document.getElementById("hivDesc").style.display='block';
+        document.getElementById("dentalDesc").style.display='block';
+        document.getElementById("counselingDesc").style.display='block';
+        document.getElementById("infoDesc").style.display='block';
+        document.getElementById("altTherapyDesc").style.display='block';
+        document.getElementById("homeAidDesc").style.display='block';
+        document.getElementById("medDesc").style.display='block';
+        document.getElementById("insuranceDesc").style.display='block';
+        document.getElementById("abuseDesc").style.display='block';
+        document.getElementById("socialDesc").style.display='block';
+        document.getElementById("jobDesc").style.display='block';
+        document.getElementById("eduDesc").style.display='block';
+        document.getElementById("foodDesc").style.display='block';
+        document.getElementById("housingDesc").style.display='block';
+        document.getElementById("billsDesc").style.display='block';
     }
 
     document.getElementById("myBarChart").onclick = function (evt) {
