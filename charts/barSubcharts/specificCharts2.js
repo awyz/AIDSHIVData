@@ -17,7 +17,7 @@ var stackedBar = new Chart(informationBarriersReason, {
         datasets: [{
             label: "Very Difficult",
             data: [5,3,3,2,2,2,1,1],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            backgroundColor: "#FF9505",
         }]
     },
     options: {

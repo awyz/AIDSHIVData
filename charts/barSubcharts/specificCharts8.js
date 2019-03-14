@@ -30,10 +30,22 @@ var myChart = new Chart(abuseBarriersReason, {
     options: {
         scales: {
             xAxes: [{
-                stacked: true
+                stacked: true,
+                ticks: {
+                    autoSkip: true,
+                },
+                scaleLabel:{
+                    display:true,
+                    labelString: 'Number of Individuals',
+                    fontSize: 16,
+                    fontcolor: '#000'
+                },
             }],
             yAxes: [{
-                stacked: true
+                stacked: true,
+                ticks: {
+                    stepSize: 1
+                }
             }]
         }
     }});

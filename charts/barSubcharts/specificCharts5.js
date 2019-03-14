@@ -20,11 +20,11 @@ var stackedBar = new Chart(insuranceBarriersReason, {
         datasets: [{
             label: "Very Difficult",
             data: [4,3,3,4,3,3,3,3,2,1,1],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
             data: [2,2,2,0,1,0,0,0,1,1,0],
-            backgroundColor: "rgba(152,148,255,1)"
+            backgroundColor: "#F3FFB6"
         }
         ]
     },

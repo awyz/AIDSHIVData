@@ -25,9 +25,6 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
                     beginAtZero: true,
                     fontSize: 16,
                     fontcolor: '#000',
-                    if (percentage) {
-                        max: 100
-                    }
                 },
             }],
             yAxes: [{
@@ -40,7 +37,11 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
                 ticks: {
                     fontFamily: "'Open Sans Bold', sans-serif",
                     fontSize: 16,
-                    fontcolor: '#000'
+                    fontcolor: '#000',
+                    if (percentage) {
+                        max: 100
+                        suggestedMax: 100
+                    }
                 },
                 gridLines: {
                     display: false,

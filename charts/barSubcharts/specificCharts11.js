@@ -34,7 +34,13 @@ var myChart = new Chart(employmentBarriersReason, {
     options: {
         scales: {
             xAxes: [{
-                stacked: true
+                stacked: true,
+                scaleLabel:{
+                    display:true,
+                    labelString: 'Number of Individuals',
+                    fontSize: 16,
+                    fontcolor: '#000'
+                },
             }],
             yAxes: [{
                 stacked: true

@@ -22,11 +22,11 @@ var myChart = new Chart(medicalCostsBarriersReason, {
         datasets: [{
             label: "Very Difficult",
             data: [12,12,8,7,6,6,5,4,3,2,0,1],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            backgroundColor: "#FF9505",
         },{
             label: "Too Difficult",
             data: [3,2,0,1,0,0,0,0,0,0,1,0],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            backgroundColor: "#F3FFB6",
         }]
     },
 

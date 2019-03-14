@@ -21,12 +21,12 @@ var stackedBar = new Chart(disabilityBarriersReason, {
         datasets: [{
             label: "Very Difficult",
             data: [3,2,2,1,2,0,0,0,0,0],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            backgroundColor: "#FF9505",
         },
 			{
 				label: "Too Difficult",
 				data: [3,4,2,3,1,2,1,1,1,1],
-				backgroundColor: "rgba(152, 148, 255, 1)"
+				backgroundColor: "#F3FFB6"
 			}]
     },
     options: {

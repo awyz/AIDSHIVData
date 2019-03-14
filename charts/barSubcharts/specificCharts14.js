@@ -36,7 +36,13 @@ var myChart = new Chart(housingBarriersReason, {
     options: {
         scales: {
             xAxes: [{
-                stacked: true
+                stacked: true,
+                scaleLabel:{
+                    display:true,
+                    labelString: 'Number of Individuals',
+                    fontSize: 16,
+                    fontcolor: '#000'
+                },
             }],
             yAxes: [{
                 stacked: true

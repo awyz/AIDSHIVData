@@ -30,7 +30,13 @@ var stackedBar = new Chart(caseManagementBarriersReason, {
    'options': {
      scales: {
         'xAxes': [{
-          stacked: true
+          stacked: true,
+          scaleLabel:{
+             display:true,
+              labelString: 'Number of Individuals',
+              fontSize: 16,
+              fontcolor: '#000'
+            },
           // 'ticks': {
           //     beginAtZero: true,
           //     'min': 0,
