@@ -201,8 +201,7 @@
                                 <canvas id="drugUse"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text">
-                                <p>The State Survey has no data on drug use. However, a large proportion of the drug-using people
-                                    from the HIV Assessment were meth or marijuana users.</p>
+                                <p>The majority of the sample did not report using illicit drugs. Of those who did, marijuana was most common, followed by methamphetamines.</p>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="educationTab" role="tabpanel">
@@ -210,9 +209,7 @@
                                 <canvas id="education"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text">
-                                <p>The State Survey has no data on education level. Most people from the HIV Needs Assessment
-                                went to at least some amount of college, but it is shown most people either did not go to
-                                    or did not finish college.</p>
+                                <p>The majority of the sample continued their education after high school, and 31% either completed Bachelor’s or graduate degrees. </p>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="incomeTypeTab" role="tabpanel">
@@ -220,8 +217,7 @@
                                 <canvas id="incomeType"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text">
-                                <p>The State Survey has no data on income types. However, most people from the HIV Needs Assessment
-                                    had SSI/SSDI as their primary income.</p>
+                                <p> Social security was the most common type of income, indicating that a high percentage of the sample (58%) is living in poverty. Among those that specified “other” income, assistance from family and friends was the most common income source, followed by general assistance. </p>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="methodOfTransmissionTab" role="tabpanel">
@@ -229,9 +225,7 @@
                                 <canvas id="methodOfTransmission"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text">
-                                <p>There were no significant differences between the methods of transmission of the HIV
-                                Needs Assessment and the State Survey. However, a large amount of people received HIV through
-                                    Male to Male Sexual Contact over anything else.</p>
+                                <p>There were not notable differences between the needs assessment and the epidemiological profile in method of transmission. For both, by far the most common method of transmission is male to male sexual contact.</p>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="raceTab" role="tabpanel">
@@ -239,11 +233,7 @@
                                 <canvas id="race"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text-discrepancy">
-                                <p>The HIV Needs Assessment and the State Survey have a number of small discrepancies mostly in the range of about 5%. It must
-                                be noted that anyone who was multiple Asian races or multiple Pacific Islander races ONLY in the HIV Needs Assessment
-                                was counted as a mixed-race person, but it is unclear how the State Survey counted its mixed race people. Other than that,
-                                the HIV Needs Assessment has a much larger percentage of Multiple Race people, which may further support this issue.
-                                    In general, there are a large amount of white-only people compared to any other race in either distribution.</p>
+                                <p>There were not notable differences in terms of race between the epidemiological survey and the needs assessment. Both showed an overrepresentation of White and Black/African American PLWHA compared to the state population (22.9% and 2.4% respectively), and an underrepresentation of Asians (36.1%) and people with multiple races (18.8%) compared to the state population. </p>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="sexualOrientationTab" role="tabpanel">
@@ -251,8 +241,7 @@
                                 <canvas id="sexualOrientation"  height="600px" width="1000px"></canvas>
                             </div>
                             <div class="container-text">
-                                <p>The State Survey has no data on sexual orientation. However, a large amount of people from the HIV
-                                    Needs Assessment were male homosexuals.</p>
+                                <p>The majority of individuals in the sample were homosexual men. </p>
                             </div>
                         </div>
                     </div>
@@ -270,12 +259,13 @@
 <section class="bg-primary" id="serviceAccess">
     <div class="fluid-container" style="background-color: white">
         <br>
-        <h2 class="section-heading text-center">Access to Services By Difficulty</h2>
-        <h5 class="text-center">Amount of HIV Patients Surveyed = 398 people</h5>
+        <h2 class="section-heading text-center">Services Needed and Difficulty Accessing Them</h2>
+        <h5 class="text-center">Number of PLWHA Surveyed = 398</h5>
+
+        <canvas id="myBarChart"></canvas>
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
                 <div class="fluid-container">
-                    <canvas id="myBarChart"></canvas>
                     <a name="theBox"></a>
                 </div>
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -283,11 +273,14 @@
                 <div class="container">
                     &nbsp;
                     <div style="text-align: justify; text-align-last: center;" id="instructions"><p>
-                        While it can be difficult for patients with AIDS/HIV to find and access good care, in Hawaii many people are able to obtain the services they need for the most part. However, there is still a long way to go to ensure that all patients are able to get the services to live a better life.
-                        <br><br> Click on a section of the bar chart for more information</p>
+                        Accessing needed services is essential to ensure health and good quality of life for PLWHA. The chart above illustrates the services that people needed in the past year, and also how difficult it was to access those services.
+
+                        By clicking on one of the services, you can see what the main barriers were for those who described accessing the services as “Possible but very difficult” or “Too difficult to access.”
+
                     </div>
 
 <script>
+    // Brings user back to services bar chart
     function myFunction(divElement) {
         var x = document.getElementById(divElement);
         x.style.display = "none";
@@ -302,6 +295,7 @@
     }
 </style>
 
+                    <a name="hivCaseManagement"></a>
                     <div class="text-center" id="hivDesc">
                         <br><br>
                         <p style="font-size: 20px; font-family: Arial;">Stable living conditions and transportation were the main barriers to HIV case management.</p>
@@ -312,7 +306,7 @@
                     </div>
 					<script src = "charts/barSubcharts/specificCharts.js"></script>
 
-
+                    <a name="dental">
                     <div id="dentalDesc">
                         <br><br>
                          <div class="container">
@@ -423,12 +417,13 @@
             </div>
         </div>
     </div>
-
                        <br><br>
                         <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('dentalDesc')">Close</a>
                     </div>
+                    </a>
 					<script src = "charts/barSubcharts/specificCharts7.js"></script>
 
+                    <a name="counseling"></a>
                     <div id="counselingDesc">
                         <br><br>
                         <p><i>What made it most difficult for patients to access counseling?</i></p>
@@ -440,6 +435,7 @@
                     </div>
 					<script src = "charts/barSubcharts/specificCharts10.js"></script>
 
+                    <a name="info"></a>
                     <div id="infoDesc">
                         <br><br>
                         <p><i>What made it most difficult for patients to access information?</i></p>
@@ -452,6 +448,7 @@
 					<script src = "charts/barSubcharts/specificCharts2.js"></script>
 
 					<!--Alternative therapy multiple graphs-->
+                    <a name="therapy"></a>
                     <div id="altTherapyDesc">
                         <br><br>
                          <div class="container">
@@ -570,6 +567,7 @@
                     </div>
 					<script src ="charts/barSubcharts/specificCharts17.js"></script>
 
+                    <a name="assist"></a>
                     <div id="homeAidDesc">
                         <br><br>
                         <p><i>What are the main barriers to accessing home aid?</i></p>
@@ -593,6 +591,7 @@
 					<script src = "charts/barSubcharts/specificCharts5.js"></script>
 
 
+                    <a name="medical"></a>
                     <div id="medDesc">
                         <br><br>
                         <p><i>What are the main barriers to paying medical costs?</i></p>
@@ -604,6 +603,7 @@
                     </div>
 					<script src = "charts/barSubcharts/specificCharts4.js"></script>
 
+                    <a name="abuse"></a>
                     <div id="abuseDesc">
                         <br><br>
                         <p><i>What are the main barriers to accessing help with addiction/drug abuse?</i></p>
@@ -615,6 +615,7 @@
                     </div>
 					<script src = "charts/barSubcharts/specificCharts8.js"></script>
 
+                    <a name="social"></a>
                     <div id="socialDesc">
                         <br><br>
                         <p><i>What are the main barriers to accessing social support?</i></p>
@@ -626,6 +627,7 @@
                     </div>
 					<script src = "charts/barSubcharts/specificCharts9.js"></script>
 
+                    <a name="job"></a>
                     <div id="jobDesc">
                         <br><br>
                         <p><i>What are the main barriers to accessing employment?</i></p>
@@ -638,6 +640,7 @@
 					<script src = "charts/barSubcharts/specificCharts11.js"></script>
 
 
+                    <a name="accessEducation"></a>
                     <div id="eduDesc">
                         <br><br>
                         <p><i>What are the main barriers to accessing education?</i></p>
@@ -649,6 +652,7 @@
                     </div>
 					<script src = "charts/barSubcharts/specificCharts12.js"></script>
 
+                    <a name="food"></a>
                     <div id="foodDesc">
                         <br><br>
                         <p><i>What are the main barriers to acquiring aid to purchase food?</i></p>
@@ -660,6 +664,7 @@
                     </div>
 					<script src = "charts/barSubcharts/specificCharts13.js"></script>
 
+                    <a name="housing"></a>
                     <div id="housingDesc">
                         <br><br>
                         <p><i>What are the main barriers to accessing housing cost assistance?</i></p>
@@ -671,6 +676,7 @@
                     </div>
 					<script src = "charts/barSubcharts/specificCharts14.js"></script>
 
+                    <a name="bills"></a>
                     <div id="billsDesc">
                         <p><i>What are the main barriers to accessing aid for paying bills?</i></p>
                         <p style="font-size: 20px; font-family: Arial;" align = "center">The top barrier to assistance paying for bills is that many did not qualify for this service.</p>

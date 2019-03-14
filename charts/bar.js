@@ -1,5 +1,3 @@
-    // todo Change the fonts
-
     var group;
 
     var barOptions_stacked = {
@@ -14,7 +12,10 @@
                     fontSize:11
                 },
                 scaleLabel:{
-                    display:false
+                    display:true,
+                    labelString: 'Number of Individuals',
+                    fontSize: 16,
+                    fontcolor: '#000'
                 },
                 gridLines: {
                 },
@@ -162,6 +163,7 @@
                 else {
                     x.style.display = "block";
                 }
+                window.location.hash = "#hivCaseManagement";
                 break;
 
             case ("Dental Care"): // Dental
@@ -181,6 +183,7 @@
                     x.style.display = "none"
                 else
                     x.style.display = "block";
+                window.location.hash = "#counseling";
                 break;
 
             case ("Information"): // Info
@@ -190,6 +193,7 @@
                     x.style.display = "none"
                 else
                     x.style.display = "block";
+                window.location.hash = "#info";
                 break;
 
             case ("Alternative Therapy"): // Easy alt therapy
@@ -199,6 +203,7 @@
                     x.style.display = "none"
                 else
                     x.style.display = "block";
+                window.location.hash = "#therapy";
                 break;
 
             case ("Assistance at Home"): // Assistance at home
@@ -208,6 +213,7 @@
                     x.style.display = "none"
                 else
                     x.style.display = "block";
+                window.location.hash = "#assist";
                 break;
 
             case ("Paying Medical Costs"): // Medical costs
@@ -217,6 +223,7 @@
                     x.style.display = "none"
                 else
                     x.style.display = "block";
+                window.location.hash = "#medical";
                 break;
 
             case ("Enrolling in Insurance Coverage"):
@@ -226,6 +233,7 @@
                     x.style.display = "none"
                 else
                     x.style.display = "block";
+                window.location.hash = "#insurance";
                 break;
 
             case ("Help with Alcohol/Drug Abuse"):
@@ -235,6 +243,7 @@
                     x.style.display = "none"
                 else
                     x.style.display = "block";
+                window.location.hash = "#abuse";
                 break;
 
             case ("Social Support"):
@@ -244,6 +253,7 @@
                     x.style.display = "none"
                 else
                     x.style.display = "block";
+                window.location.hash = "#social";
                 break;
 
             case ("Employment"):
@@ -253,6 +263,7 @@
                     x.style.display = "none"
                 else
                     x.style.display = "block";
+                window.location.hash = "#job";
                 break;
 
             case ("Education"):
@@ -262,6 +273,7 @@
                     x.style.display = "none"
                 else
                     x.style.display = "block";
+                window.location.hash = "#accessEducation";
                 break;
 
             case ("Paying for Food"):
@@ -271,6 +283,7 @@
                     x.style.display = "none"
                 else
                     x.style.display = "block";
+                window.location.hash = "#food";
                 break;
 
             case ("Housing"):
@@ -280,6 +293,7 @@
                     x.style.display = "none"
                 else
                     x.style.display = "block";
+                window.location.hash = "#housing";
                 break;
 
             case ("Paying Bills"):
@@ -289,6 +303,7 @@
                     x.style.display = "none"
                 else
                     x.style.display = "block";
+                window.location.hash = "#bills";
                 break;
         }
         if (myChart.data.labels[activePoint._index][0].includes("Help with Alcohol")) {
@@ -298,6 +313,7 @@
                 x.style.display = "none"
             else
                 x.style.display = "block";
+            window.location.hash = "#abuse";
         }
         else if (myChart.data.labels[activePoint._index][0].includes("Enrolling in")) {
             document.getElementById("instructions").style.display = "none";
@@ -306,6 +322,8 @@
                 x.style.display = "none"
             else
                 x.style.display = "block";
+            window.location.hash = "#insurance";
+
         }
 
     }

@@ -5,7 +5,7 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
 
     var options = {
         title: {
-            // text: ['TOOT HIV Needs Assessment 2018 / People Surveyed: 398', epiTitleString],
+            // text: ['HIV Needs Assessment 2018 / People Surveyed: 398', epiTitleString],
             // text: [chart, 'Needs Assessment ( n = 398)', epiTitleString],
             text: [chart],
             display: true,
@@ -24,7 +24,10 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
                     fontSize: 11,
                     beginAtZero: true,
                     fontSize: 16,
-                    fontcolor: '#000'
+                    fontcolor: '#000',
+                    if (percentage) {
+                        max: 100
+                    }
                 },
             }],
             yAxes: [{
@@ -213,12 +216,12 @@ var ctx = drugChart.getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'horizontalBar',
     data: {
-        labels: ['Marijuana', 'Methamphetamine', 'Cocaine', 'Heroin', 'Ecstasy', 'Crack', 'Other', 'None'],
+        labels: ['None', 'Marijuana', 'Methamphetamine', 'Cocaine', 'Heroin', 'Ecstasy', 'Crack', 'Other'],
         datasets: [
             {
                 label: 'Needs Assessment (n=398)',
                 // data: [32.9, 9, 1.5, 1.3, 1, 1, 1, 61],
-                data: [131, 36, 6, 5, 4, 4, 4, 243],
+                data: [243, 131, 36, 6, 5, 4, 4, 4],
                 backgroundColor: [
                     'rgba(255, 104, 107, 1)',
                     'rgba(255, 104, 107, 1)',
@@ -231,7 +234,7 @@ var myChart = new Chart(ctx, {
                 ]},
         ]
     },
-    options: createOptions('Drugs', false, 'Breakdown By Drug Use')
+    options: createOptions('Drugs', false, 'Breakdown By Drug Use', 'Number of Individuals', false)
 });
 
 
@@ -262,7 +265,7 @@ var myChart = new Chart(ctx, {
                 ]},
         ]
     },
-    options: createOptions('Level of Education', false, 'Breakdown By Education Level')
+    options: createOptions('Level of Education', false, 'Breakdown By Education Level', 'Number of Individuals', false)
 });
 
 
@@ -273,7 +276,7 @@ var ctx = incomeChart.getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'horizontalBar',
     data: {
-        labels: ['SSI/SSDI', 'Employment Income', 'Self-Employed', 'Veteran Benefits', 'Other'],
+        labels: ['SSI/SSDI', 'Employment', 'Self-Employed', 'Veteran Benefits', 'Other'],
         datasets: [
             {
                 label: 'Needs Assessment (n=398)',
@@ -288,7 +291,7 @@ var myChart = new Chart(ctx, {
                 ]},
         ]
     },
-    options: createOptions('Income Type', false, 'Breakdown By Income Type')
+    options: createOptions('Income Source', false, 'Breakdown By Income Source', 'Number of Individuals', false)
 });
 
 
@@ -304,8 +307,8 @@ var myChart = new Chart(ctx, {
         datasets: [
             {
                 label: 'Needs Assessment (n=398)',
-                // data: [67.6, 5, 9.5, 7.5, .25, 5],
-                data: [269, 20, 38, 30, 1, 20],
+                data: [67.6, 5, 9.5, 7.5, .25, 5],
+                // data: [269, 20, 38, 30, 1, 20],
                 backgroundColor: [
                     'rgba(255, 104, 107, 1)',
                     'rgba(255, 104, 107, 1)',
@@ -315,9 +318,9 @@ var myChart = new Chart(ctx, {
                     'rgba(255, 104, 107, 1)'
                 ]},
             {
-                label: 'State Survey',
-                // data: [71.9, 3.6, 6.6, 6.5, 0.6, 4.6],
-                data: [286, 14, 26, 26, 2, 18],
+                label: 'Epidemiological Profile (n=2,519)',
+                data: [71.9, 3.6, 6.6, 6.5, 0.6, 4.6],
+                // data: [286, 14, 26, 26, 2, 18],
                 backgroundColor: [
                     'rgba(104, 99, 240, 1)',
                     'rgba(104, 99, 240, 1)',
@@ -328,9 +331,8 @@ var myChart = new Chart(ctx, {
                 ]}
         ]
     },
-    options: createOptions('Method of Transmission', true, 'Breakdown By Method of Transmission')
+    options: createOptions('Method of Transmission', true, 'Breakdown By Method of Transmission', 'Percentage of Sample', true)
 });
-
 
 // Race
 var raceChart = document.getElementById('race');
@@ -339,13 +341,13 @@ var ctx = raceChart.getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'horizontalBar',
     data: {
-        labels: ['White', 'Pacific Islander', 'African American', 'Asian', 'American Indian/Alaskan Native', 'Hispanic',
+        labels: ['White', 'Native Hawaiian/Pacific Islander', 'African American', 'Asian', 'American Indian/Alaskan Native', 'Hispanic',
             'Multiple Races', 'Other', 'Prefer not to Answer'],
         datasets: [
             {
                 label: 'Needs Assessment (n=398)',
-                // data: [43.2, 14.6, 2.5, 11.3, 0.5, 4.8, 21.6, 3.5, 0.8],
-                data: [172, 58, 10, 45, 2, 19, 86, 14, 3],
+                data: [43.2, 14.6, 2.5, 11.3, 0.5, 4.8, 21.6, 3.5, 0.8],
+                // data: [172, 58, 10, 45, 2, 19, 86, 14, 3],
                 backgroundColor: [
                     'rgba(255, 104, 107, 1)',
                     'rgba(255, 104, 107, 1)',
@@ -359,8 +361,8 @@ var myChart = new Chart(ctx, {
                 ]},
             {
                 label: 'Epidemiological Profile (n=2,519)',
-                // data: [49.4, 9.2, 6.6, 15.4, 0.2, 10, 8., 0.5, 0],
-                data: [197, 37, 26, 61, 1, 40, 32, 2, 0],
+                data: [49.4, 9.4, 6.6, 15.4, 0.2, 10, 8.5, 0.4, 0],
+                // data: [197, 37, 26, 61, 1, 40, 32, 2, 0],
                 backgroundColor: [
                     'rgba(104, 99, 240, 1)',
                     'rgba(104, 99, 240, 1)',
@@ -374,7 +376,7 @@ var myChart = new Chart(ctx, {
                 ]}
         ]
     },
-    options: createOptions('Race', true, 'Breakdown By Race')
+    options: createOptions('Race', true, 'Breakdown By Race', 'Percentage of Sample', true)
 });
 
 
@@ -385,13 +387,15 @@ var ctx = sexChart.getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'horizontalBar',
     data: {
-        labels: ['Heterosexual (Male)', 'Heterosexual (Female)', 'Homosexual (Male)', 'Homosexual (Female)', 'Bisexual (Male)',
-            'Bisexual (Female)', 'Celibate', 'Other', 'Prefer not to Answer'],
+        labels: ['Homosexual (Male)', 'Bisexual (Male)', 'Heterosexual (Female)',
+            'Heterosexual (Male)','Prefer not to Answer', 'Other','Celibate',
+            'Bisexual (Female)', 'Homosexual (Female)'
+        ],
         datasets: [
             {
                 label: 'Needs Assessment (n=398)',
                 // data: [10.1, 12.1, 60.8, 0, 12.3, 1.5, 2.8, 3.5, 9.8],
-                data: [40, 48, 242, 0, 49, 6, 11, 14, 39],
+                data: [242,49,48,40,39,14,11,6,0],
                 backgroundColor: [
                     'rgba(255, 104, 107, 1)',
                     'rgba(255, 104, 107, 1)',
@@ -405,5 +409,5 @@ var myChart = new Chart(ctx, {
                 ]},
         ]
     },
-    options: createOptions('Sexual Orientation', false, 'Breakdown By Sexual Orientation')
+    options: createOptions('Sexual Orientation', false, 'Breakdown By Sexual Orientation', 'Number of Individuals', false)
 });
