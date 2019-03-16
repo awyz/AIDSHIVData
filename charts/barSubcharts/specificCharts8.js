@@ -33,6 +33,8 @@ var myChart = new Chart(abuseBarriersReason, {
                 stacked: true,
                 ticks: {
                     autoSkip: true,
+                    fixedStepSize: 1,
+                    stepSize: 1
                 },
                 scaleLabel:{
                     display:true,
@@ -43,9 +45,6 @@ var myChart = new Chart(abuseBarriersReason, {
             }],
             yAxes: [{
                 stacked: true,
-                ticks: {
-                    stepSize: 1
-                }
             }]
         }
     }});

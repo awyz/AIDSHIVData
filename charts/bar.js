@@ -99,21 +99,21 @@
 
     // Hide everything
     window.onload=function(){
-        document.getElementById("hivDesc").style.display='block';
-        document.getElementById("dentalDesc").style.display='block';
-        document.getElementById("counselingDesc").style.display='block';
-        document.getElementById("infoDesc").style.display='block';
-        document.getElementById("altTherapyDesc").style.display='block';
-        document.getElementById("homeAidDesc").style.display='block';
-        document.getElementById("medDesc").style.display='block';
-        document.getElementById("insuranceDesc").style.display='block';
-        document.getElementById("abuseDesc").style.display='block';
-        document.getElementById("socialDesc").style.display='block';
-        document.getElementById("jobDesc").style.display='block';
-        document.getElementById("eduDesc").style.display='block';
-        document.getElementById("foodDesc").style.display='block';
-        document.getElementById("housingDesc").style.display='block';
-        document.getElementById("billsDesc").style.display='block';
+        document.getElementById("hivDesc").style.display='none';
+        document.getElementById("dentalDesc").style.display='none';
+        document.getElementById("counselingDesc").style.display='none';
+        document.getElementById("infoDesc").style.display='none';
+        document.getElementById("altTherapyDesc").style.display='none';
+        document.getElementById("homeAidDesc").style.display='none';
+        document.getElementById("medDesc").style.display='none';
+        document.getElementById("insuranceDesc").style.display='none';
+        document.getElementById("abuseDesc").style.display='none';
+        document.getElementById("socialDesc").style.display='none';
+        document.getElementById("jobDesc").style.display='none';
+        document.getElementById("eduDesc").style.display='none';
+        document.getElementById("foodDesc").style.display='none';
+        document.getElementById("housingDesc").style.display='none';
+        document.getElementById("billsDesc").style.display='none';
     }
 
     document.getElementById("myBarChart").onclick = function (evt) {

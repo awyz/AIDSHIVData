@@ -37,11 +37,11 @@ var stackedBar = new Chart(caseManagementBarriersReason, {
               fontSize: 16,
               fontcolor: '#000'
             },
-          // 'ticks': {
-          //     beginAtZero: true,
-          //     'min': 0,
-          //   'max': 3
-          // },
+            ticks: {
+                autoSkip: true,
+                fixedStepSize: 1,
+                stepSize: 1
+            },
         }],
          yAxes: [{
             stacked: true

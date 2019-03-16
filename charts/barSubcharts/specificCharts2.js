@@ -23,7 +23,12 @@ var stackedBar = new Chart(informationBarriersReason, {
     options: {
         scales: {
             xAxes: [{
-                stacked: true
+                stacked: true,
+                ticks: {
+                    autoSkip: true,
+                    fixedStepSize: 1,
+                    stepSize: 1
+                },
             }],
             yAxes: [{
                 stacked: true
