@@ -34,6 +34,13 @@ var myChart = new Chart(altTherapyBarriersReason, {
     },
 
     options: {
+        plugins: {
+            datalabels: {
+                display: function(context) {
+                    return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
+                }
+            }
+        },
         scales: {
             xAxes: [{
                 stacked: true,
@@ -83,6 +90,13 @@ var myChart = new Chart(altTherapyEthnicity, {
     },
 
     options: {
+        plugins: {
+            datalabels: {
+                display: function(context) {
+                    return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
+                }
+            }
+        },
         scales: {
             xAxes: [{
                 stacked: true
@@ -119,6 +133,13 @@ var myChart = new Chart(altTherapyAge, {
         }]
     },
     options: {
+        plugins: {
+            datalabels: {
+                display: function(context) {
+                    return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
+                }
+            }
+        },
         scales: {
             xAxes: [{
                 stacked: true
@@ -156,6 +177,13 @@ var myChart = new Chart(altTherapyEducation, {
     },
 
     options: {
+        plugins: {
+            datalabels: {
+                display: function(context) {
+                    return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
+                }
+            }
+        },
         scales: {
             xAxes: [{
                 stacked: true
@@ -188,6 +216,13 @@ var myChart = new Chart(altTherapyIncome, {
         }]
     },
     options: {
+        plugins: {
+            datalabels: {
+                display: function(context) {
+                    return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
+                }
+            }
+        },
         scales: {
             xAxes: [{
                 stacked: true
@@ -227,6 +262,13 @@ var myChart = new Chart(altTherapySexualOrientation, {
         }]
     },
     options: {
+        plugins: {
+            datalabels: {
+                display: function(context) {
+                    return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
+                }
+            }
+        },
         scales: {
             xAxes: [{
                 stacked: true
@@ -267,6 +309,13 @@ var myChart = new Chart(altTherapyDrugs, {
     },
 
     options: {
+        plugins: {
+            datalabels: {
+                display: function(context) {
+                    return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
+                }
+            }
+        },
         scales: {
             xAxes: [{
                 stacked: true
@@ -307,6 +356,13 @@ var myChart = new Chart(altTherapyMoT, {
     },
 
     options: {
+        plugins: {
+            datalabels: {
+                display: function(context) {
+                    return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
+                }
+            }
+        },
         scales: {
             xAxes: [{
                 stacked: true

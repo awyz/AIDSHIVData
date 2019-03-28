@@ -1,6 +1,13 @@
     var group;
 
     var barOptions_stacked = {
+        plugins: {
+            datalabels: {
+                display: function(context) {
+                    return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
+                }
+            }
+        },
         hover :{
             animationDuration:0
         },

@@ -3,6 +3,13 @@
 var group;
 
 var barOptions_stacked = {
+    plugins: {
+        datalabels: {
+            display: function(context) {
+                return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
+            }
+        }
+    },
     hover :{
         animationDuration:0
     },
@@ -96,7 +103,7 @@ var myChart = new Chart(ctx, {
     options: barOptions_stacked,
 });
 
-// Hide everything
+// Show everything
 window.onload=function(){
     document.getElementById("hivDesc").style.display='block';
     document.getElementById("dentalDesc").style.display='block';
@@ -127,25 +134,6 @@ document.getElementById("myBarChart").onclick = function (evt) {
     console.log(barOptions_stacked);
 
     location.hash = "#theBox";
-
-    function closeAll() {
-        console.log("Close everything");
-        document.getElementById("hivDesc").style.display='none';
-        document.getElementById("dentalDesc").style.display='none';
-        document.getElementById("counselingDesc").style.display='none';
-        document.getElementById("infoDesc").style.display='none';
-        document.getElementById("altTherapyDesc").style.display='none';
-        document.getElementById("homeAidDesc").style.display='none';
-        document.getElementById("medDesc").style.display='none';
-        document.getElementById("insuranceDesc").style.display='none';
-        document.getElementById("abuseDesc").style.display='none';
-        document.getElementById("socialDesc").style.display='none';
-        document.getElementById("jobDesc").style.display='none';
-        document.getElementById("eduDesc").style.display='none';
-        document.getElementById("foodDesc").style.display='none';
-        document.getElementById("housingDesc").style.display='none';
-        document.getElementById("billsDesc").style.display='none';
-    }
 
     console.log(label, value, datasetIndex);
     closeAll();

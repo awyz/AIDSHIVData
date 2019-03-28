@@ -32,6 +32,13 @@ var myChart = new Chart(employmentBarriersReason, {
     },
 
     options: {
+        plugins: {
+            datalabels: {
+                display: function(context) {
+                    return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
+                }
+            }
+        },
         scales: {
             xAxes: [{
                 stacked: true,
