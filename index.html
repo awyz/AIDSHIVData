@@ -61,7 +61,6 @@
 <div id="wrapper">
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Hawai'i HIV Needs Assessment</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -97,8 +96,10 @@
                 </h1>
                 <hr>
             </div>
-            <div class="col-lg-8 mx-auto" style="background-color: rgba(0,0,0, .5)"> <br><br>
-                <p class="text-faded mb-5 rounded" style="text-align: justify; text-align-last: center; font-size: 20px;">The Hawai`i HIV Needs Assessment was conducted in 2017-2018 in a joint effort between CHOW, the Life Foundation, the Hawai`i Department of Health, and the University of Hawaii at Mānoa. The purpose of the needs assessment is to shape and inform services for people living with HIV/AIDS (PLWHA) in Hawai`i from a social determinants of health perspective. We identify strengths as well as primary barriers to accessing a variety of social and health services with the goal of improving quality of life for PLWHA.</p>
+            <div class="col-lg-8 mx-auto" style="background-color: rgba(0,0,0, .5); padding-bottom: 20px"> <br><br>
+                <p class="text-faded mb-5 rounded" style="text-align: justify; text-align-last: center; font-size: 20px;">
+                    The Hawai`i HIV Needs Assessment was conducted in 2018 in a joint effort between the Hawai'i Health & Harm Reduction Center (formerly CHOW and Life Foundation), the Hawai`i Department of Health, and the University of Hawaii at Mānoa. The purpose of the needs assessment is to shape and inform services for people living with HIV/AIDS (PLWH) in Hawai`i from a social determinants of health perspective. We identify strengths as well as barriers to accessing a variety of social and health services with the goal of improving quality of life for PLWH.
+                </p>
                     <a class="btn btn-primary btn-xl js-scroll-trigger" href="#aboutHIV">View Results</a>
                 <br><br>
             </div>
@@ -114,8 +115,9 @@
                 <br><br>
                 <h1 class="section-heading"><br><br>About</h1>
                 <hr class="my-4">
-                <div class="container"><p style="text-align: center; text-align: justify; text-align-last: center;" class="mb-5">
-                    The survey was developed by CHOW, the Life Foundation, and the Hawai`i Department of Health, and administered by case managers at Life Foundation, Hawai`i Island HIV/AIDS Foundation (HIHAF), Malama Pono, and Maui AIDS Foundation. Data were analyzed and visualized by Jack Barile, PhD, Joy Agner, MS, OTR, and Angela Zheng. Funding was provided by X.
+                <div class="container"><p style="text-align: center; text-align: justify; text-align-last: center; padding-left: 15%; padding-right: 15%;" class="mb-5;">
+                    The survey was developed by the Hawai'i Health & Harm Reduction Center (HHHRC) and the Hawai`i Department of Health, and promoted by service providers at HHHRC, Hawai`i Island HIV/AIDS Foundation (HIHAF), Malama Pono, and Maui AIDS Foundation. Data were analyzed and visualized by Jack Barile, PhD, Joy Agner, MS, OTR, and Angela Zheng.
+                    <br><br><br><br><br>
                 </p></div>
             </div>
         </div>
@@ -128,12 +130,11 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12 mx-auto text-center">
-                <h2 class="section-heading text-center">Sociodemographics</h2>
-                <h4 class="section-heading">Comparisons of the HIV Needs Assessment's sociodemographic data to <br>
-                    <a href="https://health.hawaii.gov/harmreduction/files/2013/05/2015-Epi-Profile.pdf">Hawai`i State Epidemiological Profile</a>
-                    <p>398 people across O`ahu, Kaua`i, Hawai`i Island, and Maui participated in the survey.</p>
-                        <p style="text-align: center; font-size: 15px;"><i>*Where possible, demographic comparisons are made with the latest <u>Hawai`i State Epidemiological Profile</u> to illustrate how representative the needs assessment participants are of the state population of PLWHA.</i></p>
-
+                <h1 class="section-heading text-center">Sociodemographics</h1>
+                <h4>
+                    <br>
+                    <p>398 PLWHA across O`ahu, Kaua`i, Hawai`i Island, and Maui participated in the survey.</p>
+                        <p style="text-align: center;">Where possible, demographic comparisons are made with the latest <a href="https://health.hawaii.gov/harmreduction/files/2013/05/2015-Epi-Profile.pdf">Hawai`i State Epidemiological Profile</a> to illustrate how representative the needs assessment participants are of the state population of PLWHA.</p>
                 </h4>
                 <br>
                     <ul class="nav nav-pills nav-justified">
@@ -172,80 +173,92 @@
 
 
                     </ul>
-
+                    <br><br>
                     <div class="tab-content mt-3">
                         <div class="tab-pane fade" id="ageTab" role="tabpanel">
                             <div class="row justify-content-center">
+                                <h2>Age</h2>
+
+                                <div class="container-text-discrepancy">
+                                    <p style="padding-left: 10%; padding-right: 10%">Individuals who completed the needs assessment tend to be older than the PLWHA included in the epidemiological profile, with a high percentage of the respondents over 55 (58%). This may be reflective of the fact that younger PLWHA are less likely to be engaged in care.</p>
+                                </div>
+
                                 <canvas id="age" height="600px" width="1000px"></canvas>
-                            </div>
-                            <div class="container-text-discrepancy">
-                                <p>Individuals who completed the needs assessment tend to be older than the PLWHA included in the epidemiological profile, with a high percentage of the respondents over 55 (58%). This may be reflective of the fact that younger PLWHA are less likely to be engaged in care.
-                                </p>
                             </div>
                         </div>
                         <div class="tab-pane show active" id="caseManagementTab" role="tabpanel">
                             <div class="row justify-content-center">
+                                <h2>Case Management Location</h2>
+
+                                <div class="container-text">
+                                <p style="padding-left: 10%; padding-right: 10%">Although the epidemiological profile does not have information on where people receive case management services, it does have information on where people live. Assuming that most people receive case management in the county where they live, the samples are similar in terms of location, with slight overrepresentation of individuals from Hawai`i Island and Kauai, and underrepresentation of individuals in Honolulu County. </p>
+                                </div>
+
                                 <canvas id="caseManagement"  height="600px" width="1000px"></canvas>
-                            </div>
-                            <div class="container-text">
-                                <p>Although the epidemiological profile does not have information on where people receive case management services, it does have information on where people live. Assuming that most people receive case management in the county where they live, the samples are similar in terms of location, with slight overrepresentation of individuals from Hawai`i Island and Kauai, and underrepresentation of individuals in Honolulu County. </p>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="disabilityTab" role="tabpanel">
                             <div class="row justify-content-center">
+                                <h2>Prevalence of Chronic Conditions</h2>
+                                <div class="container-text">
+                                    <p style="padding-left: 10%; padding-right: 10%">A high proportion of the sample reported concurrent chronic conditions. The most prevalent were heart disease, depression, anxiety and chronic pain.</p>
+                                </div>
                                 <canvas id="disabilities"  height="600px" width="1000px"></canvas>
-                            </div>
-                            <div class="container-text">
-                                <p> A high proportion of the sample reported concurrent chronic conditions. The most prevalent were heart disease, depression, anxiety and chronic pain.
-                                </p>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="drugUseTab" role="tabpanel">
                             <div class="row justify-content-center">
+                                <h2>Drug Use</h2>
+                                <div class="container-text">
+                                    <p style="padding-left: 10%; padding-right: 10%">The majority of the sample did not report using illicit drugs. Of those who did, marijuana was most common, followed by methamphetamines.</p>
+                                </div>
                                 <canvas id="drugUse"  height="600px" width="1000px"></canvas>
-                            </div>
-                            <div class="container-text">
-                                <p>The majority of the sample did not report using illicit drugs. Of those who did, marijuana was most common, followed by methamphetamines.</p>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="educationTab" role="tabpanel">
                             <div class="row justify-content-center">
+                                <h2>Education</h2>
+                                <div class="container-text">
+                                    <p style="padding-left: 10%; padding-right: 10%">The majority of the sample continued their education after high school, and 31% either completed Bachelor’s or graduate degrees. </p>
+                                </div>
                                 <canvas id="education"  height="600px" width="1000px"></canvas>
-                            </div>
-                            <div class="container-text">
-                                <p>The majority of the sample continued their education after high school, and 31% either completed Bachelor’s or graduate degrees. </p>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="incomeTypeTab" role="tabpanel">
                             <div class="row justify-content-center">
+                                <h2>Income Source</h2>
+                                <div class="container-text">
+                                    <p style="padding-left: 10%; padding-right: 10%">Social security was the most common type of income, indicating that a high percentage of the sample (58%) is living in poverty. Among those that specified “other” income, assistance from family and friends was the most common income source, followed by general assistance. </p>
+                                </div>
                                 <canvas id="incomeType"  height="600px" width="1000px"></canvas>
-                            </div>
-                            <div class="container-text">
-                                <p> Social security was the most common type of income, indicating that a high percentage of the sample (58%) is living in poverty. Among those that specified “other” income, assistance from family and friends was the most common income source, followed by general assistance. </p>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="methodOfTransmissionTab" role="tabpanel">
                             <div class="row justify-content-center">
+                                <h2>Method of Transmission</h2>
+                                <div class="container-text">
+                                    <p style="padding-left: 10%; padding-right: 10%">There were not notable differences between the needs assessment and the epidemiological profile in method of transmission. For both, by far the most common method of transmission is male to male sexual contact.</p>
+                                </div>
                                 <canvas id="methodOfTransmission"  height="600px" width="1000px"></canvas>
-                            </div>
-                            <div class="container-text">
-                                <p>There were not notable differences between the needs assessment and the epidemiological profile in method of transmission. For both, by far the most common method of transmission is male to male sexual contact.</p>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="raceTab" role="tabpanel">
                             <div class="row justify-content-center">
+                                <h2>Race</h2>
+                                <div class="container-text-discrepancy">
+                                    <p style="padding-left: 10%; padding-right: 10%">There were not notable differences in terms of race between the epidemiological survey and the needs assessment. Both showed an overrepresentation of White (23%) and Black/African American PLWHA (2%) compared to the state population, and an underrepresentation of Asians (36%) and people with multiple races (19%) compared to the state population. </p>
+                                </div>
                                 <canvas id="race"  height="600px" width="1000px"></canvas>
                             </div>
-                            <div class="container-text-discrepancy">
-                                <p>There were not notable differences in terms of race between the epidemiological survey and the needs assessment. Both showed an overrepresentation of White and Black/African American PLWHA compared to the state population (22.9% and 2.4% respectively), and an underrepresentation of Asians (36.1%) and people with multiple races (18.8%) compared to the state population. </p>
-                            </div>
                         </div>
+
                         <div class="tab-pane fade" id="sexualOrientationTab" role="tabpanel">
                             <div class="row justify-content-center">
+                                <h2>Sexual Orientation<br></h2>
+                                <div class="container-text-discrepancy">
+                                    <p style="padding-left: 10%; padding-right: 10%"><br>The majority of individuals in the sample were homosexual men. </p>
+                                </div>
                                 <canvas id="sexualOrientation"  height="600px" width="1000px"></canvas>
-                            </div>
-                            <div class="container-text">
-                                <p>The majority of individuals in the sample were homosexual men. </p>
                             </div>
                         </div>
                     </div>
@@ -263,7 +276,7 @@
 <br><br>
 <section class="bg-primary" id="serviceAccess">
     <div class="fluid-container" style="background-color: white">
-        <br>
+        <br><br><br><br><br>
         <h2 class="section-heading text-center">Services Needed and Difficulty Accessing Them</h2>
         <h5 class="text-center">Number of PLWHA Surveyed = 398</h5>
 

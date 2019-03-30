@@ -4,11 +4,22 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
     if(ifEpiProfileData) epiTitleString = 'Hawai`i State Epidemiological Profile / People Surveyed: 2,519'
 
     var options = {
+        plugins: {
+            datalabels: {
+                display: function(context) {
+                    return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
+                },
+                round: function(context) {
+                    if (context.dataset.data[context.dataIndex] < 1)
+                        return "<1%";
+                }
+            }
+        },
         title: {
             // text: ['HIV Needs Assessment 2018 / People Surveyed: 398', epiTitleString],
             // text: [chart, 'Needs Assessment ( n = 398)', epiTitleString],
             text: [chart],
-            display: true,
+            display: false,
             fontSize: 25
         },
         scales: {
@@ -16,7 +27,7 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
                 scaleLabel: {
                     display: true,
                     labelString: xAxisLabel,
-                    fontSize: 16,
+                    fontSize: 18,
                     fontcolor: '#000'
                 },
                 ticks: {
@@ -30,7 +41,7 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
             yAxes: [{
                 scaleLabel: {
                     display: true,
-                    labelString: yAxisLabel,
+                    // labelString: yAxisLabel,
                     fontSize: 16,
                     fontcolor: '#000'
                 },
@@ -47,7 +58,7 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
         pointLabelFontFamily: "Quadon Extra Bold",
         scaleFontFamily: "Quadon Extra Bold",
         legend: {
-            display: ifEpiProfileData,
+            display: true,
             labels: {
                 fontSize: 18
             }
@@ -97,19 +108,19 @@ var myChart = new Chart(ctx, {
                 // data: [10.1, 12.1, 60.8, 0, 12.3, 1.5, 2.8, 3.5, 9.8],
                 data: [242,49,48,40,39,14,11,6,0],
                 backgroundColor: [
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e'
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)'
                 ]},
         ]
     },
-    options: createOptions('Sexual Orientation', false, 'Breakdown By Sexual Orientation', 'Number of Individuals', false)
+    options: createOptions('Sexual Orientation', false, 'Sexual Orientation', 'Number of Individuals', false)
 });
 
 
@@ -127,15 +138,15 @@ var myChart = new Chart(ctx, {
                 // data: [57, 24.4, 12, 1.3, 5.3],
                 data: [227, 97, 48, 5, 21],
                 backgroundColor: [
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e'
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)'
                 ]},
         ]
     },
-    options: createOptions('Income Source', false, 'Breakdown By Income Source', 'Number of Individuals', false)
+    options: createOptions('Income Source', false, 'Income Source', 'Number of Individuals', false)
 });
 
 // Education
@@ -155,17 +166,17 @@ var myChart = new Chart(ctx, {
                 // data: [11.6, 18.1, 35.4, 4.8, 22.4, 6, 1.8],
                 data: [46, 72, 141, 19, 89, 24, 7],
                 backgroundColor: [
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e'
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)'
                 ]},
         ]
     },
-    options: createOptions('Level of Education', false, 'Breakdown By Education Level', 'Number of Individuals', false)
+    options: createOptions('Level of Education', false, 'Education Level', 'Number of Individuals', false)
 });
 
 
@@ -186,31 +197,32 @@ var myChart = new Chart(ctx, {
                 // data: [23.6, 21.6, 19.3, 17.3, 13.6, 12.6, 7.3, 7, 6.5, 6, 5.5, 5, 4.8, 3.5, 2.8, 2.5, 2.5, 2.3, 1.8, 1.3, 1],
                 data: [94, 86, 77, 69, 54, 50, 29, 28, 26, 24, 22, 20, 19, 14, 11, 10, 10, 9, 7, 5, 4],
                 backgroundColor: [
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e'
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)'
                 ]},
         ]
     },
-    options: createOptions('Chronic Conditions', false, 'Prevalence of Chronic Conditions', 'Number of Individuals', false)
+    // options: createOptions('Chronic Conditions', false, 'Prevalence of Chronic Conditions', 'Number of Individuals', false)
+    options: createOptions('Chronic Conditions', false, '', 'Number of Individuals', false)
 });
 
 
@@ -229,16 +241,16 @@ var myChart = new Chart(ctx, {
                 // data: [32.9, 9, 1.5, 1.3, 1, 1, 1, 61],
                 data: [243, 131, 36, 6, 5, 4, 4, 4],
                 backgroundColor: [
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e',
-                    '#ff9e9e'
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)'
                 ]},
         ]
     },
-    options: createOptions('Drugs', false, 'Breakdown By Drug Use', 'Number of Individuals', false)
+    options: createOptions('Drugs', false, 'Drug Use', 'Number of Individuals', false)
 });
