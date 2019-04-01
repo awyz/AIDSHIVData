@@ -22,11 +22,11 @@ var myChart = new Chart(medicalCostsBarriersReason, {
         datasets: [{
             label: "Very Difficult",
             data: [12,12,8,7,6,6,5,4,3,2,0,1],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [3,2,0,1,0,0,0,0,0,0,1,0],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
 
@@ -40,10 +40,12 @@ var myChart = new Chart(medicalCostsBarriersReason, {
         },
         scales: {
             xAxes: [{
-                stacked: true
+                stacked: true,
+                ticks: {fontColor: 'black'}
             }],
             yAxes: [{
-                stacked: true
+                stacked: true,
+                ticks: {fontColor: 'black'}
             }]
         }
     }});

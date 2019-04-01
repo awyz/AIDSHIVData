@@ -20,11 +20,11 @@ var myChart = new Chart(abuseBarriersReason, {
         datasets: [{
             label: "Very Difficult",
             data: [1,1,1,1,1,0,0,0],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [1,1,1,1,0,1,1,1],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
     options: {
@@ -41,7 +41,8 @@ var myChart = new Chart(abuseBarriersReason, {
                 ticks: {
                     autoSkip: true,
                     fixedStepSize: 1,
-                    stepSize: 1
+                    stepSize: 1,
+                    fontColor: 'black'
                 },
                 scaleLabel:{
                     display:true,
@@ -52,6 +53,8 @@ var myChart = new Chart(abuseBarriersReason, {
             }],
             yAxes: [{
                 stacked: true,
+                ticks: {fontColor: 'black'}
+
             }]
         }
     }});

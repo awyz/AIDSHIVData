@@ -27,11 +27,11 @@ var myChart = new Chart(counselingBarriersReason, {
         datasets: [{
             label: "Very Difficult",
             data: [5,3,2,4,3,3,1,2,2,2,0,0,0,0,0],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [5,3,3,0,1,1,2,0,0,2,0,2,1,1,1],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
 
@@ -50,11 +50,13 @@ var myChart = new Chart(counselingBarriersReason, {
                     display:true,
                     labelString: 'Number of Individuals',
                     fontSize: 16,
-                    fontcolor: '#000'
+                    fontColor: 'black'
                 },
             }],
             yAxes: [{
-                stacked: true
+                stacked: true,
+                ticks: {fontColor: 'black'}
+
             }]
         }
     }});

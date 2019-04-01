@@ -48,10 +48,14 @@ var myChart = new Chart(ctx, {
         },
         scales: {
             xAxes: [{
-                stacked: true
+                stacked: true,
+                ticks: {fontColor: 'black'}
+
             }],
             yAxes: [{
-                stacked: true
+                stacked: true,
+                ticks: {fontColor: 'black'}
+
             }]
         }
     }});

@@ -28,14 +28,14 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
                     display: true,
                     labelString: xAxisLabel,
                     fontSize: 18,
-                    fontcolor: '#000'
+                    fontColor: 'black'
                 },
                 ticks: {
                     fontFamily: "'Open Sans Bold', sans-serif",
                     fontSize: 11,
                     beginAtZero: true,
                     fontSize: 16,
-                    fontcolor: '#000',
+                    fontColor: 'black'
                 },
             }],
             yAxes: [{
@@ -43,12 +43,12 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
                     display: true,
                     // labelString: yAxisLabel,
                     fontSize: 16,
-                    fontcolor: '#000'
+                    fontColor: 'black'
                 },
                 ticks: {
                     fontFamily: "'Open Sans Bold', sans-serif",
                     fontSize: 16,
-                    fontcolor: '#000',
+                    fontColor: 'black'
                 },
                 gridLines: {
                     display: false,
@@ -60,7 +60,8 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
         legend: {
             display: true,
             labels: {
-                fontSize: 18
+                fontSize: 18,
+                fontColor: 'black'
             }
 
         },

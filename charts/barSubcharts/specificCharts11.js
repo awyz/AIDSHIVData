@@ -23,11 +23,11 @@ var myChart = new Chart(employmentBarriersReason, {
         datasets: [{
             label: "Very Difficult",
             data: [4,4,3,3,3,2,2,2,2,1,1,1,1],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [3,2,2,2,1,1,1,0,0,1,1,0,0],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
 
@@ -46,11 +46,14 @@ var myChart = new Chart(employmentBarriersReason, {
                     display:true,
                     labelString: 'Number of Individuals',
                     fontSize: 16,
-                    fontcolor: '#000'
+                    fontColor: 'black'
                 },
             }],
             yAxes: [{
-                stacked: true
+                stacked: true,
+                ticks: {fontColor: 'black'}
+
+
             }]
         }
     }});

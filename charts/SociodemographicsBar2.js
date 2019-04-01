@@ -30,16 +30,16 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
                     display: true,
                     labelString: xAxisLabel,
                     fontSize: 18,
-                    fontcolor: '#000'
+                    fontColor: 'black'
                 },
                 ticks: {
                     fontFamily: "'Open Sans Bold', sans-serif",
                     fontSize: 11,
                     beginAtZero: true,
                     fontSize: 18,
-                    fontcolor: '#000',
+                    fontColor: 'black',
                     max: 1,
-                    stepSize: 100, /* total/4 shows 0, 25%, 50%, 75%, 100% */
+                    // stepSize: 100, /* total/4 shows 0, 25%, 50%, 75%, 100% */
                     callback: function(value, index, values) {
                         return (value * 100) + '%';
                     }
@@ -50,13 +50,13 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
                     display: true,
                     // labelString: yAxisLabel,
                     fontSize: 16,
-                    fontcolor: '#000'
+                    fontColor: 'black'
 
                 },
                 ticks: {
                     fontFamily: "'Open Sans Bold', sans-serif",
                     fontSize: 16,
-                    fontcolor: '#000',
+                    fontColor: 'black'
                 },
                 gridLines: {
                     display: false,
@@ -68,7 +68,8 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
         legend: {
             display: true,
             labels: {
-                fontSize: 18
+                fontSize: 18,
+                fontColor: 'black'
             }
 
         },

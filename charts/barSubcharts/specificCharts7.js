@@ -25,11 +25,11 @@ var myChart = new Chart(dentalBarriersReason, {
         datasets: [{
             label: "Very Difficult",
             data: [26,12,14,10,8,6,5,5,4,3,2,1,1,0],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [16,9,6,7,4,3,3,2,1,0,0,0,0,1],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
 
@@ -44,15 +44,17 @@ var myChart = new Chart(dentalBarriersReason, {
         scales: {
             xAxes: [{
                 stacked: true,
+                ticks: {fontColor: 'black'},
                 scaleLabel:{
                     display:true,
                     labelString: 'Number of Individuals',
                     fontSize: 16,
-                    fontcolor: '#000'
+                    fontColor: 'black'
                 },
             }],
             yAxes: [{
-                stacked: true
+                stacked: true,
+                ticks: {fontColor: 'black'}
             }]
         }
     }});
@@ -84,11 +86,11 @@ var chart2= new Chart(dentalBarriersEthnicity, {
         datasets: [{
             label: "Very Difficult",
             data: [16,9,5,2,1,4,3,2,2,1,1,0,1,1,0,0],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [12,2,2,3,4,0,1,0,0,1,1,2,0,0,1,1],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
 
@@ -118,11 +120,11 @@ var chart3 = new Chart(dentalBarriersAge, {
         datasets: [{
             label: "Very Difficult",
             data: [10,11,10,5,2],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [7,5,4,3,2],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
 
@@ -153,11 +155,11 @@ var myChart = new Chart(dentalBarriersEducation, {
         datasets: [{
             label: "Very Difficult",
             data: [14,11,5,4,2,2],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [9,4,3,2,2,1],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
     options: {
@@ -185,11 +187,11 @@ var myChart = new Chart(dentalBarriersIncomeType, {
         datasets: [{
             label: "Very Difficult",
             data: [26,8,4],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [15,3,4],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
     options: {
@@ -221,11 +223,11 @@ var myChart = new Chart(dentalBarriersSexualOrientation, {
         datasets: [{
             label: "Very Difficult",
             data: [17,8,6,3,3,3,1],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [12,3,4,2,1,0,0],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
     options: {
@@ -317,11 +319,11 @@ var myChart = new Chart(dentalBarriersDrugUse, {
         datasets: [{
             label: "Very Difficult",
             data: [22,22,14,1,0],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [15,15,5,3,2],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
     options: {
@@ -356,11 +358,11 @@ var myChart = new Chart(dentalBarriersMoT, {
         datasets: [{
             label: "Very Difficult",
             data: [27,8,4,2,1,0],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [16,2,2,1,2,1],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
     options: {

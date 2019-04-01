@@ -83,11 +83,11 @@ var myChart = new Chart(ctx, {
         }, { // Possible but very difficult
             label: "Possible but very difficult",
             data: [5, 38, 24, 6, 26, 35, 26, 9, 16, 7, 5, 6, 8, 4, 1],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         }, { // Too difficult to access
             label: "Too difficult to access",
             data: [1, 22, 5, 0, 10, 43, 10, 2, 16, 5, 14, 6, 3, 13, 2],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
 //                hoverBackgroundColor: "rgba(166, 60, 6, 1)"
         }, { // blanks
             label: "Did not need service",

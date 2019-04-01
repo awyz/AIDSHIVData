@@ -20,11 +20,11 @@ var stackedBar = new Chart(caseManagementBarriersReason, {
         datasets: [{
             label: "Very Difficult",
             data: [3,2,2,2,2,2,2,1,1,1,1,1],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [0,1,0,0,0,0,0,1,0,0,0,0],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
    'options': {
@@ -42,7 +42,7 @@ var stackedBar = new Chart(caseManagementBarriersReason, {
              display:true,
               labelString: 'Number of Individuals',
               fontSize: 16,
-              fontcolor: '#000'
+              fontColor: 'black'
             },
             ticks: {
                 autoSkip: true,
@@ -51,11 +51,13 @@ var stackedBar = new Chart(caseManagementBarriersReason, {
             },
         }],
          yAxes: [{
-            stacked: true
+            stacked: true,
+             ticks: {fontColor: 'black'}
          }]
       },
       'legend': {
         'position': 'right',
+
       },
   },
 })

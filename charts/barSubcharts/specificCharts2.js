@@ -17,7 +17,7 @@ var stackedBar = new Chart(informationBarriersReason, {
         datasets: [{
             label: "Very Difficult",
             data: [5,3,3,2,2,2,1,1],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         }]
     },
     options: {
@@ -34,11 +34,13 @@ var stackedBar = new Chart(informationBarriersReason, {
                 ticks: {
                     autoSkip: true,
                     fixedStepSize: 1,
-                    stepSize: 1
+                    stepSize: 1,
+                    fontColor: 'black'
                 },
             }],
             yAxes: [{
-                stacked: true
+                stacked: true,
+                ticks: {fontColor: 'black'}
             }]
         }
     }

@@ -25,11 +25,11 @@ var myChart = new Chart(billsBarriersReason, {
         datasets: [{
             label: "Very Difficult",
             data: [5,9,3,0,7,4,3,2,2,2,2,2,1,1,1],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [11,5,10,10,1,3,1,1,1,0,0,0,0,0,0],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
 
@@ -48,11 +48,13 @@ var myChart = new Chart(billsBarriersReason, {
                     display:true,
                     labelString: 'Number of Individuals',
                     fontSize: 16,
-                    fontcolor: '#000'
+                    fontColor: 'black',
                 },
             }],
             yAxes: [{
-                stacked: true
+                stacked: true,
+                ticks: {fontColor: 'black'}
+
             }]
         }
     }});

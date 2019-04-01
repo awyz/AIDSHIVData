@@ -42,7 +42,7 @@
 
 </head>
 
-<body id="page-top">
+</sec id="page-top">
 
 <style>
     p {
@@ -254,15 +254,21 @@
 
                         <div class="tab-pane fade" id="sexualOrientationTab" role="tabpanel">
                             <div class="row justify-content-center">
-                                <h2>Sexual Orientation<br></h2>
-                                <div class="container-text-discrepancy">
-                                    <p style="padding-left: 10%; padding-right: 10%"><br>The majority of individuals in the sample were homosexual men. </p>
+                                <div class="fluid container">
+                                <h2>Sexual Orientation</h2>
+                                </div>
+
+                                <div class="container-text-discrepancy" style="width: 80%">
+                                    <p style="padding-left: 10%; padding-right: 10%">
+                                        The majority of individuals in the sample were homosexual men.
+                                    </p>
                                 </div>
                                 <canvas id="sexualOrientation"  height="600px" width="1000px"></canvas>
                             </div>
                         </div>
-                    </div>
 
+
+                    </div>
             </div>
         </div>
     </div>
@@ -277,7 +283,7 @@
 <section class="bg-primary" id="serviceAccess">
     <div class="fluid-container" style="background-color: white">
         <br><br><br><br><br>
-        <h2 class="section-heading text-center">Services Needed and Difficulty Accessing Them</h2>
+        <h2 class="section-heading text-center">Services Needed and Ease of Access</h2>
         <h5 class="text-center">Number of PLWHA Surveyed = 398</h5>
 
         <canvas id="myBarChart"></canvas>
@@ -317,8 +323,10 @@
                     <div class="text-center" id="hivDesc">
                         <br><br>
                         <h3>Barriers to Accessing HIV Case Management</h3>
-                        <canvas id = "cMReasons" style = "height: 500px; width: 850px"></canvas>
+                        <br>
                         <p style="text-align: center; text-align: center; font-size: 20px; font-family: Arial;">The top barriers to HIV case management were stable living conditions and transportation. </p>
+                        <br>
+                        <canvas id = "cMReasons" style = "height: 500px; width: 850px"></canvas>
                         <br><br>
                         <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('hivDesc')">Close</a>
                     </div>
@@ -361,10 +369,13 @@
 
                     <!--<div class="tab-content mt-3">-->
                         <!--<div class="tab-pane fade show active" id="barriersTabQ" role="tabpanel">-->
-                            <div class="row justify-content-center">
+                            <div class="container fluid">
                                 <h3>Barriers to Dental Care</h3>
+                            </div>
+                            <div class="container fluid" style="text-align: center">
+                                <br><p>The top barrier is the cost of dental care.</p><br>
+                            </div>
                                 <canvas id="denReasons" style="height: 600px; width: 1000px;"></canvas>
-                                <p>The top barrier is the cost of dental care.</p>
                             </div>
                         <!--</div>-->
 						<!--<div class="tab-pane fade" id="ageTabQ" role="tabpanel">-->
@@ -443,9 +454,9 @@
                     <a name="counseling"></a>
                     <div id="counselingDesc">
                         <br><br>
-                        <h3>Barriers to Accessing Counseling</h3>>
+                        <h3>Barriers to Accessing Counseling</h3>
+                        <br><p style="text-align: center; font-size: 20px; font-family: Arial;">The top barrier to counseling was finding out how to get it. </p><br>
                         <canvas id = "counReasons" style = "height:500px; width:850px"></canvas>
-                        <p style="text-align: center; font-size: 20px; font-family: Arial;">The top barrier to counseling was finding out how to get it. </p>
                         <br><br>
                         <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('counselingDesc')">Close</a>
                     </div>
@@ -455,8 +466,8 @@
                     <div id="infoDesc">
                         <br><br>
                         <h3>Barriers to Accessing Information</h3>
+                        <br><p style="text-align: center; font-size: 20px; font-family: Arial;">The top barrier was knowing where to get it.</p><br>
                         <canvas id = "infoReasons" style = "height:500px; width:850px"></canvas>
-                        <p style="text-align: center; font-size: 20px; font-family: Arial;">The top barrier was knowing where to get it.</p>
                         <br><br>
                         <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('infoDesc')">Close</a>
                     </div>
@@ -503,8 +514,8 @@
                         <div class="tab-pane fade show active" id="barriersTabQ2" role="tabpanel">
                             <div class="row justify-content-center">
                                 <h3>Barriers to Alternative Therapy</h3>
+                                <br><p style="text-align: center; font-size: 20px; font-family: Arial;">The top barrier to alternative therapy access was affording the service.</p><br>
                                 <canvas id="therReasons" style="height: 600px; width: 1000px;"></canvas>
-                                <p style="text-align: center; font-size: 20px; font-family: Arial;">The top barrier to alternative therapy access was affording the service.</p>
                             </div>
                         </div>
 
@@ -585,8 +596,8 @@
                     <div id="homeAidDesc">
                         <br><br>
                         <h3>Barriers to Accessing Home Aid</h3>
+                        <br><p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">The top barrier was that the service was unavailable.</p><br>
                         <canvas id = "disReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
-                        <p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">The top barrier was that the service was unavailable.</p>
                         <br><br>
                         <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('homeAidDesc')">Close</a>
                     </div>
@@ -595,8 +606,10 @@
                     <div id="insuranceDesc">
                         <br><br>
                         <h3>Barriers to Obtaining Insurance</h3>
-                        <canvas id = "insuReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
+                        <br>
                         <p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">The top barrier knowing where to obtain insurance.</p>
+                        <br>
+                        <canvas id = "insuReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
                         <br><br>
                         <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('insuranceDesc')">Close</a>
                     </div>
@@ -607,8 +620,10 @@
                     <div id="medDesc">
                         <br><br>
                         <h3>Barriers to Paying Medical Costs</h3>
-                        <canvas id = "medcReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
+                        <br>
                         <p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">The top barrier to assistance paying for medical costs was that this service was unavailable.</p>
+                        <br>
+                        <canvas id = "medcReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
                         <br><br>
                         <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('medDesc')">Close</a>
                     </div>
@@ -618,8 +633,8 @@
                     <div id="abuseDesc">
                         <br><br>
                         <h3>Barriers to Accessing Help With Addiction/Drug Abuse</h3>
+                        <br><p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">The top barrier to help with addiction and drug abuse was that it was unavailable.</p><br>
                         <canvas id = "abusReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
-                        <p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">The top barrier to help with addiction and drug abuse was that it was unavailable.</p>
                         <br><br>
                         <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('abuseDesc')">Close</a>
                     </div>
@@ -629,8 +644,8 @@
                     <div id="socialDesc">
                         <br><br>
                         <h3>Barriers to Accessing Social Support</h3>
+                        <br><p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">The top barrier was that it was unavailable.</p><br>
                         <canvas id = "sociReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
-                        <p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">The top barrier was that it was unavailable.</p>
                         <br><br>
                         <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('socialDesc')">Close</a>
                     </div>
@@ -640,8 +655,9 @@
                     <div id="jobDesc">
                         <br><br>
                         <h3>Barriers to Accessing Employment</h3>
-                        <canvas id = "emplReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
+                        <br>
                         <p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">The top barrier to accessing and having a job is that it was unavailable.</p>
+                        <br><canvas id = "emplReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
                         <br><br>
                         <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('jobDesc')">Close</a>
                     </div>
@@ -652,8 +668,10 @@
                     <div id="eduDesc">
                         <br><br>
                         <h3>Barriers to Accessing Education</h3>
-                        <canvas id = "eduReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
+                        <br>
                         <p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">The top barrier to obtaining an education was that it was unavailable.</p>
+                        <br>
+                        <canvas id = "eduReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
                         <br><br>
                         <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('eduDesc')">Close</a>
                     </div>
@@ -663,8 +681,10 @@
                     <div id="foodDesc">
                         <br><br>
                         <h3>Barriers to Accessing Food Assistance</h3>
-                        <canvas id = "fooReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
+                        <br>
                         <p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">The top barrier to assistance paying for food was not being able to qualify for this service.</p>
+                        <br>
+                        <canvas id = "fooReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
                         <br><br>
                         <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('foodDesc')">Close</a>
                     </div>
@@ -674,8 +694,10 @@
                     <div id="housingDesc">
                         <br><br>
                         <h3>Barriers to Accessing Housing Assistance</h3>
-                        <canvas id = "housReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
+                        <br>
                         <p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">The top barrier to assistance paying for housing was qualifying for it.</p>
+                        <br>
+                        <canvas id = "housReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
                         <br><br>
                         <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('housingDesc')">Close</a>
                     </div>
@@ -684,8 +706,9 @@
                     <a name="bills"></a>
                     <div id="billsDesc">
                         <h3>Barriers to Accessing Bill Assistance</h3>
+                        <br><p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">The top barrier to assistance paying for bills was qualifying for this service.</p>
+                        <br>
                         <canvas id = "bilReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
-                        <p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">The top barrier to assistance paying for bills was qualifying for this service.</p>
                         <br><br>
                         <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('billsDesc')">Close</a>
                     </div>
@@ -711,14 +734,14 @@
                         <a href="https://www.hhhrc.org">
                         <img src="https://static.wixstatic.com/media/cde855_bed7208fb31144d9829958dc8cb2fd9d~mv2.png/v1/fill/w_495,h_153,al_c,q_80,usm_0.66_1.00_0.01/cde855_bed7208fb31144d9829958dc8cb2fd9d~mv2.webp">
                         <br><br>
-                        Hawai`i Health Harm Reduction Center (Oahu)
+                        Hawai`i Health Harm Reduction Center <br>(Oahu)
                         </a>
                     </div>
                     <div class="col-6">
                         <a href=" https://mphskauai.org">
                             <img src="https://mphskauai.org/wp-content/uploads/2017/06/MPHS-PNG300.png">
                             <br><br>
-                            Malama Pono (Kauai)
+                            Malama Pono <br>(Kauai)
                         </a>
                     </div>
                 </div>
@@ -728,14 +751,14 @@
                         <a href="http://hihaf.org">
                             <img src="img/b9146dac413cff1226ff16e8799e2f9d.png">
                         <br><br>
-                        Hawai`i Island HIV/AIDS Foundation (Hawai`i Island)
+                        Hawai`i Island HIV/AIDS Foundation <br>(Hawai`i Island)
                         </a>
                     </div>
                     <div class="col-6">
                         <a href="http://www.mauiaids.org">
                             <img src="http://www.mauiaids.org/images/logo3.png">
                             <br><br>
-                            Maui AIDS Founadtion (Maui)
+                            Maui AIDS Foundation <br>(Maui)
                         </a>
                     </div>
                 </div>

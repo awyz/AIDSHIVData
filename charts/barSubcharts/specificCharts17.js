@@ -25,11 +25,11 @@ var myChart = new Chart(altTherapyBarriersReason, {
         datasets: [{
             label: "Very Difficult",
             data: [29,12,13,6,7,2,1,2,2,1,1,1,1,0,0],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [35,18,16,15,5,3,4,1,0,1,1,1,0,1,1],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
 
@@ -48,11 +48,14 @@ var myChart = new Chart(altTherapyBarriersReason, {
                     display:true,
                     labelString: 'Number of Individuals',
                     fontSize: 16,
-                    fontcolor: '#000'
+                    fontColor: 'black'
                 },
             }],
             yAxes: [{
-                stacked: true
+                stacked: true,
+                ticks: {fontColor: 'black'}
+
+
             }]
         }
     }});
@@ -81,11 +84,11 @@ var myChart = new Chart(altTherapyEthnicity, {
         datasets: [{
             label: "Very Difficult",
             data: [22,8,2,5,4,4,1,5,2,1,0,0,0],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [19,7,12,2,3,2,5,0,2,1,2,1,1],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
 
@@ -125,11 +128,11 @@ var myChart = new Chart(altTherapyAge, {
         datasets: [{
             label: "Very Difficult",
             data: [20,7,4,4],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [17,18,5,3],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
     options: {
@@ -168,11 +171,11 @@ var myChart = new Chart(altTherapyEducation, {
         datasets: [{
             label: "Very Difficult",
             data: [16,9,6,3,1,0],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [14,11,6,7,2,3],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
 
@@ -208,11 +211,11 @@ var myChart = new Chart(altTherapyIncome, {
         datasets: [{
             label: "Very Difficult",
             data: [5,19, 11],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [26,11,6],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
     options: {
@@ -254,11 +257,11 @@ var myChart = new Chart(altTherapySexualOrientation, {
         datasets: [{
             label: "Very Difficult",
             data: [22,6,4,1,1,1,0,1],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [30,6,1,2,2,2,2,0],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
     options: {
@@ -300,11 +303,11 @@ var myChart = new Chart(altTherapyDrugs, {
         datasets: [{
             label: "Very Difficult",
             data: [19,13,5,2,1,1,1,0],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [27,15,2,0,0,0,0,1],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
 
@@ -347,11 +350,11 @@ var myChart = new Chart(altTherapyMoT, {
         datasets: [{
             label: "Very Difficult",
             data: [28,7,2,1,0,1,0,0],
-            backgroundColor: "#FF9505",
+            backgroundColor: "rgba(237, 119, 104, 0.4)",
         },{
             label: "Too Difficult",
             data: [35,1,5,1,2,0,1,1],
-            backgroundColor: "#F3FFB6",
+            backgroundColor: "rgba(183, 18, 0, .38)",
         }]
     },
 
@@ -421,8 +424,8 @@ var AlternativeTherapyDoughnutOption = {
                 {value:35, name:'possible but\n very difficult', itemStyle: {color: 'rgba(255, 166, 166, 1)'}},
                 {value:241, name:'chose not\n to answer', itemStyle: {color: 'rgba(184, 197, 214, 1)'}},
                 {value:7, name:'did not\n need service',itemStyle: {color: 'rgba(163, 155, 168, 1)'} },
-                {value:43, name:'possible with\n some work', itemStyle: {color: '#F3FFB6'}},
-                {value:29, name:'easy', itemStyle: {color: '#FF9505'}}
+                {value:43, name:'possible with\n some work', itemStyle: {color: 'rgba(183, 18, 0, .38)'}},
+                {value:29, name:'easy', itemStyle: {color: 'rgba(237, 119, 104, 0.4)'}}
             ]
         }
     ]
