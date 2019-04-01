@@ -1,5 +1,3 @@
-// todo Change the fonts
-
 var group;
 
 var barOptions_stacked = {
@@ -18,10 +16,14 @@ var barOptions_stacked = {
             ticks: {
                 beginAtZero:true,
                 fontFamily: "'Open Sans Bold', sans-serif",
-                fontSize:11
+                fontSize:11,
+                fontColor: 'black'
             },
             scaleLabel:{
-                display:false
+                display:true,
+                labelString: 'Number of Individuals',
+                fontSize: 16,
+                fontColor: 'black'
             },
             gridLines: {
             },
@@ -37,7 +39,7 @@ var barOptions_stacked = {
             ticks: {
                 fontFamily: "'Open Sans Bold', sans-serif",
 //                    fontSize:16,
-                fontcolor: '#000'
+                fontColor: 'black'
             },
             stacked: true
         }]
@@ -75,11 +77,11 @@ var myChart = new Chart(ctx, {
         datasets: [{ // Easy
             label: "Easy",
             data: [277, 134, 99, 120, 44, 29, 48, 62, 29, 55, 54, 28, 5, 3, 12],
-            backgroundColor: "rgba(104, 99, 240, 1)",
+            backgroundColor: "rgba(56, 178, 0, 0.38)",
         },{ // Possible but required some work
             label: "Possible with some work",
             data: [39, 67, 73, 32, 74, 43, 58, 47, 47, 24, 15, 26, 15, 11, 11],
-            backgroundColor: "rgba(152, 148, 255, 1)",
+            backgroundColor: "rgba(254, 250, 128, 0.52)",
         }, { // Possible but very difficult
             label: "Possible but very difficult",
             data: [5, 38, 24, 6, 26, 35, 26, 9, 16, 7, 5, 6, 8, 4, 1],
@@ -87,7 +89,7 @@ var myChart = new Chart(ctx, {
         }, { // Too difficult to access
             label: "Too difficult to access",
             data: [1, 22, 5, 0, 10, 43, 10, 2, 16, 5, 14, 6, 3, 13, 2],
-            backgroundColor: "rgba(183, 18, 0, .38)",
+            backgroundColor: "rgba(183, 18, 0, 0.38)",
 //                hoverBackgroundColor: "rgba(166, 60, 6, 1)"
         }, { // blanks
             label: "Did not need service",
