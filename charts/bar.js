@@ -94,7 +94,7 @@
             }, { // blanks
                 label: "Did not need service",
                 data: [75, 132, 194, 238, 237, 241, 249, 273, 283, 300, 303, 329, 360, 360, 366],
-                backgroundColor: "rgba(184, 197, 214, 1)"
+                backgroundColor: "rgba(221, 221, 221, 0.78)"
             }, { // No
                 label: "Chose not to answer",
                 data: [1, 5, 3, 2, 7, 7, 7, 5, 7, 7, 7, 3, 7, 7, 6],
