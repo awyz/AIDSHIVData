@@ -15,13 +15,14 @@
     <script src="charts/echarts.js"></script>
 
     <!-- Graph sheets -->
-    <script src="plotly-latest.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 
-
-    <script src = "charts/echarts.js"></script>
+    <!-- Data label plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -41,18 +42,730 @@
 
 </head>
 
-<body>
+</sec id="page-top">
 
-<div id="insuranceDesc">
+<style>
+    p {
+        font-family: Arial;
+        text-align: justify;
+        text-align-last: center;
+        font-size: 20px;
+    }
+    #wrapper {
+        overflow-x: hidden;
+    }
+
+</style>
+
+<!-- Navigation -->
+<div id="wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#aboutHIV">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#sociodemographics">SOCIODEMOGRAPHICS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#serviceAccess">SERVICE NEEDS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">GET INVOLVED</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="pdf.html">PDF</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex">
+        <div class="container my-auto">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h1 class="text-uppercase">
+                        <strong>Hawaii HIV & AIDS Needs Assessment</strong>
+                    </h1>
+                    <hr>
+                </div>
+                <div class="col-lg-8 mx-auto" style="background-color: rgba(0,0,0, .5); padding-bottom: 20px"> <br><br>
+                    <p class="text-faded mb-5 rounded" style="text-align: justify; text-align-last: center; font-size: 20px;">
+                        The Hawai`i HIV Needs Assessment was conducted in 2018 in a joint effort between the Hawai'i Health & Harm Reduction Center (formerly CHOW and Life Foundation), the Hawai`i Department of Health, and the University of Hawaii at Mānoa. The purpose of the needs assessment is to shape and inform services for people living with HIV/AIDS (PLWH) in Hawai`i from a social determinants of health perspective. We identify strengths as well as barriers to accessing a variety of social and health services with the goal of improving quality of life for PLWH.
+                    </p>
+                    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#aboutHIV">View Results</a>
+                    <br><br>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="bg-primary" id="aboutHIV">
+        <div class="fluid-container" style="background-color: white">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <br><br>
+                    <h1 class="section-heading"><br><br>About</h1>
+                    <hr class="my-4">
+                    <div class="container"><p style="text-align: center; text-align: justify; text-align-last: center; padding-left: 15%; padding-right: 15%;" class="mb-5;">
+                        The survey was developed by the Hawai'i Health & Harm Reduction Center (HHHRC) and the Hawai`i Department of Health, and promoted by service providers at HHHRC, Hawai`i Island HIV/AIDS Foundation (HIHAF), Malama Pono, and Maui AIDS Foundation. Data were analyzed and visualized by Jack Barile, PhD, Joy Agner, MS, OTR, and Angela Zheng.
+                        <br><br><br><br><br>
+                    </p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End HIV/AIDS intro -->
+
+    <!--Sociodemographics Section-->
+    <section id = "sociodemographics">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 mx-auto text-center">
+                    <h1 class="section-heading text-center">Sociodemographics</h1>
+                    <h4>
+                        <br>
+                        <p>398 PLWHA across O`ahu, Kaua`i, Hawai`i Island, and Maui participated in the survey.</p>
+                        <p style="text-align: center;">Where possible, demographic comparisons are made with the latest <a href="https://health.hawaii.gov/harmreduction/files/2013/05/2015-Epi-Profile.pdf">Hawai`i State Epidemiological Profile</a> to illustrate how representative the needs assessment participants are of the state population of PLWHA.</p>
+                    </h4>
+                    <br>
+
+                    <div class="tab-pane show active" id="methodOfTransmissionTab" role="tabpanel">
+                        <div class="row justify-content-center">
+                            <h2>Method of Transmission</h2>
+                            <div class="container-text">
+                                <p style="padding-left: 10%; padding-right: 10%">There were not notable differences between the needs assessment and the epidemiological profile in method of transmission. For both, by far the most common method of transmission is male to male sexual contact.</p>
+                            </div>
+                            <canvas id="methodOfTransmission"  height="600px" width="1000px"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane show active" id="raceTab" role="tabpanel">
+                        <div class="row justify-content-center">
+                            <h2>Race</h2>
+                            <div class="container-text-discrepancy">
+                                <p style="padding-left: 10%; padding-right: 10%">There were not notable differences in terms of race between the epidemiological survey and the needs assessment. Both showed an overrepresentation of White (23%) and Black/African American PLWHA (2%) compared to the state population, and an underrepresentation of Asians (36%) and people with multiple races (19%) compared to the state population. </p>
+                            </div>
+                            <canvas id="race"  height="600px" width="1000px"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="tab-content mt-3">
+                        <div class="tab-pane show active" id="ageTab" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <h2>Age</h2>
+
+                                <div class="container-text-discrepancy">
+                                    <p style="padding-left: 10%; padding-right: 10%">Individuals who completed the needs assessment tend to be older than the PLWHA included in the epidemiological profile, with a high percentage of the respondents over 55 (58%). This may be reflective of the fact that younger PLWHA are less likely to be engaged in care.</p>
+                                </div>
+
+                                <canvas id="age" height="600px" width="1000px"></canvas>
+                            </div>
+                        </div>
+                        <div class="tab-pane show active" id="caseManagementTab" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <h2>Case Management Location</h2>
+
+                                <div class="container-text">
+                                    <p style="padding-left: 10%; padding-right: 10%">Although the epidemiological profile does not have information on where people receive case management services, it does have information on where people live. Assuming that most people receive case management in the county where they live, the samples are similar in terms of location, with slight overrepresentation of individuals from Hawai`i Island and Kauai, and underrepresentation of individuals in Honolulu County. </p>
+                                </div>
+
+                                <canvas id="caseManagement"  height="600px" width="1000px"></canvas>
+                            </div>
+                        </div>
+                        <div class="tab-pane show active" id="disabilityTab" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <h2>Prevalence of Chronic Conditions</h2>
+                                <div class="container-text">
+                                    <p style="padding-left: 10%; padding-right: 10%">A high proportion of the sample reported concurrent chronic conditions. The most prevalent were heart disease, depression, anxiety and chronic pain.</p>
+                                </div>
+                                <canvas id="disabilities"  height="600px" width="1000px"></canvas>
+                            </div>
+                        </div>
+                        <div class="tab-pane show active" id="drugUseTab" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <h2>Drug Use</h2>
+                                <div class="container-text">
+                                    <p style="padding-left: 10%; padding-right: 10%">The majority of the sample did not report using illicit drugs. Of those who did, marijuana was most common, followed by methamphetamines.</p>
+                                </div>
+                                <canvas id="drugUse"  height="600px" width="1000px"></canvas>
+                            </div>
+                        </div>
+                        <div class="tab-pane show active" id="educationTab" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <h2>Education</h2>
+                                <div class="container-text">
+                                    <p style="padding-left: 10%; padding-right: 10%">The majority of the sample continued their education after high school, and 31% either completed Bachelor’s or graduate degrees. </p>
+                                </div>
+                                <canvas id="education"  height="600px" width="1000px"></canvas>
+                            </div>
+                        </div>
+                        <div class="tab-pane show active" id="incomeTypeTab" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <h2>Income Source</h2>
+                                <div class="container-text">
+                                    <p style="padding-left: 10%; padding-right: 10%">Social security was the most common type of income, indicating that a high percentage of the sample (58%) is living in poverty. Among those that specified “other” income, assistance from family and friends was the most common income source, followed by general assistance. </p>
+                                </div>
+                                <canvas id="incomeType"  height="600px" width="1000px"></canvas>
+                            </div>
+                        </div>
+
+
+                        <div class="tab-pane show active" id="sexualOrientationTab" role="tabpanel">
+                            <div class="row justify-content-center">
+                                <div class="fluid container">
+                                    <h2>Sexual Orientation</h2>
+                                </div>
+
+                                <div class="container-text-discrepancy" style="width: 80%">
+                                    <p style="padding-left: 10%; padding-right: 10%">
+                                        The majority of individuals in the sample were homosexual men.
+                                    </p>
+                                </div>
+                                <canvas id="sexualOrientation"  height="600px" width="1000px"></canvas>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="charts/SociodemographicsBar2.js"></script>
+    <script src="charts/SociodemographicsBar2.2.js"></script>
+
+    <!-- Bar chart of services -->
+    <a name="theBar"></a>
     <br><br>
-    <p><i>What are the main barriers to obtaining insurance?</i></p>
-    <p style="font-size: 20px; font-family: Arial;" align = "center">The top barrier is that many did not know where to obtain insurance.</p>
-    <canvas id = "insuReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
-    <p style="font-size: 14px"><i>Barriers to Obtaining Insurance</i></p>
-    <br><br>
-    <a class="btn btn-outline-danger js-scroll-trigger" href="#theBar" onclick="myFunction('insuranceDesc')">Close</a>
+    <section class="bg-primary" id="serviceAccess">
+        <div class="fluid-container" style="background-color: white">
+            <br><br><br><br><br>
+            <h2 class="section-heading text-center">Services Needed and Ease of Access</h2>
+            <h5 class="text-center">Number of PLWHA Surveyed = 398</h5>
+
+
+            <div class="container" style="text-align: center">
+                <h5>
+                    <br>
+                    Accessing needed services is essential to ensure health and good quality of life for PLWHA. The chart above illustrates the services that people needed in the past year, and also how difficult it was to access those services.
+
+                    By clicking on one of the services, you can see what the main barriers were for those who described accessing the services as “Possible but very difficult” or “Too difficult to access.”
+                    <br>
+                </h5></div>
+
+
+
+            <canvas style="padding-left: 10%; padding-right: 10%;" id="myBarChart"></canvas>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="fluid-container">
+                        <a name="theBox"></a>
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <div class="container">
+                        &nbsp;
+                        <div style="text-align: justify; text-align-last: center;" id="instructions"><p>
+                            <!--nothing-->
+
+                        </div>
+
+                        <script>
+                            // Brings user back to services bar chart
+                            function myFunction(divElement) {
+                                var x = document.getElementById(divElement);
+                                x.style.display = "none";
+                                document.getElementById('instructions').style.display = "block";
+                                window.location.href = "#theBar";
+                            }
+                        </script>
+
+                        <style>
+                            html {
+                                scroll-behavior: smooth;
+                            }
+                        </style>
+
+                        <a name="hivCaseManagement"></a>
+                        <div class="text-center" id="hivDesc">
+                            <br><br>
+                            <h3>Accessing HIV Case Management</h3>
+                            <br>
+                            <p style="text-align: center; text-align: center; font-size: 20px; font-family: Arial;">Nearly everyone in the sample was able to access HIV case management. For those who couldn't, transportation and lack of stable living conditions were primary barriers.</p>
+                            <br>
+                            <h5>Primary Barriers</h5>
+                            <canvas id = "cMReasons" style = "height: 500px; width: 850px"></canvas>
+                            <br><br>
+                        </div>
+                        <script src = "charts/barSubcharts/specificCharts.js"></script>
+
+                        <a name="dental">
+                            <div id="dentalDesc">
+                                <br><br>
+                                <div class="container">
+                                    <div class="row">
+                                        <!--<div class="col-xl-12 mx-auto text-center">-->
+                                        <!--<h2 class="section-heading">Sociodemographic Breakdown</h2>-->
+                                        <!--<br>-->
+                                        <!--<ul class="nav nav-pills nav-justified">-->
+                                        <!--<li class="nav-item pill-1" style="text-align: center">-->
+                                        <!--<a class="nav-link active" data-toggle="tab" href="#barriersTabQ">Barriers</a>-->
+                                        <!--</li>-->
+                                        <!--<li class="nav-item pill-2" style="text-align: center">-->
+                                        <!--<a class="nav-link" data-toggle="tab" href="#ageTabQ">Age</a>-->
+                                        <!--</li>-->
+                                        <!--<li class="nav-item pill-4">-->
+                                        <!--<a class="nav-link" data-toggle="tab" href="#drugUseTabQ">Drugs</a>-->
+                                        <!--</li>-->
+                                        <!--<li class="nav-item pill-5">-->
+                                        <!--<a class="nav-link" data-toggle="tab" href="#educationTabQ">Education</a>-->
+                                        <!--</li>-->
+                                        <!--<li class="nav-item pill-6">-->
+                                        <!--<a class="nav-link" data-toggle="tab" href="#incomeTypeTabQ">Income</a>-->
+                                        <!--</li>-->
+                                        <!--<li class="nav-item pill-7">-->
+                                        <!--<a class="nav-link" data-toggle="tab" href="#methodOfTransmissionTabQ">Method of Transmission</a>-->
+                                        <!--</li>-->
+                                        <!--<li class="nav-item pill-8">-->
+                                        <!--<a class="nav-link" data-toggle="tab" href="#raceTabQ">Race</a>-->
+                                        <!--</li>-->
+                                        <!--<li class="nav-item pill-9">-->
+                                        <!--<a class="nav-link" data-toggle="tab" href="#sexualOrientationTabQ">Sexual Orientation</a>-->
+                                        <!--</li>-->
+                                        <!--</ul>-->
+
+                                        <!--<div class="tab-content mt-3">-->
+                                        <!--<div class="tab-pane fade show active" id="barriersTabQ" role="tabpanel">-->
+                                        <div class="container fluid">
+                                            <h3>Barriers to Dental Care</h3>
+                                        </div>
+                                        <div class="container fluid" style="text-align: center">
+                                            <br><p>A high percentage of participants needed dental care, and 16% of the total sample described it as difficult to access. Primary barriers were cost, waiting time, and that the service wasn't available.</p><br>
+                                        </div>
+                                        <canvas id="denReasons" style="height: 600px; width: 1500px;"></canvas>
+                                        <div class="container" style="text-align: center;">
+                                        </div>
+                                    </div>
+                                    <!--</div>-->
+                                    <!--<div class="tab-pane fade" id="ageTabQ" role="tabpanel">-->
+                                    <!--<div class="row justify-content-center">-->
+                                    <!--<p><i>Does age affect availability of dental services?<br><br></i></p>-->
+                                    <!--<p>Patients ages 25-34 had the most difficulty accessing dental services</p>-->
+                                    <!--<canvas id="dentalAge" style="height: 600px; width: 1500px;"></canvas>-->
+                                    <!--<p style="text-align: center; font-size: 14px"><i>Age vs. Dental Care</i></p>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+
+                                    <!--<div class="tab-pane fade" id="drugUseTabQ" role="tabpanel">-->
+                                    <!--<div class="row justify-content-center">-->
+                                    <!--<p><i>Does drug use affect availability of dental services?</i></p><br>-->
+                                    <!--<p>The majority of the respondents have used meth in the past 12 months.</p>-->
+                                    <!--<canvas id="dentalDrugUse" style="height: 600px; width: 1500px;"></canvas>-->
+                                    <!--<p style="text-align: center; font-size: 14px"><i>Drug Use vs. Dental Care</i></p>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+
+                                    <!--<div class="tab-pane fade" id="educationTabQ" role="tabpanel">-->
+                                    <!--<div class="row justify-content-center">-->
+                                    <!--<p><i>Does education affect availability of dental services?</i></p>-->
+                                    <!--<p>The majority of the respondents' highest level of education was "some college".</p>-->
+                                    <!--<canvas id="dentalEducation" style="height: 600px; width: 1500px;"></canvas>-->
+                                    <!--<p style="text-align: center; font-size: 14px"><i>Education vs. Dental Care</i></p>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+
+                                    <!--<div class="tab-pane fade" id="incomeTypeTabQ" role="tabpanel">-->
+                                    <!--<div class="row justify-content-center">-->
+                                    <!--<p><i>Does income affect availability of dental services?<br><br></i></p><br>-->
+                                    <!--<p>The main source of income for these respondents is SSI/SSDI.</p>-->
+                                    <!--<canvas id="dentalIncomeType" style="height: 600px; width: 1500px;"></canvas>-->
+                                    <!--<p style="text-align: center; font-size: 14px"><i>Income vs. Dental Care</i></p>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+
+                                    <!--<div class="tab-pane fade" id="methodOfTransmissionTabQ" role="tabpanel">-->
+                                    <!--<div class="row justify-content-center">-->
+                                    <!--<p><i>Does method of HIV transmission affect availability of dental services?</i></p>-->
+                                    <!--<p>The majority of respondents cited "sex with men" as the most likely way they recieved HIV.</p>-->
+                                    <!--<canvas id="dentalMoT" style="height: 600px; width: 1500px;"></canvas>-->
+                                    <!--<p style="text-align: center; font-size: 14px"><i>Method of HIV Transmission vs. Dental Care</i></p>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+
+                                    <!--<div class="tab-pane fade" id="raceTabQ" role="tabpanel">-->
+                                    <!--<div class="row justify-content-center">-->
+                                    <!--<p><i>Does ethnicity affect availability of dental services?</i></p>-->
+                                    <!--<p>The majority of the respondents that found it difficult to access alternative therapy were an other race.</p>-->
+                                    <!--<canvas id="dentalEthnicity" style="height: 600px; width: 1500px;"></canvas>-->
+                                    <!--<p style="text-align: center; font-size: 14px"><i>Ethnicity vs. Dental Care</i></p>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+
+                                    <!--<div class="tab-pane fade" id="sexualOrientationTabQ" role="tabpanel">-->
+                                    <!--<div class="row justify-content-center">-->
+                                    <!--<p><i>Does sexual orientation affect availability of dental services?</i></p>-->
+                                    <!--<p>There seems to be a majority of homosexual male respondents who find it difficult to access alternative therapy.</p>-->
+                                    <!--<canvas id="dentalSexualOrientation" style="height: 600px; width: 1500px;"></canvas>-->
+                                    <!--<p style="text-align: center; font-size: 14px"><i>Sexual Orientation vs. Dental Care</i></p>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+
+                                    <!--</div>-->
+                                </div>
+                            </div>
+                            <br><br>
+                    </div>
+                    </a>
+                    <script src = "charts/barSubcharts/specificCharts7.js"></script>
+
+                    <a name="counseling"></a>
+                    <div id="counselingDesc">
+                        <br><br>
+                        <h3>Accessing Counseling</h3>
+                        <br><p style="text-align: center; font-size: 20px; font-family: Arial;">The top barrier to counseling was finding out how to get it. </p><br>
+                        <h5>Primary Barriers</h5>
+                        <canvas id = "counReasons" style = "height:500px; width:850px"></canvas>
+                        <br><br>
+                    </div>
+                    <script src = "charts/barSubcharts/specificCharts10.js"></script>
+
+                    <a name="info"></a>
+                    <div id="infoDesc">
+                        <br><br>
+                        <h3>Accessing Information</h3>
+                        <br><p style="text-align: center; font-size: 20px; font-family: Arial;">39% of participants wanted information about HIV and AIDS. Fortunately, most found it easy or possible with some work to find the information they needed.</p><br>
+                        <h5>Primary Barriers</h5>
+                        <canvas id = "infoReasons" style = "height:500px; width:850px"></canvas>
+                        <br><br>
+                    </div>
+                    <script src = "charts/barSubcharts/specificCharts2.js"></script>
+
+                    <!--Alternative therapy multiple graphs-->
+                    <a name="therapy"></a>
+                    <div id="altTherapyDesc">
+                        <br><br>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-12 mx-auto text-center">
+                                    <!--<h2 class="section-heading">Sociodemographic Breakdown</h2>-->
+
+                                    <!--<br>-->
+                                    <!--<ul class="nav nav-pills nav-justified">-->
+                                    <!--<li class="nav-item pill-1" style="text-align: center">-->
+                                    <!--<a class="nav-link active" data-toggle="tab" href="#barriersTabQ2">Barriers</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="nav-item pill-2" style="text-align: center">-->
+                                    <!--<a class="nav-link" data-toggle="tab" href="#ageTabQ2">Age</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="nav-item pill-4">-->
+                                    <!--<a class="nav-link" data-toggle="tab" href="#drugUseTabQ2">Drugs</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="nav-item pill-5">-->
+                                    <!--<a class="nav-link" data-toggle="tab" href="#educationTabQ2">Education</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="nav-item pill-6">-->
+                                    <!--<a class="nav-link" data-toggle="tab" href="#incomeTypeTabQ2">Income</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="nav-item pill-7">-->
+                                    <!--<a class="nav-link" data-toggle="tab" href="#methodOfTransmissionTabQ2">Method of Transmission</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="nav-item pill-8">-->
+                                    <!--<a class="nav-link" data-toggle="tab" href="#raceTabQ2">Race</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="nav-item pill-9">-->
+                                    <!--<a class="nav-link" data-toggle="tab" href="#sexualOrientationTabQ2">Sexual Orientation</a>-->
+                                    <!--</li>-->
+                                    <!--</ul>-->
+
+                                    <div class="tab-content mt-3">
+                                        <div class="tab-pane fade show active" id="barriersTabQ2" role="tabpanel">
+                                            <div class="row justify-content-center">
+                                                <h3>Alternative Therapy</h3>
+                                                <br><p style="text-align: center; font-size: 20px; font-family: Arial;">Alternative therapy (including acupuncture, chiropractic care, massage therapy, etc.) was the 6th most sought out service in the needs assessment, and the most difficult to access. 20% of the total sample described it as very difficult or too difficult to access. The most common barrier was not being able to afford it.</p><br>
+                                                <h5>Primary Barriers</h5>
+                                                <canvas id="therReasons" style="height: 600px; width: 1500px;"></canvas>
+                                            </div>
+                                        </div>
+
+                                        <!--<div class="tab-pane fade" id="ageTabQ2" role="tabpanel">-->
+                                        <!--<div class="row justify-content-center">-->
+                                        <!--<p><i>Does age affect access to alternative therapy?</i></p>-->
+                                        <!--<p style="text-align: center; font-size: 20px; font-family: Arial;">The age group that has the most respondents who answered "very difficult" or "too difficult" are those aged 55 and up.</p>-->
+                                        <!--<canvas id="altTherapyAge" style="height: 600px; width: 1500px;"></canvas>-->
+                                        <!--<p style="text-align: center; font-size: 14px"><i>Age vs. Alternative Therapy</i></p>-->
+                                        <!--</div>-->
+                                        <!--</div>-->
+
+                                        <!--<div class="tab-pane fade" id="drugUseTabQ2" role="tabpanel">-->
+                                        <!--<div class="row justify-content-center">-->
+                                        <!--<p><i>Does drug use affect access to alternative therapy?</i></p>-->
+                                        <!--<p style="text-align: center; font-size: 20px; font-family: Arial;">The majority of the respondents do not use any illegal substances.</p>-->
+                                        <!--<canvas id="altTherapyDrugUse" style="height: 600px; width: 1500px;"></canvas>-->
+                                        <!--<p style="text-align: center; font-size: 14px"><i>Drug Use vs. Alternative Therapy</i></p>-->
+                                        <!--</div>-->
+                                        <!--</div>-->
+
+                                        <!--<div class="tab-pane fade" id="educationTabQ2" role="tabpanel">-->
+                                        <!--<div class="row justify-content-center">-->
+                                        <!--<p><i>Does education affect access to alternative therapy?</i></p>-->
+                                        <!--<p style="text-align: center; font-size: 20px; font-family: Arial;">The majority of the respondents' highest level of education was "some college".</p>-->
+                                        <!--<canvas id="altTherapyEducation" style="height: 600px; width: 1500px;"></canvas>-->
+                                        <!--<p style="text-align: center; font-size: 14px"><i>Education vs. Alternative Therapy</i></p>-->
+                                        <!--</div>-->
+                                        <!--</div>-->
+
+                                        <!--<div class="tab-pane fade" id="incomeTypeTabQ2" role="tabpanel">-->
+                                        <!--<div class="row justify-content-center">-->
+                                        <!--<p><i>Does income affect access to alternative therapy?</i></p>-->
+                                        <!--<p style="text-align: center; font-size: 20px; font-family: Arial;">The main source of income for these respondents is other.</p>-->
+                                        <!--<canvas id="altTherapyIncomeType" style="height: 600px; width: 1500px;"></canvas>-->
+                                        <!--<p style="text-align: center; font-size: 14px"><i>Income vs. Alternative Therapy</i></p>-->
+                                        <!--</div>-->
+                                        <!--</div>-->
+
+                                        <!--<div class="tab-pane fade" id="methodOfTransmissionTabQ2" role="tabpanel">-->
+                                        <!--<div class="row justify-content-center">-->
+                                        <!--<p><i>Does method of transmission affect access to alternative therapy?</i></p>-->
+                                        <!--<p style="text-align: center; font-size: 20px; font-family: Arial;">The majority of respondents cited "sex with men" as the most likely way they received HIV.</p>-->
+                                        <!--<canvas id="altTherapyMoT" style="height: 600px; width: 1500px;"></canvas>-->
+                                        <!--<p style="text-align: center; font-size: 14px"><i>Method of Transmission vs. Alternative Therapy</i></p>-->
+                                        <!--</div>-->
+                                        <!--</div>-->
+
+                                        <!--<div class="tab-pane fade" id="raceTabQ2" role="tabpanel">-->
+                                        <!--<div class="row justify-content-center">-->
+                                        <!--<p><i>Does ethnicity affect access to alternative therapy?</i></p>-->
+                                        <!--<p style="text-align: center; font-size: 20px; font-family: Arial;">The majority of the respondents that found it difficult to access alternative therapy were White.</p>-->
+                                        <!--<canvas id="altTherapyEthnicity" style="height: 600px; width: 1500px;"></canvas>-->
+                                        <!--<p style="text-align: center; font-size: 14px"><i>Ethnicity vs. Alternative Therapy</i></p>-->
+                                        <!--</div>-->
+                                        <!--</div>-->
+
+                                        <!--<div class="tab-pane fade" id="sexualOrientationTabQ2" role="tabpanel">-->
+                                        <!--<div class="row justify-content-center">-->
+                                        <!--<p><i>Does sexual orientation affect access to alternative therapy?</i></p>-->
+                                        <!--<p style="text-align: center; font-size: 20px; font-family: Arial;">There seems to be a majority of homosexual males who find it difficult to access alternative therapy.</p>-->
+                                        <!--<canvas id="altTherapySexualOrientation" style="height: 600px; width: 1500px;"></canvas>-->
+                                        <!--<p style="text-align: center; font-size: 14px"><i>Sexual Orientation vs. Alternative Therapy</i></p>-->
+                                        <!--</div>-->
+                                        <!--</div>-->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <br><br>
+
+                    </div>
+                    <script src ="charts/barSubcharts/specificCharts17.js"></script>
+
+                    <a name="assist"></a>
+                    <div id="homeAidDesc">
+                        <br><br>
+                        <h3>Accessing Assistance for Daily Self Care</h3>
+                        <br><p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">The top barrier was that the service was unavailable.</p><br>
+                        <h5>Primary Barriers</h5>
+                        <canvas id = "disReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
+                        <br><br>
+                    </div>
+                    <script src = "charts/barSubcharts/specificCharts3.js"></script>
+
+                    <div id="insuranceDesc">
+                        <br><br>
+                        <h3>Obtaining Insurance</h3>
+                        <br>
+                        <p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">30% of the sample needed help enrolling in insurance coverage. 91% of those who needed help enrolling in insurance found it easy or possible with some work. Primary barriers for those who found it difficult are below.</p>
+                        <br>
+                        <h5>Primary Barriers</h5>
+                        <canvas id = "insuReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
+                        <br><br>
+                    </div>
+                    <script src = "charts/barSubcharts/specificCharts5.js"></script>
+
+
+                    <a name="medical"></a>
+                    <div id="medDesc">
+                        <br><br>
+                        <h3>Paying Medical Costs</h3>
+                        <br>
+                        <p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">50% of participants needed help paying for medical bills. Primary barriers for those who found it difficult included knowing where to get assistance and qualifying for assistance.</p>
+                        <br>
+                        <h5>Primary Barriers</h5>
+                        <canvas id = "medcReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
+                        <br><br>
+                    </div>
+                    <script src = "charts/barSubcharts/specificCharts4.js"></script>
+
+                    <a name="abuse"></a>
+                    <div id="abuseDesc">
+                        <br><br>
+                        <h3>Accessing Help With Addiction/Drug Abuse</h3>
+                        <br><p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">The top barrier to help with addiction and drug abuse was that it was unavailable.</p><br>
+                        <h5>Primary Barriers</h5>
+                        <canvas id = "abusReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
+                        <br><br>
+                    </div>
+                    <script src = "charts/barSubcharts/specificCharts8.js"></script>
+
+                    <a name="social"></a>
+                    <div id="socialDesc">
+                        <br><br>
+                        <h3>Accessing Social Support</h3>
+                        <br><p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">23% of the sample sought out social support services in the past year. The majority of those who sought out services were able to access them. Primary barriers for those who found it difficult were knowing where to get social support services or that they were not available.</p><br>
+                        <br>
+                        <h5>Primary Barriers</h5>
+                        <canvas id = "sociReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
+                        <br><br>
+                    </div>
+                    <script src = "charts/barSubcharts/specificCharts9.js"></script>
+
+                    <a name="job"></a>
+                    <div id="jobDesc">
+                        <br><br>
+                        <h3>Accessing Employment</h3>
+                        <br>
+                        <p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">The top barrier to accessing and having a job is that it was unavailable.</p>
+                        <br>
+                        <h5>Primary Barriers</h5>
+                        <canvas id = "emplReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
+                        <br><br>
+                    </div>
+                    <script src = "charts/barSubcharts/specificCharts11.js"></script>
+
+
+                    <a name="accessEducation"></a>
+                    <div id="eduDesc">
+                        <br><br>
+                        <h3>Accessing Education</h3>
+                        <br>
+                        <p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">The top barrier to obtaining an education was that it was unavailable.</p>
+                        <br>
+                        <h5>Primary Barriers</h5>
+                        <canvas id = "eduReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
+                        <br><br>
+                    </div>
+                    <script src = "charts/barSubcharts/specificCharts12.js"></script>
+
+                    <a name="food"></a>
+                    <div id="foodDesc">
+                        <br><br>
+                        <h3>Accessing Food Assistance</h3>
+                        <br>
+                        <p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">
+                            Only 11% of the participants who needed help paying for food found it easy to access food assistance. 19% described it as possible with some work, and 10% found it very difficult or too difficult to access. Primary barriers were not qualifying for food assistance, the service wasn't available, or too long of a wait.
+                        </p>
+                        <br>
+                        <h5>Primary Barriers</h5>
+                        <canvas id = "fooReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
+                        <br><br>
+                    </div>
+                    <script src = "charts/barSubcharts/specificCharts13.js"></script>
+
+                    <a name="housing"></a>
+                    <div id="housingDesc">
+                        <br><br>
+                        <h3>Accessing Housing Assistance</h3>
+                        <br>
+                        <p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">35% of the participants needed housing services in the past year. Of the total sample, the majority of those (75%) found it easy or possible with some work to access housing services. Among those who found it difficult, wait time and lack of housing services were primary barriers.</p>
+                        <br>
+                        <h5>Primary Barriers</h5>
+                        <canvas id = "housReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
+                        <br><br>
+                    </div>
+                    <script src = "charts/barSubcharts/specificCharts14.js"></script>
+
+                    <a name="bills"></a>
+                    <div id="billsDesc">
+                        <h3>Accessing Bill Assistance</h3>
+                        <br><p style="text-align: center; font-size: 20px; font-family: Arial;" align = "center">8% of the total sample needed help paying their bills, and found it very difficult or too difficult to access. Primary barriers were that the service was not available, the participants didn't know where to get it, or long wait times.</p>
+                        <br>
+                        <h5>Primary Barriers</h5>
+                        <canvas id = "bilReasons" style = "height: 600px; width: 800px;" align = "center"></canvas>
+                        <br><br>
+                    </div>
+                    <script src = "charts/barSubcharts/specificCharts15.js"></script>
+
+                    &nbsp;
+                </div>            </div>
+        </div>
+        <br><br>
 </div>
-<script src = "charts/barSubcharts/specificCharts5.js"></script>
+</section>
+
+<section class="bg-primary" id="contact">
+    <div class="fluid-container" style="background-color: white">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="section-heading"><br><br>Get Involved</h1>
+                <hr class="my-4">
+                <p>It is possible to live a long and healthy life despite a diagnosis of HIV, but it takes a community effort to reduce stigma and improve essential services. If you would like to get involved in supporting services for people with HIV/AIDS in Hawai`i by volunteering or providing donations, or if you interested in prevention services, such as PrEP, please contact the following organizations. </p><br><br>
+
+                <div class="row">
+                    <div class="col-6">
+                        <a href="https://www.hhhrc.org">
+                            <img style="width: 150px; height: 100px;" src="https://static.wixstatic.com/media/cde855_bed7208fb31144d9829958dc8cb2fd9d~mv2.png/v1/fill/w_495,h_153,al_c,q_80,usm_0.66_1.00_0.01/cde855_bed7208fb31144d9829958dc8cb2fd9d~mv2.webp">
+                            <br><br>
+                            Hawai`i Health Harm Reduction Center <br>(Oahu)
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href=" https://mphskauai.org">
+                            <img style="width: 150px; height: 100px;" src="https://mphskauai.org/wp-content/uploads/2017/06/MPHS-PNG300.png">
+                            <br><br>
+                            Malama Pono <br>(Kauai)
+                        </a>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col-6">
+                        <a href="http://hihaf.org">
+                            <img style="width: 150px; height: 100px;" src="img/b9146dac413cff1226ff16e8799e2f9d.png">
+                            <br><br>
+                            Hawai`i Island HIV/AIDS Foundation <br>(Hawai`i Island)
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a style="width: 150px; height: 100px;" href="http://www.mauiaids.org">
+                            <img src="http://www.mauiaids.org/images/logo3.png">
+                            <br><br>
+                            Maui AIDS Foundation <br>(Maui)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+</section>
+</div>
+
+<script src="charts/barPDF.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/creative.min.js"></script>
 
 </body>
 </html>
