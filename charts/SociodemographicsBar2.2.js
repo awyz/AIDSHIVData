@@ -4,8 +4,11 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
     if(ifEpiProfileData) epiTitleString = 'Hawai`i State Epidemiological Profile / People Surveyed: 2,519'
 
     var options = {
+
         plugins: {
+            color: '#000',
             datalabels: {
+                color: '#000',
                 display: function(context) {
                     return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
                 },

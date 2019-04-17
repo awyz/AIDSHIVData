@@ -5,7 +5,9 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
 
     var options = {
         plugins: {
+            color: '#000',
             datalabels: {
+                color: '#000',
                 formatter: function(value, context) {
                     return Math.round(value*100) + '%';
                 },

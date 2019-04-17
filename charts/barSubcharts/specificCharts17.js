@@ -35,6 +35,7 @@ var myChart = new Chart(altTherapyBarriersReason, {
 
     options: {
         plugins: {
+            color: '#000',
             datalabels: {
                 display: function(context) {
                     return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
@@ -94,6 +95,7 @@ var myChart = new Chart(altTherapyEthnicity, {
 
     options: {
         plugins: {
+            color: '#000',
             datalabels: {
                 display: function(context) {
                     return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
@@ -137,6 +139,7 @@ var myChart = new Chart(altTherapyAge, {
     },
     options: {
         plugins: {
+            color: '#000',
             datalabels: {
                 display: function(context) {
                     return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
@@ -181,6 +184,7 @@ var myChart = new Chart(altTherapyEducation, {
 
     options: {
         plugins: {
+            color: '#000',
             datalabels: {
                 display: function(context) {
                     return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
@@ -220,6 +224,7 @@ var myChart = new Chart(altTherapyIncome, {
     },
     options: {
         plugins: {
+            color: '#000',
             datalabels: {
                 display: function(context) {
                     return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
@@ -266,6 +271,7 @@ var myChart = new Chart(altTherapySexualOrientation, {
     },
     options: {
         plugins: {
+            color: '#000',
             datalabels: {
                 display: function(context) {
                     return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
@@ -313,6 +319,7 @@ var myChart = new Chart(altTherapyDrugs, {
 
     options: {
         plugins: {
+            color: '#000',
             datalabels: {
                 display: function(context) {
                     return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
@@ -360,6 +367,7 @@ var myChart = new Chart(altTherapyMoT, {
 
     options: {
         plugins: {
+            color: '#000',
             datalabels: {
                 display: function(context) {
                     return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...

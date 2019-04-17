@@ -30,6 +30,7 @@ var stackedBar = new Chart(insuranceBarriersReason, {
     },
     options: {
         plugins: {
+            color: '#000',
             datalabels: {
                 display: function(context) {
                     return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
