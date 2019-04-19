@@ -85,9 +85,6 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
                             return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel * 2519 / 100) + " (" + Math.ceil(tooltipItems.xLabel) + "%)";
                         }
                     }
-                    // afterLabel: function (tooltipItems, data) {
-                    //     return  " (" + Math.ceil(tooltipItems.xLabel) + "%)";
-                    // },
                 }
             }
         }

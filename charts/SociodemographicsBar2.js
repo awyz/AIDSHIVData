@@ -78,18 +78,36 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
         tooltips: {
             callbacks: {
                 label: function (tooltipItems, data) {
+
+
+
+
                     if (!percentage) {
+
+
+
+
                         if (tooltipItems.datasetIndex === 0) {
                             return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel) + " (" + Math.ceil(tooltipItems.xLabel * 100 / 398) + "%)";
-                            ;
                         } else {
                             return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel) + " (" + Math.ceil(tooltipItems.xLabel * 100 / 2519) + "%)";
                         }
                     } else {
+
+
+
+
                         if (tooltipItems.datasetIndex === 0) {
-                            return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel * 398 /100) + " (" + Math.ceil(tooltipItems.xLabel) + "%)";
+
+                            console.log("nani4: " + tooltipItems.xLabel);
+
+                            return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel * 398) + " (" + Math.ceil(tooltipItems.xLabel * 100 ) + "%)";
                         } else {
-                            return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel * 2519 / 100) + " (" + Math.ceil(tooltipItems.xLabel) + "%)";
+
+                            console.log("nani5: " + tooltipItems.xLabel);
+
+
+                            return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel * 2519) + " (" + Math.ceil(tooltipItems.xLabel * 100 ) + "%)";
                         }
                     }
                     // afterLabel: function (tooltipItems, data) {
