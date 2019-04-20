@@ -61,6 +61,8 @@
             }
         },
         tooltips: {
+            titleFontSize: 18,
+            bodyFontSize: 16,
              callbacks: {
                  label: function(tooltipItems, data) {
                      var percentage = Math.round((tooltipItems.xLabel * 100) / 398);

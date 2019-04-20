@@ -76,6 +76,8 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
 
         },
         tooltips: {
+            titleFontSize: 18,
+            bodyFontSize: 16,
             callbacks: {
                 label: function (tooltipItems, data) {
 
@@ -88,9 +90,9 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
 
 
                         if (tooltipItems.datasetIndex === 0) {
-                            return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel) + " (" + Math.ceil(tooltipItems.xLabel * 100 / 398) + "%)";
+                            return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel) + " (" + Math.round(tooltipItems.xLabel * 100 / 398) + "%)";
                         } else {
-                            return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel) + " (" + Math.ceil(tooltipItems.xLabel * 100 / 2519) + "%)";
+                            return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel) + " (" + Math.round(tooltipItems.xLabel * 100 / 2519) + "%)";
                         }
                     } else {
 
@@ -101,13 +103,13 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
 
                             console.log("nani4: " + tooltipItems.xLabel);
 
-                            return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel * 398) + " (" + Math.ceil(tooltipItems.xLabel * 100 ) + "%)";
+                            return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel * 398) + " (" + Math.round(tooltipItems.xLabel * 100 ) + "%)";
                         } else {
 
                             console.log("nani5: " + tooltipItems.xLabel);
 
 
-                            return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel * 2519) + " (" + Math.ceil(tooltipItems.xLabel * 100 ) + "%)";
+                            return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel * 2519) + " (" + Math.round(tooltipItems.xLabel * 100 ) + "%)";
                         }
                     }
                     // afterLabel: function (tooltipItems, data) {
