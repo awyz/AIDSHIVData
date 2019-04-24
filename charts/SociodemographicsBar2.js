@@ -12,7 +12,7 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
                     return Math.round(value*100) + '%';
                 },
                 display: function(context) {
-                    return context.dataset.data[context.dataIndex] >=.01; // or >= 1 or ...
+                    return context.dataset.data[context.dataIndex] >=.02; // or >= 1 or ...
                 },
                 round: function(context) {
                     return Math.ceil(context.dataset.data[context.dataIndex]);
@@ -80,18 +80,16 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
             bodyFontSize: 16,
             callbacks: {
                 label: function (tooltipItems, data) {
-
-
-
-
                     if (!percentage) {
-
-
-
-
                         if (tooltipItems.datasetIndex === 0) {
+                            if ( (Math.round(tooltipItems.xLabel * 100 / 398) <= 1) ) {
+                                return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel) + " ( < 1%)";
+                            }
                             return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel) + " (" + Math.round(tooltipItems.xLabel * 100 / 398) + "%)";
                         } else {
+                            if ( (Math.round(tooltipItems.xLabel * 100 / 2519)) <= 1 ) {
+                                return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel) + " ( < 1%)";
+                            }
                             return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel) + " (" + Math.round(tooltipItems.xLabel * 100 / 2519) + "%)";
                         }
                     } else {
@@ -100,15 +98,14 @@ function createOptions(yAxisLabel, ifEpiProfileData, chart, xAxisLabel, percenta
 
 
                         if (tooltipItems.datasetIndex === 0) {
-
-                            console.log("nani4: " + tooltipItems.xLabel);
-
+                            if (Math.round(tooltipItems.xLabel * 100 ) <= 1) {
+                                return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel * 398) + " ( < 1%)";
+                            }
                             return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel * 398) + " (" + Math.round(tooltipItems.xLabel * 100 ) + "%)";
                         } else {
-
-                            console.log("nani5: " + tooltipItems.xLabel);
-
-
+                            if ( (Math.round(tooltipItems.xLabel * 100 )) <= 1) {
+                                return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel * 2519) + " ( < 1%)";
+                            }
                             return data.datasets[tooltipItems.datasetIndex].label + ": " + Math.round(tooltipItems.xLabel * 2519) + " (" + Math.round(tooltipItems.xLabel * 100 ) + "%)";
                         }
                     }
@@ -255,12 +252,13 @@ var ctx = raceChart.getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'horizontalBar',
     data: {
-        labels: ['White', ['Native Hawaiian/', 'Pacific Islander'], 'African American', 'Asian', ['American Indian/', 'Alaskan Native'], 'Hispanic',
-            'Multiple Races', 'Other', 'Prefer not to Answer'],
+        //     'Multiple Races', 'Other', 'Prefer not to Answer'],
+        labels: ['White', 'Multiple Race', 'Asian', 'OPI', 'Hispanic', 'African American', 'Other' ,'Prefer not to Answer', ['American Indian/', 'Alaskan Native']],
+        // labels: ['White', ['Native Hawaiian/', 'Pacific Islander'], 'African American', 'Asian', ['American Indian/', 'Alaskan Native'], 'Hispanic',
         datasets: [
             {
                 label: 'Needs Assessment (n=398)',
-                data: [.432, .0146, .025, .113, .005, .048, .216, .035, .008],
+                data: [.432, .216, .131, .126, .048, .025, .010, .008, .005],
                 // data: [172, 58, 10, 45, 2, 19, 86, 14, 3],
                 backgroundColor: [
                     'rgba(237, 119, 104, 0.4)',
@@ -275,7 +273,8 @@ var myChart = new Chart(ctx, {
                 ]},
             {
                 label: 'Epidemiological Profile (n=2,519)',
-                data: [.494, .094, .066, .154, .002, .10, .085, .004, 0],
+                data: [.494, .085, .154, .094, .10, .066, .004, 0, .002],
+                // data: [.494, .094, .066, .154, .002, .10, .085, .004, 0],
                 // data: [197, 37, 26, 61, 1, 40, 32, 2, 0],
                 backgroundColor: [
                     'rgba(118, 238, 206, 0.3)',
