@@ -253,7 +253,7 @@ var myChart = new Chart(ctx, {
     type: 'horizontalBar',
     data: {
         //     'Multiple Races', 'Other', 'Prefer not to Answer'],
-        labels: ['White', 'Multiple Race', 'Asian', 'OPI', 'Hispanic', 'African American', 'Other' ,'Prefer not to Answer', ['American Indian/', 'Alaskan Native']],
+        labels: ['White', 'Multiple Race', 'Asian', ['Native Hawaiian/', 'Pacific Islander'], 'Hispanic', 'African American', 'Other' ,'Prefer not to Answer', ['American Indian/', 'Alaskan Native']],
         // labels: ['White', ['Native Hawaiian/', 'Pacific Islander'], 'African American', 'Asian', ['American Indian/', 'Alaskan Native'], 'Hispanic',
         datasets: [
             {
@@ -291,6 +291,39 @@ var myChart = new Chart(ctx, {
     },
     options: createOptions('Race', true, 'Race', 'Percentage of Sample', true)
 });
+
+// Race chart that sums up to > 100%
+var totalRaceChart = document.getElementById('totalRace');
+var ctx = totalRaceChart.getContext('2d');
+
+var myChart2 = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: {
+        //     'Multiple Races', 'Other', 'Prefer not to Answer'],
+        labels: ['White', 'Multiple Race', 'Asian', ['Native Hawaiian/', 'Pacific Islander'], 'Hispanic', 'African American', 'Other' ,'Prefer not to Answer', ['American Indian/', 'Alaskan Native']],
+        // labels: ['White', ['Native Hawaiian/', 'Pacific Islander'], 'African American', 'Asian', ['American Indian/', 'Alaskan Native'], 'Hispanic',
+        datasets: [
+            {
+                label: 'Needs Assessment (n=398)',
+                data: [.558, .216, .291, .256, .103, .035, .035, .008, .045],
+                // data: [172, 58, 10, 45, 2, 19, 86, 14, 3],
+                backgroundColor: [
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                ]}
+        ]
+    },
+    options: createOptions('Race', true, 'Race', 'Percentage of Sample', true)
+});
+
+
 
 
 
