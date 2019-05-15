@@ -300,14 +300,22 @@ var myChart2 = new Chart(ctx, {
     type: 'horizontalBar',
     data: {
         //     'Multiple Races', 'Other', 'Prefer not to Answer'],
-        labels: ['White', 'Multiple Race', 'Asian', ['Native Hawaiian/', 'Pacific Islander'], 'Hispanic', 'African American', 'Other' ,'Prefer not to Answer', ['American Indian/', 'Alaskan Native']],
-        // labels: ['White', ['Native Hawaiian/', 'Pacific Islander'], 'African American', 'Asian', ['American Indian/', 'Alaskan Native'], 'Hispanic',
+        labels: ['Prefer Not To Answer', 'Native Hawaiian', 'White', 'Black', 'Latino', ['American Indian/', 'Alaskan Native'], 'Chinese', 'Filipino', 'Japanese', 'Korean', 'Vietnam', 'Guam', 'Samoan', 'Other Pacific Islander', 'Other Asian', 'Other Race'],
         datasets: [
             {
                 label: 'Needs Assessment (n=398)',
-                data: [.558, .216, .291, .256, .103, .035, .035, .008, .045],
+                data: [3/398, 34/398, 172/398, 10/398, 19/398, 2/398, 4/398, 18/398, 18/398, 3/398, 2/398, 3/398, 5/398, 8/398, 7/398, 4/398],
                 // data: [172, 58, 10, 45, 2, 19, 86, 14, 3],
                 backgroundColor: [
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
+                    'rgba(237, 119, 104, 0.4)',
                     'rgba(237, 119, 104, 0.4)',
                     'rgba(237, 119, 104, 0.4)',
                     'rgba(237, 119, 104, 0.4)',
