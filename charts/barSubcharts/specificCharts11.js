@@ -35,6 +35,7 @@ var myChart = new Chart(employmentBarriersReason, {
         plugins: {
             color: '#000',
             datalabels: {
+                color: '#000',
                 display: function(context) {
                     return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
                 }
@@ -56,7 +57,12 @@ var myChart = new Chart(employmentBarriersReason, {
 
 
             }]
-        }
+        },
+        'legend': {
+            labels: {
+                fontColor: '#000'
+            },
+        },
     }});
 
 

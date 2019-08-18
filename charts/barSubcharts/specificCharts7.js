@@ -37,6 +37,7 @@ var myChart = new Chart(dentalBarriersReason, {
         plugins: {
             color: '#000',
             datalabels: {
+                color: '#000',
                 display: function(context) {
                     return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
                 }
@@ -57,5 +58,10 @@ var myChart = new Chart(dentalBarriersReason, {
                 stacked: true,
                 ticks: {fontColor: 'black'}
             }]
-        }
+        },
+        'legend': {
+            labels: {
+                fontColor: '#000'
+            },
+        },
     }});

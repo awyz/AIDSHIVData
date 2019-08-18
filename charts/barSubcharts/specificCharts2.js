@@ -24,6 +24,7 @@ var stackedBar = new Chart(informationBarriersReason, {
         plugins: {
             color: '#000',
             datalabels: {
+                color: '#000',
                 display: function(context) {
                     return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
                 }
@@ -43,7 +44,12 @@ var stackedBar = new Chart(informationBarriersReason, {
                 stacked: true,
                 ticks: {fontColor: 'black'}
             }]
-        }
+        },
+        'legend': {
+            labels: {
+                fontColor: '#000'
+            },
+        },
     }
 });
 

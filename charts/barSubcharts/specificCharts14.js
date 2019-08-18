@@ -37,6 +37,7 @@ var myChart = new Chart(housingBarriersReason, {
         plugins: {
             color: '#000',
             datalabels: {
+                color: '#000',
                 display: function(context) {
                     return context.dataset.data[context.dataIndex] !== 0; // or >= 1 or ...
                 }
@@ -57,7 +58,12 @@ var myChart = new Chart(housingBarriersReason, {
                 ticks: {fontColor: 'black'}
 
             }]
-        }
+        },
+        'legend': {
+            labels: {
+                fontColor: '#000'
+            },
+        },
     }});
 
 //top barrier too long of a wait

@@ -57,8 +57,8 @@
             display: true,
             position: 'right',
             labels: {
-//                fontSize: 18
-            }
+                fontColor: '#000'
+            },
         },
         tooltips: {
             titleFontSize: 18,
@@ -81,7 +81,7 @@
             datasets: [{ // Easy
                 label: "Easy",
                 data: [277, 134, 99, 120, 44, 29, 48, 62, 29, 55, 54, 28, 5, 3, 12],
-                backgroundColor: "rgba(56, 178, 0, 0.38)",
+                backgroundColor: "rgba(56, 178, 0, 0.5)",
             },{ // Possible but required some work
                 label: "Possible with some work",
                 data: [39, 67, 73, 32, 74, 43, 58, 47, 47, 24, 15, 26, 15, 11, 11],
@@ -89,11 +89,11 @@
             }, { // Possible but very difficult
                 label: "Possible but very difficult",
                 data: [5, 38, 24, 6, 26, 35, 26, 9, 16, 7, 5, 6, 8, 4, 1],
-                backgroundColor: "rgba(237, 119, 104, 0.4)",
+                backgroundColor: "rgba(237, 119, 104, 0.5)",
             }, { // Too difficult to access
                 label: "Too difficult to access",
                 data: [1, 22, 5, 0, 10, 43, 10, 2, 16, 5, 14, 6, 3, 13, 2],
-                backgroundColor: "rgba(183, 18, 0, 0.38)",
+                backgroundColor: "rgba(183, 18, 0, 0.5)",
 //                hoverBackgroundColor: "rgba(166, 60, 6, 1)"
             }, { // blanks
                 label: "Did not need service",
